@@ -1,39 +1,4 @@
-.start{
-    width: 100%;
-    height: 100%;
-  }
-  
-  .content .header{
-    color: #1A9A18;
-    width: 650px;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  
-    margin-left: 42px;
-  } 
-  ul {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .content .nav ul li {
-    font-size: 20px;
-    font-weight: 800;
-    color: #8C8C8C;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 50px;
-    list-style-type: none;
-  }
-  .content > .nav > ul > li:hover{
-    color: #1A9A18;
-  }
-  .mainCard{
-    width: 100%;
-    height: 291px;
-    background-color: #F5F5F6;
-  }
+
   .sideName{
     position: relative;
     top: 80px;

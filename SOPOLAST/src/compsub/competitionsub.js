@@ -7,20 +7,19 @@ import insta from "./image/insta.png"
 import kakao from "./image/kakao.png"
 import yogiyo from "./image/요기요고종현님-001.png"
 import comment from "./image/comment.png"
-
+import { Link } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
       <div className="content">
-         <header className="header">
-             <h1><a herf="">SOPO</a></h1>
-         
+      <header className="header">
+             <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>
              <nav className="nav">
                  <ul>
-                     <li><a herf="#">홈</a></li>
-                     <li><a herf="#">선배가 후배에게</a></li>
-                     <li><a herf="#">포트폴리오</a></li>
-                     <li><a herf="#">내정보</a></li>
+                     <li><Link to="/Mentor-Mentee" className="link">선배가 후배에게</Link></li>
+                     <li><Link to="/portfolio" className="link">포트폴리오</Link></li>
+                     <li><Link to="/Competition" className="link">대회</Link></li>
+                     <li><Link to="/mypage" className="link">내정보</Link></li>
                  </ul>
              </nav>
          </header>  
