@@ -153,15 +153,20 @@
     display: inline-block;
     margin-left: 150px;
     margin-top: 27px;
-  
-    color: #1A9A18;
+   
   }
-  
+  .majorSelect > .frontEnd:hover{
+    cursor: pointer;
+    color: #178915;
+  }
   .elseMajor{
     display: inline-block;
     margin-left: 25px;
   }
-  
+  .elseMajor:hover{
+    cursor: pointer;
+    color: #178915;
+  }
   .namecardBox{
     width: 840px;
     height: 130px;

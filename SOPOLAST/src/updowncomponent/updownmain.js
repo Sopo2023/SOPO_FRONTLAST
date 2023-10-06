@@ -24,7 +24,7 @@ export default function start(){
                  </ul>
              </nav>
          </header>
-         <div className='proBox'>
+         <div className='proBox_1'>
           <div className='proName'>
             <span>
               이해준

@@ -34,7 +34,8 @@
   
   .proBox{
     position: relative;
-  
+    margin-left: 450px;
+    margin-top: 150px;
     display: inline-block;
   
     width: 320px;
@@ -43,8 +44,6 @@
     border-radius: 10px;
     background: #F5F5F6;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-left: 40px;
-    margin-top: 40px;
   
     color: #000;
     font-family: Inter;
@@ -128,12 +127,12 @@
     margin-left: 10px;
   }
   
-  .searchBox{
+  .searchBox1{
     display: inline-block;
   
     position: absolute;
   
-    margin-top: 50px;
+    margin-top: 80px;
     margin-left: 20px;
   
     width: 840px;
@@ -145,7 +144,7 @@
     background: #FFF;
   }
   
-  .searchBox > .searchFito{
+  .searchBox1 > .searchFito{
     margin-left: 797px;
     margin-top: 11.5px;
   }
@@ -188,7 +187,6 @@
     margin-left: 150px;
     margin-top: 27px;
   
-    color: #1A9A18;
   }
   
   .elseMajor{

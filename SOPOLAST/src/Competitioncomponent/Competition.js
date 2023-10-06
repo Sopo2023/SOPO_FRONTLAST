@@ -82,7 +82,7 @@ function App() {
             {/* probio */}
         </div>
         {/* probox */}
-        <div className='searchBox'>
+        <div className='searchBox1'>
           <img src={searchFito} className='searchFito'></img>
           <div className='stackLine'>
             <div className='gradeSelet'> 8기 ▾ </div>
