@@ -67,7 +67,7 @@
     background-color: #F5F5F6;
   }
   
-  .proBox{
+  .proBox1{
     position: relative;
   
     display: inline-block;
@@ -89,9 +89,11 @@
     line-height: normal; 
   
     overflow: hidden;
+  
+    display: inline-block;
   }
   
-  .proBox > .proName{
+  .proBox1 > .proName1{
     position: absolute;
   
     width: 70.318px;
@@ -100,7 +102,7 @@
     margin: 46.46px 0 0 28.54px;
   }
   
-  .proHr{
+  .proHr1{
     
     border: #A7A7A7 solid 0.9px;
     width: 320px;;
@@ -109,7 +111,7 @@
     margin-left: -28.4px;
   }
   
-  .proBio{
+  .proBio1{
     margin-top: 30px;
   
     font-size: 17px;
@@ -118,122 +120,45 @@
     white-space: nowrap;
   }
   
-  .proBio > .firstBio{
+  .proBio1 > .firstBio1{
     font-size: 18px;
     font-weight: 800;
   }
   
-  .secondBio{
+  .secondBio1{
     margin-top: 10px;
   }
   
-  .skillTitle{
+  .skillTitle1{
     margin-top: 20px;
     font-size: 20px;
     font-weight: 800;
   }
   
-  .awardTitle{
+  .awardTitle1{
     margin-top: 20px;
     font-size: 20px;
     font-weight: 800;
   }
   
-  .bioInfo{
+  .bioInfo1{
     margin-top: 20px;
   }
   
-  .bioInfo > .oddBio{
+  .bioInfo1 > .oddBio1{
     margin-top: 10px;
   }
   
-  .imgBio{
+  .imgBio1{
     width: 20px;
     height: 20px; 
   
     vertical-align: middle;
   }
   
-  .perBio{
-    font-weight: 600;
-    font-size: 15px;
-  
-    vertical-align: middle;
-  
-    margin-left: 10px;
-  }
-  
-  .searchBox{
-    display: inline-block;
-  
-    position: absolute;
-  
-    margin-top: 50px;
-    margin-left: 20px;
-  
-    width: 840px;
-    height: 50px;
-    flex-shrink: 0; 
-  
-    border-radius: 50px;
-    border: 1px solid #178915;
-    background: #FFF;
-  }
-  
-  .searchBox > .searchFito{
-    margin-left: 797px;
-    margin-top: 11.5px;
-  }
-  
-  .gradeSelet{
-    position: absolute;
-    display: inline-block;
-  
-    margin-top: 20px;
-    
-    color: #000;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .gradegreen{
-    color: green;
-    font-size: 30px;
-  
-    position: absolute;
-  
-    margin-top: 17px;
-    margin-left: 110px;
-  }
-  
-  .majorSelect{
-    color: #A7A7A7;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  
-  .majorSelect > .frontEnd{
-    display: inline-block;
-    margin-left: 150px;
-    margin-top: 27px;
-  
-    color: #1A9A18;
-  }
-  
-  .elseMajor{
-    display: inline-block;
-    margin-left: 25px;
-  }
-  
-  .gatherBox{
-    width: 398px;
-    height: 210px;
+  .compBox1{
+    width: 829px;
+    height: 669px;
     flex-shrink: 0;
   
     border-radius: 10px;
@@ -242,114 +167,54 @@
   
     position: absolute;
   
-    margin-top: 39px;
+    margin-top: 40px;
+    margin-left: 31px;
+  
+    display: inline-block;
   }
   
-  .gatherTitle{
+  .compBox1 > .compTitle1{
     color: #000;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
   
-    margin-top: 22px;
-    margin-left: 33px;
+    margin-top: 44px;
+    margin-left: 56px;
   }
   
-  .gatherGradeName{
+  .compBox1 > .compGrade1{
     color: #8C8C8C;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    
-    margin-top: 53px;
-    margin-left: 33px;
+  
+    margin-top: 13px;
+    margin-left: 56px;
   }
   
-  .gatherMail{
-    color: #8C8C8C;
+  .compBox1 > .compAbout{
+    color: #000;
     font-family: Inter;
-    font-size: 15px;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
   
-    margin-top: 7px;
-    margin-left: 33px;
+    margin-top: 52px;
+    margin-left: 56px;
   }
   
-  .gatherBox2{
-    width: 398px;
-    height: 210px;
-    flex-shrink: 0;
-  
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
+  .compBox1 > .compBack1{
     position: absolute;
   
-    margin-top: 39px;
-    margin-left: 430px;
-  }
+    margin-top: 10px;
+    margin-left: 56px;
   
-  .gatherBox3{
-    width: 398px;
-    height: 210px;
-    flex-shrink: 0;
+    font-size: 30px;
   
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
-    position: absolute;
-  
-    margin-top: 280px;
-  }
-  
-  .gatherBox4{
-    width: 398px;
-    height: 210px;
-    flex-shrink: 0;
-  
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
-    position: absolute;
-  
-    margin-top: 280px;
-    margin-left: 430px;
-  }
-  
-  .gatherBox5{
-    width: 398px;
-    height: 210px;
-    flex-shrink: 0;
-  
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
-    position: absolute;
-  
-    margin-top: 521px;
-  }
-  
-  .gatherBox6{
-    width: 398px;
-    height: 210px;
-    flex-shrink: 0;
-  
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
-    position: absolute;
-  
-    margin-top: 521px;
-    margin-left: 430px;
   }
