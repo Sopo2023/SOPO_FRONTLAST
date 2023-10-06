@@ -22,6 +22,11 @@ export default function Mypage() {
               </Link>
             </li>
             <li>
+              <Link to="/Competition" className="link">
+                대회
+              </Link>
+            </li>
+            <li>
               <Link to="/mypage" className="link">
                 내정보
               </Link>
@@ -43,22 +48,56 @@ export default function Mypage() {
       </div>
       <div className="social">
         <p>
-          <Link to="/mypage/git">깃</Link>ㅇ니ㅏㅇㄴ
+          <Link to="/mypage/git" className="link1">
+            깃
+          </Link>
+          ㅇ니ㅏㅇㄴ
         </p>
         <p>
-          <Link to="/mypage/mail">메일</Link>ㅇㅁㅇㅁㅁ
+          <Link to="/mypage/mail" className="link1">
+            메일
+          </Link>
+          ㅇㅁㅇㅁㅁ
         </p>
         <p>
-          <Link to="/mypage/number">전화번호</Link>010-1234-5678
+          <Link to="/mypage/number" className="link1">
+            전화번호
+          </Link>
+          010-1234-5678
         </p>
         <p>
-          <Link to="/mypage/instar">인스타</Link>@apnalchangchangkimseoneung{" "}
+          <Link to="/mypage/instar" className="link1">
+            인스타
+          </Link>
+          @apnalchangchangkimseoneung{" "}
         </p>
         <p>
-          <Link to="/mypage/kako">카톡</Link>카톡
+          <Link to="/mypage/kako" className="link1">
+            카톡
+          </Link>
+          카톡
         </p>
       </div>
-      <div></div>
+      <div className="post">
+        <p className="post1">배채희님이 쓴 글 보기</p>
+        <div className="post-write">
+          <div className="Zonecontrol">
+            <span className="Name">배채희</span>
+            <span className="title">오늘 먹은거 </span>
+            <span className="detail">
+              햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 김가영{" "}
+            </span>
+            <span className="date">2023.09.22</span>
+          </div>
+          <span className="img">
+            <img
+              className="real_img"
+              src={require("../updowncomponent/postimg.jpeg")}
+              alt="이미지"
+            ></img>
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
