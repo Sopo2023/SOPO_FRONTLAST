@@ -1,3 +1,56 @@
+/* .content{
+  overflow-x: hidden;
+} */
+.SOPO {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #1a9a18;
+  margin: 0 40px 0 20px;
+}
+.start {
+  width: 100%;
+  height: 100%;
+}
+.content .header a:hover {
+  /* 커서 설정*/
+  cursor: pointer;
+}
+.content .header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #ffffff;
+  color: #1a9a18;
+  width: 320%;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.content .nav ul li {
+  text-decoration-line: none;
+  font-size: 23px;
+  font-weight: 800;
+  color: #8c8c8c;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 50px;
+  list-style-type: none;
+  justify-content: space-between; /* li 요소에 추가 */
+  display: flex; /* li 요소에 추가 */
+}
+
+.link {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #8c8c8c; /* 기본 회색으로 설정 */
+}
+.link:hover {
+  color: #1a9a18;
+}
 .top {
   margin: 0;
   align-items: flex-start;
@@ -53,6 +106,86 @@
   text-decoration: none; /* 밑줄 제거 */
   color: #47a1f3;
 }
-.post {
-  margin: 60px;
+
+.post1 {
+  color: #1a9a18;
+  font-size: 25px;
+  font-weight: 800;
+}
+.post-write {
+  margin: 0;
+}
+.Zonecontrol {
+  width: 55%;
+  height: 100px;
+}
+.post_1::-webkit-scrollbar {
+  display: none;
+}
+.post_1 {
+  margin: 60px 0 0 10px;
+  overflow-x: hidden;
+  position: absolute;
+  left: 50px;
+  top: 440px;
+  width: 60%;
+  height: 800px;
+  /* background-color: #dddddd; */
+}
+
+.post_1 > .post-write {
+  position: relative;
+  border-bottom: 2px solid #d9d9d9;
+  left: 60px;
+  width: 100%;
+  height: 200px;
+  /* background-color: #8C8C8C; */
+}
+.post_1 > .post-write > .Zonecontrol > .Name {
+  position: relative;
+  top: 5px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.post_1 > .post-write > .Zonecontrol > .title {
+  display: block;
+  position: relative;
+  top: 7px;
+  color: #8c8c8c;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.post_1 > .post-write > .Zonecontrol > .detail {
+  position: relative;
+  top: 10px;
+  color: #8c8c8c;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.post_1 > .post-write > .Zonecontrol > .date {
+  position: relative;
+  display: block;
+  top: 80px;
+  color: #8c8c8c;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.post_1 > .post-write > .img {
+  position: relative;
+  width: 100px;
+  left: 60%;
+  bottom: 9.5vh;
 }

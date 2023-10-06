@@ -78,7 +78,7 @@ export default function Mypage() {
           카톡
         </p>
       </div>
-      <div className="post">
+      <div className="post_1">
         <p className="post1">배채희님이 쓴 글 보기</p>
         <div className="post-write">
           <div className="Zonecontrol">
