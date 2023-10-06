@@ -1,0 +1,298 @@
+  .proBox{
+    position: relative;
+  
+    display: inline-block;
+  
+    width: 320px;
+    height: 640px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F5F5F6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 40px;
+    margin-top: 40px;
+  
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal; 
+  
+    overflow: hidden;
+  }
+  
+  .proBox > .proName{
+    position: absolute;
+  
+    width: 70.318px;
+    height: 28.444px;
+    flex-shrink: 0; 
+    margin: 46.46px 0 0 28.54px;
+  }
+  
+  .proHr{
+    
+    border: #A7A7A7 solid 0.9px;
+    width: 320px;;
+  
+    margin-top: 30.34px;
+    margin-left: -28.4px;
+  }
+  
+  .proBio{
+    margin-top: 30px;
+  
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .proBio > .firstBio{
+    font-size: 18px;
+    font-weight: 800;
+  }
+  
+  .secondBio{
+    margin-top: 10px;
+  }
+  
+  .skillTitle{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .awardTitle{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .bioInfo{
+    margin-top: 20px;
+  }
+  
+  .bioInfo > .oddBio{
+    margin-top: 10px;
+  }
+  
+  .imgBio{
+    width: 20px;
+    height: 20px; 
+  
+    vertical-align: middle;
+  }
+  
+  .perBio{
+    font-weight: 600;
+    font-size: 15px;
+  
+    vertical-align: middle;
+  
+    margin-left: 10px;
+  }
+  
+  .searchBox{
+    display: inline-block;
+  
+    position: absolute;
+  
+    margin-top: 50px;
+    margin-left: 20px;
+  
+    width: 840px;
+    height: 50px;
+    flex-shrink: 0; 
+  
+    border-radius: 50px;
+    border: 1px solid #178915;
+    background: #FFF;
+  }
+  
+  .searchBox > .searchFito{
+    margin-left: 797px;
+    margin-top: 11.5px;
+  }
+  
+  .gradeSelet{
+    position: absolute;
+    display: inline-block;
+  
+    margin-top: 20px;
+    
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .gradegreen{
+    color: green;
+    font-size: 30px;
+  
+    position: absolute;
+  
+    margin-top: 17px;
+    margin-left: 110px;
+  }
+  
+  .majorSelect{
+    color: #A7A7A7;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .majorSelect > .frontEnd{
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 27px;
+  
+    color: #1A9A18;
+  }
+  
+  .elseMajor{
+    display: inline-block;
+    margin-left: 25px;
+  }
+  
+  .namecardBox{
+    width: 840px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 189px;
+  
+    display: inline-block;
+  }
+  
+  .nameName{
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  
+    position: absolute;
+  
+    margin-top: 22px;
+    margin-left: 33px;
+  }
+  
+  .nameGrade{
+    color: #8C8C8C;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  
+    position: absolute;
+  
+    margin-top: 55px;
+    margin-left: 33px;
+  }
+  
+  .nameMail{
+    color: #8C8C8C;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  
+    position: absolute;
+  
+    margin-top: 99px;
+    margin-left: 33px;
+  }
+  
+  .cnsLogo{
+    width: 73px;
+    height: 40px;
+    flex-shrink: 0;
+  
+    margin-top: 11px;
+    margin-left: 747px;
+  }
+  
+  .namecardBox2{
+    width: 840px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 339px;
+  
+    display: inline-block;
+  }
+  
+  
+  .b1ndLogo{
+    width: 70px;
+    height: 70px;
+  
+    margin-top: 11px;
+    margin-left: 760px;
+  }
+  
+  .namecardBox3{
+    width: 840px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 489px;
+  
+    display: inline-block;
+  }
+  
+  .namecardBox4{
+    width: 840px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 639px;
+  
+    display: inline-block;
+  }
+  
+  .namecardBox5{
+    width: 840px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 789px;
+  
+    display: inline-block;
+  }

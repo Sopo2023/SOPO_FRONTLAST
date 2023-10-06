@@ -1,0 +1,53 @@
+
+#write_submit{
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    border-radius: 30px;
+    background: #1A9A18;
+    width: 148px;
+    height: 48px;
+    flex-shrink: 0;
+    left: 1200px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.write_screen::placeholder{
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+}
+.write_title::placeholder{
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+}
+.write_title{
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 750px;
+    height: 100px;
+    flex-shrink: 0;
+    top: 150px;
+    left: 600px;
+    background-color: beige;
+    font-size: 30px;
+}
+.write_screen{
+    position: absolute;
+    outline: none;
+    border: none;
+    vertical-align: top;
+    width: 750px;
+    height: 500px;
+    flex-shrink: 0;
+    top: 250px;
+    left: 600px;
+    background-color: lightblue;
+    font-size: 30px;
+}
