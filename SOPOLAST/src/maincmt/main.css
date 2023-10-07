@@ -83,7 +83,7 @@
   }
   .sideName{ /* 원쪽 이를/글쓰기/마이페이지*/
     position: sticky;
-    top: 445px;
+    top: 455px;
     left: 60px;
     width: 290px;
     height: 310px;
@@ -175,7 +175,7 @@
     overflow-x: hidden;
     position: absolute;
     left: 50px;
-    top: 440px;
+    top: 385px;
     width: 60%; 
     height: 800px;
     /* background-color: #dddddd; */

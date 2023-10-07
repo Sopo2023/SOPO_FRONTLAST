@@ -29,7 +29,7 @@ export default function portfolio() {
              </nav>
          </header>  
         </div>
-        <div className='proBox'>
+        <div className='proBox_'>
           <div className='proName'>
             <span>
               이해준
@@ -99,6 +99,7 @@ export default function portfolio() {
             </div>
           </div>
         </div>
+      <div className='mo'>
         <div className='namecardBox'>
           <div className='nameName'> 배채희 </div>
           <div className='nameGrade'> DGSW 8th </div>
@@ -133,7 +134,8 @@ export default function portfolio() {
           <div className='nameMail'> Mail - yejin@gmail.com </div>
           <img src={b1nd} className='b1ndLogo'></img>
         </div>
-    </div>
+      </div>
+      </div>
   );
 }
 

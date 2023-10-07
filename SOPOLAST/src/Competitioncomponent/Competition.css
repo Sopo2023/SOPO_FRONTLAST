@@ -1,5 +1,7 @@
-
-  .sideName{
+  .App{
+    overflow: hidden;
+  }
+  /* .sideName{
     position: relative;
     top: 80px;
     left: 60px;
@@ -8,8 +10,8 @@
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .sideName> .CHname{
+  } */
+  /* .sideName> .CHname{
     background-color: #1A9A18;
     width: 290;
     height: 80px;
@@ -31,7 +33,7 @@
     height: 50px;
     background-color: #F5F5F6;
   }
-  
+   */
   .proBox{
     position: relative;
     margin-left: 450px;

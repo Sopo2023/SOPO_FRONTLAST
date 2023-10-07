@@ -10,11 +10,11 @@
   width: 100%;
   height: 100%;
 }
-.content .header a:hover {
+ .header a:hover {
   /* 커서 설정*/
   cursor: pointer;
 }
-.content .header {
+.header {
   position: sticky;
   top: 0;
   z-index: 3;
@@ -31,7 +31,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.content .nav ul li {
+.nav ul li {
   text-decoration-line: none;
   font-size: 23px;
   font-weight: 800;
@@ -104,16 +104,26 @@ ul {
 }
 .link1 {
   text-decoration: none; /* 밑줄 제거 */
-  color: #47a1f3;
+  color: #8c8c8c;
 }
-
+.link2{
+  text-decoration: none; /* 밑줄 제거 */
+  color: #000;
+}
 .post1 {
+  position: relative;
+  top: 30px;
+  left: 50px;
   color: #1a9a18;
   font-size: 25px;
   font-weight: 800;
+  position: absolute;
+  
 }
 .post-write {
   margin: 0;
+  position: relative;
+  top: 70px;
 }
 .Zonecontrol {
   width: 55%;
@@ -189,3 +199,7 @@ ul {
   left: 60%;
   bottom: 9.5vh;
 }
+/* .post_mainnn{
+  position: absolute;
+  left: 300px;
+} */

@@ -25,7 +25,7 @@ export default function Start(){
                 <p className='card_p'>Front-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>CNS</p>
-                <p><img className='card_img' src={require('../img/image 40.png')} alt="이미지"></img></p>
+                {/* <p><img className='card_img' src={require('../img/image 40.png')} alt="이미지"></img></p> */}
                 
             </div>
             <div className="card2">
@@ -62,7 +62,7 @@ export default function Start(){
     <div className='sideName-mom'>
          <div className="sideName">
              <div className="CHname">
-                 <Link to="/mypage" className='sidenameColor' >전우진</Link>
+                 <Link to="/mypage" className='sidenameColor' >이해준</Link>
              </div>
              <div className="Write">
                  <p className="p1"><Link to="/myportfolio" className='link_side'>내 포트폴리오</Link></p>
@@ -71,7 +71,7 @@ export default function Start(){
              <div className='News'>
                 <p className='writ_name'>내 소식</p>
                 <div className='write_detail'>
-                <p className='writ'><strong>이해준</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
+                <p className='writ'><strong>전우진</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
                 </div>
                 
              </div>
@@ -82,16 +82,16 @@ export default function Start(){
                 <div className='Zonecontrol'>
                     <span className="Name">{currentIndex[0]}</span>
                     <span className="title">4개교 연합 해커톤 프론트엔드</span>
-                    <span className="detail">박규민 모크 김가영은 핑구 배채희는 대소고 김채원 전우진은 학생회(노예) 김호준 축구부</span>
+                    <span className="detail">박규민 모크 김가영은 핑구 배채희는 대소고 김채원 전우진은 학생회 김호준 축구부</span>
                     <span className="date">2023.09.30</span>
                 </div>
                 <span className="img"><img className='real_img' src={require('../img/gayoe.jpeg')} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
-                    <span className="Name">배채희</span>
+                    <span className="Name">이해준</span>
                     <span className="title">오늘 먹은거 </span>
-                    <span className="detail">햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 김가영 </span>
+                    <span className="detail">햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 </span>
                     <span className="date">2023.09.22</span>
                 </div>
                 <span className="img"><img className='real_img' src={require('../updowncomponent/postimg.jpeg')} alt="이미지"></img></span>

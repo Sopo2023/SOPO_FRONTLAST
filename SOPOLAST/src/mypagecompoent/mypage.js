@@ -48,44 +48,45 @@ export default function Mypage() {
       </div>
       <div className="social">
         <p>
-          <Link to="/mypage/git" className="link1">
-            깃
+          <Link to="https://github.com/ftery0" className="link1">
+            깃:
           </Link>
-          ㅇ니ㅏㅇㄴ
+          <Link to="https://github.com/ftery0" className="link2">@ftery0</Link>
         </p>
         <p>
           <Link to="/mypage/mail" className="link1">
-            메일
+            메일:
           </Link>
-          ㅇㅁㅇㅁㅁ
+          lerb5253@dgsw.hs.kr
         </p>
         <p>
           <Link to="/mypage/number" className="link1">
-            전화번호
+            전화번호:
           </Link>
           010-1234-5678
         </p>
         <p>
-          <Link to="/mypage/instar" className="link1">
-            인스타
+          <Link to="https://www.instagram.com/hae_jun7388/" className="link1">
+            인스타:
           </Link>
-          @apnalchangchangkimseoneung{" "}
+          <Link to="https://www.instagram.com/hae_jun7388/" className="link2">@hae_jun7388</Link>
         </p>
         <p>
           <Link to="/mypage/kako" className="link1">
-            카톡
+            카톡:
           </Link>
-          카톡
+          이해준
         </p>
       </div>
+      {/* <div className="post_mainnn"> */}
       <div className="post_1">
-        <p className="post1">배채희님이 쓴 글 보기</p>
+        <p className="post1">이해준님이 쓴 글 보기</p>
         <div className="post-write">
           <div className="Zonecontrol">
-            <span className="Name">배채희</span>
+            <span className="Name">이해준</span>
             <span className="title">오늘 먹은거 </span>
             <span className="detail">
-              햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 김가영{" "}
+              햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 
             </span>
             <span className="date">2023.09.22</span>
           </div>
@@ -98,6 +99,7 @@ export default function Mypage() {
           </span>
         </div>
       </div>
-    </div>
+      </div>
+    // </div>
   );
 }

@@ -1,4 +1,7 @@
-  .proBox{
+  .portfolio{
+    overflow: hidden;
+  }
+  .proBox_{
     position: relative;
   
     display: inline-block;
@@ -10,7 +13,7 @@
     background: #F5F5F6;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 200px;
   
     color: #000;
     font-family: Inter;
@@ -22,7 +25,7 @@
     overflow: hidden;
   }
   
-  .proBox > .proName{
+  .proBox_ > .proName{
     position: absolute;
   
     width: 70.318px;
@@ -98,9 +101,9 @@
     display: inline-block;
   
     position: absolute;
-  
+    left: 500px;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 30px;
   
     width: 840px;
     height: 50px;
@@ -167,7 +170,15 @@
     cursor: pointer;
     color: #178915;
   }
-  .namecardBox{
+  .mo{
+    position: absolute;
+    left: 500px;
+    top: 250px;
+    width: 900px;
+    height: 1000px;
+    
+  }
+   .mo>.namecardBox{
     width: 840px;
     height: 130px;
     flex-shrink: 0;
@@ -177,7 +188,7 @@
   
     position: absolute;
     margin-left: 22px;
-    margin-top: 189px;
+    margin-top: 30px;
   
     display: inline-block;
   }
@@ -228,12 +239,11 @@
     width: 73px;
     height: 40px;
     flex-shrink: 0;
-  
-    margin-top: 11px;
+    margin-top: 10px;
     margin-left: 747px;
   }
   
-  .namecardBox2{
+  .mo>.namecardBox2{
     width: 840px;
     height: 130px;
     flex-shrink: 0;
@@ -243,7 +253,7 @@
   
     position: absolute;
     margin-left: 22px;
-    margin-top: 339px;
+    margin-top: 180px;
   
     display: inline-block;
   }
@@ -252,12 +262,11 @@
   .b1ndLogo{
     width: 70px;
     height: 70px;
-  
-    margin-top: 11px;
+    margin-top: 10px;
     margin-left: 760px;
   }
   
-  .namecardBox3{
+  .mo>.namecardBox3{
     width: 840px;
     height: 130px;
     flex-shrink: 0;
@@ -267,12 +276,12 @@
   
     position: absolute;
     margin-left: 22px;
-    margin-top: 489px;
+    margin-top: 330px;
   
     display: inline-block;
   }
   
-  .namecardBox4{
+  .mo>.namecardBox4{
     width: 840px;
     height: 130px;
     flex-shrink: 0;
@@ -282,12 +291,12 @@
   
     position: absolute;
     margin-left: 22px;
-    margin-top: 639px;
+    margin-top: 480px;
   
     display: inline-block;
   }
   
-  .namecardBox5{
+  .mo>.namecardBox5{
     width: 840px;
     height: 130px;
     flex-shrink: 0;
@@ -297,7 +306,7 @@
   
     position: absolute;
     margin-left: 22px;
-    margin-top: 789px;
+    margin-top: 640px;
   
     display: inline-block;
   }
