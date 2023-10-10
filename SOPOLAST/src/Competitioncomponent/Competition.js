@@ -83,7 +83,13 @@ function App() {
         </div>
         {/* probox */}
         <div className='searchBox1'>
-          <img src={searchFito} className='searchFito'></img>
+        <div className="App">
+        <div className="search_1" >
+          <input className="search_box"></input>
+          <input type="button" className="search_icon"></input>
+          <div className="searcg_icon_line"></div>
+        </div>
+        </div>
           <div className='stackLine'>
             <div className='gradeSelet'> 8기 ▾ </div>
             <div className='gradegreen'> | </div>

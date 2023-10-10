@@ -83,7 +83,11 @@ export default function portfolio() {
         </div>
         {/* probox */}
         <div className='searchBox'>
-          <img src={searchFito} className='searchFito'></img>
+        <div className="search">
+          <input className="search_box"></input>
+          <input type="button" className="search_icon"></input>
+          <div className="searcg_icon_line"></div>
+        </div>
           <div className='stackLine'>
             <div className='gradeSelet'> 8기 ▾ </div>
             <div className='gradegreen'> | </div>

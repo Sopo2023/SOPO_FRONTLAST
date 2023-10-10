@@ -77,9 +77,13 @@ export default function start(){
             {/* probio */}
         </div>
         {/* probox */}
-        <div className='searchBox'>
-          <img src={searchFito} className='searchFito'></img>
+        <div className="App">
+        <div className="search">
+          <input className="search_box"></input>
+          <input type="button" className="search_icon"></input>
+          <div className="searcg_icon_line"></div>
         </div>
+    </div>
        <div className="post-container">
             <div className="post-written">
                 <div className='Movecontrol'>
