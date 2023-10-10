@@ -137,6 +137,7 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    margin-top: 5px;
   }
   .News > .write_detail{
     position: relative;
