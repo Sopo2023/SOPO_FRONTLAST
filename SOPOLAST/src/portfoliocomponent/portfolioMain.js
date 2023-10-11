@@ -105,7 +105,7 @@ export default function portfolio() {
         </div>
       <div className='mo'>
         <div className='namecardBox'>
-          <div className='nameName'> 배채희 </div>
+          <div className='nameName'> <Link to="sub">배채희 </Link></div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - chaeeehui@gmail.com </div>
           <img src={cnsLogo} className='cnsLogo'></img>
