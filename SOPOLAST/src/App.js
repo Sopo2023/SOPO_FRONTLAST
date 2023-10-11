@@ -7,6 +7,7 @@ import Write from './sidewrite/write'
 import Signup from './signupcomponent/signup'
 import Mypage from './mypagecompoent/mypage'
 import Competition from './Competitioncomponent/Competition';
+import Sub from "./portfoliosub/portfolioSub"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/Signuppage' element={<Signup />}/>
           <Route path='/Mypage' element={<Mypage/>}/>
           <Route path='/Competition' element={<Competition/>}/>
+          <Route path='/sub' element={<Sub/>}/>
         </Routes>
       </div>
     </BrowserRouter>

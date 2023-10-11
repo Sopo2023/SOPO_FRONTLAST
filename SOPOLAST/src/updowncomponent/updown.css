@@ -24,10 +24,9 @@
     color: #1A9A18;
   }
 
-  .App>.search{
+  .search{
     position: absolute;
-    top: 150px;
-    left: 400px;
+    left: 0px;
     width: 840px;
     height: 50px;
     flex-shrink: 0;
@@ -152,35 +151,5 @@
   }
   .post-container{
     position: relative;
-    bottom: 580px;
-  }
-  .proBox_1{
-    position: relative;
-    margin-left: 50px;
-    margin-top: 150px;
-    display: inline-block;
-  
-    width: 320px;
-    height: 640px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #F5F5F6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal; 
-  
-    overflow: hidden;
-  }
-  .proBox_1 > .proName{
-    position: absolute;
-  
-    width: 70.318px;
-    height: 28.444px;
-    flex-shrink: 0; 
-    margin: 46.46px 0 0 28.54px;
+    top: 110px;
   }
