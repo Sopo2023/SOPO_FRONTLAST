@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import cnsLogo from "../image/cnsLogo.png"
 import b1nd from "../image/b1nd.png"
 import Sidename from "../sidebar/side"
+import "./protfolio.css"
 // import selectLIne from "./image/selectLIne.png"
 
 // import tri from "./image/tri.png"

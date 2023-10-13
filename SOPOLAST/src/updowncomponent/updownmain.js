@@ -1,24 +1,16 @@
 import './updown.css';
 import { Link } from 'react-router-dom';
 import Sidename from "../sidebar/side"
+import Head from "../head/head"
+import "./updown.css"
 
 export default function start(){
   return( 
   <div className="content">
-       <header className="header">
-             <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>
-             <nav className="nav">
-                 <ul>
-                     <li><Link to="/Mentor-Mentee" className="link">선배가 후배에게</Link></li>
-                     <li><Link to="/portfolio" className="link">포트폴리오</Link></li>
-                     <li><Link to="/Competition" className="link">대회</Link></li>
-                     <li><Link to="/mypage" className="link">내정보</Link></li>
-                 </ul>
-             </nav>
-         </header>
+       <Head></Head>
          <Sidename />
         
-        <div className="search">
+        <div className="search1">
           <input className="search_box"></input>
           <input type="button" className="search_icon"></input>
           <div className="searcg_icon_line"></div>

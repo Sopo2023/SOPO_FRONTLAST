@@ -10,46 +10,7 @@
     width: 100%;
     height: 100%;
   }
-  .content .header a:hover{ /* 커서 설정*/
-    cursor: pointer;
-  }
-  .content .header{
-    position:sticky;
-    top: 0;
-    z-index: 3;
-    background-color: #ffffff;
-    color: #1A9A18;
-    width: 320%;
-    height: 80px;
-    margin: 0;
-    display: flex;
-    align-items: center; 
-  } 
-  ul {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .content .nav ul li {
-    text-decoration-line: none;
-    font-size: 23px;
-    font-weight: 800;
-    color: #8C8C8C;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 50px;
-    list-style-type: none;
-    justify-content: space-between; /* li 요소에 추가 */
-    display: flex; /* li 요소에 추가 */
-  }
-  
-  .link {
-    text-decoration: none; /* 밑줄 제거 */
-    color: #8C8C8C; /* 기본 회색으로 설정 */
-  }
-  .link:hover {
-    color: #1A9A18;
-  }
+
   .link_card{
     text-decoration: none;
     color: #000;
@@ -156,11 +117,11 @@
   }
   .News>.write_detail >strong{
     color: #000;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     }
   .Write p:hover{
     cursor: pointer;
@@ -205,11 +166,11 @@
     position: relative;
     top: 7px;
     color: #8C8C8C;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
   .post > .post-write > .Zonecontrol >.detail{
     position: relative;
