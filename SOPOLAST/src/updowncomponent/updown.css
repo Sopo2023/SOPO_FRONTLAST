@@ -19,6 +19,10 @@
     background: #FFF;
     z-index: 2;
   }
+  .post-divider {
+    border-top: 1px solid #ccc;
+    margin: 10px 0; 
+  }
   .search_icon{
     position: absolute;
     cursor: pointer;
@@ -56,14 +60,14 @@
   }
 
   .post-written {
-    border: 1px solid #ccc;
-    border-radius: 20px;
+    /* border: 1px solid #ccc; */
+    border-bottom: 1px solid #888;
     padding: 10px;
     margin-bottom: 20px;
     margin-left: 400px;
     margin-top: 10px;
     background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
     width: 1200px;
     height: 250px;
     z-index: 1;
