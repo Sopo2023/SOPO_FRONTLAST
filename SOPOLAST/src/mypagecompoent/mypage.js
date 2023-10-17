@@ -4,36 +4,17 @@ export default function Mypage() {
   return (
     <div className="Mypage">
       <header className="header">
-        <h1>
-          <Link to="/main" className="SOPO">
-            SOPO
-          </Link>
-        </h1>
-        <nav className="nav">
-          <ul>
-            <li>
-              <Link to="/Mentor-Mentee" className="link">
-                선배가 후배에게
-              </Link>
-            </li>
-            <li>
-              <Link to="/portfolio" className="link">
-                포트폴리오
-              </Link>
-            </li>
-            <li>
-              <Link to="/Competition" className="link">
-                대회
-              </Link>
-            </li>
-            <li>
-              <Link to="/mypage" className="link">
-                내정보
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+             <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>
+             <nav className="nav">
+                 <ul>
+                    <li><Link to="/main" className="link">홈</Link></li>
+                     <li><Link to="/Mentor-Mentee" className="link">선배가 후배에게</Link></li>
+                     <li><Link to="/portfolio" className="link">포트폴리오</Link></li>
+                     <li><Link to="/Competition" className="link">대회</Link></li>
+                     <li><Link to="/mypage" className="link">내정보</Link></li>
+                 </ul>
+             </nav>
+         </header>
       <div className="top">
         <p className="top1">이해준</p>
         <p className="top2">DGSW 8th</p>
