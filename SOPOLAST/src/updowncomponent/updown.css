@@ -9,7 +9,7 @@
 
   .search1{
     position: absolute;
-    bottom: 670px;
+    bottom: 750px;
     left: 500px;
     width: 840px;
     height: 50px;
@@ -17,6 +17,7 @@
     border-radius: 50px;
     border: 1px solid #1A9A18;
     background: #FFF;
+    z-index: 2;
   }
   .search_icon{
     position: absolute;
@@ -53,46 +54,7 @@
     width: 750px;
     height: 40px;
   }
-  /* .searchBox{
-    display: inline-block;
-  
-    position: absolute;
-  
-    margin-top: 50px;
-    margin-left: 20px;
-  
-    width: 840px;
-    height: 50px;
-    flex-shrink: 0; 
-  
-    border-radius: 50px;
-    border: 1px solid #178915;
-    background: #FFF;
-  }
-  .search-box {
-    width: 1200px;
-    height: 50px;
-    flex-shrink: 0;
-    border-radius: 50px;
-    border: 1px solid #1A9A18;
-    background: #FFF; 
-    margin-left: 60px;
-    
-  }
-  .search-button {
-    position: relative;
-    background-color: #1A9A18;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 15px;
-    right: 60px;
-    cursor: pointer;
-  }
-  
-  .search-button i {
-    color: white;
-  } */
-  
+
   .post-written {
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -104,6 +66,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     width: 1200px;
     height: 250px;
+    z-index: 1;
   }
   
   .post-written .name {
