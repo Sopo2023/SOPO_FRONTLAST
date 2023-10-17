@@ -1,6 +1,11 @@
 /* .content{
   overflow-x: hidden;
 } */
+.content{
+  width: 50%;
+  height: 50%;
+  
+}
 .SOPO{
   text-decoration: none; /* 밑줄 제거 */
     color: #1A9A18; 
@@ -64,7 +69,6 @@
   .mainCard{
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
     width: 320%;
     height: 291px;
     background-color: #F5F5F6;
@@ -77,7 +81,7 @@
   .sideName-mom{
     position: absolute;
     right: 0;
-    width: 400px;
+    width: 30%;
     height: 925px;
     /* background-color: #D9D9D9; */
   }
@@ -236,11 +240,12 @@
     position: relative;
     width: 100px;
     left: 60%;
-    bottom: 9.5vh;
+    bottom: 70px;
   }
   .real_img{
-    width: 16.5vw;
-    height: 19vh;
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
   }
   .mainCard > .card1{
     position: relative;

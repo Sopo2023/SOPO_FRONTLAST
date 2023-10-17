@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 
 export default function Start(){
+
+    
     let [currentIndex, setCurrentIndex] = useState(['김가영']);
 
 
