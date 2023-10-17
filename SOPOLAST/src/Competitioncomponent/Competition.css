@@ -1,39 +1,6 @@
   .App{
     overflow: hidden;
   }
-  /* .sideName{
-    position: relative;
-    top: 80px;
-    left: 60px;
-    width: 290px;
-    height: 310px;
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  } */
-  /* .sideName> .CHname{
-    background-color: #1A9A18;
-    width: 290;
-    height: 80px;
-    border-radius: 10px 10px 0 0;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  }
-  .sideName > .CHname > p{
-    position: relative;
-    top: 28px;
-    left: 30px;
-  }
-  .Write{
-    width: 290px;
-    height: 50px;
-    background-color: #F5F5F6;
-  }
-   */
   .proBox{
     position: relative;
     margin-left: 450px;

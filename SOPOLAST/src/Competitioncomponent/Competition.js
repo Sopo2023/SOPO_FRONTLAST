@@ -30,7 +30,11 @@ function App() {
           <div className="searcg_icon_line"></div>
         </div>
           <div className='stackLine'>
-            <div className='gradeSelet'> 8기 ▾ </div>
+          <select className='gradeSelet'>
+              <option>8기 </option>
+              <option>7기 </option>
+              <option>6기 </option>
+            </select>
             <div className='gradegreen'> | </div>
             <div className='majorSelect'>
               <div className='frontEnd'> 프론트엔드 </div>

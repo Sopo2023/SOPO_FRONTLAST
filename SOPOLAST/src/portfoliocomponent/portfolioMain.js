@@ -38,7 +38,6 @@ export default function portfolio() {
               <option>7기 </option>
               <option>6기 </option>
             </select>
-            {/* <div className='gradeSelet'> 8기 ▾ </div> */}
             <div className='gradegreen'> | </div>
             <div className='majorSelect'>
               <div className='frontEnd'> 프론트엔드 </div>
