@@ -1,15 +1,12 @@
 import "./side.css"
-import hp from "../image/hp.png"
-import org from "../image/org.png"
-import mail from "../image/mail.png"
-import github from "../image/github.png"
-import insta from "../image/insta.png"
-import kakao from "../image/kakao.png"
-import searchFito from "../image/searchFito.png"
-import cnsLogo from "../image/cnsLogo.png"
-import b1nd from "../image/b1nd.png"
+import hp from "../../Assets/image/hp.png"
+import org from "../../Assets/image/org.png"
+import mail from "../../Assets/image/mail.png"
+import github from "../../Assets/image/github.png"
+import insta from "../../Assets/image/insta.png"
+import kakao from "../../Assets/image/kakao.png"
 
-export default function side(){
+export default function Side(){
     return(
         <div className="side">
 <div className='proBox_1'>

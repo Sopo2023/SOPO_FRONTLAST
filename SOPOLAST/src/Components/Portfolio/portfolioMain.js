@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import cnsLogo from "../image/cnsLogo.png"
-import b1nd from "../image/b1nd.png"
-import Sidename from "../sidebar/side"
+import cnsLogo from "../../Assets/image/cnsLogo.png"
+import b1nd from "../../Assets/image/b1nd.png"
+import Sidename from "../Sidebar/side"
 import "./protfolio.css"
 // import selectLIne from "./image/selectLIne.png"
 
 // import tri from "./image/tri.png"
 // import tirang from "./image/tirang.png"
 
-export default function portfolio() {
+export default function Portfolio() {
   return (
     <div className="portfolio">
       <div className="content">

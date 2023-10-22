@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import TEST from "../../Assets/img/postimg.jpeg"
 
 export default function Mypage() {
   return (
@@ -74,7 +75,7 @@ export default function Mypage() {
           <span className="img">
             <img
               className="real_img"
-              src={require("../updowncomponent/postimg.jpeg")}
+              src={TEST}
               alt="이미지"
             ></img>
           </span>

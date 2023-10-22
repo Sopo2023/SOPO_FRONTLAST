@@ -1,11 +1,10 @@
-@import url(./maincmt/main.css);
-@import url(./logincomponent/login.css);
+@import url(../src/Components/Main/main.css);
+@import url(../src/Components/Login/login.css);
 
-@import url(./sidewrite/write.css);
-@import url(./signupcomponent/signup.css);
-@import url(./mypagecompoent/mypage.css);
-@import url(./Competitioncomponent/Competition.css);
+@import url(../src/Components/Sidewrite/write.css);
+@import url(../src/Components/Signup/signup.css);
+@import url(../src/Components/Mypage/mypage.css);
+@import url(../src/Components/Competition/Competition.css);
 
-@import url(./portfoliosub/portfolioSub.css);
-@import url(./Competitioncomponent/Competition.css);
-@import url(./compsub/cometitionsub.css);
+@import url(../src/Components/compsub/cometitionsub.css);
+

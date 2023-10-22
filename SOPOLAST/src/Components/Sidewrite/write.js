@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function sidewrite(){
+export default function Sidewrite(){
     return(
         <div className="content">
             <header className="header">

@@ -1,16 +1,17 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+import Post1 from "../../Assets/img/gayoe.jpeg";
+import Post2 from "../../Assets/img/postimg.jpeg";
+import Post3 from "../../Assets/img/newjeans.jpeg";
 
 export default function Start(){
 
     
-    let [currentIndex, setCurrentIndex] = useState(['김가영']);
 
 
     return( 
     <div className="content">
-         <header className="header">
+         <header className="header" >
              <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>
              <nav className="nav">
                  <ul>
@@ -29,7 +30,6 @@ export default function Start(){
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>CNS</p>
                 {/* <p><img className='card_img' src={require('../img/image 40.png')} alt="이미지"></img></p> */}
-                
             </div>
             <div className="card2">
                 <p className='card_p'><Link to="/card2" className='link_card'>박규민</Link></p>
@@ -83,12 +83,12 @@ export default function Start(){
         <div className="post">
             <div className="post-write">
                 <div className='Zonecontrol'>
-                    <span className="Name">{currentIndex[0]}</span>
+                    <span className="Name">김가영</span>
                     <span className="title">4개교 연합 해커톤 프론트엔드</span>
                     <span className="detail">박규민 모크 김가영은 핑구 배채희는 대소고 김채원 전우진은 학생회 김호준 축구부</span>
                     <span className="date">2023.09.30</span>
                 </div>
-                <span className="img"><img className='real_img' src={require('../img/gayoe.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='real_img' src={Post1} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -97,7 +97,7 @@ export default function Start(){
                     <span className="detail">햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 </span>
                     <span className="date">2023.09.22</span>
                 </div>
-                <span className="img"><img className='real_img' src={require('../updowncomponent/postimg.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='real_img' src={Post2} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -106,7 +106,7 @@ export default function Start(){
                     <span className="detail">갈굼 당하기 리엑트 하기 사진찍기</span>
                     <span className="date">2023.09.18</span>
                 </div>
-                <span className="img"><img className='real_img' src={require('../img/newjeans.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='real_img' src={Post3} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -134,7 +134,6 @@ export default function Start(){
             
         </footer>
     </div>
-    
     
     )
  }

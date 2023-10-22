@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Sidname from "../sidebar/side"
+import Sidname from "../Sidebar/side"
 // import selectLIne from "./image/selectLIne.png"
 
 // import tri from "./image/tri.png"

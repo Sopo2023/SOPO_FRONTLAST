@@ -1,10 +1,15 @@
 import './updown.css';
 import { Link } from 'react-router-dom';
-import Sidename from "../sidebar/side"
+import Sidename from "../Sidebar/side"
+import TEST0 from "../../Assets/img/postimg.jpeg"
+import TEST1 from "../../Assets/img/gayoe.jpeg"
+import TEST2 from "../../Assets/img/park.JPG"
+import TEST3 from "../../Assets/img/newjeans.jpeg"
+import TEST4 from "../../Assets/img/gayoe.jpeg"
 
 import "./updown.css"
 
-export default function start(){
+export default function Start(){
   return( 
   <div className="content">
        <header className="header">
@@ -33,7 +38,7 @@ export default function start(){
                 <span className="title">4개교 연합 해커톤 프론트엔드</span><br></br>
                 <span className="detail">저희는 오늘 4개교 연합 토크콘서트를 갔다왔습니다 경험을 공유하고 명함을 공유해서 좋은 경험이였습니다</span><br></br>
                 <span className="date">2023.09.30</span>
-                <span className="img"><img className='post_img' src={require('../img/gayoe.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='post_img' src={TEST4} alt="이미지"></img></span>
                 </div>
             </div>
             <div className="post-written">
@@ -42,7 +47,7 @@ export default function start(){
                 <span className="title">오늘은 나르샤하는날</span><br></br>
                 <span className="detail">오늘은 나르샤를 해야하지만 김호준은 축구를 하러갔다 짜증이 났다</span><br></br>
                 <span className="date">2023.10.05</span>
-                <span className="img"><img className='post_img' src={require('./postimg.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='post_img' src={TEST0} alt="이미지"></img></span>
                 </div>
             </div>
             <div className="post-written">
@@ -51,7 +56,7 @@ export default function start(){
                 <span className="title">오늘은 나르샤하는날</span><br></br>
                 <span className="detail">오늘은 나르샤를 해야하지만 나는 축구를 하러 갔다 규민선배 좋아요</span><br></br>
                 <span className="date">2023.10.05</span>
-                <span className="img"><img className='post_img' src={require('../img/newjeans.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='post_img' src={TEST3} alt="이미지"></img></span>
                 </div>
             </div>
             <div className="post-written">
@@ -60,7 +65,7 @@ export default function start(){
                 <span className="title">오늘은 경민스쿨하는날</span><br></br>
                 <span className="detail">오늘은 CNS에서 경민스쿨을 진행했다 리엑트에 평소에 관심이 많았는데 리엑트를 배울수 있어서 좋았다</span><br></br>
                 <span className="date">2023.10.05</span>
-                <span className="img"><img className='post_img' src={require('../img/park.JPG')} alt="이미지"></img></span>
+                <span className="img"><img className='post_img' src={TEST2} alt="이미지"></img></span>
                 </div>
             </div>
             <div className="post-written">
@@ -69,7 +74,7 @@ export default function start(){
                 <span className="title">오늘의 리엑트 수업</span><br></br>
                 <span className="detail">오늘은 동아리 CNS에서 경민스쿨을 진행했다 윤세욱이 제일 많이 문제를 맞췄다 역시 우리의 세욱이</span><br></br>
                 <span className="date">2023.10.05</span>
-                <span className="img"><img className='post_img' src={require('../img/gayoe.jpeg')} alt="이미지"></img></span>
+                <span className="img"><img className='post_img' src={TEST1} alt="이미지"></img></span>
                 </div>
             </div>
        </div>
