@@ -17,7 +17,9 @@ export default function Side(){
             <span>
               이해준
             </span>
-            <div className='proHr'></div>
+            <div className='proHr'>
+              
+            </div>
             <div className='proBio'>
               <span className='firstBio'>안녕하세요.<br />프론트엔드 개발자 이해준입니다.</span>
               <div className='secondBio'> 매일 성장하는 개발자 이해준입니다.</div>

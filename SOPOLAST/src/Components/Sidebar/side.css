@@ -1,16 +1,4 @@
 .proBox_1{
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-
-  height: 100vh;
-  width: 80vh; */
-    /* position: absolute;
-    top: 200px;
-    left: 50px;
-    display: inline-block; */
-  
     width: 320px;
     height: 640px;
     flex-shrink: 0;
@@ -26,10 +14,12 @@
     position: absolute;
 
     height: 90vh;
-    width: 50vh;
+    width: 45vh;
   }
 
   .boxContents{
+    display: flex;
+
     position: absolute;
     color: #000;
     font-family: Inter;
@@ -37,11 +27,20 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal; 
+
+    height: 90vh;
+    width: 55vh;
   
     overflow: hidden;
   }
-  .proBox_1 > .proName{
+  
+.boxContents > .proName{
     display: flex;
+
+    width: 50vh;
+    height: 15vh;
+    justify-content: flex-end;
+    align-items: flex-end;
 
     position: absolute;
   }
@@ -50,5 +49,6 @@
     position: absolute;
     display: flex;
 
-    width: 100vh;
+    justify-content: flex-end;
+    text-align: flex-end;
   }
