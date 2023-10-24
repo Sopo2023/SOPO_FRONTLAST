@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
+import axios from "axios";
 
 function LoginComponent() {
   // id = document.querySelector(".id-Email");
@@ -18,8 +19,9 @@ function LoginComponent() {
   }, [msg]);
 
   const LOginFunc = (e) => {
-    e.preventDefault(); // 올바른 메소드명으로 수정
-    // 로그인 로직을 이곳에 추가해야 합니다.
+    e.preventDefault();
+    // const formData = new FormData();
+    // formData.append("email")
   };
 
   return (
