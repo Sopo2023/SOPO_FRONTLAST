@@ -54,7 +54,7 @@ export default function Portfolio() {
         <Sidename/>
       <div className='mo'>
         <div className='namecardBox'>
-          <div className='nameName'> <Link to="/sub">배채희 </Link></div>
+          <div className='nameName'> <Link to="/Portfoliosub">배채희 </Link></div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - chaeeehui@gmail.com </div>
           <img src={cnsLogo} className='cnsLogo'></img>

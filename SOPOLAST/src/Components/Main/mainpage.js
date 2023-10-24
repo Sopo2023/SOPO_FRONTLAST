@@ -1,6 +1,6 @@
 
 import { Link, useNavigate } from 'react-router-dom';
-import Post1 from "../../Assets/img/gayoe.jpeg";
+import Post1 from "../../Assets/image/1.png";
 import Post2 from "../../Assets/img/postimg.jpeg";
 import Post3 from "../../Assets/img/newjeans.jpeg";
 

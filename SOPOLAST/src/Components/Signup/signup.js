@@ -32,26 +32,24 @@ function LoginComponent() {
     // 서버로 데이터 전송
     try {
       setLoading(true);
-
+    
       const userData = {
         email: email,
         name: name,
         password: password,
       };
-
-      await axios.post("/createUser", userData, {
-        withCredentials: true, // CORS 요청을 보낼 때 자격 증명 정보를 포함
+    
+      const response = await axios.post("/createUser", userData, {
+        withCredentials: true,
         headers: {
           "Content-Type": "application/json",
         },
       });
-
+    
       setLoading(false);
-
-      // 서버로부터의 응답 처리
+    
       if (response.data.success) {
         alert("회원 가입이 완료되었습니다.");
-        // 다음 단계로 리다이렉트 또는 원하는 동작 수행
       } else {
         alert("회원 가입에 실패하였습니다.");
       }
@@ -59,7 +57,7 @@ function LoginComponent() {
       setLoading(false);
       alert("서버와의 통신 중 오류가 발생했습니다.");
       console.error(error);
-    }
+    }    
   };
 
   return (

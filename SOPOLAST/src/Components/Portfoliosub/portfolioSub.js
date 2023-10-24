@@ -1,84 +1,13 @@
+import yogiyo from "../../Assets/image/1.png"
+import comment from "../../Assets/image/comment.png"
+import Header from "../../head/head"
 
-import hp from "../image/hp.png"
-import org from "../image/org.png"
-import mail from "../image/mail.png"
-import github from "../image/github.png"
-import insta from "../image/insta.png"
-import kakao from "../image/kakao.png"
-import yogiyo from "../image/요기요고종현님-001.png"
-import comment from "../image/comment.png"
-
-
-function App() {
+function Portfoliosubon() {
   return (
     <div className="App">
       <div className="content">
-         <header className="header">
-             <h1><a herf="">SOPO</a></h1>
-         
-             <nav className="nav">
-                 <ul>
-                     <li><a herf="#">홈</a></li>
-                     <li><a herf="#">선배가 후배에게</a></li>
-                     <li><a herf="#">포트폴리오</a></li>
-                     <li><a herf="#">내정보</a></li>
-                 </ul>
-             </nav>
-         </header>  
-        </div>
-        <div className='proBox'>
-          <div className='proName'>
-            <span>
-              이해준
-            </span>
-            <div className='proHr'></div>
-            <div className='proBio'>
-              <span className='firstBio'>안녕하세요.<br />프론트엔드 개발자 이해준입니다.</span>
-              <div className='secondBio'> 매일 성장하는 개발자 이해준입니다.</div>
-              <div className='skillTitle'>skills</div>
-              <div>React / HTML / CSS / JS / C</div>
-              <div className='awardTitle'>Award</div>
-              <div>🥇 교내해커톤 대상<br></br>🏆 스마틴 앱 챌린지 우수상 <br></br>🎖️ ICT 대구 교육감상</div>
-
-                <div className='bioInfo'>
-                  <div className='oddBio'>
-                    <img src={hp} className='imgBio'></img>
-                    <span className='perBio'> 010-1234-1234</span>
-                  </div>
-
-                  <div className='oddBio'>
-                    <img src={org} className='imgBio'></img>
-                    <span className='perBio'> B1ND</span>
-                  </div>
-
-                  <div className='oddBio'>
-                    <img src={mail} className='imgBio'></img>
-                    <span className='perBio'> leehaejoon@dgsw.hs.kr</span>
-                  </div>
-
-                  <div className='oddBio'>
-                    <img src={github} className='imgBio'></img>
-                    <span className='perBio'> githae </span>
-                  </div>
-
-                  <div className='oddBio'>
-                    <img src={insta} className='imgBio'></img>
-                    <span className='perBio'> @haeejoon1234</span>
-                  </div>
-
-                  <div className='oddBio'>
-                    <img src={kakao} className='imgBio'></img>
-                    <span className='perBio'> imhaejoon </span>
-                  </div>
-
-                </div> 
-                {/* bioInfo */}
-              </div> 
-              {/* award */}
-            </div>
-            {/* probio */}
-        </div>
-        {/* probox */}
+         <Header></Header>
+        
         <div className='portPerson'>
           <div className='portName'> 배채희 </div>
           <div className='portGrade'> DGSW 8th </div>
@@ -125,9 +54,10 @@ function App() {
             <img src={comment}></img>
             <hr></hr>
           </div>
+          </ div >
         </div>
     </div>
   );
 }
 
-export default App;
+export default Portfoliosubon;
