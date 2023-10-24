@@ -1,13 +1,10 @@
-
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/img/gayoe.jpeg";
 import Post2 from "../../Assets/img/postimg.jpeg";
 import Post3 from "../../Assets/img/newjeans.jpeg";
 
+
 export default function Start(){
-
-    
-
 
     return( 
     <div className="content">
