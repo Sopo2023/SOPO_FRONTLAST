@@ -1,11 +1,7 @@
 
 .content{
   width: 100vw;
-  height: calc(20vh - 200px);
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center;
-  position: absolute;
+  height: 100vh;
 }
 .footer{
   position: absolute;
@@ -80,13 +76,11 @@
     color: #000;
   }
   .mainCard::-webkit-scrollbar{
-    display: none;
+    
   }
   .mainCard{
-    
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
     width: 100vw;
     height: 291px;
     background-color: #F5F5F6;

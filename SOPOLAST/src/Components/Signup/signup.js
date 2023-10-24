@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LOGO from "../../Assets/image/LOGO.png"
 // import { useDispatch } from "react-redux";
 import "./signup.css";
 
@@ -26,7 +27,7 @@ function LoginComponent() {
   return (
     <div className="App">
       <div className="greenbox">
-        {/* 초록색 박스 스타일을 여기에 적용하세요 */}
+      <img src={LOGO}></img>
       </div>
       <div className="box1">
         <p>Sign up</p>

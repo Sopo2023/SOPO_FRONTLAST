@@ -1,3 +1,4 @@
+
 import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/img/gayoe.jpeg";
 import Post2 from "../../Assets/img/postimg.jpeg";
@@ -5,6 +6,8 @@ import Post3 from "../../Assets/img/newjeans.jpeg";
 
 
 export default function Start(){
+
+
 
     return( 
     <div className="content">
@@ -66,7 +69,7 @@ export default function Start(){
              </div>
              <div className="Write">
                  <p className="p1"><Link to="/myportfolio" className='link_side'>내 포트폴리오</Link></p>
-                 <p className="p2"><Link to="/main/sidewrite" className='link_side'>글쓰기</Link></p>
+                 <p className="p2"><Link to="/sidewrite" className='link_side'>글쓰기</Link></p>
              </div>
              <div className='News'>
                 <p className='writ_name'>내 소식</p>
@@ -126,10 +129,6 @@ export default function Start(){
             <input id='leftbutton' type='button' value="1"></input>
             <input type='button' value="2"></input>
         </form> */}
-        <br></br>
-        <footer className='footer'>
-            
-        </footer>
     </div>
     
     )

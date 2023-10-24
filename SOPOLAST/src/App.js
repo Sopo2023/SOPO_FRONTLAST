@@ -19,7 +19,7 @@ function App() {
           <Route path='/main' element={<Main />} />
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/Mentor-Mentee' element={<Updown />}/>
-          <Route path='sidewrite' element={<Write />} />
+          <Route path='/sidewrite' element={<Write />} />
           <Route path='/Signuppage' element={<Signup />}/>
           <Route path='/Mypage' element={<Mypage/>}/>
           <Route path='/Competition' element={<Competition/>}/>
