@@ -39,7 +39,7 @@ function LoginComponent() {
         password: password,
       };
 
-      axios.post(SERVERURL, userData, {
+      await axios.post("/createUser", userData, {
         withCredentials: true, // CORS 요청을 보낼 때 자격 증명 정보를 포함
         headers: {
           "Content-Type": "application/json",
