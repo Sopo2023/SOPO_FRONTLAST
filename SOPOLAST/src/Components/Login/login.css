@@ -4,10 +4,9 @@
 .App {
   display: flex;
 }
-.greenbox {
-  background-color: #1a9a18;
-  width: 65vw;
-  height: 100vh;
+.greenbox > img {
+  width: 600px;
+  height: 100%;
   float: left;
   box-sizing: border-box;
   padding: 0;
