@@ -9,7 +9,10 @@ import kakao from "../../Assets/image/kakao.png"
 export default function Side(){
     return(
         <div className="side">
-<div className='proBox_1'>
+        <div className='proBox_2'>
+          <div className='proBox_1'></div>
+        </div>
+        <div className="boxContents">
           <div className='proName'>
             <span>
               이해준
@@ -59,8 +62,8 @@ export default function Side(){
               </div> 
               {/* award */}
             </div>
-            {/* probio */}
         </div>
+            {/* probio */}
         {/* probox */}
         </div>
     )
