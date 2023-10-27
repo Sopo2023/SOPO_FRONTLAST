@@ -13,7 +13,7 @@ import "./updown.css"
 export default function Start(){
   return( 
   <div className="content">
-        <Head />
+        <Head/>
          <Sidename />
         
         <div className="search1">
