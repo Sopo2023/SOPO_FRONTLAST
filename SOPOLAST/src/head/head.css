@@ -46,6 +46,8 @@
   }
   .link.active {
     color: #1A9A18 !important;
+    text-decoration: underline !important;
+    text-underline-offset:32px !important;
 }
 
 
