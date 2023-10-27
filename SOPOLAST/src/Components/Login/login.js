@@ -6,8 +6,7 @@ import LOGO from "../../Assets/image/LOGO.png";
 import axios from "axios";
 
 function LoginComponent() {
-  // id = document.querySelector(".id-Email");
-  // const dispatch = useDispatch();
+
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,8 +19,7 @@ function LoginComponent() {
 
   const LOginFunc = (e) => {
     e.preventDefault();
-    // const formData = new FormData();
-    // formData.append("email")
+ 
   };
 
   return (

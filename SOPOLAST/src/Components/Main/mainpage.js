@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/image/1.png";
 import Post2 from "../../Assets/img/postimg.jpeg";
 import Post3 from "../../Assets/img/newjeans.jpeg";
-
+import Head from '../../head/head';
 
 export default function Start(){
 
@@ -11,18 +11,7 @@ export default function Start(){
 
     return( 
     <div className="content">
-         <header className="header" >
-             <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>
-             <nav className="nav">
-                 <ul>
-                    <li><Link to="/main" className="link">홈</Link></li>
-                     <li><Link to="/Mentor-Mentee" className="link">선배가 후배에게</Link></li>
-                     <li><Link to="/portfolio" className="link">포트폴리오</Link></li>
-                     <li><Link to="/Competition" className="link">대회</Link></li>
-                     <li><Link to="/mypage" className="link">내정보</Link></li>
-                 </ul>
-             </nav>
-         </header>
+         <Head />
          <main className="mainCard">
             <div className="card1">
                 <p className='card_p'><Link to="/card1" className='link_card'>배채희</Link></p>

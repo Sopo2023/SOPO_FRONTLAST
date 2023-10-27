@@ -1,29 +1,20 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import cnsLogo from "../../Assets/image/cnsLogo.png"
 import b1nd from "../../Assets/image/b1nd.png"
 import Sidename from "../Sidebar/side"
 import "./protfolio.css"
+import Head from '../../head/head';
 // import selectLIne from "./image/selectLIne.png"
 
 // import tri from "./image/tri.png"
 // import tirang from "./image/tirang.png"
 
 export default function Portfolio() {
+  const navigate = useNavigate(); 
   return (
     <div className="portfolio">
       <div className="content">
-      <header className="header">
-             <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>
-             <nav className="nav">
-                 <ul>
-                    <li><Link to="/main" className="link">홈</Link></li>
-                     <li><Link to="/Mentor-Mentee" className="link">선배가 후배에게</Link></li>
-                     <li><Link to="/portfolio" className="link">포트폴리오</Link></li>
-                     <li><Link to="/Competition" className="link">대회</Link></li>
-                     <li><Link to="/mypage" className="link">내정보</Link></li>
-                 </ul>
-             </nav>
-         </header> 
+      <Head />
         </div>
         
         <div className='searchBox'>
@@ -53,8 +44,8 @@ export default function Portfolio() {
         </div>
         <Sidename/>
       <div className='mo'>
-        <div className='namecardBox'>
-          <div className='nameName'> <Link to="/Portfoliosub">배채희 </Link></div>
+        <div className='namecardBox' onClick={()=>{navigate("/Portfoliosub")}} >
+          <div className='nameName'>배채희</div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - chaeeehui@gmail.com </div>
           <img src={cnsLogo} className='cnsLogo'></img>

@@ -16,18 +16,16 @@
   height: 50%;
   
 } */
-.SOPO{
-  text-decoration: none; /* 밑줄 제거 */
+/* .SOPO{
+  text-decoration: none; 
     color: #1A9A18; 
     margin: 0 40px 0 20px;
-}
+} */
 .start{
     width: 100%;
     height: 100%;
   }
-  .content .header a:hover{ /* 커서 설정*/
-    cursor: pointer;
-  }
+/*   
   
   .header {
     position:sticky;
@@ -56,17 +54,18 @@
     display: inline-block;
     margin-right: 50px;
     list-style-type: none;
-    justify-content: space-between; /* li 요소에 추가 */
-    display: flex; /* li 요소에 추가 */
+    justify-content: space-between;  li 요소에 추가 
+    display: flex;  li 요소에 추가 
   }
   
   .link {
-    text-decoration: none; /* 밑줄 제거 */
-    color: #8C8C8C; /* 기본 회색으로 설정 */
+    text-decoration: none;  밑줄 제거
+    color: #8C8C8C; 기본 회색으로 설정 
+    cursor: pointer;
   }
   .link:hover {
     color: #1A9A18;
-  }
+  } */
   .link_card{
     text-decoration: none;
     color: #000;
