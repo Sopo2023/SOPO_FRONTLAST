@@ -1,12 +1,13 @@
 import yogiyo from "../../Assets/image/1.png"
 import comment from "../../Assets/image/comment.png"
-import Header from "../../head/head"
+import Head from "../../head/head";
+import "./portfolioSub.css"
 
 function Portfoliosubon() {
   return (
     <div className="App">
       <div className="content">
-         <Header></Header>
+         <Head/>
         
         <div className='portPerson'>
           <div className='portName'> 배채희 </div>

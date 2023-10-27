@@ -226,6 +226,9 @@
     height: 1000px;
     
   }
+  .mo>.namecardBox:hover{
+    cursor: pointer;
+  }
    .mo>.namecardBox{
     width: 840px;
     height: 130px;
