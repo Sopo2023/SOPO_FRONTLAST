@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import Sidname from "../Sidebar/side"
 import Head from '../../head/head';
+import "./Competition.css"
 
-function App() {
+function Competition() {
   return (
-    <div className="App">
+    <div className="Competition">
       <div className="content">
         <Head />
         </div>
@@ -68,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default Competition;
