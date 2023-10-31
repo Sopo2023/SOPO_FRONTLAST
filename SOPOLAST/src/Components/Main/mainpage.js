@@ -52,22 +52,24 @@ export default function Start(){
             </div>
          </main>
     <div className='sideName-mom'>
-         <div className="sideName">
-             <div className="CHname">
-                 <Link to="/mypage" className='sidenameColor' >이해준</Link>
-             </div>
-             <div className="Write">
-                 <p className="p1"><Link to="/myportfolio" className='link_side'>내 포트폴리오</Link></p>
-                 <p className="p2"><Link to="/sidewrite" className='link_side'>글쓰기</Link></p>
-             </div>
-             <div className='News'>
-                <p className='writ_name'>내 소식</p>
-                <div className='write_detail'>
-                <p className='writ'><strong>전우진</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
+        <div className='sideNameFlex'>
+            <div className="sideName">
+                <div className="CHname">
+                    <Link to="/mypage" className='sidenameColor' >이해준</Link>
                 </div>
-                
-             </div>
-         </div>
+                <div className="Write">
+                    <p className="p1"><Link to="/myportfolio" className='link_side'>내 포트폴리오</Link></p>
+                    <p className="p2"><Link to="/sidewrite" className='link_side'>글쓰기</Link></p>
+                </div>
+                <div className='News'>
+                    <p className='writ_name'>내 소식</p>
+                    <div className='write_detail'>
+                    <p className='writ'><strong>전우진</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
         <div className="post">
             <div className="post-write">
