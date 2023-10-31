@@ -29,7 +29,7 @@ export default function Mypage() {
           <Link to="/mypage/mail" className="link1">
             메일:
           </Link>
-          lerb5253@dgsw.hs.kr
+          <a href="mailto:lerb5253@dgsw.hs.kr"> 이해준님께 메일쓰기 </a>
         </p>
         <p>
           <Link to="/mypage/number" className="link1">
