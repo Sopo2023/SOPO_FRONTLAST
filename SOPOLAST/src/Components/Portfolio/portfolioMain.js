@@ -4,10 +4,6 @@ import b1nd from "../../Assets/image/b1nd.png"
 import Sidename from "../Sidebar/side"
 import "./protfolio.css"
 import Head from '../../head/head';
-// import selectLIne from "./image/selectLIne.png"
-
-// import tri from "./image/tri.png"
-// import tirang from "./image/tirang.png"
 
 export default function Portfolio() {
   const navigate = useNavigate(); 
