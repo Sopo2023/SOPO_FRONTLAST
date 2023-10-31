@@ -14,12 +14,14 @@ export default function Side(){
         </div>
         <div className="boxContents">
           <div className='proName'>
-            <span>
+            <div className="nameSide">
               이해준
-            </span>
-            <div className='proHr'>
-              
             </div>
+            {/* <div className='proHr'>
+              
+            </div> */}
+
+            <hr className='nameHr'/>
             <div className='proBio'>
               <span className='firstBio'>안녕하세요.<br />프론트엔드 개발자 이해준입니다.</span>
               <div className='secondBio'> 매일 성장하는 개발자 이해준입니다.</div>

@@ -7,7 +7,22 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
-  .proBox_2{
+.proName{
+  margin-top: 100px;
+  margin-left: 55px;
+}
+
+.nameSide{
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.nameHr{
+  width: 319px;
+}
+
+
+.proBox_2{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -27,28 +42,19 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal; 
-
-    height: 90vh;
-    width: 55vh;
-  
-    overflow: hidden;
   }
   
 .boxContents > .proName{
-    display: flex;
-
     width: 50vh;
     height: 15vh;
-    justify-content: flex-end;
-    align-items: flex-end;
 
     position: absolute;
   }
 
   .proHr{
     position: absolute;
-    display: flex;
-
-    justify-content: flex-end;
-    text-align: flex-end;
   }
+
+.proBio{
+  margin-left: 30px;
+}
