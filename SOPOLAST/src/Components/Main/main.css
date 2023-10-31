@@ -11,61 +11,10 @@
   bottom : 0;
 }
 
-/* .content{
-  width: 50%;
-  height: 50%;
-  
-} */
-/* .SOPO{
-  text-decoration: none; 
-    color: #1A9A18; 
-    margin: 0 40px 0 20px;
-} */
 .start{
     width: 100%;
     height: 100%;
   }
-/*   
-  
-  .header {
-    position:sticky;
-    top: 0;
-    z-index: 3;
-    background-color: #ffffff;
-    color: #1A9A18;
-    width: 320%;
-    height: 80px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  ul {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .content .nav ul li {
-    text-decoration-line: none;
-    font-size: 23px;
-    font-weight: 800;
-    color: #8C8C8C;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 50px;
-    list-style-type: none;
-    justify-content: space-between;  li 요소에 추가 
-    display: flex;  li 요소에 추가 
-  }
-  
-  .link {
-    text-decoration: none;  밑줄 제거
-    color: #8C8C8C; 기본 회색으로 설정 
-    cursor: pointer;
-  }
-  .link:hover {
-    color: #1A9A18;
-  } */
   .link_card{
     text-decoration: none;
     color: #000;
@@ -74,9 +23,9 @@
     text-decoration: none;
     color: #000;
   }
-  .mainCard::-webkit-scrollbar{
+  /* .mainCard::-webkit-scrollbar{
     
-  }
+  } */
   .mainCard{
     overflow-x: scroll;
     overflow-y: hidden;
