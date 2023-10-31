@@ -61,13 +61,14 @@
   }
 
   .post-written {
+    position: relative;
     border-bottom: 1px solid #888;
     padding: 10px;
     margin-bottom: 20px;
-    margin-left: 400px;
+    margin-left: 430px;
     margin-top: 10px;
     background-color: #fff;
-    width: 1200px;
+    width: 1000px;
     height: 250px;
     z-index: 1;
   }
@@ -88,19 +89,27 @@
   
   .post-written .date {
     color: #888;
-    white-space: pre-line;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   
-  .post-written .img {
-    margin-left: 800px;
-    margin-right: 0px;
-  }
+ 
   .post_img{
-    width: 16.5vw;
-    height: 19vh;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 50%; 
+    right: 50px; 
+    transform: translate(0, -50%); 
     }
   .post-container{
     position: relative;
     top: 110px;
+  }
+  .post_border{
+    width: 650px;
+    height: 260px;
+    
   }
  
