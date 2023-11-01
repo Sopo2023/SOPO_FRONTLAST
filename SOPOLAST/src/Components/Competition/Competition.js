@@ -6,9 +6,7 @@ import "./Competition.css"
 function Competition() {
   return (
     <div className="Competition">
-      <div className="content">
         <Head />
-        </div>
         <Sidname />
         <div className='searchBox1'>
         <div className="search_1" >
@@ -21,7 +19,7 @@ function Competition() {
               <option>8기 </option>
               <option>7기 </option>
               <option>6기 </option>
-            </select>
+          </select>
             <div className='gradegreen'> | </div>
             <div className='majorSelect'>
               <div className='frontEnd'> 프론트엔드 </div>
@@ -64,8 +62,9 @@ function Competition() {
             <div className='gatherGradeName'> DGSW 8th 김호준 </div>
             <div className='gatherMail'> Mail - gaemi@gmail.com </div>
         </div>
-        </div>
+      </div>
     </div>
+  
   );
 }
 

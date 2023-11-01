@@ -168,9 +168,9 @@
   .gradeSelet{
     position: absolute;
     display: inline-block;
-  
+    width: 80px;
     margin-top: 20px;
-    
+    outline: none;
     color: #000;
     font-family: Inter;
     font-size: 30px;
@@ -179,7 +179,16 @@
     line-height: normal;
 
     border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../../Assets/img/arrow.png") no-repeat right center;
+    background-position: calc(100% - 5px) center;
+    background-size: 20px 20px; 
   }
+  .gradeSelet::-ms-expand {
+    display: none;
+}
   
   .gradegreen{
     color: green;

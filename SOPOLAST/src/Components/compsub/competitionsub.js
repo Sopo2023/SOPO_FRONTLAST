@@ -1,6 +1,7 @@
 import './cometitionsub.css';
 import Side from '../Sidebar/side';
 import { Link } from 'react-router-dom';
+import "./cometitionsub.css"
 function App() {
   return (
     <div className="App">

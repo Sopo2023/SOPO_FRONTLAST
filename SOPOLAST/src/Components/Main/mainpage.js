@@ -4,6 +4,7 @@ import Post1 from "../../Assets/image/1.png";
 import Post2 from "../../Assets/img/postimg.jpeg";
 import Post3 from "../../Assets/img/newjeans.jpeg";
 import Head from '../../head/head';
+import "./main.css"
 
 export default function Start(){
 
