@@ -5,7 +5,8 @@ import "./Competition.css"
 
 function Competition() {
   return (
-    <div className="Competition">
+    <div className="main">
+      <div className='content'>
         <Head />
         <Sidname />
         <div className='searchBox1'>
@@ -62,6 +63,7 @@ function Competition() {
             <div className='gatherGradeName'> DGSW 8th 김호준 </div>
             <div className='gatherMail'> Mail - gaemi@gmail.com </div>
         </div>
+      </div>
       </div>
     </div>
   

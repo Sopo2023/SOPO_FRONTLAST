@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import "./cometitionsub.css"
 function App() {
   return (
-    <div className="App">
+    <div className="main">
       <div className="content">
       <header className="header">
              <h1><Link to="/main" className='SOPO' >SOPO</Link></h1>

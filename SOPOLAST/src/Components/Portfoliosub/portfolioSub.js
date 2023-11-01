@@ -6,7 +6,7 @@ import "./portfolioSub.css"
 
 function Portfoliosubon() {
   return (
-    <div className="App">
+    <div className="main">
       <div className="content">
          <Head/>
          <Sidebar/>

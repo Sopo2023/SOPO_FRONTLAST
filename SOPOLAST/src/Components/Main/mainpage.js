@@ -11,6 +11,7 @@ export default function Start(){
 
 
     return( 
+    <div className='main'>
     <div className="content">
          <Head />
          <main className="mainCard">
@@ -19,7 +20,7 @@ export default function Start(){
                 <p className='card_p'>Front-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>CNS</p>
-                {/* <p><img className='card_img' src={require('../img/image 40.png')} alt="이미지"></img></p> */}
+                
             </div>
             <div className="card2">
                 <p className='card_p'><Link to="/card2" className='link_card'>박규민</Link></p>
@@ -52,8 +53,7 @@ export default function Start(){
                 <p className='card_p'>QI</p>
             </div>
          </main>
-    <div className='sideName-mom'>
-        <div className='sideNameFlex'>
+    
             <div className="sideName">
                 <div className="CHname">
                     <Link to="/mypage" className='sidenameColor' >이해준</Link>
@@ -70,8 +70,7 @@ export default function Start(){
                     
                 </div>
             </div>
-        </div>
-    </div>
+    
         <div className="post">
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -122,6 +121,6 @@ export default function Start(){
             <input type='button' value="2"></input>
         </form> */}
     </div>
-    
+    </div>
     )
  }

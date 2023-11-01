@@ -7,11 +7,11 @@ import TEST2 from "../../Assets/img/park.JPG"
 import TEST3 from "../../Assets/img/newjeans.jpeg"
 import TEST4 from "../../Assets/img/gayoe.jpeg"
 import Head from '../../head/head';
-
 import "./updown.css"
 
 export default function Start(){
   return( 
+<div className='main'>
   <div className="content">
         <Head/>
          <Sidename />
@@ -21,7 +21,7 @@ export default function Start(){
           <input type="button" className="search_icon"></input>
           <div className="searcg_icon_line"></div>
        </div>
-       
+
        <div className="post-container">
             <div className="post-written">
                 <div className='post_border'>
@@ -70,6 +70,7 @@ export default function Start(){
                </div>
             </div>
        </div>
+  </div>
   </div>
   )
 }

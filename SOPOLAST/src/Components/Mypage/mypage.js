@@ -4,7 +4,8 @@ import Head from "../../head/head";
 
 export default function Mypage() {
   return (
-    <div className="Mypage">
+    <div className="main">
+      <div className="content">
       <Head />
       <div className="top">
         <p className="top1">이해준</p>
@@ -74,6 +75,6 @@ export default function Mypage() {
         </div>
       </div>
       </div>
-    // </div>
+    </div>
   );
 }

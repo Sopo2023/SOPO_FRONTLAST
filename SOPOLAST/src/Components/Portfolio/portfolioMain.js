@@ -8,7 +8,8 @@ import Head from '../../head/head';
 export default function Portfolio() {
   const navigate = useNavigate(); 
   return (
-    <div className="portfolio">
+    <div className='main'>
+    
       <div className="content">
       <Head />
         </div>

@@ -1,3 +1,11 @@
+.content{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 
 #write_submit{
     cursor: pointer;
@@ -8,6 +16,7 @@
     width: 148px;
     height: 48px;
     flex-shrink: 0;
+    top: 100px;
     left: 1200px;
     color: #FFF;
     font-family: Inter;
@@ -50,4 +59,5 @@
     left: 600px;
     background-color: lightblue;
     font-size: 30px;
+
 }
