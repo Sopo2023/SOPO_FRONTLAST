@@ -10,7 +10,9 @@ export default function Mypage() {
         <p className="top1">이해준</p>
         <p className="top2">DGSW 8th</p>
         <br></br>
-        <button className="fixbutton">프로필 수정하기</button>
+        <Link to="./mypageadjustment.js" className="fixbutton">
+          프로필 수정하기
+        </Link>
       </div>
       <div className="Readme">
         <p className="head">Frontend-Dev</p>
