@@ -1,240 +1,137 @@
-  .proBox{
-    position: relative;
+.allPort{
+  width: calc(100vw - 400px);
+  position: absolute;
+  right: 0;
+}
+
+
+.namePort{
+
+  color: #000;
+
+  font-family: Inter; 
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.gradePort{
+  margin-top: 7px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.bioPort{
+  margin-top: 23px;
+
+  color: #8C8C8C;
+
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.setBio{
+  margin-top: 16px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.skillsBio{
+  margin-top: 9px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.aboutSikll{
+  margin-top: 2px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.awardBio{
+  margin-top: 21px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.aboutAward{
+  margin-top: 2px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.aboutMe{
+  margin-top: 21px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.morePort{
+  margin-top: 7px;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.herfPort{
+  margin-top: 2px;
   
-    display: inline-block;
-  
-    width: 320px;
-    height: 640px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #F5F5F6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-left: 40px;
-    margin-top: 40px;
-  
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal; 
-  
-    overflow: hidden;
-  }
-  
-  .proBox > .proName{
-    position: absolute;
-  
-    width: 70.318px;
-    height: 28.444px;
-    flex-shrink: 0; 
-    margin: 46.46px 0 0 28.54px;
-  }
-  
-  .proHr{
-    
-    border: #A7A7A7 solid 0.9px;
-    width: 320px;;
-  
-    margin-top: 30.34px;
-    margin-left: -28.4px;
-  }
-  
-  .proBio{
-    margin-top: 30px;
-  
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  
-  .proBio > .firstBio{
-    font-size: 18px;
-    font-weight: 800;
-  }
-  
-  .secondBio{
-    margin-top: 10px;
-  }
-  
-  .skillTitle{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  
-  .awardTitle{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  
-  .bioInfo{
-    margin-top: 20px;
-  }
-  
-  .bioInfo > .oddBio{
-    margin-top: 10px;
-  }
-  
-  .imgBio{
-    width: 20px;
-    height: 20px; 
-  
-    vertical-align: middle;
-  }
-  
-  .perBio{
-    font-weight: 600;
-    font-size: 15px;
-  
-    vertical-align: middle;
-  
-    margin-left: 10px;
-  }
-  
-  .portPerson{
-    display: inline-block;
-    position: absolute;
-    margin-top: 70px;
-    margin-left: 38px;
-  }
-  
-  .portPerson > .portName{
-    color: #000;
-    font-family: Inter;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  }
-  
-  .portPerson > .portGrade{
-    color: #000;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  
-  .portPerson > .portMajor{
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  
-  .portPerson > .readMe{
-    width: 800px;
-    height: 100px;
-    flex-shrink: 0;
-  
-    border-radius: 10px;
-    background: #F5F5F6;
-  }
-  
-  .readMe > .readMeText{
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  
-    padding: 40px 0 40px;
-    text-align: center;
-  }
-  
-  .readMeAboutMe{
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  }
-  
-  .readMePort{
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  
-    margin-top: 20px;
-  }
-  .readMeTitle{
-    color: #1A9A18;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  
-    margin-top: 20px;
-  }
-  
-  .readMeUser{
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  
-    margin-top: 25px;
-  
-    display: inline-block;
-  }
-  
-  .readMeNotice{
-    color: #8C8C8C;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  
-    margin-top: 5px;
-  }
-  
-  .readMeAbout{
-    color: #8C8C8C;
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  
-    width: 595px; 
-    display: inline-block;
-    
-    margin-top: 10px;
-  }
-  
-  .noticePhoto{
-    width: 160px;
-    height: 160px;
-  
-    position: absolute;
-  
-    margin-left: 580px;
-    margin-top: 25px;
-  }
-  
-  .readMeDate{
-    color: #8C8C8C;
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-  
-    margin-top: 5px;
-  }
-  
+  color: #1A9A18;
+
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
