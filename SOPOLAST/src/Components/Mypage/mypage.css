@@ -52,7 +52,7 @@ ul {
   color: #1a9a18;
 }
 .top {
-  margin: 0;
+  position: absolute;
   align-items: flex-start;
 }
 .top1 {

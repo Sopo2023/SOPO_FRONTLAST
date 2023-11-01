@@ -9,10 +9,9 @@ export default function Portfolio() {
   const navigate = useNavigate(); 
   return (
     <div className='main'>
-    
       <div className="content">
       <Head />
-        </div>
+        
         
         <div className='searchBox'>
         <div className="search">
@@ -75,6 +74,7 @@ export default function Portfolio() {
           <div className='nameMail'> Mail - yejin@gmail.com </div>
           <img src={b1nd} className='b1ndLogo'></img>
         </div>
+      </div>
       </div>
       </div>
   );
