@@ -15,6 +15,19 @@ function LoginComponent() {
   const [repassword, setRepassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
+  const []
+  const [isEmailEntered, setIsEmailEntered] = useState(false);
+  const [isCertifying, setIsCertifying] = useState(false);
+
+  const handleEmailChange = (e) => {
+    const emailValue = e.target.value;
+    setEmail(emailValue);
+    setIsEmailEntered(!!emailValue); // Update isEmailEntered based on whether emailValue is not empty
+  };
+
+  const handleEmailCertify = () => {
+    setIsCertifying(true);
+  };
 
   const LOginFunc = async (e) => {
     e.preventDefault();
@@ -127,11 +140,20 @@ function LoginComponent() {
               type="text"
               placeholder="E-Mail"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
             ></input>
-            <button onSubmit={""} className="Certified">
+            <button
+              onClick={() => handleEmailCertify()}
+              className={`Certified ${isEmailEntered ? "entered" : ""}`}
+            >
               인증하기
             </button>
+            {isCertifying && (
+              <input
+                className="Name"
+                placeholder="인증코드 네자리를 입력해주세요."
+              ></input>
+            )}
             <input
               className="password"
               name="password"
