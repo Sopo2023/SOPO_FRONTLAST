@@ -21,7 +21,6 @@ export default function Start() {
           <input type="button" className="search_icon"></input>
           <div className="searcg_icon_line"></div>
         </div>
-
         <div className="post-container">
           <div className="post-written">
             <div className="post_border">
