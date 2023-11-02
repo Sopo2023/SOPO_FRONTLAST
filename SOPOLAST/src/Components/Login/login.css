@@ -1,8 +1,11 @@
 * {
   margin: 0;
 }
-.App {
-  display: flex;
+
+.signup_main{
+  width: 1600px;
+  height: 835px;
+  position: absolute;
 }
 .greenbox > img {
   width: 600px;
@@ -12,21 +15,22 @@
   padding: 0;
   margin: 0;
 }
-.box1 {
+.box2 {
   margin: 0 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  justify-content: center;
-  height: 100vh;
+  width: 500px;
+  height: 800px;
+  position: absolute;
+  top: 300px;
+  right: 50px;
 }
-.box1 p {
+.box2 p {
   font-size: 40px;
+  margin-left: 10px;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.box1 button {
+.box2 button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -37,8 +41,9 @@
   width: 400px;
   font-size: 20px;
   border-radius: 5px;
+  display: block;
 }
-.box1 input {
+.box2 input {
   border: none;
   border-bottom: 2px solid #898989;
   padding: 10px;
@@ -49,7 +54,7 @@
   font-size: 16px;
 }
 
-.box1 a {
+.box2 a {
   text-decoration: none;
   color: #47a1f3;
 }
@@ -59,4 +64,7 @@
 }
 form {
   display: contents;
+}
+.LINK{
+  margin-left: 10px;
 }

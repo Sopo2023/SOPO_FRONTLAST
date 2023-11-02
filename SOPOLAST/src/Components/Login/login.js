@@ -183,11 +183,12 @@ const LoginComponent = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App1">
+      <div className="signup_main">
       <div className="greenbox">
         <img src={LOGO}></img>
       </div>
-      <div className="box1">
+      <div className="box2">
         <p>Log in</p>
         <form onSubmit={LOginFunc}>
           <input
@@ -209,8 +210,11 @@ const LoginComponent = () => {
             Log in
           </button>
           {msg}
-          <Link to="/Signuppage">sign up</Link>
+          <Link to="/Signuppage"
+          className="LINK"
+          >sign up</Link>
         </form>
+      </div>
       </div>
     </div>
   );
