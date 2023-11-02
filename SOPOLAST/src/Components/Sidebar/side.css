@@ -20,13 +20,19 @@
 
 
 .proBox_2{
-    display: flex;
+    /* display: flex;
     justify-content: flex-end;
     align-items: center;
     position: absolute;
 
     height: 90vh;
-    width: 45vh;
+    width: 45vh; */
+
+    margin-top: 100px;
+    margin-left: 40px;
+
+    position: absolute;
+
   }
 
   .boxContents{
