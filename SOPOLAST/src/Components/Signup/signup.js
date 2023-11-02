@@ -15,7 +15,7 @@ function LoginComponent() {
   const [repassword, setRepassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
-  const []
+  //const []
   const [isEmailEntered, setIsEmailEntered] = useState(false);
   const [isCertifying, setIsCertifying] = useState(false);
 
