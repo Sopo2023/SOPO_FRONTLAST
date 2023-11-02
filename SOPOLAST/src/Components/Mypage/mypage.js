@@ -22,6 +22,8 @@ export default function Mypage() {
         </div>
       </div>
       <div className="social">
+        <p className="head2">About Me</p>
+        <div className="socialp">
         <p>
           <Link to="https://github.com/ftery0" className="link1">
             깃:
@@ -52,6 +54,7 @@ export default function Mypage() {
           </Link>
           이해준
         </p>
+        </div>
       </div>
       {/* <div className="post_mainnn"> */}
       <div className="post_1">
