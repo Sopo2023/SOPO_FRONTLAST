@@ -51,9 +51,13 @@ ul {
 .link:hover {
   color: #1a9a18;
 }
+.Readme {
+  margin-top: 200px;
+}
 .top {
   position: absolute;
   align-items: flex-start;
+  margin-top: 100px;
 }
 .top1 {
   font-size: 30px;
@@ -102,6 +106,9 @@ ul {
   font-size: 20px;
   font-weight: 800;
 }
+.socialp {
+  background-color: #F5F5F6;
+}
 .link1 {
   text-decoration: none; /* 밑줄 제거 */
   color: #8c8c8c;
@@ -140,6 +147,7 @@ ul {
   top: 440px;
   width: 60%;
   height: 800px;
+  margin-left: -40px;
   /* background-color: #dddddd; */
 }
 
