@@ -8,6 +8,7 @@ import Signup from "../src/Components/Signup/signup";
 import Mypage from "../src/Components/Mypage/mypage";
 import Competition from "../src/Components/Competition/Competition";
 import Portfoliosub from "../src/Components/Portfoliosub/portfolioSub";
+import Mypagesub from "../src/Components/Mypagesub/mypageadjustment"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Mypage" element={<Mypage />} />
           <Route path="/Competition" element={<Competition />} />
           <Route path="/Portfoliosub" element={<Portfoliosub />} />
+          <Route path="Mypagesub" element={<Mypagesub />} />
         </Routes>
       </div>
     </BrowserRouter>
