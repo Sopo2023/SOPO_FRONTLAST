@@ -7,7 +7,6 @@ import TEST2 from "../../Assets/img/park.JPG";
 import TEST3 from "../../Assets/img/newjeans.jpeg";
 import TEST4 from "../../Assets/img/gayoe.jpeg";
 import Head from "../../head/head";
-import "./updown.css";
 
 export default function Start() {
   const navigate = useNavigate(); 
