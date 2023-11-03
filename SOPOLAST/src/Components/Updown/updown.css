@@ -68,8 +68,9 @@
     background-color: #fff;
     width: 1000px;
     height: 180px;
-    /* Remove height property to allow content to expand and scroll */
+    cursor: pointer;
     z-index: 1;
+
   }
   
   .post-written .name {

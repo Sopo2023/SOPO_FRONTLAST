@@ -9,7 +9,10 @@ import TEST4 from "../../Assets/img/gayoe.jpeg";
 import Head from "../../head/head";
 
 export default function Start() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
+
+
   return (
     <div className="main">
       <div className="content">
@@ -22,8 +25,8 @@ export default function Start() {
           <div className="searcg_icon_line"></div>
         </div>
         <div className="post-container">
-          <div className="post-written">
-            <div className="postshow1" onClick={()=>{navigate("/Updownsub")}}>
+          <div className="post-written" onClick={()=>{navigate("/Updownsub")}}>
+            <div className="postshow1" >
             <div className="post_border">
               <span className="name">김가영</span>
               <br></br>
