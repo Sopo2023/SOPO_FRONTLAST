@@ -72,14 +72,23 @@ ul {
   display: inline-block;
 }
 .fixbutton {
-  width: 150px;
-  height: 30px;
+  position: absolute;
+  width: 200px;
+  height: 40px;
   border-radius: 10px;
   color: #868686;
   background-color: #f5f5f6;
   border: none;
   margin: 30px 19px 50px 60px;
+  margin-top: 7px;
 }
+
+.fixbuttonT {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
 .fixbutton:hover {
   /* 커서 설정*/
   cursor: pointer;
@@ -89,10 +98,19 @@ ul {
   font-weight: 600;
   margin: 0 0 0 60px;
 }
+
+.head2 {
+  font-size: 27px;
+}
+
+.Readme{
+  margin-top: 250px;
+}
+
 .body {
   display: flex;
-  width: 100vw;
-  height: 10vh;
+  width: 1370px;
+  height: 100px;
   background-color: #f5f5f6;
   border-radius: 10px;
   margin: 0 60px 0 60px;
@@ -101,22 +119,36 @@ ul {
   font-size: 25px;
   font-weight: 800;
 }
+
 .social {
   margin: 52px 0 0 60px;
   font-size: 20px;
   font-weight: 800;
 }
+
+.pT {
+  position: relative;
+  margin-left: 10px;
+}
+
 .socialp {
   background-color: #F5F5F6;
+  width: 1370px;
+  height: 120px;
+  border-radius: 10px;
+  position: absolute;
 }
+
 .link1 {
   text-decoration: none; /* 밑줄 제거 */
   color: #8c8c8c;
 }
+
 .link2{
   text-decoration: none; /* 밑줄 제거 */
   color: #000;
 }
+
 .post1 {
   position: relative;
   top: 30px;
@@ -125,29 +157,33 @@ ul {
   font-size: 25px;
   font-weight: 800;
   position: absolute;
-  
 }
+
 .post-write {
   margin: 0;
   position: relative;
   top: 70px;
 }
+
 .Zonecontrol {
   width: 55%;
   height: 100px;
 }
+
 .post_1::-webkit-scrollbar {
   display: none;
 }
+
 .post_1 {
   margin: 60px 0 0 10px;
   overflow-x: hidden;
   position: absolute;
   left: 50px;
   top: 440px;
-  width: 60%;
-  height: 800px;
+  width: 1430px;
+  height: 400px;
   margin-left: -40px;
+  margin-top: 120px;
   /* background-color: #dddddd; */
 }
 
@@ -169,6 +205,7 @@ ul {
   font-weight: 800;
   line-height: normal;
 }
+
 .post_1 > .post-write > .Zonecontrol > .title {
   display: block;
   position: relative;
@@ -180,6 +217,7 @@ ul {
   font-weight: 700;
   line-height: normal;
 }
+
 .post_1 > .post-write > .Zonecontrol > .detail {
   position: relative;
   top: 10px;
@@ -190,6 +228,7 @@ ul {
   font-weight: 500;
   line-height: normal;
 }
+
 .post_1 > .post-write > .Zonecontrol > .date {
   position: relative;
   display: block;
@@ -201,6 +240,7 @@ ul {
   font-weight: 500;
   line-height: normal;
 }
+
 .post_1 > .post-write > .img {
   position: relative;
   width: 100px;
