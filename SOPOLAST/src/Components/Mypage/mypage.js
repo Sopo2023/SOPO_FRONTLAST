@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import TEST from "../../Assets/img/postimg.jpeg"
 import Head from "../../head/head";
 
 export default function Mypage() {
+  const navigate = useNavigate(); 
   return (
     <div className="main">
       <div className="content">
@@ -11,9 +12,9 @@ export default function Mypage() {
         <p className="top1">이해준</p>
         <p className="top2">DGSW 8th</p>
         <br></br>
-        <Link to="./mypageadjustment.js" className="fixbutton">
+        <div className="fixbutton" onClick={()=>{navigate("/Mypagesub")}}>
           프로필 수정하기
-        </Link>
+        </div>
       </div>
       <div className="Readme">
         <p className="head">Frontend-Dev</p>
