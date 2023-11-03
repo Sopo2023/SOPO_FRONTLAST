@@ -68,12 +68,14 @@
     margin-left: 430px;
     background-color: #fff;
     width: 1000px;
+    height: 180px;
     /* Remove height property to allow content to expand and scroll */
     z-index: 1;
   }
   
   .post-written .name {
     font-weight: bold;
+    font-size: 20px;
     color: #333;
   }
   
@@ -99,7 +101,7 @@
     position: absolute;
     top: 50%; 
     right: 50px; 
-    transform: translate(0, -50%); 
+    transform: translate(0, -55%); 
     }
     .post-container {
       position: relative;
