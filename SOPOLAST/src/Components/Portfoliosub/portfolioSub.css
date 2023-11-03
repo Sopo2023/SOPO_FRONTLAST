@@ -1,7 +1,10 @@
 .allPort{
-  width: calc(100vw - 400px);
+  width: 700px;
+ 
   position: absolute;
-  right: 0;
+  left: 420px;
+
+  margin-top: 100px;
 }
 
 
@@ -134,4 +137,84 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.aboutPort{
+  width: 20px;
+  height: 20px;
+
+  /* margin-bottom: 1rem; */
+}
+
+.aboutText{
+  display: inline;
+
+  color: #000;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  text-decoration: none;
+
+  margin-left: 1rem;
+  /* margin-bottom: 0.5rem; */
+}
+
+.portMore{
+  margin-top: 2rem;
+}
+
+.moreText{
+  margin-top: 3rem;
+}
+
+.myStory{
+  color: #1A9A18;
+
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.plusImg{
+  width: 20px;
+  height: 20px;
+}
+
+.plusButton{
+  display: inline;
+  position: absolute;
+}
+
+.aboutTitle{
+  color: #000;
+
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-top: 38px;
+}
+
+.eachTitle{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.myCompi{
+  margin-top: 50px;
+}
+
+.hrGreen{
+  width: 700px;
+  border: #1A9A18 solid;
+  
+  margin-top: 10px;
 }
