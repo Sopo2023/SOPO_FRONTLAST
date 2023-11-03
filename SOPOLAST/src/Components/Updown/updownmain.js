@@ -1,5 +1,5 @@
 import "./updown.css";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import Sidename from "../Sidebar/side";
 import TEST0 from "../../Assets/img/postimg.jpeg";
 import TEST1 from "../../Assets/img/gayoe.jpeg";
@@ -7,9 +7,9 @@ import TEST2 from "../../Assets/img/park.JPG";
 import TEST3 from "../../Assets/img/newjeans.jpeg";
 import TEST4 from "../../Assets/img/gayoe.jpeg";
 import Head from "../../head/head";
-import "./updown.css";
 
 export default function Start() {
+  const navigate = useNavigate(); 
   return (
     <div className="main">
       <div className="content">
@@ -21,9 +21,9 @@ export default function Start() {
           <input type="button" className="search_icon"></input>
           <div className="searcg_icon_line"></div>
         </div>
-
         <div className="post-container">
           <div className="post-written">
+            <div className="postshow1" onClick={()=>{navigate("/Updownsub")}}>
             <div className="post_border">
               <span className="name">김가영</span>
               <br></br>
@@ -39,6 +39,7 @@ export default function Start() {
               <span className="img">
                 <img className="post_img" src={TEST4} alt="이미지"></img>
               </span>
+            </div>
             </div>
           </div>
           <div className="post-written">
