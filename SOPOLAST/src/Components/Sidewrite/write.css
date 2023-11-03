@@ -39,13 +39,15 @@
     position: absolute;
     outline: none;
     border: none;
-    width: 750px;
+    width: 740px;
     height: 100px;
     flex-shrink: 0;
     top: 150px;
     left: 600px;
-    background-color: beige;
+    border: 2px solid lightgray;
+    border-radius: 10px 10px 0 0;
     font-size: 30px;
+    padding-left: 10px;
 }
 .write_screen{
     resize: none;
@@ -53,12 +55,15 @@
     outline: none;
     border: none;
     vertical-align: top;
-    width: 750px;
-    height: 500px;
+    width: 740px;
+    height: 480px;
     flex-shrink: 0;
     top: 250px;
     left: 600px;
-    background-color: lightblue;
+    border: 2px solid lightgray;
+    border-radius: 0 0 10px 10px;
     font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
 
 }

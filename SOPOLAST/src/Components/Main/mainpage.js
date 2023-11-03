@@ -1,13 +1,25 @@
-
+import React, { useEffect,useState  } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/image/1.png";
 import Post2 from "../../Assets/img/postimg.jpeg";
 import Post3 from "../../Assets/img/newjeans.jpeg";
 import Head from '../../head/head';
+import axios from "axios";
 import "./main.css"
 
 export default function Start(){
+    const [posts, setPosts] = useState([]);
+    useEffect(()=>{
+        axios.get('#')
+        .then(response=>{
+            setPosts(response.data);
 
+        })
+        .catch((error)=>{
+            console.error('Error:', error);
+        })
+    })
+    
 
 
     return( 
