@@ -26,7 +26,7 @@ function App() {
           <Route path="/Mypage" element={<Mypage />} />
           <Route path="/Competition" element={<Competition />} />
           <Route path="/Portfoliosub" element={<Portfoliosub />} />
-          <Route path="Mypagesub" element={<Mypagesub />} />
+          <Route path="/Mypagesub" element={<Mypagesub />} />
         </Routes>
       </div>
     </BrowserRouter>
