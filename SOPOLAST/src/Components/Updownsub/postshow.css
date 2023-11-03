@@ -1,0 +1,55 @@
+  #MainTitle {
+    color: #1A9A18;
+  }
+
+  .post-written1 {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 430px;
+    margin-top: 7%;
+    background-color: #fff;
+    width: 1000px;
+    z-index: 1;
+  }
+  
+  .post-written1 .title1 {
+    font-size: 40px;
+    color: #000000;
+  }
+
+  .name1 {
+    position: absolute;
+    font-weight: bold;
+    color: #888;
+    margin-top: 1%;
+  }
+
+  .post_img1{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: -4%;
+    margin-right: 65%;
+    top: 50%; 
+    right: 50px; 
+    }
+
+  .detail1 {
+    color: #000000;
+    position: absolute;
+    margin-top: 34%;
+  }
+
+  .post_border1{
+    width: 650px;
+    height: 260px;
+  }
+ 
+  .minit {
+    font-size: 20px;
+  }
+
+  .minit2 {
+    font-size: 20px;
+  }
