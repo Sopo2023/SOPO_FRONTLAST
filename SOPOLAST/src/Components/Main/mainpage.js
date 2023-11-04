@@ -84,7 +84,7 @@ export default function Start() {
                     <p onClick={()=>{navigate("/mypage")}} className='sidenameColor' >이해준</p>
                 </div>
                 <div className="Write">
-                    <p className="p1"><Link to="/myportfolio" className='link_side'>내 포트폴리오</Link></p>
+                    <p className="p1"><Link to="/Mypage" className='link_side'>내 포트폴리오</Link></p>
                     <p className="p2"><Link to="/sidewrite" className='link_side'>글쓰기</Link></p>
                 </div>
                 <div className='News'>
