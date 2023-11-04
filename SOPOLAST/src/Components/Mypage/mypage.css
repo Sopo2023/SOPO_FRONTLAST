@@ -296,6 +296,17 @@ ul {
   top: 18px;
   left: 10px;
 }
+.writing1{
+  position: absolute;
+  left: 100px;
+  top: 130px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
 .horseman{
   position: absolute;
   top: 100px;

@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import Sidname from "../Sidebar/side"
 import Head from '../../head/head';
 import "./Competition.css"
+import { useNavigate } from 'react-router-dom';
 
 function Competition() {
+  const navigate=useNavigate();
   return (
     <div className="main">
       <div className='content'>
@@ -33,7 +35,7 @@ function Competition() {
               <div className='elseMajor'> 디자인 </div>
             </div>
           </div>
-          <div className='gatherBox'>
+          <div className='gatherBox' onClick={()=>{navigate("/CompetitionSub")}}>
             <div className='gatherTitle'> 8기 프론트엔드 헬뉴월 해커톤 <br></br> 같이 나갈 분 구해용~~ </div>
             <div className='gatherGradeName'> DGSW 8th 배채희 </div>
             <div className='gatherMail'> Mail - chaeeehui@gmail.com </div>

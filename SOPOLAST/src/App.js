@@ -10,7 +10,9 @@ import Competition from "../src/Components/Competition/Competition";
 import Portfoliosub from "../src/Components/Portfoliosub/portfolioSub";
 import Mypagesub from "../src/Components/Mypagesub/mypageadjustment";
 import Updownsub from "../src/Components/Updownsub/postshow";
+import CompetitionSub from "../src/Components/compsub/competitionsub";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           <Route path="/Portfoliosub" element={<Portfoliosub />} />
           <Route path="/Mypagesub" element={<Mypagesub />} />
           <Route path="/Updownsub" element={<Updownsub />} />
+          <Route path="/CompetitionSub" element={<CompetitionSub/>} />
         </Routes>
       </div>
     </BrowserRouter>
