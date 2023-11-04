@@ -1,32 +1,73 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import LOGO from "../../Assets/image/LOGO.png";
 import "./signup.css";
-import SERVERKEY from "../../Apis/auth/axios";
 import Swal from "sweetalert2";
 
 function LoginComponent() {
-  // const SERVERKEY ="/createUser"
-  const SERVERURL = "http://10.80.162.77:8080/createUser";
+  const SERVERURL = "http://10.80.161.148:8080";
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repassword, setRepassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
-  //const []
   const [isEmailEntered, setIsEmailEntered] = useState(false);
   const [isCertifying, setIsCertifying] = useState(false);
+  const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [isVerifying, setIsVerifying] = useState(false);
 
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
     setEmail(emailValue);
-    setIsEmailEntered(!!emailValue); // Update isEmailEntered based on whether emailValue is not empty
+    setIsEmailEntered(!!emailValue);
   };
 
-  const handleEmailCertify = () => {
+  const handleEmailCertify = async (e) => {
+    e.preventDefault();
     setIsCertifying(true);
+
+    if (!email) {
+      Swal.fire({
+        icon: "error",
+        title: "이메일을 입력해주세요.",
+      });
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        SERVERURL + "/sendEmailVerifyNumber",
+        {
+          email: email,
+        },
+        {
+          withCredentials: true,
+          headers: {
+            "Email-Verification": "true",
+          },
+        }
+      );
+
+      if (response.data.success) {
+        Swal.fire({
+          icon: "success",
+          title: "이메일이 성공적으로 보내졌습니다.",
+        });
+
+        setIsEmailVerified(true);
+      }
+    } catch (error) {
+      console.error("서버 통신 오류:", error);
+      Swal.fire({
+        icon: "error",
+        title: "인증이 안보내졌습니다",
+      });
+    } finally {
+      setIsVerifying(false);
+    }
   };
 
   const LOginFunc = async (e) => {
@@ -42,6 +83,7 @@ function LoginComponent() {
         toast.addEventListener("mouseleave", Swal.resumeTimer);
       },
     });
+
     if (name === "") {
       Toast.fire({
         icon: "warning",
@@ -49,8 +91,8 @@ function LoginComponent() {
       });
       return;
     }
-    // 이메일 형식 검사
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailPattern.test(email)) {
       Toast.fire({
         icon: "warning",
@@ -59,7 +101,6 @@ function LoginComponent() {
       return;
     }
 
-    // 이메일 도메인 검사
     if (!email.endsWith("@dgsw.hs.kr")) {
       Toast.fire({
         icon: "warning",
@@ -68,7 +109,6 @@ function LoginComponent() {
       return;
     }
 
-    // 비밀번호 확인
     if (password !== repassword) {
       Toast.fire({
         icon: "question",
@@ -77,7 +117,6 @@ function LoginComponent() {
       return;
     }
 
-    // 서버로 데이터 전송
     try {
       setLoading(true);
       const userData = {
@@ -86,7 +125,7 @@ function LoginComponent() {
         password: password,
       };
 
-      const response = await axios.post(SERVERKEY, userData, {
+      const response = await axios.post(SERVERURL + "/create/user", userData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +148,7 @@ function LoginComponent() {
         });
       }
     } catch (error) {
-      console.log(error); // 에러 메시지 콘솔에 출력
+      console.log(error);
       Toast.fire({
         icon: "error",
         title: "서버 통신 실패.",
@@ -125,7 +164,7 @@ function LoginComponent() {
         </div>
         <div className="box1">
           <p>Sign up</p>
-          <form onSubmit={LOginFunc}>
+          <form>
             <input
               className="Name"
               name="name"
@@ -143,17 +182,21 @@ function LoginComponent() {
               onChange={handleEmailChange}
             ></input>
             <button
-              onClick={() => handleEmailCertify()}
+              onClick={handleEmailCertify}
               className={`Certified ${isEmailEntered ? "entered" : ""}`}
             >
-              인증하기
+              {isVerifying ? "Verifying..." : "인증하기"}
             </button>
             {isCertifying && (
-              <input
-                maxLength={10}
-                className="Name"
-                placeholder="인증코드 네자리를 입력해주세요."
-              ></input>
+              <div className="Certificationbox">
+                {/*인증박스*/}
+                <input
+                  maxLength={10}
+                  className="Authentication"
+                  placeholder="인증코드 여섯자리를 입력해주세요."
+                ></input>
+                <button className="completed">확인</button>
+              </div>
             )}
             <input
               className="password"
@@ -170,8 +213,12 @@ function LoginComponent() {
               value={repassword}
               onChange={(e) => setRepassword(e.target.value)}
             ></input>
-
-            <button type="submit" className="button" disabled={loading}>
+            <button
+              type="button"
+              className="button"
+              onClick={LOginFunc}
+              disabled={loading || !isEmailVerified}
+            >
               {loading ? "Signing up..." : "Sign up"}
             </button>
             <p>{msg}</p>
