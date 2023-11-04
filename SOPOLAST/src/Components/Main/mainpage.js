@@ -7,7 +7,9 @@ import Head from '../../head/head';
 import axios from "axios";
 import "./main.css"
 
+
 export default function Start() {
+    const navigate=useNavigate()
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios.get('#')
@@ -39,39 +41,38 @@ export default function Start() {
     <div className="content">
          <Head />
          <main className="mainCard">
-            <div className="card1">
-                <p className='card_p'><Link to="/card1" className='link_card'>배채희</Link></p>
+            <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
+                <p className='card_p'>배채희</p>
                 <p className='card_p'>Front-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>CNS</p>
-                
             </div>
-            <div className="card2">
-                <p className='card_p'><Link to="/card2" className='link_card'>박규민</Link></p>
+            <div className="card2" onClick={()=>{navigate("/card2")}}>
+                <p className='card_p'>박규민</p>
                 <p className='card_p'>Full-Stack Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>ALT</p>
             </div>
-            <div className="card3">
-                <p className='card_p'><Link to="/card3" className='link_card'>가요이</Link></p>
+            <div className="card3" onClick={()=>{navigate("/card3")}}>
+                <p className='card_p'>가요이</p>
                 <p className='card_p'>Back-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>DLC</p>
             </div>
-            <div className="card4">
-                <p className='card_p'><Link to="/card4" className='link_card'>전우진</Link></p>
+            <div className="card4"  onClick={()=>{navigate("/card4")}}>
+                <p className='card_p'>전우진</p>
                 <p className='card_p'>Front-Stack Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>모디</p>
             </div>
-            <div className="card5">
-                <p className='card_p'><Link to="/card5" className='link_card'>김호준</Link></p>
+            <div className="card5"  onClick={()=>{navigate("/card5")}}>
+                <p className='card_p'>김호준</p>
                 <p className='card_p'>Back-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>모디</p>
             </div>
-            <div className="card6">
-                <p className='card_p'><Link to="/card6" className='link_card'>이해준</Link></p>
+            <div className="card6"  onClick={()=>{navigate("/card6")}}>
+                <p className='card_p'>이해준</p>
                 <p className='card_p'>Front-Stack Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>QI</p>
@@ -80,7 +81,7 @@ export default function Start() {
     
             <div className="sideName">
                 <div className="CHname">
-                    <Link to="/mypage" className='sidenameColor' >이해준</Link>
+                    <p onClick={()=>{navigate("/mypage")}} className='sidenameColor' >이해준</p>
                 </div>
                 <div className="Write">
                     <p className="p1"><Link to="/myportfolio" className='link_side'>내 포트폴리오</Link></p>

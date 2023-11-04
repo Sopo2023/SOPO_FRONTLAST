@@ -104,8 +104,8 @@ export default function Mypage() {
                   </div>
                   <div id="last-pagination">내 정보 입력하기</div>
                   <form className="horseman">
-                    <div className="writing1">당신의 기수를 알려주세요</div>
-                    
+                    <div className="writing">당신의 기수를 알려주세요</div>
+                    <div className="writing1">당신의 전공은 무엇인가요?</div>
                   </form>
                 </div>
               </div>
