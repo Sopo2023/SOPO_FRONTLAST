@@ -1,9 +1,20 @@
 import { Link , useNavigate } from "react-router-dom";
+import { useState } from 'react';
 import TEST from "../../Assets/img/postimg.jpeg"
 import Head from "../../head/head";
+import Last from "../../Assets/img/Polygon 4.png"
 
 export default function Mypage() {
   const navigate = useNavigate(); 
+  const [isCertifying, setIsCertifying] = useState(false);
+  const handleEmailCertify = () => {
+    setIsCertifying(true);
+  };
+  const LeavehandleEmailCertify = () => {
+    setIsCertifying(false);
+  };
+
+
   return (
     <div className="main">
       <div className="content">
@@ -12,8 +23,8 @@ export default function Mypage() {
         <p className="top1">이해준</p>
         <p className="top2">DGSW 8th</p>
         <br></br>
-        <div className="fixbutton" onClick={()=>{navigate("/Mypagesub")}}>
-          <div className="fixbuttonT">
+         <div className="fixbutton" onClick={() => handleEmailCertify()}> 
+          <div className="fixbuttonT" >
               프로필 수정하기
           </div>
         </div>
@@ -38,7 +49,7 @@ export default function Mypage() {
               <Link to="/mypage/mail" className="link1">
                 메일:
               </Link>
-              <a href="mailto:lerb5253@dgsw.hs.kr"> 이해준님께 메일쓰기 </a>
+              <Link className="link2" href="mailto:lerb5253@dgsw.hs.kr"> 이해준님께 메일쓰기 </Link>
             </p>
             <p>
               <Link to="/mypage/number" className="link1">
@@ -61,7 +72,7 @@ export default function Mypage() {
           </div>
         </div>
       </div>
-      {/* <div className="post_mainnn"> */}
+      
       <div className="post_1">
         <p className="post1">이해준님이 쓴 글 보기</p>
         <div className="post-write">
@@ -82,8 +93,22 @@ export default function Mypage() {
               alt="이미지"
             ></img>
           </span>
+
         </div>
       </div>
+      {isCertifying && (
+              <div className="pagination">
+                <div className="pagination-writing">
+                  <div id="leave" onClick={LeavehandleEmailCertify}>
+                  <div className="last-pagination"><img src={Last} /></div>
+                  </div>
+                  <div id="last-pagination">내 정보 입력하기</div>
+                  <form className="horseman">
+                    
+                  </form>
+                </div>
+              </div>
+            )}
       </div>
     </div>
   );

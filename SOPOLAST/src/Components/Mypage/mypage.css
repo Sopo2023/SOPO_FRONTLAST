@@ -251,3 +251,59 @@ ul {
   position: absolute;
   left: 300px;
 } */
+
+
+.pagination {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #73737339;
+
+}
+.pagination-writing{
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+  top: 300px;
+  border-radius: 30px 30px 0 0;
+  animation-name: pagination;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#leave{
+  cursor: pointer;
+}
+.last-pagination{
+  position: absolute;
+  left: 40px;
+  top: 10px;
+}
+#last-pagination{
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.last-pagination >img{
+  position: absolute;
+  top: 18px;
+  left: 10px;
+}
+.horseman{
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 500px;
+  background-color: #1a9a18;
+}
+@keyframes pagination {
+  0% {top: 700px;}
+  100% {top: 200px;}
+}

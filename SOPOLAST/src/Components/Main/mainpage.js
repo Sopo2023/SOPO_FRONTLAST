@@ -1,4 +1,4 @@
-import React, { useEffect,useState  } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/image/1.png";
 import Post2 from "../../Assets/img/postimg.jpeg";
@@ -7,19 +7,31 @@ import Head from '../../head/head';
 import axios from "axios";
 import "./main.css"
 
-export default function Start(){
-    const [posts, setPosts] = useState([]);
-    useEffect(()=>{
-        axios.get('#')
-        .then(response=>{
-            setPosts(response.data);
+export default function Start() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    axios.get('#')
+      .then(response => {
+        setPosts(response.data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, []);
 
-        })
-        .catch((error)=>{
-            console.error('Error:', error);
-        })
-    })
-    
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 5;
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const prevPage = () => {
+    setCurrentPage(currentPage - 1);
+  };
 
 
     return( 
@@ -128,6 +140,12 @@ export default function Start(){
                 </div>
             </div>       
         </div>
+        <div className='paginat'>
+            {currentPage > 1 && <button onClick={prevPage}>Previous Page</button>}
+            {currentPage < Math.ceil(posts.length / postsPerPage) && (
+              <button onClick={nextPage}>Next Page</button>
+            )}
+          </div>
         {/* <form className='chang_button'>
             <input id='leftbutton' type='button' value="1"></input>
             <input type='button' value="2"></input>
