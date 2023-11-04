@@ -105,7 +105,19 @@ export default function Mypage() {
                   <div id="last-pagination">내 정보 입력하기</div>
                   <form className="horseman">
                     <span className="writing">당신의 기수를 알려주세요</span>
-                    <span className="writing1">당신의 전공은 무엇인가요?</span>
+                    <span className="writing1">
+                      당신의 전공은 무엇인가요?
+                      <div className='majorSelect1'>
+                        <div className='frontEnd1'> 프론트엔드 </div>
+                        <div className='elseMajor1'> 백엔드 </div>
+                        <div className='elseMajor1'> 안드로이드 </div>
+                        <div className='elseMajor1'> iOS </div>
+                        <div className='elseMajor1'> 임베디드 </div>
+                        <div className='elseMajor1'> AI </div>
+                        <div className='elseMajor1'> 정보보안 </div>
+                        <div className='elseMajor1'> 디자인 </div>
+                    </div>
+                    </span>
                     <span className="writing2">당신에 대하여 간단하게 설명해주세요!</span>
                     <input 
                     id="major" 

@@ -354,3 +354,32 @@ ul {
   0% {top: 700px;}
   100% {top: 200px;}
 }
+
+.majorSelect1{
+  color: #A7A7A7;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: -150px;
+}
+
+.majorSelect1 > .frontEnd1{
+  display: inline-block;
+  margin-left: 150px;
+  margin-top: 27px;
+ 
+}
+.majorSelect1 > .frontEnd1:hover{
+  cursor: pointer;
+  color: #178915;
+}
+.elseMajor1{
+  display: inline-block;
+  margin-left: 25px;
+}
+.elseMajor1:hover{
+  cursor: pointer;
+  color: #178915;
+}
