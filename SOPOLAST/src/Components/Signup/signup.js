@@ -150,6 +150,7 @@ function LoginComponent() {
             </button>
             {isCertifying && (
               <input
+                maxLength={10}
                 className="Name"
                 placeholder="인증코드 네자리를 입력해주세요."
               ></input>
