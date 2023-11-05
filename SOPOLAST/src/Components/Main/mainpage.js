@@ -1,46 +1,74 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/image/1.png";
 import Post2 from "../../Assets/img/postimg.jpeg";
 import Post3 from "../../Assets/img/newjeans.jpeg";
 import Head from '../../head/head';
 import axios from "axios";
-import "./main.css"
-
+import "./main.css";
 
 export default function Start() {
-    const navigate=useNavigate()
+  const navigate = useNavigate();
+  const scrollContainerRef = useRef(null);
   const [posts, setPosts] = useState([]);
+  const [dragging, setDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    if (e.button !== 0) return; // 왼쪽 마우스 버튼만
+    setDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!dragging) return;
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.addEventListener('mousedown', handleMouseDown);
+      scrollContainerRef.current.addEventListener('mouseup', handleMouseUp);
+      scrollContainerRef.current.addEventListener('mousemove', handleMouseMove);
+    }
+
+    return () => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.removeEventListener('mousedown', handleMouseDown);
+        scrollContainerRef.current.removeEventListener('mouseup', handleMouseUp);
+        scrollContainerRef.current.removeEventListener('mousemove', handleMouseMove);
+      }
+    };
+  }, [scrollContainerRef, handleMouseDown, handleMouseUp, handleMouseMove]);
+  
+ 
+  
+  useEffect(() => {
+    
     axios.get('#')
       .then(response => {
         setPosts(response.data);
       })
-      .catch((error) => {
+      .catch(error => {
         console.error('Error:', error);
       });
   }, []);
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 5;
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
-
-  const prevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
+  
 
 
     return( 
     <div className='main'>
     <div className="content">
          <Head />
-         <main className="mainCard">
+         <div className="mainCard" ref={scrollContainerRef}>
             <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
                 <p className='card_p'>배채희</p>
                 <p className='card_p'>Front-end Dev</p>
@@ -77,35 +105,38 @@ export default function Start() {
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>QI</p>
             </div>
-         </main>
+         </div>
     
             <div className="sideName">
                 <div className="CHname">
                     <p onClick={()=>{navigate("/mypage")}} className='sidenameColor' >이해준</p>
                 </div>
                 <div className="Write">
-                    <p className="p1"><Link to="/Mypage" className='link_side'>내 포트폴리오</Link></p>
-                    <p className="p2"><Link to="/sidewrite" className='link_side'>글쓰기</Link></p>
+                    <p className="link_side" onClick={()=>{navigate("/Mypage")}}>내 포트폴리오</p>
+                    <p className="link_side" onClick={()=>{navigate("/sidewrite")}}>글쓰기</p>
                 </div>
                 <div className='News'>
                     <p className='writ_name'>내 소식</p>
                     <div className='write_detail'>
                     <p className='writ'><strong>전우진</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
                     </div>
-                    
                 </div>
             </div>
     
         <div className="post">
-            <div className="post-write">
-                <div className='Zonecontrol'>
-                    <span className="Name">김가영</span>
-                    <span className="title">4개교 연합 해커톤 프론트엔드</span>
-                    <span className="detail">박규민 모크 김가영은 핑구 배채희는 대소고 김채원 전우진은 학생회 김호준 축구부</span>
-                    <span className="date">2023.09.30</span>
-                </div>
-                <span className="img"><img className='real_img' src={Post1} alt="이미지"></img></span>
+        {posts.map(post => (
+            <div className="post-write" key={post.id}>
+              <div className="Zonecontrol">
+                <span className="Name">{post.author}</span>
+                <span className="title">{post.title}</span>
+                <span className="detail">{post.content}</span>
+                <span className="date">{post.date}</span>
+              </div>
+              <span className="img">
+                <img className="real_img" src={post.imageUrl} alt="이미지" />
+              </span>
             </div>
+          ))}
             <div className="post-write">
                 <div className='Zonecontrol'>
                     <span className="Name">이해준</span>
@@ -141,12 +172,7 @@ export default function Start() {
                 </div>
             </div>       
         </div>
-        <div className='paginat'>
-            {currentPage > 1 && <button onClick={prevPage}>Previous Page</button>}
-            {currentPage < Math.ceil(posts.length / postsPerPage) && (
-              <button onClick={nextPage}>Next Page</button>
-            )}
-          </div>
+ 
         {/* <form className='chang_button'>
             <input id='leftbutton' type='button' value="1"></input>
             <input type='button' value="2"></input>

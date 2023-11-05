@@ -35,9 +35,9 @@
     text-decoration: none;
     color: #000;
   }
-  /* .mainCard::-webkit-scrollbar{
-    
-  } */
+  .mainCard::-webkit-scrollbar{
+    display: none;
+  }
   .mainCard{
     overflow-x: scroll;
     overflow-y: hidden;
@@ -46,7 +46,8 @@
     background-color: #F5F5F6;
     position: absolute;
     top: 80px;
-    
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
   }
   .card_img{
     position: absolute;
@@ -221,6 +222,16 @@
     height: 150px;
     object-fit: contain;
   }
+  .mainCard {
+    overflow-x: auto; /* Enable horizontal scrollbar if content overflows */
+    overflow-y: hidden;
+    white-space: nowrap; 
+    width: 100%; 
+    height: 291px;
+    background-color: #F5F5F6;
+    position: absolute;
+    top: 80px;
+  }
   .mainCard > .card1{
     position: relative;
     cursor: pointer;
@@ -232,6 +243,7 @@
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
+
   .mainCard > .card2 {
     position: relative;
     cursor: pointer;
@@ -309,4 +321,7 @@
     width: 50px;
   }
  
+.mainCard:active {
+  cursor: grabbing;
+}
   
