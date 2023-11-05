@@ -214,7 +214,7 @@ function LoginComponent() {
         </div>
         <div className="box1">
           <p>Sign up</p>
-          <form>
+          <form method="POST">
             <input
               className="Name"
               name="name"

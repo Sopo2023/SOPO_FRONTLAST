@@ -1,6 +1,3 @@
-
-
-
 .SOPO{
     text-decoration: none; /* 밑줄 제거 */
       color: #1A9A18; 
@@ -10,10 +7,9 @@
 
   .header {
     background-color: red;
-    position: sticky;
+    position: sticky !important;
     position: absolute;
     top: 0;
-    
     z-index: 3;
     background-color: #ffffff;
     color: #1A9A18;

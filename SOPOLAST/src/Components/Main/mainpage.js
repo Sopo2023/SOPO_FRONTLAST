@@ -14,6 +14,7 @@ export default function Start() {
   const [dragging, setDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [cards, setCards] = useState([]);
 
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // 왼쪽 마우스 버튼만
@@ -62,6 +63,26 @@ export default function Start() {
       });
   }, []);
   
+  const fetchCardData = async () => {
+    try {
+      const response = await axios.get('서버에서 JSON 데이터를 가져올 엔드포인트');
+      return response.data;
+    } catch (error) {
+      console.error('데이터를 불러오는 중 에러 발생:', error);
+      return [];
+    }
+  };
+   // 페이지가 로드될 때 데이터 가져오는 코드
+   useEffect(() => {
+    fetchCardData().then((data) => {
+      setCards(data);
+    });
+    window.addEventListener('beforeunload', () => {
+      fetchCardData().then((data) => {
+        setCards(data);
+      });
+    });
+  }, []);
 
 
     return( 
@@ -69,12 +90,24 @@ export default function Start() {
     <div className="content">
          <Head />
          <div className="mainCard" ref={scrollContainerRef}>
-            <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
+            {/* <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
                 <p className='card_p'>배채희</p>
                 <p className='card_p'>Front-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>CNS</p>
+            </div> */}
+            {cards.map((card) => ( 
+            <div
+            key={card.id} //서버로부터 받은 id
+            onClick={() => navigate(`/card${card.id + 1}`)}
+            className="card1"
+            >
+            <p className='card_p'>{card.name}</p>
+            <p className='card_p'>{card.major}</p>
+            <p className='card_p'>{card.batch}</p>
+            <p className='card_p'>{card.club}</p>
             </div>
+        ))}
             <div className="card2" onClick={()=>{navigate("/card2")}}>
                 <p className='card_p'>박규민</p>
                 <p className='card_p'>Full-Stack Dev</p>
@@ -125,7 +158,7 @@ export default function Start() {
     
         <div className="post">
         {posts.map(post => (
-            <div className="post-write" key={post.id}>
+            <div className="post-write" key={post.id} onClick={()=>navigate(`/post/${post.id}`)}>
               <div className="Zonecontrol">
                 <span className="Name">{post.author}</span>
                 <span className="title">{post.title}</span>

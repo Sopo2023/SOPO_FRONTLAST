@@ -6,14 +6,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  
 }
 .content{
   position: absolute;
   top: 0;
   width: 1460px;
   height: 1400px;
-  position: absolute;
 }
 .footer{
   position: absolute;
@@ -233,7 +231,7 @@
     top: 80px;
   }
   .mainCard > .card1{
-    position: relative;
+    position: absolute;
     cursor: pointer;
     left: 60px;
     top: 25px;
@@ -245,10 +243,10 @@
   }
 
   .mainCard > .card2 {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     left: 700px;
-    bottom: 215px;
+    top: 25px;
     width: 460px;
     height: 240px;
     border-radius: 10px;
@@ -256,10 +254,10 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .mainCard > .card3 {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     left: 1340px;
-    bottom: 455px;
+    top: 25px;
     width: 460px;
     height: 240px;
     border-radius: 10px;
@@ -267,10 +265,10 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .mainCard>.card4{
-    position: relative;
+    position: absolute;
     cursor: pointer;
     left: 1980px;
-    bottom: 695px;
+    top: 25px;
     width: 460px;
     height: 240px;
     border-radius: 10px;
@@ -278,10 +276,10 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .mainCard>.card5{
-    position: relative;
+    position: absolute;
     cursor: pointer;
     left: 2620px;
-    bottom: 935px;
+    top: 25px;
     width: 460px;
     height: 240px;
     border-radius: 10px;
@@ -289,10 +287,10 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
    .mainCard>.card6{
-    position: relative;
+    position: absolute;
     cursor: pointer;
     left: 3260px;
-    bottom: 1175px;
+    top: 25px;
     width: 460px;
     height: 240px;
     border-radius: 10px;
