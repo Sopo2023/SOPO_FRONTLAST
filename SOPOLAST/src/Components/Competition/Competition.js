@@ -11,13 +11,13 @@ function Competition() {
       <div className='content'>
         <Head />
         <Sidname />
-        <div className='searchBox1'>
-        <div className="search_1" >
+        <div className='searchBox'>
+        <div className="search" >
           <input className="search_box"></input>
           <input type="button" className="search_icon"></input>
           <div className="searcg_icon_line"></div>
         </div>
-          <div className='stackLine'>
+        <div className='stackLine'>
           <select className='gradeSelet'>
               <option>8기 </option>
               <option>7기 </option>
@@ -34,7 +34,11 @@ function Competition() {
               <div className='elseMajor'> 정보보안 </div>
               <div className='elseMajor'> 디자인 </div>
             </div>
-          </div>
+            </div>
+          
+          
+      </div>
+      <div className='mo'>
           <div className='gatherBox' onClick={()=>{navigate("/CompetitionSub")}}>
             <div className='gatherTitle'> 8기 프론트엔드 헬뉴월 해커톤 <br></br> 같이 나갈 분 구해용~~ </div>
             <div className='gatherGradeName'> DGSW 8th 배채희 </div>
@@ -65,7 +69,7 @@ function Competition() {
             <div className='gatherGradeName'> DGSW 8th 김호준 </div>
             <div className='gatherMail'> Mail - gaemi@gmail.com </div>
         </div>
-      </div>
+        </div>
       </div>
     </div>
   

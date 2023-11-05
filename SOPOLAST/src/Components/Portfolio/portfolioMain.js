@@ -19,6 +19,7 @@ export default function Portfolio() {
           <input type="button" className="search_icon"></input>
           <div className="searcg_icon_line"></div>
         </div>
+        
           <div className='stackLine'>
             <select className='gradeSelet'>
               <option>8기 </option>
@@ -36,8 +37,9 @@ export default function Portfolio() {
               <div className='elseMajor'> 정보보안 </div>
               <div className='elseMajor'> 디자인 </div>
             </div>
-          </div>
+            </div>
         </div>
+        
         <Sidename/>
       <div className='mo'>
         <div className='namecardBox' onClick={()=>{navigate("/Portfoliosub")}} >

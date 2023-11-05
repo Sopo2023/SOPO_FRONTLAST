@@ -176,6 +176,7 @@
     line-height: normal;
   }
   
+
   .gradegreen{
     color: green;
     font-size: 30px;
@@ -185,15 +186,14 @@
     margin-top: 17px;
     margin-left: 110px;
   }
-  
-  .majorSelect{
-    color: #A7A7A7;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
+/* .mo{
+  position: absolute;
+  top: 150px;
+  left: 400px;
+  width: 900px;
+  height: 800px;
+
+} */
   
   .majorSelect > .frontEnd{
     display: inline-block;
