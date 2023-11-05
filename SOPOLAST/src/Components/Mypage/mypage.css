@@ -383,3 +383,32 @@ ul {
   cursor: pointer;
   color: #178915;
 }
+
+.YearSelect{
+  color: #A7A7A7;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: -150px;
+}
+
+.YearSelect > .Year{
+  display: inline-block;
+  margin-left: 150px;
+  margin-top: 27px;
+ 
+}
+.YearSelect > .Year:hover{
+  cursor: pointer;
+  color: #178915;
+}
+.elseYear{
+  display: inline-block;
+  margin-left: 25px;
+}
+.elseYear:hover{
+  cursor: pointer;
+  color: #178915;
+}
