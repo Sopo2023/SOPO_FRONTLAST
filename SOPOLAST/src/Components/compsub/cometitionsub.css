@@ -54,3 +54,8 @@
     font-size: 30px;
     cursor: pointer;
   }
+
+  .mailComp{
+    text-decoration: none;
+    color: #000;
+  }

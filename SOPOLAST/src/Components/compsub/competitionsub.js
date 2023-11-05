@@ -24,8 +24,8 @@ let goBack = () => {
            <br />
            해커톤 열심히 하실 분 제 프로필 또는 밑에 연락처, 카웤으로 연락주세요. <br />
            같이 나가서 상 받아봐요..!!!  <br />
-           카카오워크 1-4 배채희 메일 chaeeehui@gmaiml.com  <br />
-           인스타그램 ikhibr
+           카카오워크 1-4 배채희 메일 <a href='mailto:chaeeehui@gmail.com' className='mailComp'> chaeeehui@gmail.com </a>  <br />
+           인스타그램 <a href='https://www.instagram.com/whywhywwwhy/' className='mailComp'> whywhywwwhy </a>
 </div>
         </div>  
         </div>
