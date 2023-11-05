@@ -69,9 +69,9 @@ function LoginComponent() {
       setIsVerifying(false);
     }
   };
-  const Authenticationverification = async () => {
+  const Authenticationverification = async (e) => {
     // 이 함수는 사용자가 입력한 인증코드를 서버로 보내고, 인증 코드가 올바른지 확인하는 역할을 합니다.
-
+    e.preventDefault();
     // 1. 입력된 인증 코드 가져오기
     const authenticationCode = document.querySelector(".Authentication").value;
 
@@ -96,7 +96,7 @@ function LoginComponent() {
           withCredentials: true,
         }
       );
-
+      e.preventDefault();
       if (response.data.success) {
         Swal.fire({
           icon: "success",
