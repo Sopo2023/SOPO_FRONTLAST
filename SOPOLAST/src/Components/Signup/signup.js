@@ -69,6 +69,56 @@ function LoginComponent() {
       setIsVerifying(false);
     }
   };
+  const Authenticationverification = async () => {
+    // 이 함수는 사용자가 입력한 인증코드를 서버로 보내고, 인증 코드가 올바른지 확인하는 역할을 합니다.
+
+    // 1. 입력된 인증 코드 가져오기
+    const authenticationCode = document.querySelector(".Authentication").value;
+
+    // 2. 입력된 인증 코드가 6자리인지 확인
+    if (authenticationCode.length !== 6) {
+      Swal.fire({
+        icon: "error",
+        title: "인증 코드는 여섯 자리여야 합니다.",
+      });
+      return;
+    }
+
+    try {
+      // 3. 서버에 인증 코드를 보내어 확인
+      const response = await axios.post(
+        SERVERURL + "/verifyAuthenticationCode",
+        {
+          email: email, // 사용자 이메일
+          code: authenticationCode, // 사용자가 입력한 인증 코드
+        },
+        {
+          withCredentials: true,
+        }
+      );
+
+      if (response.data.success) {
+        Swal.fire({
+          icon: "success",
+          title: "인증 코드가 올바릅니다.",
+        });
+
+        // 인증 코드가 올바를 경우, 다음 단계로 진행
+        setIsCertifying(false); // 인증 단계 종료
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "인증 코드가 올바르지 않습니다.",
+        });
+      }
+    } catch (error) {
+      console.error("서버 통신 오류:", error);
+      Swal.fire({
+        icon: "error",
+        title: "서버 통신 실패.",
+      });
+    }
+  };
 
   const LOginFunc = async (e) => {
     e.preventDefault();
@@ -195,7 +245,12 @@ function LoginComponent() {
                   className="Authentication"
                   placeholder="인증코드 여섯자리를 입력해주세요."
                 ></input>
-                <button className="completed">확인</button>
+                <button
+                  onClick={Authenticationverification}
+                  className="completed"
+                >
+                  확인
+                </button>
               </div>
             )}
             <input
