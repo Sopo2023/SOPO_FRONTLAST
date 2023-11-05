@@ -355,7 +355,7 @@ ul {
   100% {top: 200px;}
 }
 
-.majorSelect1{
+.dreamSelect1{
   color: #A7A7A7;
   font-family: Inter;
   font-size: 20px;
@@ -365,21 +365,21 @@ ul {
   margin-left: -150px;
 }
 
-.majorSelect1 > .frontEnd1{
+.dreamSelect1 > .dreamfront{
   display: inline-block;
   margin-left: 150px;
   margin-top: 27px;
  
 }
-.majorSelect1 > .frontEnd1:hover{
+.dreamSelect1 > .dreamfront:hover{
   cursor: pointer;
   color: #178915;
 }
-.elseMajor1{
+.elsedream{
   display: inline-block;
   margin-left: 25px;
 }
-.elseMajor1:hover{
+.elsedream:hover{
   cursor: pointer;
   color: #178915;
 }
