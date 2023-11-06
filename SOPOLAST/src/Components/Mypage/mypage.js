@@ -75,16 +75,17 @@ export default function Mypage() {
       
       <div className="post_1">
         <p className="post1">이해준님이 쓴 글 보기</p>
-        <div className="post-write">
+        <div className="post-write" onClick={()=>{navigate("/Updownsub")}}>
           <div className="Zonecontrol">
             <span className="Name">이해준</span>
-            <span className="title">4개교 연합 해커톤 프론트엔드  </span>
+            <span className="title">바인드 컨버런스를 듣고나서.  </span>
             <span className="detail">
-            2023년 08월 24일 4개교 연합 해커톤을 진행했다.고종현 님 @manudeli 경력 요기요에서
-            -Merchant trine : 사장님 관련 서비스 사장 사이트, 사장 관리자 서비스 공통 요기요 디자인, FE
-            나의 이야기 제대 전, 수포자 고등학생에서 미대생(디자인전공)으로서의 삶...
+            오늘은 팀 바인드에서 주최한 컨퍼런스 바코드에 대해 이야기 하려 한다.
+            ​바코드? 작년겨울 시작
+            - 주로 일학년을 대상으로 새내기 개발자들에게 꼭 필요한 지식 전하는 컨퍼런스.
+            Git & GitHub / 백엔드 이지민선배
             </span>
-            <span className="date">2023.09.22</span>
+            <span className="date">2023.09.10</span>
           </div>
           <span className="img">
             <img
