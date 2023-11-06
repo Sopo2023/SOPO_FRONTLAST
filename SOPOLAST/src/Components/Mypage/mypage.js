@@ -133,6 +133,18 @@ export default function Mypage() {
                     type="text"
                     placeholder="배움에서 즐거움을 찾는 프론트엔드 개발자, 홍길동 입니다."
                     ></input>
+
+                    <span className="writing3">당신의 동아리는 무엇인가요?</span>
+                    <div className='clubSelect'>
+                        <div className='clubB1ND'> B1ND </div>
+                        <div className='elseclub'> 두카미 </div>
+                        <div className="elseclub"> CNS </div>
+                        <div className="elseclub"> ALT </div>
+                        <div className="elseclub"> 모디 </div>
+                        <div className="elseclub"> DLC </div>
+                        <div className="elseclub"> QI </div>
+                        <div className="elseclub"> 기타 </div>
+                      </div>
                     <div className="completebutton">
                     완료
                     </div>

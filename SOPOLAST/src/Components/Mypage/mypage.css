@@ -259,8 +259,8 @@ ul {
 }
 .pagination-writing{
   position: absolute;
-  width: 100%;
-  height: 700px;
+  width: 1470px;
+  height: 1400px;
   background-color: #fff;
   top: 300px;
   border-radius: 30px 30px 0 0;
@@ -325,6 +325,18 @@ ul {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+}
+.writing3{
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 150px;
 }
 #major{
   position: absolute;
@@ -421,5 +433,35 @@ ul {
 }
 /* 모든 3개 요소가 활성화되었을 때 completebutton 색상 변경 */
 .YearSelect:hover + .dreamSelect1 .dreamfront:hover + .writing2:hover + .completebutton {
+  color: #178915;
+}
+
+.clubSelect{
+  color: #A7A7A7;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: -48px;
+  margin-top: 580px;
+}
+
+.clubSelect > .clubB1ND{
+  display: inline-block;
+  margin-left: 150px;
+  margin-top: 27px;
+ 
+}
+.clubSelect > .clubB1ND:hover{
+  cursor: pointer;
+  color: #178915;
+}
+.elseclub{
+  display: inline-block;
+  margin-left: 25px;
+}
+.elseclub:hover{
+  cursor: pointer;
   color: #178915;
 }
