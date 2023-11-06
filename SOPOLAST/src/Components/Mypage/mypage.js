@@ -7,13 +7,34 @@ import Last from "../../Assets/img/Polygon 4.png"
 export default function Mypage() {
   const navigate = useNavigate(); 
   const [isCertifying, setIsCertifying] = useState(false);
+  const [isYearSelected, setIsYearSelected] = useState(false); // 추가: Year 버튼 상태를 저장할 변수
+  const [is7thYearSelected, setIs7thYearSelected] = useState(false);
+  const [is8thYearSelected, setIs8thYearSelected] = useState(false);
+  const [is9thYearSelected, setIs9thYearSelected] = useState(false);
+
   const handleEmailCertify = () => {
     setIsCertifying(true);
   };
+
   const LeavehandleEmailCertify = () => {
     setIsCertifying(false);
   };
 
+  const toggleYearColor = () => {
+    setIsYearSelected(!isYearSelected);
+  };
+
+  const toggle7thYearColor = () => {
+    setIs7thYearSelected(!is7thYearSelected);
+  };
+
+  const toggle8thYearColor = () => {
+    setIs8thYearSelected(!is8thYearSelected);
+  };
+
+  const toggle9thYearColor = () => {
+    setIs9thYearSelected(!is9thYearSelected);
+  };
 
   return (
     <div className="main">
@@ -108,10 +129,34 @@ export default function Mypage() {
                     <span className="writing">
                       당신의 기수를 알려주세요
                       <div className='YearSelect'>
-                        <div className='Year'> 6기(2021) </div>
-                        <div className='elseYear'> 7기(2022) </div>
-                        <div className='elseYear'> 8기(2023) </div>
-                        <div className='elseYear'> 9기(2024) </div>
+                        {/* Year 버튼을 클릭할 때 색상을 변경 */}
+                        <div className='YearSelect'>
+          <div
+            className={`Year ${isYearSelected ? 'selected' : ''}`}
+            onClick={toggleYearColor}
+          >
+            6기(2021)
+          </div>
+          <div
+            className={`elseYear ${is7thYearSelected ? 'selected' : ''}`}
+            onClick={toggle7thYearColor}
+          >
+            7기(2022)
+          </div>
+          <div
+            className={`elseYear ${is8thYearSelected ? 'selected' : ''}`}
+            onClick={toggle8thYearColor}
+          >
+            8기(2023)
+          </div>
+          <div
+            className={`elseYear ${is9thYearSelected ? 'selected' : ''}`}
+            onClick={toggle9thYearColor}
+          >
+            9기(2024)
+          </div>
+        </div>
+
                       </div>
                     </span>
                     <span className="writing1">

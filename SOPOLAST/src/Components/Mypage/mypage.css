@@ -399,7 +399,7 @@ ul {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-left: -150px;
+  margin-left: -75px;
 }
 
 .YearSelect > .Year{
@@ -547,4 +547,14 @@ ul {
 }
 #skill::placeholder{
   font-size: 18px;
+}
+
+.Year.selected {
+  /* 선택된 경우의 색상전환 */
+  color: #1a9a18;
+}
+
+.elseYear.selected {
+  color: #1a9a18; /* 선택된 경우의 텍스트 색상을 바꾸려면 원하는 색상으로 변경하세요 */
+  /* 다른 스타일 속성들 */
 }
