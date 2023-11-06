@@ -140,11 +140,20 @@ export default function Mypage() {
                         <div className='elseclub'> 두카미 </div>
                         <div className="elseclub"> CNS </div>
                         <div className="elseclub"> ALT </div>
+                        <div className="elseclub"> 삼디 </div>
+                        <div className="elseclub"> 스페이스 </div>
                         <div className="elseclub"> 모디 </div>
                         <div className="elseclub"> DLC </div>
                         <div className="elseclub"> QI </div>
                         <div className="elseclub"> 기타 </div>
                       </div>
+
+                    <span className="writing4"> 당신의 깃허브 아이디는 무엇인가요? </span>
+                    <input 
+                    id="git" 
+                    type="text"
+                    placeholder="당신의 깃허브 아이디를 입력해주세요"
+                    ></input>
                     <div className="completebutton">
                     완료
                     </div>

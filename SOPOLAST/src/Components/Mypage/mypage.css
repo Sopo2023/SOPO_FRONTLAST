@@ -465,3 +465,31 @@ ul {
   cursor: pointer;
   color: #178915;
 }
+
+#git{
+  position: absolute;
+  left: 100px;
+  top: 450px;
+  width: 840px;
+  border: none;
+  border-bottom: 2px solid #1a9a18;
+  outline: none;
+  font-size: 20px;
+  margin-top: 295px;
+}
+#git::placeholder{
+  font-size: 18px;
+}
+
+.writing4 {
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 290px;
+}
