@@ -10,7 +10,7 @@ const LoginComponent = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const SERVERURL = "http://10.80.161.148:8080login";
+  const SERVERURL = "http://10.80.161.148:8080/login";
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
 
@@ -52,10 +52,8 @@ const LoginComponent = () => {
 
       setLoading(false);
 
-      if (response.data.success) {
-        // 로그인이 성공한 경우, "mypage" 경로로 이동합니다.
+      if (response.data.status === 200) {
         navigate("/mypage");
-        // 사용자의 로그인 상태를 Redux나 context API와 같은 전역 상태 관리 시스템에 저장할 수도 있습니다.
       } else {
         Toast.fire({
           icon: "error",
@@ -100,7 +98,7 @@ const LoginComponent = () => {
             </button>
             {msg}
             <Link to="/Signuppage" className="LINK">
-              Sign up
+              sign up
             </Link>
           </form>
         </div>

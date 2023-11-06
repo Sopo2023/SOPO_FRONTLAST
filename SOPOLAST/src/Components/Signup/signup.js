@@ -58,6 +58,11 @@ function LoginComponent() {
         });
 
         setIsEmailVerified(true);
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "이메일 보내기 실패",
+        });
       }
     } catch (error) {
       console.error("서버 통신 오류:", error);
@@ -69,13 +74,11 @@ function LoginComponent() {
       setIsVerifying(false);
     }
   };
+
   const Authenticationverification = async (e) => {
-    // 이 함수는 사용자가 입력한 인증코드를 서버로 보내고, 인증 코드가 올바른지 확인하는 역할을 합니다.
     e.preventDefault();
-    // 1. 입력된 인증 코드 가져오기
     const authenticationCode = document.querySelector(".Authentication").value;
 
-    // 2. 입력된 인증 코드가 6자리인지 확인
     if (authenticationCode.length !== 6) {
       Swal.fire({
         icon: "error",
@@ -85,26 +88,24 @@ function LoginComponent() {
     }
 
     try {
-      // 3. 서버에 인증 코드를 보내어 확인
       const response = await axios.post(
-        SERVERURL + "/verifyAuthenticationCode",
+        SERVERURL + "/verifyCheckEmail",
         {
-          email: email, // 사용자 이메일
-          code: authenticationCode, // 사용자가 입력한 인증 코드
+          email: email,
+          verifyNm: authenticationCode,
         },
         {
           withCredentials: true,
         }
       );
-      e.preventDefault();
-      if (response.data.success) {
+
+      if (response.data.status === 200) {
         Swal.fire({
           icon: "success",
           title: "인증 코드가 올바릅니다.",
         });
-
-        // 인증 코드가 올바를 경우, 다음 단계로 진행
-        setIsCertifying(false); // 인증 단계 종료
+        setIsCertifying(false);
+        setMsg(""); // 이전 오류 메시지 제거
       } else {
         Swal.fire({
           icon: "error",
@@ -122,6 +123,7 @@ function LoginComponent() {
 
   const LOginFunc = async (e) => {
     e.preventDefault();
+    console.log("hihi");
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -175,22 +177,28 @@ function LoginComponent() {
         password: password,
       };
 
-      const response = await axios.post(SERVERURL + "/create/user", userData, {
+      const response = await axios.post(SERVERURL + "/createUser", userData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
         },
       });
 
-      console.log(response);
-
       setLoading(false);
 
-      if (response.data.success) {
+      if (response.data.status === 200) {
         Toast.fire({
           icon: "success",
           title: "회원 가입이 완료되었습니다.",
         });
+        // 회원가입 성공 후 초기화
+        setName("");
+        setEmail("");
+        setPassword("");
+        setRepassword("");
+        setIsEmailEntered(false);
+        setIsCertifying(false);
+        setIsEmailVerified(false);
       } else {
         Toast.fire({
           icon: "error",
@@ -198,7 +206,7 @@ function LoginComponent() {
         });
       }
     } catch (error) {
-      console.log(error);
+      console.error("서버 통신 오류:", error);
       Toast.fire({
         icon: "error",
         title: "서버 통신 실패.",
@@ -214,7 +222,7 @@ function LoginComponent() {
         </div>
         <div className="box1">
           <p>Sign up</p>
-          <form method="POST">
+          <form method="POST" onSubmit={LOginFunc}>
             <input
               className="Name"
               name="name"
@@ -239,7 +247,6 @@ function LoginComponent() {
             </button>
             {isCertifying && (
               <div className="Certificationbox">
-                {/*인증박스*/}
                 <input
                   maxLength={10}
                   className="Authentication"
@@ -268,14 +275,12 @@ function LoginComponent() {
               value={repassword}
               onChange={(e) => setRepassword(e.target.value)}
             ></input>
-            <button
-              type="button"
+            <input
+              type="submit"
               className="button"
-              onClick={LOginFunc}
-              disabled={loading || !isEmailVerified}
-            >
-              {loading ? "Signing up..." : "Sign up"}
-            </button>
+              // disabled={loading || !isEmailVerified}
+              value={loading ? "Signing up..." : "Sign up"}
+            />
             <p>{msg}</p>
             <Link to="/">Log in</Link>
           </form>
