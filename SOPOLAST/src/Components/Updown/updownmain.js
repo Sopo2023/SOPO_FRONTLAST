@@ -88,13 +88,32 @@ export default function Start() {
           <div className="post-written">
             <div className="postshow1">
               <div className="post_border">
-                <span className="name">전우진</span>
+                <span className="name">박규민</span>
                 <br></br>
-                <span className="title">오늘은 경민스쿨하는날</span>
+                <span className="title">SW연합해커톤</span>
                 <br></br>
                 <span className="detail">
-                  오늘은 CNS에서 경민스쿨을 진행했다 리엑트에 평소에 관심이
-                  많았는데 리엑트를 배울수 있어서 좋았다
+                - 왜 SW 개발자가 필요할까?
+    
+    비지니스가 소프트웨어로 이루어 진다
+    
+    소프트웨어로 인해 사람의 삶이 바뀌고 살아가는 방식이 바뀐다
+    
+- 기업이 원한는 SW개발자란?
+    - Tech Skill
+        - 코드 가독성이 좋은
+        - 재사용이 가능한 코드
+        - 유지보수성을 고려하는 코드
+        - 버그없는 코드
+    - Soft Skill
+        - 업무공유와 협업에 능한
+        - 소통을 잘하는
+        - 이슈에 빠르게 대응하는
+        - 고객사/협력사/동료와 관계가 좋은
+    - 우수SW개발자
+        - 협업에 유연하고
+        - 자기 주도적이며
+        - 문제 해결력이 높은
                 </span>
                 <br></br>
                 <br></br>
