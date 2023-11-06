@@ -32,7 +32,7 @@ export default function Portfolio() {
               <div className='elseMajor'> 백엔드 </div>
               <div className='elseMajor'> 안드로이드 </div>
               <div className='elseMajor'> iOS </div>
-              <div className='elseMajor'> s임베디드 </div>
+              <div className='elseMajor'> 임베디드 </div>
               <div className='elseMajor'> AI </div>
               <div className='elseMajor'> 정보보안 </div>
               <div className='elseMajor'> 디자인 </div>
