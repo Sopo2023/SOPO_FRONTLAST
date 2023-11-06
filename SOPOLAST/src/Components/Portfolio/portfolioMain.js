@@ -32,7 +32,7 @@ export default function Portfolio() {
               <div className='elseMajor'> 백엔드 </div>
               <div className='elseMajor'> 안드로이드 </div>
               <div className='elseMajor'> iOS </div>
-              <div className='elseMajor'> 임베디드 </div>
+              <div className='elseMajor'> s임베디드 </div>
               <div className='elseMajor'> AI </div>
               <div className='elseMajor'> 정보보안 </div>
               <div className='elseMajor'> 디자인 </div>
@@ -46,35 +46,30 @@ export default function Portfolio() {
           <div className='nameName'>배채희</div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - chaeeehui@gmail.com </div>
-          <img src={cnsLogo} className='cnsLogo'></img>
         </div>
 
         <div className='namecardBox2'>
           <div className='nameName'> 이해준 </div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - haejoon@gmail.com </div>
-          <img src={b1nd} className='b1ndLogo'></img>
         </div>
 
         <div className='namecardBox3'>
           <div className='nameName'> 전우진 </div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - woojin@gmail.com </div>
-          <img src={cnsLogo} className='cnsLogo'></img>
         </div>
 
         <div className='namecardBox5'>
           <div className='nameName'> 이윤선 </div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - younssun@gmail.com </div>
-          <img src={cnsLogo} className='cnsLogo'></img>
         </div>
 
         <div className='namecardBox4'>
           <div className='nameName'> 이예진 </div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - yejin@gmail.com </div>
-          <img src={b1nd} className='b1ndLogo'></img>
         </div>
       </div>
       </div>
