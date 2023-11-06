@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { useDispatch } from "react-redux";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
 import axios from "axios";
@@ -11,16 +10,11 @@ const LoginComponent = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const SERVERURL = "http://10.80.162.77:8080/createUser";
+  const SERVERURL = "http://10.80.161.148:8080login";
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
 
-  useEffect(() => {
-    // dd
-  }, [msg]);
-
-  const LOginFunc = async (e) => {
-    e.preventDefault();
+  const handleLogin = async () => {
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -32,29 +26,16 @@ const LoginComponent = () => {
         toast.addEventListener("mouseleave", Swal.resumeTimer);
       },
     });
-    if (email === "") {
+
+    if (email === "" || password === "") {
       Toast.fire({
         icon: "warning",
-        title: "이메일을 써주세요",
-      });
-      return;
-    }
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!emailPattern.test(email)) {
-      Toast.fire({
-        icon: "warning",
-        title: "이메일 형식이 올바르지 않습니다.",
+        title: "이메일과 비밀번호를 모두 입력해주세요",
       });
       return;
     }
 
-    if (!email.endsWith("@dgsw.hs.kr")) {
-      Toast.fire({
-        icon: "warning",
-        title: "이 도메인은 로그인이 허용되지 않습니다.",
-      });
-      return;
-    }
+    // 서버에 로그인 정보를 확인하기 위한 요청을 보냅니다
     try {
       setLoading(true);
       const userData = {
@@ -62,31 +43,27 @@ const LoginComponent = () => {
         password: password,
       };
 
-      const response = await axios.post("/createUser", userData, {
+      const response = await axios.post(SERVERURL, userData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
         },
       });
 
-      navigate("/mypage");
-      console.log(response);
-
       setLoading(false);
 
       if (response.data.success) {
-        Toast.fire({
-          icon: "success",
-          title: "회원 가입이 완료되었습니다.",
-        });
+        // 로그인이 성공한 경우, "mypage" 경로로 이동합니다.
+        navigate("/mypage");
+        // 사용자의 로그인 상태를 Redux나 context API와 같은 전역 상태 관리 시스템에 저장할 수도 있습니다.
       } else {
         Toast.fire({
           icon: "error",
-          title: "회원 가입에 실패하였습니다.",
+          title: "로그인에 실패하였습니다.",
         });
       }
     } catch (error) {
-      console.log(error); // 에러 메시지 콘솔에 출력
+      console.log(error);
       Toast.fire({
         icon: "error",
         title: "서버 통신 실패.",
@@ -98,11 +75,11 @@ const LoginComponent = () => {
     <div className="App1">
       <div className="signup_main">
         <div className="greenbox">
-          <img src={LOGO}></img>
+          <img src={LOGO} alt="로고"></img>
         </div>
         <div className="box2">
           <p>Log in</p>
-          <form onSubmit={LOginFunc}>
+          <form>
             <input
               className="Email"
               type="text"
@@ -118,7 +95,7 @@ const LoginComponent = () => {
               onChange={(e) => setPassword(e.target.value)}
             ></input>
 
-            <button type="submit" className="button">
+            <button type="button" className="button" onClick={handleLogin}>
               Log in
             </button>
             {msg}
