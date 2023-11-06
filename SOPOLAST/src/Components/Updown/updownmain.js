@@ -10,9 +10,6 @@ import Head from "../../head/head";
 
 export default function Start() {
   const navigate = useNavigate();
-
-
-
   return (
     <div className="main">
       <div className="content">
@@ -37,7 +34,7 @@ export default function Start() {
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.09.30</span>
+                <span className="date">2023.08.25</span>
                 <span className="img">
                   <img className="post_img" src={TEST4} alt="이미지"></img>
                 </span>
@@ -47,16 +44,19 @@ export default function Start() {
           <div className="post-written">
             <div className="postshow1">
               <div className="post_border">
-                <span className="name">이해준</span>
+                <span className="name">배채희</span>
                 <br></br>
-                <span className="title">오늘은 나르샤하는날</span>
+                <span className="title">4개교 연합 해커톤 - SW창업 알고보면 어렵지 않다</span>
                 <br></br>
                 <span className="detail">
-                  오늘은 나르샤를 해야하지만 김호준은 축구를 하러갔다 짜증이 났다
+                  스타트업 창업 상상을 현실로 이끄는 액션 플랜
+                  온택트 코리아 최지연님
+                  자신에게 구매욕구가 확실하게 작용하지 않으면 매출로 이어지지 않는다.
+                  전화 - 고객접접 만들기 어려웠다. 현장 - 못들어오게 함.
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.10.05</span>
+                <span className="date">2023.09.02</span>
                 <span className="img">
                   <img className="post_img" src={TEST0} alt="이미지"></img>
                 </span>
@@ -66,12 +66,15 @@ export default function Start() {
           <div className="post-written">
             <div className="postshow1">
               <div className="post_border">
-                <span className="name">김호준</span>
+                <span className="name">이해준</span>
                 <br></br>
-                <span className="title">오늘은 나르샤하는날</span>
+                <span className="title">바인드 컨버런스를 듣고나서.</span>
                 <br></br>
                 <span className="detail">
-                  오늘은 나르샤를 해야하지만 나는 축구를 하러 갔다 규민선배 좋아요
+                  오늘은 팀 바인드에서 주최한 컨퍼런스 바코드에 대해 이야기 하려 한다.
+                  ​바코드? 작년겨울 시작
+                  - 주로 일학년을 대상으로 새내기 개발자들에게 꼭 필요한 지식 전하는 컨퍼런스.
+                  Git & GitHub / 백엔드 이지민선배
                 </span>
                 <br></br>
                 <br></br>
