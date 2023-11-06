@@ -423,7 +423,7 @@ ul {
 .completebutton {
   font-size: 40px;
   color: #8C8C8C;
-  margin-top: 500px;
+  margin-top: 430px;
   margin-left: 1200px;
   cursor: pointer;
   transition: color 0.3s; 
@@ -518,5 +518,33 @@ ul {
   margin-top: 430px;
 }
 #inst::placeholder{
+  font-size: 18px;
+}
+
+.writing6 {
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 550px;
+}
+
+#skill{
+  position: absolute;
+  left: 100px;
+  top: 450px;
+  width: 840px;
+  border: none;
+  border-bottom: 2px solid #1a9a18;
+  outline: none;
+  font-size: 20px;
+  margin-top: 550px;
+}
+#skill::placeholder{
   font-size: 18px;
 }
