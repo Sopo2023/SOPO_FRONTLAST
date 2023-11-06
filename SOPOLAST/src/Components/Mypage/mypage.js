@@ -115,7 +115,7 @@ export default function Mypage() {
                     </span>
                     <span className="writing1">
                       당신의 전공은 무엇인가요?
-                      <div className='dreamSelect1'>
+                      <div className='dreamSelect'>
                         <div className='dreamfront'> 프론트엔드 </div>
                         <div className='elsedream'> 백엔드 </div>
                         <div className='elsedream'> 안드로이드 </div>
@@ -132,6 +132,9 @@ export default function Mypage() {
                     type="text"
                     placeholder="배움에서 즐거움을 찾는 프론트엔드 개발자, 홍길동 입니다."
                     ></input>
+                    <div className="completebutton">
+                    완료
+                    </div>
                   </form>
                 </div>
               </div>

@@ -355,7 +355,7 @@ ul {
   100% {top: 200px;}
 }
 
-.dreamSelect1{
+.dreamSelect{
   color: #A7A7A7;
   font-family: Inter;
   font-size: 20px;
@@ -365,13 +365,13 @@ ul {
   margin-left: -150px;
 }
 
-.dreamSelect1 > .dreamfront{
+.dreamSelect > .dreamfront{
   display: inline-block;
   margin-left: 150px;
   margin-top: 27px;
  
 }
-.dreamSelect1 > .dreamfront:hover{
+.dreamSelect > .dreamfront:hover{
   cursor: pointer;
   color: #178915;
 }
@@ -410,5 +410,20 @@ ul {
 }
 .elseYear:hover{
   cursor: pointer;
+  color: #178915;
+}
+.completebutton {
+  font-size: 40px;
+  color: #8C8C8C;
+  margin-top: 500px;
+  margin-left: 1200px;
+  cursor: pointer;
+  transition: color 0.3s; 
+}
+.horseman > .completebutton:hover {
+  color: #178915; 
+}
+/* 모든 3개 요소가 활성화되었을 때 completebutton 색상 변경 */
+.YearSelect:hover + .dreamSelect1 .dreamfront:hover + .writing2:hover + .completebutton {
   color: #178915;
 }
