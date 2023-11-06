@@ -137,8 +137,8 @@ export default function Mypage() {
                     <span className="writing3">당신의 동아리는 무엇인가요?</span>
                     <div className='clubSelect'>
                         <div className='clubB1ND'> B1ND </div>
-                        <div className='elseclub'> 두카미 </div>
-                        <div className="elseclub"> CNS </div>
+                        <div className='elseclub'> CNS </div>
+                        <div className="elseclub"> CNS두카미 </div>
                         <div className="elseclub"> ALT </div>
                         <div className="elseclub"> 삼디 </div>
                         <div className="elseclub"> 스페이스 </div>
