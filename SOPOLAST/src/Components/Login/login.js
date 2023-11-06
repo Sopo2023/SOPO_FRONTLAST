@@ -100,7 +100,7 @@ const LoginComponent = () => {
             </button>
             {msg}
             <Link to="/Signuppage" className="LINK">
-              sign up
+              Sign up
             </Link>
           </form>
         </div>
