@@ -51,13 +51,10 @@ ul {
 .link:hover {
   color: #1a9a18;
 }
-.Readme {
-  margin-top: 200px;
-}
 .top {
   position: absolute;
   align-items: flex-start;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .top1 {
   font-size: 30px;
@@ -104,7 +101,7 @@ ul {
 }
 
 .Readme{
-  margin-top: 250px;
+  margin-top: 150px;
 }
 
 .body {
@@ -124,6 +121,7 @@ ul {
   margin: 52px 0 0 60px;
   font-size: 20px;
   font-weight: 800;
+  position: absolute;
 }
 
 .pT {
@@ -136,7 +134,6 @@ ul {
   width: 1370px;
   height: 120px;
   border-radius: 10px;
-  position: absolute;
 }
 
 .link1 {
@@ -259,7 +256,6 @@ ul {
   height: 100%;
   top: 0;
   background-color: #73737339;
-
 }
 .pagination-writing{
   position: absolute;
