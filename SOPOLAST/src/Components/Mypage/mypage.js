@@ -159,14 +159,14 @@ export default function Mypage() {
                     <input 
                     id="inst" 
                     type="text"
-                    placeholder="당신의 인스타 URL을 입력해주세요"
+                    placeholder="당신의 인스타 URL을 입력해주세요."
                     ></input>
 
                     <span className="writing6"> 당신의 사용가능 스킬은 무엇인가요? </span>
                     <input 
                     id="skill" 
                     type="text"
-                    placeholder="당신의 사용가능 스킬을 입력해주세요"
+                    placeholder="당신의 사용가능 스킬을 입력해주세요."
                     ></input>
 
                     <div className="completebutton">
