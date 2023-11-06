@@ -152,7 +152,7 @@ export default function Mypage() {
                     <input 
                     id="git" 
                     type="text"
-                    placeholder="당신의 깃허브 아이디를 입력해주세요"
+                    placeholder="당신의 깃허브 아이디를 입력해주세요."
                     ></input>
                     <div className="completebutton">
                     완료
