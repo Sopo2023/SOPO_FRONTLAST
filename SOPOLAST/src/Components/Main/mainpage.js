@@ -132,7 +132,7 @@ useEffect(() => {
                 <p className='card_p'>ALT</p>
             </div>
             <div className="card3" onClick={()=>{navigate("/card3")}}>
-                <p className='card_p'>가요이</p>
+                <p className='card_p'>서샹렬</p>
                 <p className='card_p'>Back-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>DLC</p>
