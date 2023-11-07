@@ -9,8 +9,10 @@ export default function Sidewrite() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [imageSrc, setImageSrc] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null); 
-  const SERVERURL = "http:10.80.161.148:8080"; 
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [fileName, setFileName] = useState(null); 
+  const localStorageEmail = localStorage.getItem('sopo_id');
+  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app";
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -24,10 +26,10 @@ export default function Sidewrite() {
   });
 
   const onSubmitHandler = async (e) => {
+    e.preventDefault();
     const selectedCategory = document.querySelector('.sc-cBornz-gegs').value;
     const selectedPlace = document.querySelector('.sd-cBornz-gegs').value;
-
-    const userEmail = localStorage.getItem("userEmail");
+  
     if (!title || !content) {
       Toast.fire({
         icon: 'error',
@@ -35,42 +37,46 @@ export default function Sidewrite() {
       });
       return;
     }
-
+  
     const formData = new FormData();
-    formData.append("title", title);
-    formData.append("content", content);
-    formData.append("category", selectedCategory);
-    formData.append("email", userEmail);
-
+    const data = {
+      title,
+      content,
+      email: localStorageEmail,
+    };
+  
+    
+    formData.append("data", new Blob([JSON.stringify(data)], { type: "application/json" }));
+  
     if (selectedPlace === "게시물") {
-      formData.append("images", selectedImage);
+      formData.append("image", selectedImage);
     }
-
+  
     try {
       let response;
       if (selectedPlace === "게시물") {
-        response = await axios.post(SERVERURL + "/senior-to-junior/create", formData, {
+        await axios.post(SERVERURL + "/senior-to-junior/create", formData, {
           headers: {
-        
+            "Content-Type": "multipart/form-data",
           },
         });
       } else if (selectedPlace === "대회") {
-        
         response = await axios.post(SERVERURL + "#", formData, {
           headers: {
-        
+            
           },
         });
       }
-     
     } catch (error) {
       console.error("Error:", error);
     }
   };
+  
 
   const handleImageChange = (e) => {
     const selectedImage = e.target.files[0];
-    setSelectedImage(selectedImage); 
+    setSelectedImage(selectedImage);
+    setFileName(selectedImage ? selectedImage.name : null);
     setImageSrc(URL.createObjectURL(selectedImage));
   };
 
@@ -117,7 +123,8 @@ export default function Sidewrite() {
           <label htmlFor="file">
             <div className="btn-upload">사진 설정</div>
           </label>
-          <input type="file" name="file" id="file" onChange={handleImageChange}/>
+          <input type="file" name="file" id="file" onChange={handleImageChange} />
+          {fileName && <div>{fileName}</div>}
           <button id='write_submit' type='submit'>Submit</button>
         </form>
       </div>
