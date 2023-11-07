@@ -127,3 +127,35 @@
     width: 650px;
     margin-left: -10px;
   }
+
+  .name{
+    color: #000;
+
+  font-family: Inter;
+  font-size: 20px;  
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  }
+
+  .title{
+    color: #8C8C8C;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-top: 6px;
+  }
+
+  .detail{
+    color: #8C8C8C;
+
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  }
