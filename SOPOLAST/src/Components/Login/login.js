@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import {  userState } from "../../recoil/auto"; 
+
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
 import axios from "axios";
@@ -10,9 +13,10 @@ const LoginComponent = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/login";
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
+
+  const [user, setUser] = useRecoilState(userState);
 
   const handleLogin = async () => {
     const Toast = Swal.mixin({
@@ -43,6 +47,8 @@ const LoginComponent = () => {
         password: password,
       };
 
+      const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/login"; // Move the server URL here
+
       const response = await axios.post(SERVERURL, userData, {
         withCredentials: true,
         headers: {
@@ -53,7 +59,8 @@ const LoginComponent = () => {
       setLoading(false);
 
       if (response.data.status === 200) {
-        navigate("/mypage");
+        setUser({ name: response.data.name, email: response.data.email });
+        navigate("/main");
       } else {
         Toast.fire({
           icon: "error",

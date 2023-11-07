@@ -6,6 +6,8 @@ import Post3 from "../../Assets/img/newjeans.jpeg";
 import Head from '../../head/head';
 import axios from "axios";
 import "./main.css";
+import { useRecoilValue } from 'recoil'; 
+import { userState } from '../../recoil/auto';
 
 export default function Start() {
   const navigate = useNavigate();
@@ -15,6 +17,7 @@ export default function Start() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [cards, setCards] = useState([]);
+  const user = useRecoilValue(userState);
 
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // 왼쪽 마우스 버튼만
@@ -142,7 +145,7 @@ export default function Start() {
     
             <div className="sideName">
                 <div className="CHname">
-                    <p onClick={()=>{navigate("/mypage")}} className='sidenameColor' >이해준</p>
+                <p onClick={() => navigate("/mypage")} className='sidenameColor'>{user.name}</p>
                 </div>
                 <div className="Write">
                     <p className="link_side" onClick={()=>{navigate("/Mypage")}}>내 포트폴리오</p>
