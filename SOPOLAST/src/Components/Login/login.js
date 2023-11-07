@@ -10,7 +10,7 @@ const LoginComponent = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const SERVERURL = "http://10.80.161.148:8080/login";
+  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/login";
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
 

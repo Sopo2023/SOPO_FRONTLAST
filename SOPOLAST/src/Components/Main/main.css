@@ -46,6 +46,11 @@
     top: 80px;
     -ms-overflow-style: none; 
     scrollbar-width: none;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
   .card_img{
     position: absolute;
