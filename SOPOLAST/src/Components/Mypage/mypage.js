@@ -34,7 +34,7 @@ export default function Mypage() {
   const [iselseeclubSelected, setIselseeclubSelected] = useState(false);
   const [sideName, setSideName] = useState('');
   const [email, setEmail] = useState('');
-  const localStorageEmail = localStorage.getItem('sopo_id');   
+  
 // const localStorageName = localStorage.getItem('sopo_nm'); 
 useEffect(() => {
     const localStorageName = localStorage.getItem('sopo_nm');

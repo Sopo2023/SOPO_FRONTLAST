@@ -163,7 +163,7 @@ useEffect(() => {
                 <div className='News'>
                     <p className='writ_name'>내 소식</p>
                     <div className='write_detail'>
-                    <p className='writ'><strong>배채희</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
+                    <p className='writ'><strong>서상렬</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
                     </div>
                 </div>
             </div>
