@@ -79,8 +79,8 @@
   }
   
   .post-written .title {
-    font-size: 18px;
-    color: #000000;
+    font-size: 22px;
+    color: #777;
   }
   
   .post-written .detail {
@@ -95,7 +95,7 @@
   }
   
   .post_img{
-    width: 300px;
+    width: 240px;
     height: 200px;
     position: absolute;
     top: 50%; 

@@ -6,6 +6,7 @@ import TEST1 from "../../Assets/img/gayoe.jpeg";
 import TEST2 from "../../Assets/img/park.JPG";
 import TEST3 from "../../Assets/img/newjeans.jpeg";
 import TEST4 from "../../Assets/img/gayoe.jpeg";
+import TEST5 from "../../Assets/image/3.png"
 import Head from "../../head/head";
 
 export default function Start() {
@@ -34,9 +35,9 @@ export default function Start() {
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.08.25</span>
+                <span className="date">2023.11.02</span>
                 <span className="img">
-                  <img className="post_img" src={TEST4} alt="이미지"></img>
+                  <img className="post_img" src={TEST5} alt="이미지"></img>
                 </span>
               </div>
             </div>
@@ -56,7 +57,7 @@ export default function Start() {
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.09.02</span>
+                <span className="date">2023.10.28</span>
                 <span className="img">
                   <img className="post_img" src={TEST0} alt="이미지"></img>
                 </span>
@@ -78,7 +79,7 @@ export default function Start() {
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.10.05</span>
+                <span className="date">2023.10.28</span>
                 <span className="img">
                   <img className="post_img" src={TEST3} alt="이미지"></img>
                 </span>
@@ -90,54 +91,59 @@ export default function Start() {
               <div className="post_border">
                 <span className="name">박규민</span>
                 <br></br>
-                <span className="title">SW연합해커톤</span>
+                <span className="title">경쟁 서비스 분석 및 비지니스 모델 이해</span>
                 <br></br>
                 <span className="detail">
-                - 왜 SW 개발자가 필요할까?
-    
-    비지니스가 소프트웨어로 이루어 진다
-    
-    소프트웨어로 인해 사람의 삶이 바뀌고 살아가는 방식이 바뀐다
-    
-- 기업이 원한는 SW개발자란?
-    - Tech Skill
-        - 코드 가독성이 좋은
-        - 재사용이 가능한 코드
-        - 유지보수성을 고려하는 코드
-        - 버그없는 코드
-    - Soft Skill
-        - 업무공유와 협업에 능한
-        - 소통을 잘하는
-        - 이슈에 빠르게 대응하는
-        - 고객사/협력사/동료와 관계가 좋은
-    - 우수SW개발자
-        - 협업에 유연하고
-        - 자기 주도적이며
-        - 문제 해결력이 높은
+                  경쟁서비스 분석 및 비지니스모델 이해 서울 신학대학교 이형주 교수님<br></br>
+                  독창성,시장성(경쟁서비스에 대한 분석 및 이해가 적절한가?), 사업계획 완성도<br></br>
+                  (제시한 서비스의 사업 모델이 설득력 있는가?) 경쟁서비스 이해
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.10.05</span>
+                <span className="date">2023.10.27</span>
               </div>
               <span className="img">
-                <img className="post_img" src={TEST2} alt="이미지"></img>
+                <img className="post_img" src={TEST5} alt="이미지"></img>
               </span>
             </div>
           </div>
           <div className="post-written">
             <div className="post_border">
                 <div className="postshow1">
-                <span className="name">배채희</span>
+                <span className="name">전우진</span>
                 <br></br>
-                <span className="title">오늘의 리엑트 수업</span>
+                <span className="title">4개교 연합 해커톤 - SW창업 알고보면 어렵지 않다</span>
                 <br></br>
                 <span className="detail">
-                  오늘은 동아리 CNS에서 경민스쿨을 진행했다 윤세욱이 제일 많이
-                  문제를 맞췄다 역시 우리의 세욱이
+                  1학기, 3월부터 8월까지라는 짧지 않은 시간이 지났기에<br></br>
+                  나는 블로그의 첫글을 회고록으로 시작하고자 한다.<br></br>
+                  왜 회고록을 쓰는가? 라고 묻는다면 난 단연코 '성장' 하기 위해서라고 생각한다.<br></br>
+                  나는 그리 똑똑한 사람이 아니기에 어떤한 일의 모든 감정과, 그 당시 느낀 귀중한 생각을 
                 </span>
                 <br></br>
                 <br></br>
-                <span className="date">2023.10.05</span>
+                <span className="date">2023.10.25</span>
+                <span className="img">
+                  <img className="post_img" src={TEST1} alt="이미지"></img>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="post-written">
+            <div className="post_border">
+                <div className="postshow1">
+                <span className="name">김호준</span>
+                <br></br>
+                <span className="title">바인드 컨퍼런스를 주최하며 느낀점</span>
+                <br></br>
+                <span className="detail">
+                  연말을 맞이하며 바인드 컨퍼런스를 주최하게 되었습니다. 컨퍼런스를 직접 듣고<br></br>
+                  처음 개최하는 컨퍼런스이기에 발표를 맞게 되어 너무 떨렸습니다. 꽤나 부담감을 느끼는 시간<br></br>
+                  속에서 바인드 컨퍼런스를 하는 날이 밝았습니다.
+                </span>
+                <br></br>
+                <br></br>
+                <span className="date">2023.10.18</span>
                 <span className="img">
                   <img className="post_img" src={TEST1} alt="이미지"></img>
                 </span>
