@@ -125,8 +125,9 @@ ul {
 }
 
 .pT {
-  position: relative;
+  position: absolute;
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 .socialp {
@@ -504,7 +505,7 @@ ul {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: 420px;
+  margin-top: 440px;
 }
 
 #inst{
@@ -516,7 +517,7 @@ ul {
   border-bottom: 2px solid #1a9a18;
   outline: none;
   font-size: 20px;
-  margin-top: 430px;
+  margin-top: 440px;
 }
 #inst::placeholder{
   font-size: 18px;
@@ -532,7 +533,7 @@ ul {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: 550px;
+  margin-top: 570px;
 }
 
 #skill{
@@ -544,7 +545,7 @@ ul {
   border-bottom: 2px solid #1a9a18;
   outline: none;
   font-size: 20px;
-  margin-top: 550px;
+  margin-top: 570px;
 }
 #skill::placeholder{
   font-size: 18px;
@@ -560,7 +561,7 @@ ul {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: 670px;
+  margin-top: 690px;
 }
 
 #Award{
@@ -572,7 +573,7 @@ ul {
   border-bottom: 2px solid #1a9a18;
   outline: none;
   font-size: 20px;
-  margin-top: 670px;
+  margin-top: 685px;
 }
 #Award::placeholder{
   font-size: 18px;
@@ -588,7 +589,7 @@ ul {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: 790px;
+  margin-top: 810px;
 }
 
 #kk{
@@ -600,7 +601,7 @@ ul {
   border-bottom: 2px solid #1a9a18;
   outline: none;
   font-size: 20px;
-  margin-top: 780px;
+  margin-top: 810px;
 }
 #kk::placeholder{
   font-size: 18px;

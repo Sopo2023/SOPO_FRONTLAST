@@ -119,12 +119,6 @@ export default function Mypage() {
               <Link className="link2" href="mailto:lerb5253@dgsw.hs.kr"> 이해준님께 메일쓰기 </Link>
             </p>
             <p>
-              <Link to="/mypage/number" className="link1">
-                전화번호:
-              </Link>
-              010-1234-5678
-            </p>
-            <p>
               <Link to="https://www.instagram.com/hae_jun7388/" className="link1">
                 인스타:
               </Link>
@@ -311,11 +305,11 @@ export default function Mypage() {
                     type="text"
                     placeholder="당신의 수상기록을 입력해주세요.(최대3개)"
                     ></input>
-                    <span className="writing8"> 당신의 카카오톡은 무엇인가요? </span>
+                    <span className="writing8"> 당신의 포트폴리오은 무엇인가요? </span>
                     <input 
                     id="kk" 
                     type="text"
-                    placeholder="당신의 카카오톡 아이디를 입력해주세요."
+                    placeholder="당신의 포트폴리오URL를 입력해주세요."
                     ></input>
                     <div className="completebutton">
                     완료
