@@ -19,10 +19,13 @@
   }
 
   .name1 {
-    position: absolute;
-    font-weight: bold;
-    color: #888;
-    margin-top: 1%;
+    color: #8C8C8C;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   }
 
   .post_img1{
@@ -53,4 +56,14 @@
 
   .minit2 {
     font-size: 20px;
+  }
+
+  .title1{
+    color: #000;
+
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
   }
