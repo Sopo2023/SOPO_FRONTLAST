@@ -6,7 +6,7 @@ import "./signup.css";
 import Swal from "sweetalert2";
 
 function LoginComponent() {
-  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/";
+  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app";
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
