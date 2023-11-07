@@ -445,8 +445,8 @@ ul {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-left: -48px;
-  margin-top: 580px;
+  margin-left: 75px;
+  margin-top: 600px;
 }
 
 .clubSelect > .clubB1ND{
@@ -618,6 +618,10 @@ ul {
 }
 
 .elsedream.selected {
+  color: #1a9a18; 
+}
+
+.elseclub.selected {
   color: #1a9a18; 
 }
 

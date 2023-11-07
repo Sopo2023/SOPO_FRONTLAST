@@ -22,6 +22,18 @@ export default function Mypage() {
   const [isdesigndreamSelected, setIsdesigndreamSelected] = useState(false);
   const [isfullstackdreamSelected, setIsfullstackdreamSelected] = useState(false);
 
+  const [isB1NDclubSelected, setIsB1NDclubSelected] = useState(false); // 동아리 버튼 상태를 저장할 변수
+  const [isCNSclubSelected, setIsCNSclubSelected] = useState(false);
+  const [isDoclubSelected, setIsDoclubSelected] = useState(false);
+  const [isALTclubSelected, setIsALTclubSelected] = useState(false);
+  const [is3DclubSelected, setIs3DclubSelected] = useState(false);
+  const [isSpaceclubSelected, setIsSpaceclubSelected] = useState(false);
+  const [isModiclubSelected, setIsModiclubSelected] = useState(false);
+  const [isDLCclubSelected, setIsDLCclubSelected] = useState(false);
+  const [isQIclubSelected, setIsQIclubSelected] = useState(false);
+  const [iselseeclubSelected, setIselseeclubSelected] = useState(false);
+
+
   const handleEmailCertify = () => {
     setIsCertifying(true);
   };
@@ -80,6 +92,46 @@ export default function Mypage() {
 
   const togglefullstackdreamColor = () => {
     setIsfullstackdreamSelected(!isfullstackdreamSelected);
+  }
+
+  const toggleB1NDclubColor = () => {
+    setIsB1NDclubSelected(!isB1NDclubSelected);
+  }
+
+  const toggleCNSclubColor = () => {
+    setIsCNSclubSelected(!isCNSclubSelected);
+  }
+
+  const toggleDoclubColor = () => {
+    setIsDoclubSelected(!isDoclubSelected);
+  }
+
+  const toggleALTclubColor = () => {
+    setIsALTclubSelected(!isALTclubSelected);
+  }
+
+  const toggle3DclubColor = () => {
+    setIs3DclubSelected(!is3DclubSelected);
+  }
+
+  const toggleSpaceclubColor = () => {
+    setIsSpaceclubSelected(!isSpaceclubSelected);
+  }
+
+  const toggleModiclubColor = () => {
+    setIsModiclubSelected(!isModiclubSelected);
+  }
+
+  const toggleDLCclubColor = () => {
+    setIsDLCclubSelected(!isDLCclubSelected);
+  }
+
+  const toggleQIclubColor = () => {
+    setIsQIclubSelected(!isQIclubSelected);
+  }
+
+  const toggleelseeclubColor = () => {
+    setIselseeclubSelected(!iselseeclubSelected);
   }
 
   return (
@@ -267,16 +319,66 @@ export default function Mypage() {
 
                     <span className="writing3">당신의 동아리는 무엇인가요?</span>
                     <div className='clubSelect'>
-                        <div className='clubB1ND'> B1ND </div>
-                        <div className='elseclub'> CNS </div>
-                        <div className="elseclub"> 두카미 </div>
-                        <div className="elseclub"> ALT </div>
-                        <div className="elseclub"> 삼디 </div>
-                        <div className="elseclub"> 스페이스 </div>
-                        <div className="elseclub"> 모디 </div>
-                        <div className="elseclub"> DLC </div>
-                        <div className="elseclub"> QI </div>
-                        <div className="elseclub"> 기타 </div>
+                      <div
+                        className={`elseclub ${isB1NDclubSelected ? 'selected' : ''}`}
+                        onClick={toggleB1NDclubColor}
+                      >
+                        B1ND
+                      </div>
+                      <div
+                        className={`elseclub ${isCNSclubSelected ? 'selected' : ''}`}
+                        onClick={toggleCNSclubColor}
+                      >
+                        CNS
+                      </div>
+                      <div
+                        className={`elseclub ${isALTclubSelected ? 'selected' : ''}`}
+                        onClick={toggleALTclubColor}
+                      >
+                        ALT
+                      </div>
+                      <div
+                        className={`elseclub ${isDoclubSelected ? 'selected' : ''}`}
+                        onClick={toggleDoclubColor}
+                      >
+                        두카미
+                      </div>
+                      <div
+                        className={`elseclub ${is3DclubSelected ? 'selected' : ''}`}
+                        onClick={toggle3DclubColor}
+                      >
+                        삼디
+                      </div>
+                      <div
+                        className={`elseclub ${isSpaceclubSelected ? 'selected' : ''}`}
+                        onClick={toggleSpaceclubColor}
+                      >
+                        스페이스
+                      </div>
+                      <div
+                        className={`elseclub ${isModiclubSelected ? 'selected' : ''}`}
+                        onClick={toggleModiclubColor}
+                      >
+                        모디
+                      </div>
+                      <div
+                        className={`elseclub ${isQIclubSelected ? 'selected' : ''}`}
+                        onClick={toggleQIclubColor}
+                      >
+                        QI
+                      </div>
+                      <div
+                        className={`elseclub ${isDLCclubSelected ? 'selected' : ''}`}
+                        onClick={toggleDLCclubColor}
+                      >
+                        DLC
+                      </div>
+                      <div
+                        className={`elseclub ${iselseeclubSelected ? 'selected' : ''}`}
+                        onClick={toggleelseeclubColor}
+                      >
+                        기타
+                      </div>
                       </div>
 
                     <span className="writing4"> 당신의 깃허브 아이디는 무엇인가요? </span>
