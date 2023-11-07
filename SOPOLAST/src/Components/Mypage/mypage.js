@@ -41,8 +41,8 @@ export default function Mypage() {
   const LeavehandleEmailCertify = () => {
     setIsCertifying(false);
   };
-
-  const toggleYearColor = () => {
+ 
+  const toggleYearColor = () => {           // Year색깔 바꾸기
     setIsYearSelected(!isYearSelected);
   };
 
@@ -58,7 +58,7 @@ export default function Mypage() {
     setIs9thYearSelected(!is9thYearSelected);
   };
 
-  const togglefrontdreamColor = () => {
+  const togglefrontdreamColor = () => {           // dream색깔 바꾸기
     setIsfrontdreamSelected(!isfrontdreamSelected);
   }
 
@@ -94,7 +94,7 @@ export default function Mypage() {
     setIsfullstackdreamSelected(!isfullstackdreamSelected);
   }
 
-  const toggleB1NDclubColor = () => {
+  const toggleB1NDclubColor = () => {         // 동아리색깔 바꾸기
     setIsB1NDclubSelected(!isB1NDclubSelected);
   }
 
