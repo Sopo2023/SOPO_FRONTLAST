@@ -311,6 +311,18 @@ export default function Mypage() {
                     type="text"
                     placeholder="당신의 수상기록을 입력해주세요.(최대3개)"
                     ></input>
+                    <span className="writing8"> 당신의 이메일은 무엇인가요? </span>
+                    <input 
+                    id="email" 
+                    type="text"
+                    placeholder="당신의 이메일을 입력해주세요."
+                    ></input>
+                    <span className="writing9"> 당신의 카카오톡은 무엇인가요? </span>
+                    <input 
+                    id="kk" 
+                    type="text"
+                    placeholder="당신의 카카오톡 아이디를 입력해주세요."
+                    ></input>
                     <div className="completebutton">
                     완료
                     </div>

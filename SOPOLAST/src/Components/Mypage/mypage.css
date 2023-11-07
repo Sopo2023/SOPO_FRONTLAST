@@ -424,7 +424,7 @@ ul {
 .completebutton {
   font-size: 40px;
   color: #8C8C8C;
-  margin-top: 650px;
+  margin-top: 700px;
   margin-left: 1200px;
   cursor: pointer;
   transition: color 0.3s; 
@@ -504,7 +504,7 @@ ul {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: 430px;
+  margin-top: 420px;
 }
 
 #inst{
@@ -577,6 +577,64 @@ ul {
 #Award::placeholder{
   font-size: 18px;
 }
+
+.writing8 {
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 790px;
+}
+
+#email{
+  position: absolute;
+  left: 100px;
+  top: 450px;
+  width: 840px;
+  border: none;
+  border-bottom: 2px solid #1a9a18;
+  outline: none;
+  font-size: 20px;
+  margin-top: 780px;
+}
+#email::placeholder{
+  font-size: 18px;
+}
+
+.writing9 {
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 890px;
+}
+
+#kk{
+  position: absolute;
+  left: 100px;
+  top: 450px;
+  width: 840px;
+  border: none;
+  border-bottom: 2px solid #1a9a18;
+  outline: none;
+  font-size: 20px;
+  margin-top: 890px;
+}
+#kk::placeholder{
+  font-size: 18px;
+}
+
+
 .Year.selected {
   /* 선택된 경우의 색상전환 */
   color: #1a9a18;
