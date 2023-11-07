@@ -42,20 +42,36 @@ export default function Mypage() {
     setIsCertifying(false);
   };
  
-  const toggleYearColor = () => {           // Year색깔 바꾸기
-    setIsYearSelected(!isYearSelected);
+  const toggleYearColor = () => {
+    // Year 버튼을 클릭할 때 색상을 변경
+    setIsYearSelected(true); // 현재 클릭된 버튼만 선택
+    setIs7thYearSelected(false); // 다른 버튼들의 상태 초기화
+    setIs8thYearSelected(false);
+    setIs9thYearSelected(false);
   };
 
   const toggle7thYearColor = () => {
-    setIs7thYearSelected(!is7thYearSelected);
+    // 7기 버튼을 클릭할 때 색상을 변경
+    setIs7thYearSelected(true); // 현재 클릭된 버튼만 선택
+    setIsYearSelected(false); // 다른 버튼들의 상태 초기화
+    setIs8thYearSelected(false);
+    setIs9thYearSelected(false);
   };
 
   const toggle8thYearColor = () => {
-    setIs8thYearSelected(!is8thYearSelected);
+    // 8기 버튼을 클릭할 때 색상을 변경
+    setIs8thYearSelected(true); // 현재 클릭된 버튼만 선택
+    setIsYearSelected(false); // 다른 버튼들의 상태 초기화
+    setIs7thYearSelected(false);
+    setIs9thYearSelected(false);
   };
 
   const toggle9thYearColor = () => {
-    setIs9thYearSelected(!is9thYearSelected);
+    // 9기 버튼을 클릭할 때 색상을 변경
+    setIs9thYearSelected(true); // 현재 클릭된 버튼만 선택
+    setIsYearSelected(false); // 다른 버튼들의 상태 초기화
+    setIs7thYearSelected(false);
+    setIs8thYearSelected(false);
   };
 
   const togglefrontdreamColor = () => {           // dream색깔 바꾸기
