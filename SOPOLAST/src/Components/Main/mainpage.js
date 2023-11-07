@@ -1,8 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Post1 from "../../Assets/image/1.png";
-import Post2 from "../../Assets/img/postimg.jpeg";
-import Post3 from "../../Assets/img/newjeans.jpeg";
+// import Post2 from "../../Assets/img/postimg.jpeg";
+// import Post3 from "../../Assets/img/newjeans.jpeg";
+
+import SOPO from "../../Assets/img/mainicon.png";
+import bind from "../../Assets/image/b1nd.png"
+import Jagu from "../../Assets/img/MAC.JPG"
+
 import Head from '../../head/head';
 import axios from "axios";
 import "./main.css";
@@ -189,7 +194,7 @@ useEffect(() => {
                     <span className="detail"> 지난 8월부터 시작한 나르샤가 끝나간다. 나르샤가 끝나가며 ICT에 나가게 되었는데 아직 그 순간을 기억하면 떨리고 있다. 힘들기도 무척 힘들었지만 뿌듯함과 </span>
                     <span className="date">2023.09.22</span>
                 </div>
-                <span className="img"><img className='real_img' src={Post2} alt="이미지"></img></span>
+                <span className="img"><img className='real_img' src={SOPO} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -198,7 +203,7 @@ useEffect(() => {
                     <span className="detail"> JAVA 공부법.<br/> 안녕하세요. 오늘은 자바 공부법에 대해 이야기합니다. </span>
                     <span className="date">2023.09.18</span>
                 </div>
-                <span className="img"><img className='real_img' src={Post3} alt="이미지"></img></span>
+                {/* <span className="img"><img className='real_img' src={Post3} alt="이미지"></img></span> */}
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -207,6 +212,7 @@ useEffect(() => {
                     <span className="detail"> 바인드 컨퍼런스 들은 날 <br/> 바인드 컨퍼런스를 시청각실에서 들었는데 너무너무 좋은 이야기가 있었다.</span>
                     <span className="date">2023.09.15</span>
                 </div>
+                <span className="img"><img className='real_img' src={bind} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
@@ -215,6 +221,7 @@ useEffect(() => {
                     <span className="detail"> 난 자료구조 시험을 중간고사에 치고서 배운점이 많이 생겨서 다른 학생들도 알면 좋을것 같단 생각에 이 글을 쓰게 되었다!! </span>
                     <span className="date">2023.09.12</span>
                 </div>
+                <span className="img"><img className='real_img' src={Jagu} alt="이미지"></img></span>
             </div>       
         </div>
  
