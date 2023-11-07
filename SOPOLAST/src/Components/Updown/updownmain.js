@@ -6,7 +6,11 @@ import TEST1 from "../../Assets/img/gayoe.jpeg";
 import TEST2 from "../../Assets/img/park.JPG";
 import TEST3 from "../../Assets/img/newjeans.jpeg";
 import TEST4 from "../../Assets/img/gayoe.jpeg";
-import TEST5 from "../../Assets/image/3.png"
+import TEST5 from "../../Assets/image/3.png";
+import TEST6 from "../../Assets/image/1.png";
+import TEST7 from "../../Assets/image/2.png";
+import TEST8 from "../../Assets/img/B1CODE.png"
+import TEST9 from "../../Assets/img/MAC.JPG"
 import Head from "../../head/head";
 
 export default function Start() {
@@ -37,7 +41,7 @@ export default function Start() {
                 <br></br>
                 <span className="date">2023.11.02</span>
                 <span className="img">
-                  <img className="post_img" src={TEST5} alt="이미지"></img>
+                  <img className="post_img" src={TEST6} alt="이미지"></img>
                 </span>
               </div>
             </div>
@@ -59,7 +63,7 @@ export default function Start() {
                 <br></br>
                 <span className="date">2023.10.28</span>
                 <span className="img">
-                  <img className="post_img" src={TEST0} alt="이미지"></img>
+                  <img className="post_img" src={TEST7} alt="이미지"></img>
                 </span>
               </div>
             </div>
@@ -81,7 +85,7 @@ export default function Start() {
                 <br></br>
                 <span className="date">2023.10.28</span>
                 <span className="img">
-                  <img className="post_img" src={TEST3} alt="이미지"></img>
+                  <img className="post_img" src={TEST8} alt="이미지"></img>
                 </span>
               </div>
             </div>
@@ -124,7 +128,7 @@ export default function Start() {
                 <br></br>
                 <span className="date">2023.10.25</span>
                 <span className="img">
-                  <img className="post_img" src={TEST1} alt="이미지"></img>
+                  <img className="post_img" src={TEST9} alt="이미지"></img>
                 </span>
               </div>
             </div>
@@ -145,7 +149,7 @@ export default function Start() {
                 <br></br>
                 <span className="date">2023.10.18</span>
                 <span className="img">
-                  <img className="post_img" src={TEST1} alt="이미지"></img>
+                  <img className="post_img" src={TEST8} alt="이미지"></img>
                 </span>
               </div>
             </div>
