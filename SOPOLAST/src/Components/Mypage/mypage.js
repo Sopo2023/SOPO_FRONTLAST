@@ -178,7 +178,7 @@ useEffect(() => {
         </div>
       </div>
       <div className="Readme">
-        <p className="head">Frontend-Dev</p>
+        <p className="head">프론트엔드 개발자</p>
         <div className="body">
           안녕하세요! 프론트엔드 개발자라는 꿈을 향해 달리는 {sideName}입니다.
         </div>

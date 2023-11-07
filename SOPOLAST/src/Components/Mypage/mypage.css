@@ -94,10 +94,14 @@ ul {
   font-size: 20px;
   font-weight: 600;
   margin: 0 0 0 60px;
+
+  margin-bottom: 10px;
 }
 
 .head2 {
   font-size: 27px;
+
+  margin-bottom: 10px;
 }
 
 .Readme{
@@ -155,12 +159,17 @@ ul {
   font-size: 25px;
   font-weight: 800;
   position: absolute;
+
+  margin-top: 25px;
+  
 }
 
 .post-write {
   margin: 0;
   position: relative;
   top: 70px;
+
+  margin-top: 25px;
 }
 
 .Zonecontrol {
