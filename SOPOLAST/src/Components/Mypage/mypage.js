@@ -134,7 +134,7 @@ export default function Mypage() {
               <Link to="/mypage/kako" className="link1">
                 카톡:
               </Link>
-              이해준
+              imhaejoon
             </p>
           </div>
         </div>
@@ -305,7 +305,12 @@ export default function Mypage() {
                     type="text"
                     placeholder="당신의 사용가능 스킬을 입력해주세요."
                     ></input>
-
+                    <span className="writing7"> 당신의 수상은 무엇인가요? </span>
+                    <input 
+                    id="Award" 
+                    type="text"
+                    placeholder="당신의 수상기록을 입력해주세요.(최대3개)"
+                    ></input>
                     <div className="completebutton">
                     완료
                     </div>
