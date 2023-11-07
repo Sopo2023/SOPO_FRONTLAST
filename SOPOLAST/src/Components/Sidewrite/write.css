@@ -35,6 +35,44 @@
     position: absolute;
     right: 160px;
 }
+.sd-cBornZ-gegSAw{
+    position: absolute;
+    top: 70px;
+    left: 730px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: flex-start;
+    margin: 12px;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.sd-cBornz-gegs{
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgb(241, 241, 241);
+}
+.sc-cBornZ-gegSAw{
+    position: absolute;
+    top: 70px;
+    left: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: flex-start;
+    margin: 12px;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.sc-cBornz-gegs{
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgb(241, 241, 241);
+}
 
 .write_img1{
     position: absolute;
@@ -90,12 +128,12 @@
 .btn-upload{
     position: relative;
     top: 30px;
-    left: 1050px;
+    left: 850px;
     width: 100px;
     height: 30px;
     background: #fff;
-    border: 1px solid rgb(77,77,77);
-    border-radius: 10px;
+    border: 2px solid rgb(195, 195, 195);
+    border-radius: 5px;
     font-weight: 500;
     cursor: pointer;
     display: flex;

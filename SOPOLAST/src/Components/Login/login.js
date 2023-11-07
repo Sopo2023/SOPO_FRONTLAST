@@ -59,7 +59,14 @@ const LoginComponent = () => {
       setLoading(false);
 
       if (response.data.status === 200) {
-        setUser({ name: response.data.name, email: response.data.email });
+        // setUser({ name: response.data.name, email: response.data.email });
+        localStorage.clear()
+        localStorage.setItem('sopo_id', response.data.data.email);
+        localStorage.setItem('sopo_nm',  response.data.data.name);
+        // console.log(response.data.data.email);
+        // console.log(response.data.data.name);
+        // console.log(localStorage.getItem('sopo_id'));
+        // console.log(localStorage.getItem('sopo_nm'));
         navigate("/main");
       } else {
         Toast.fire({

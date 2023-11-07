@@ -1,5 +1,5 @@
 import { Link , useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TEST from "../../Assets/img/postimg.jpeg"
 import Head from "../../head/head";
 import Last from "../../Assets/img/Polygon 4.png"
@@ -32,7 +32,20 @@ export default function Mypage() {
   const [isDLCclubSelected, setIsDLCclubSelected] = useState(false);
   const [isQIclubSelected, setIsQIclubSelected] = useState(false);
   const [iselseeclubSelected, setIselseeclubSelected] = useState(false);
-
+  const [sideName, setSideName] = useState('');
+  const [email, setEmail] = useState('');
+  const localStorageEmail = localStorage.getItem('sopo_id');   
+// const localStorageName = localStorage.getItem('sopo_nm'); 
+useEffect(() => {
+    const localStorageName = localStorage.getItem('sopo_nm');
+    const localStorageEmail = localStorage.getItem('sopo_id'); 
+    if(localStorageEmail){
+      setEmail(localStorageEmail);
+    }
+    if (localStorageName) {
+      setSideName(localStorageName);
+    }
+  }, []);
 
   const handleEmailCertify = () => {
     setIsCertifying(true);
@@ -155,7 +168,7 @@ export default function Mypage() {
       <div className="content">
       <Head />
       <div className="top">
-        <p className="top1">이해준</p>
+        <p className="top1">{sideName}</p>
         <p className="top2">DGSW 8th</p>
         <br></br>
          <div className="fixbutton" onClick={() => handleEmailCertify()}> 
@@ -167,7 +180,7 @@ export default function Mypage() {
       <div className="Readme">
         <p className="head">Frontend-Dev</p>
         <div className="body">
-          안녕하세요! 프론트엔드 개발자라는 꿈을 향해 달리는 이해준입니다.
+          안녕하세요! 프론트엔드 개발자라는 꿈을 향해 달리는 {sideName}입니다.
         </div>
       </div>
       <div className="social">
@@ -184,7 +197,7 @@ export default function Mypage() {
               <Link to="/mypage/mail" className="link1">
                 메일:
               </Link>
-              <Link className="link2" href="mailto:lerb5253@dgsw.hs.kr"> 이해준님께 메일쓰기 </Link>
+              <Link className="link2" href="`mailto:${email}`"> {sideName}의 이메일 </Link>
             </p>
             <p>
               <Link to="https://www.instagram.com/hae_jun7388/" className="link1">
@@ -203,10 +216,10 @@ export default function Mypage() {
       </div>
       
       <div className="post_1">
-        <p className="post1">이해준님이 쓴 글 보기</p>
+        <p className="post1">{sideName}님이 쓴 글 보기</p>
         <div className="post-write" onClick={()=>{navigate("/Updownsub")}}>
           <div className="Zonecontrol">
-            <span className="Name">이해준</span>
+            <span className="Name">{sideName}</span>
             <span className="title">바인드 컨버런스를 듣고나서.  </span>
             <span className="detail">
             오늘은 팀 바인드에서 주최한 컨퍼런스 바코드에 대해 이야기 하려 한다.

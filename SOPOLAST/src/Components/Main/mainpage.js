@@ -6,8 +6,8 @@ import Post3 from "../../Assets/img/newjeans.jpeg";
 import Head from '../../head/head';
 import axios from "axios";
 import "./main.css";
-import { useRecoilValue } from 'recoil'; 
-import { userState } from '../../recoil/auto';
+// import { useRecoilValue } from 'recoil'; 
+// import { userState } from '../../recoil/auto';
 
 export default function Start() {
   const navigate = useNavigate();
@@ -17,7 +17,16 @@ export default function Start() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [cards, setCards] = useState([]);
-  const user = useRecoilValue(userState);
+//   const user = useRecoilValue(userState);
+const [sideName, setSideName] = useState('');
+const localStorageName = localStorage.getItem('sopo_nm'); 
+useEffect(() => {
+    const localStorageName = localStorage.getItem('sopo_nm');
+    if (localStorageName) {
+      setSideName(localStorageName);
+    }
+  }, []);
+  
 
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // 왼쪽 마우스 버튼만
@@ -145,7 +154,7 @@ export default function Start() {
     
             <div className="sideName">
                 <div className="CHname">
-                <p onClick={() => navigate("/mypage")} className='sidenameColor'>{user.name}</p>
+                <p onClick={() => navigate("/mypage")} className='sidenameColor'>{sideName}</p>
                 </div>
                 <div className="Write">
                     <p className="link_side" onClick={()=>{navigate("/Mypage")}}>내 포트폴리오</p>
@@ -154,7 +163,7 @@ export default function Start() {
                 <div className='News'>
                     <p className='writ_name'>내 소식</p>
                     <div className='write_detail'>
-                    <p className='writ'><strong>전우진</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
+                    <p className='writ'><strong>배채희</strong>님이 <strong>깃허브완전알려줌~ </strong>글에 댓글을 남겼습니다. </p>
                     </div>
                 </div>
             </div>
