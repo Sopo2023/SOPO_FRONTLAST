@@ -591,7 +591,7 @@ ul {
   margin-top: 790px;
 }
 
-#email{
+#kk{
   position: absolute;
   left: 100px;
   top: 450px;
@@ -602,38 +602,9 @@ ul {
   font-size: 20px;
   margin-top: 780px;
 }
-#email::placeholder{
-  font-size: 18px;
-}
-
-.writing9 {
-  position: absolute;
-  left: 100px;
-  top: 400px;
-  color: #000;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  margin-top: 890px;
-}
-
-#kk{
-  position: absolute;
-  left: 100px;
-  top: 450px;
-  width: 840px;
-  border: none;
-  border-bottom: 2px solid #1a9a18;
-  outline: none;
-  font-size: 20px;
-  margin-top: 890px;
-}
 #kk::placeholder{
   font-size: 18px;
 }
-
 
 .Year.selected {
   /* 선택된 경우의 색상전환 */
