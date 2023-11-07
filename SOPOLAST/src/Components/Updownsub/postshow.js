@@ -1,6 +1,6 @@
 import "./postshow.css";
 import Sidename from "../Sidebar/side";
-import TEST4 from "../../Assets/img/gayoe.jpeg";
+import TEST6 from "../../Assets/image/1.png";
 import Head from "../../head/head";
 
 export default function Start() {
@@ -16,7 +16,7 @@ export default function Start() {
               <span className="name1">김가영</span>
               <br></br>
               <span className="img">
-                <img className="post_img1" src={TEST4} alt="이미지"></img>
+                <img className="post_img1" src={TEST6} alt="이미지"></img>
               </span>
               <span className="detail1">
               <div className="minit">

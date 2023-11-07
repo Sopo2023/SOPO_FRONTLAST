@@ -38,12 +38,13 @@
   .detail1 {
     color: #000000;
     position: absolute;
-    margin-top: 34%;
+    margin-top: 400px;
   }
 
   .post_border1{
     width: 650px;
     height: 260px;
+    margin-top: -80px;
   }
  
   .minit {
