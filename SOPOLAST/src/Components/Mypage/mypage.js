@@ -7,10 +7,20 @@ import Last from "../../Assets/img/Polygon 4.png"
 export default function Mypage() {
   const navigate = useNavigate(); 
   const [isCertifying, setIsCertifying] = useState(false);
-  const [isYearSelected, setIsYearSelected] = useState(false); // 추가: Year 버튼 상태를 저장할 변수
+  const [isYearSelected, setIsYearSelected] = useState(false); // Year 버튼 상태를 저장할 변수
   const [is7thYearSelected, setIs7thYearSelected] = useState(false);
   const [is8thYearSelected, setIs8thYearSelected] = useState(false);
   const [is9thYearSelected, setIs9thYearSelected] = useState(false);
+
+  const [isfrontdreamSelected, setIsfrontdreamSelected] = useState(false); // dream 버튼 상태를 저장할 변수
+  const [isbackenddreamSelected, setIsbackenddreamSelected] = useState(false);
+  const [isAndroiddreamSelected, setIsAndroiddreamSelected] = useState(false);
+  const [isiOSdreamSelected, setIsiOSdreamSelected] = useState(false);
+  const [isEmbeddeddreamSelected, setIsEmbeddeddreamSelected] = useState(false);
+  const [isAIdreamSelected, setIsAIdreamSelected] = useState(false);
+  const [isInfoSecdreamSelected, setIsInfoSecdreamSelected] = useState(false);
+  const [isdesigndreamSelected, setIsdesigndreamSelected] = useState(false);
+  const [isfullstackdreamSelected, setIsfullstackdreamSelected] = useState(false);
 
   const handleEmailCertify = () => {
     setIsCertifying(true);
@@ -35,6 +45,42 @@ export default function Mypage() {
   const toggle9thYearColor = () => {
     setIs9thYearSelected(!is9thYearSelected);
   };
+
+  const togglefrontdreamColor = () => {
+    setIsfrontdreamSelected(!isfrontdreamSelected);
+  }
+
+  const togglebackenddreamColor = () => {
+    setIsbackenddreamSelected(!isbackenddreamSelected);
+  }
+
+  const toggleAndroiddreamColor = () => {
+    setIsAndroiddreamSelected(!isAndroiddreamSelected);
+  }
+
+  const toggleiOSdreamColor = () => {
+    setIsiOSdreamSelected(!isiOSdreamSelected);
+  }
+
+  const toggleEmbeddeddreamColor = () => {
+    setIsEmbeddeddreamSelected(!isEmbeddeddreamSelected);
+  }
+
+  const toggleAIdreamColor = () => {
+    setIsAIdreamSelected(!isAIdreamSelected);
+  }
+
+  const toggleInfoSecdreamColor = () => {
+    setIsInfoSecdreamSelected(!isInfoSecdreamSelected);
+  }
+
+  const toggledesigndreamColor = () => {
+    setIsdesigndreamSelected(!isdesigndreamSelected);
+  }
+
+  const togglefullstackdreamColor = () => {
+    setIsfullstackdreamSelected(!isfullstackdreamSelected);
+  }
 
   return (
     <div className="main">
@@ -162,14 +208,60 @@ export default function Mypage() {
                     <span className="writing1">
                       당신의 전공은 무엇인가요?
                       <div className='dreamSelect'>
-                        <div className='dreamfront'> 프론트엔드 </div>
-                        <div className='elsedream'> 백엔드 </div>
-                        <div className='elsedream'> 안드로이드 </div>
-                        <div className='elsedream'> iOS </div>
-                        <div className='elsedream'> 임베디드 </div>
-                        <div className='elsedream'> AI </div>
-                        <div className='elsedream'> 정보보안 </div>
-                        <div className='elsedream'> 디자인 </div>
+                      <div
+                        className={`elsedream ${isfrontdreamSelected ? 'selected' : ''}`}
+                        onClick={togglefrontdreamColor}
+                      >
+                        프론트엔드
+                      </div>
+                      <div
+                        className={`elsedream ${isbackenddreamSelected ? 'selected' : ''}`}
+                        onClick={togglebackenddreamColor}
+                      >
+                        백엔드
+                      </div>
+                      <div
+                        className={`elsedream ${isAndroiddreamSelected ? 'selected' : ''}`}
+                        onClick={toggleAndroiddreamColor}
+                      >
+                        Android 
+                      </div>
+                      <div
+                        className={`elsedream ${isiOSdreamSelected ? 'selected' : ''}`}
+                        onClick={toggleiOSdreamColor}
+                      >
+                        iOS
+                      </div>
+                      <div
+                        className={`elsedream ${isEmbeddeddreamSelected ? 'selected' : ''}`}
+                        onClick={toggleEmbeddeddreamColor}
+                      >
+                        임베디드
+                      </div>
+                      <div
+                        className={`elsedream ${isAIdreamSelected ? 'selected' : ''}`}
+                        onClick={toggleAIdreamColor}
+                      >
+                        AI
+                      </div>
+                      <div
+                        className={`elsedream ${isInfoSecdreamSelected ? 'selected' : ''}`}
+                        onClick={toggleInfoSecdreamColor}
+                      >
+                        정보보안
+                      </div>
+                      <div
+                        className={`elsedream ${isdesigndreamSelected ? 'selected' : ''}`}
+                        onClick={toggledesigndreamColor}
+                      >
+                        디자인
+                      </div>
+                      <div
+                        className={`elsedream ${isfullstackdreamSelected ? 'selected' : ''}`}
+                        onClick={togglefullstackdreamColor}
+                      >
+                        풀스택
+                      </div>
                       </div>
                     </span>
                     <span className="writing2">당신에 대하여 간단하게 설명해주세요!</span>
@@ -183,7 +275,7 @@ export default function Mypage() {
                     <div className='clubSelect'>
                         <div className='clubB1ND'> B1ND </div>
                         <div className='elseclub'> CNS </div>
-                        <div className="elseclub"> CNS두카미 </div>
+                        <div className="elseclub"> 두카미 </div>
                         <div className="elseclub"> ALT </div>
                         <div className="elseclub"> 삼디 </div>
                         <div className="elseclub"> 스페이스 </div>
