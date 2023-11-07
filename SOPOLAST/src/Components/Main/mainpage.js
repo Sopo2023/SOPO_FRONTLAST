@@ -184,35 +184,35 @@ useEffect(() => {
           ))}
             <div className="post-write">
                 <div className='Zonecontrol'>
-                    <span className="Name">이해준</span>
-                    <span className="title">오늘 먹은거 </span>
-                    <span className="detail">햄버거 치킨 피자 짜장면 마라탕 탕후루 사과 탕수육 치즈 </span>
+                    <span className="Name"> 서상렬 </span>
+                    <span className="title"> 나르샤 일지 </span>
+                    <span className="detail"> 지난 8월부터 시작한 나르샤가 끝나간다. 나르샤가 끝나가며 ICT에 나가게 되었는데 아직 그 순간을 기억하면 떨리고 있다. 힘들기도 무척 힘들었지만 뿌듯함과 </span>
                     <span className="date">2023.09.22</span>
                 </div>
                 <span className="img"><img className='real_img' src={Post2} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
-                    <span className="Name">전우진</span>
-                    <span className="title">오늘 한거 </span>
-                    <span className="detail">갈굼 당하기 리엑트 하기 사진찍기</span>
+                    <span className="Name"> 김창대 </span>
+                    <span className="title"> JAVA 공부법 </span>
+                    <span className="detail"> JAVA 공부법.<br/> 안녕하세요. 오늘은 자바 공부법에 대해 이야기합니다. </span>
                     <span className="date">2023.09.18</span>
                 </div>
                 <span className="img"><img className='real_img' src={Post3} alt="이미지"></img></span>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
-                    <span className="Name">박규민</span>
-                    <span className="title">오늘 한거 </span>
-                    <span className="detail">누워서 자기 키 크기 자치방에서 빨래하기</span>
+                    <span className="Name"> 김호준 </span>
+                    <span className="title"> 바인드 컨퍼런스 듣기 </span>
+                    <span className="detail"> 바인드 컨퍼런스 들은 날 <br/> 바인드 컨퍼런스를 시청각실에서 들었는데 너무너무 좋은 이야기가 있었다.</span>
                     <span className="date">2023.09.15</span>
                 </div>
             </div>
             <div className="post-write">
                 <div className='Zonecontrol'>
-                    <span className="Name">김호준</span>
-                    <span className="title">오늘 한거 </span>
-                    <span className="detail">축구하기 수업째기</span>
+                    <span className="Name"> 조현아 </span>
+                    <span className="title"> 자료구조 시험을 치고나서 </span>
+                    <span className="detail"> 난 자료구조 시험을 중간고사에 치고서 배운점이 많이 생겨서 다른 학생들도 알면 좋을것 같단 생각에 이 글을 쓰게 되었다!! </span>
                     <span className="date">2023.09.12</span>
                 </div>
             </div>       
