@@ -41,9 +41,8 @@
   }
   
 .boxContents > .proName{
-    width: 50vh;
-    height: 15vh;
-
+    width: 200px;
+    height: 100px;
     position: relative;
   }
 

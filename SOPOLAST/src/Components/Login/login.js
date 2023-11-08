@@ -63,8 +63,8 @@ const LoginComponent = () => {
         localStorage.clear()
         localStorage.setItem('sopo_id', response.data.data.email);
         localStorage.setItem('sopo_nm',  response.data.data.name);
-        localStorage.setItem('sopo_instagram',"whywhywwwhy")
         
+        localStorage.setItem('sopo_github',"je355");
         // console.log(response.data.data.email);
         // console.log(response.data.data.name);
         // console.log(localStorage.getItem('sopo_id'));

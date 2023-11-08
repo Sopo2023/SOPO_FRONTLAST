@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import TEST from "../../Assets/img/postimg.jpeg"
 import Head from "../../head/head";
 import Last from "../../Assets/img/Polygon 4.png"
+import mail from "../../Assets/img/mail.png"
+import github1 from "../../Assets/img/github.png"
+import nm from "../../Assets/img/hp.png"
 
 export default function Mypage() {
   const navigate = useNavigate(); 
@@ -35,19 +38,21 @@ export default function Mypage() {
   const [sideName, setSideName] = useState('');
   const [email, setEmail] = useState('');
   const [instagram, setinstagram] =useState('');
-  
+  const [github , setgithub] =useState('');
+
 // const localStorageName = localStorage.getItem('sopo_nm'); 
 useEffect(() => {
     const localStorageName = localStorage.getItem('sopo_nm');
     const localStorageEmail = localStorage.getItem('sopo_id'); 
-    const localStorageinstagram = localStorage.getItem('sopo_instagram')
+    
+    const localStoragegithub = localStorage.getItem("sopo_github")
     if(localStorageEmail){
       setEmail(localStorageEmail);
     }
     if (localStorageName) {
       setSideName(localStorageName);
     }
-    setinstagram(localStorageinstagram)
+    setgithub(localStoragegithub);
   }, []);
 
   const handleEmailCertify = () => {
@@ -191,28 +196,30 @@ useEffect(() => {
         <div className="socialp">
           <div className="pT">
               <p>
-              <Link to="https://github.com/ftery0" className="link1">
-                깃:
+              <Link to={`https://github.com/${github}`} className="link1">
+              <img src={github1}></img>
               </Link>
-              <Link to="https://github.com/ftery0" className="link2">@ftery0</Link>
+              <Link to={`https://github.com/${github}`} className="link2">@{github}</Link>
             </p>
             <p>
-              <Link to="/mypage/mail" className="link1">
-                메일:
+              <Link className="link1">
+              <img src={mail}></img>
               </Link>
-              <Link className="link2" href="`mailto:${email}`"> {sideName}의 이메일 </Link>
+              <Link className="link2" href={`mailto:${email}`}> {sideName}의 이메일 </Link>
             </p>
-            <p>
-              <Link to="https://www.instagram.com/hae_jun7388/" className="link1">
+            {/* <p>
+              <Link to={`https://www.instagram.com/${instagram}/`} className="link1">
                 인스타:
               </Link>
-              <Link to="`https://www.instagram.com/${instagram}/`" className="link2">@{instagram}</Link>
-            </p>
+              <Link to={`https://www.instagram.com/${instagram}/`} className="link2">@{instagram}</Link>
+            </p> */}
             <p>
               <Link to="/mypage/kako" className="link1">
-                카톡:
+                <img src={nm}></img>
               </Link>
-              imhaejoon
+              <Link className="link2">
+              010-1234-1234
+              </Link>
             </p>
           </div>
         </div>
@@ -420,12 +427,12 @@ useEffect(() => {
                     placeholder="당신의 깃허브 URL를 입력해주세요."
                     ></input>
 
-                    <span className="writing5"> 당신의 인스타는 무엇인가요? </span>
+                    {/* <span className="writing5"> 당신의 인스타는 무엇인가요? </span>
                     <input 
                     id="inst" 
                     type="text"
                     placeholder="당신의 인스타 URL을 입력해주세요."
-                    ></input>
+                    ></input> */}
 
                     <span className="writing6"> 당신의 사용가능 스킬은 무엇인가요? </span>
                     <input 
@@ -433,21 +440,21 @@ useEffect(() => {
                     type="text"
                     placeholder="당신의 사용가능 스킬을 입력해주세요."
                     ></input>
-                    <span className="writing7"> 당신의 수상은 무엇인가요? </span>
+                    <span className="writing7"> 당신이 수상이력 어떻게 되나요?</span>
                     <input 
                     id="Award" 
                     type="text"
-                    placeholder="당신의 수상기록을 입력해주세요.(최대3개)"
+                    placeholder="당신의 수상기록을 입력해주세요."
                     ></input>
-                    <span className="writing8"> 당신의 포트폴리오은 무엇인가요? </span>
-                    <input 
+                    {/* <span className="writing8"> 당신의 포트폴리오은 무엇인가요? </span> */}
+                    {/* <input 
                     id="kk" 
                     type="text"
                     placeholder="당신의 포트폴리오URL를 입력해주세요."
-                    ></input>
+                    ></input>*/}
                     <div className="completebutton">
                     완료
-                    </div>
+                    </div> 
                   </form>
                 </div>
               </div>

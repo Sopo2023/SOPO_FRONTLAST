@@ -135,7 +135,7 @@ ul {
 }
 
 .socialp {
-  background-color: #F5F5F6;
+  /* background-color: #F5F5F6; */
   width: 1570px;
   height: 120px;
   border-radius: 10px;
@@ -148,6 +148,9 @@ ul {
 
 .link2{
   text-decoration: none; /* 밑줄 제거 */
+  position: relative;
+  bottom: 7px;
+  margin-left: 2px;
   color: #000;
 }
 
@@ -267,9 +270,10 @@ ul {
   top: 0;
   background-color: #73737339;
 }
+
 .pagination-writing{
   position: absolute;
-  width: 1470px;
+  width: 100%;
   height: 1400px;
   background-color: #fff;
   top: 300px;
@@ -372,6 +376,11 @@ ul {
   0% {top: 700px;}
   100% {top: 200px;}
 }
+.link1 > img{
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
 
 .dreamSelect{
   color: #A7A7A7;
@@ -432,10 +441,11 @@ ul {
   color: #178915;
 }
 .completebutton {
+  position: absolute;
+  bottom: 200px;
+  right: 400px;
   font-size: 40px;
   color: #8C8C8C;
-  margin-top: 700px;
-  margin-left: 1200px;
   cursor: pointer;
   transition: color 0.3s; 
 }
@@ -535,7 +545,7 @@ ul {
 .writing6 {
   position: absolute;
   left: 100px;
-  top: 400px;
+  top: 250px;
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -548,7 +558,7 @@ ul {
 #skill{
   position: absolute;
   left: 100px;
-  top: 450px;
+  top: 310px;
   width: 840px;
   border: none;
   border-bottom: 2px solid #1a9a18;
@@ -563,7 +573,7 @@ ul {
 .writing7 {
   position: absolute;
   left: 100px;
-  top: 400px;
+  top: 280px;
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -576,7 +586,7 @@ ul {
 #Award{
   position: absolute;
   left: 100px;
-  top: 450px;
+  top: 350px;
   width: 840px;
   border: none;
   border-bottom: 2px solid #1a9a18;

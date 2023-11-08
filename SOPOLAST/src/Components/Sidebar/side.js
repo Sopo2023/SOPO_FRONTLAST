@@ -3,28 +3,26 @@ import { useState, useEffect } from 'react';
 import hp from "../../Assets/image/hp.png"
 import org from "../../Assets/image/org.png"
 import mail from "../../Assets/image/mail.png"
-import github from "../../Assets/image/github.png"
-import instag from "../../Assets/image/insta.png"
-import kakao from "../../Assets/image/kakao.png"
+import github1 from "../../Assets/image/github.png"
+import kakao from "../../Assets/image/hp.png"
 
 export default function Side(){
   const [sideName, setSideName] = useState('');
   const [email, setemail] = useState('')
-  const [insta, setinsta] = useState('')
+  const [github, setgithub] = useState('')
+  
   useEffect(() => {
     const localStorageName = localStorage.getItem('sopo_nm');
-    const localStorageEmail= localStorage.getItem('sopo_id')
+    const localStorageEmail= localStorage.getItem('sopo_id');
+    const localStoragegithub=localStorage.getItem('sopo_github');
     
-    const localStorageinstagram =  localStorage.getItem('sopo_instagram');
     if (localStorageName) {
       setSideName(localStorageName);
     }
     if (localStorageEmail) {
       setemail(localStorageEmail);
     }
-    if(localStorageinstagram){
-      setinsta(localStorageinstagram)
-    }
+    setgithub(localStoragegithub)
   }, []);
     return(
         <div className="side">
@@ -62,18 +60,13 @@ export default function Side(){
                         </div>
 
                         <div className='oddBio'>
-                          <img src={github} className='imgBio'></img>
-                          <span className='perBio'> githae </span>
-                        </div>
-
-                        <div className='oddBio'>
-                          <img src={instag} className='imgBio'></img>
-                          <span className='perBio'> @{insta}</span>
+                          <img src={github1} className='imgBio'></img>
+                          <span className='perBio'> {github} </span>
                         </div>
 
                         <div className='oddBio'>
                           <img src={kakao} className='imgBio'></img>
-                          <span className='perBio'> imhaejoon </span>
+                          <span className='perBio'> 010-123-1234 </span>
                         </div>
 
                       </div> 
