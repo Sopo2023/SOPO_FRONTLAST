@@ -339,146 +339,46 @@ useEffect(() => {
 
   const toggleHTMLSkillsColor = () => {
     setIsHTMLSkillsSelected(!isHTMLSkillsSelected);
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+  
   const toggleCSSkillsColor = () => {
     setIsCSSkillsSelected(!isCSSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleJavascriptSkillsColor = () => {
     setIsJavascriptSkillsSelected(!isJavascriptSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleREACTSkillsColor = () => {
     setIsREACTSkillsSelected(!isREACTSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleJavaSkillsColor = () => {
     setIsJavaSkillsSelected(!isJavaSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleSpringSkillsColor = () => {
     setIsSpringSkillsSelected(!isSpringSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleSpringBootSkillsColor = () => {
     setIsSpringBootSkillsSelected(!isSpringBootSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const togglenoodjsSkillsColor = () => {
     setIsnoodjsSkillsSelected(!isnoodjsSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleKotlinSkillsColor = () => {
     setIsKotlinSkillsSelected(!isKotlinSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleSwiftSkillsColor = () => {
     setIsSwiftSkillsSelected(!isSwiftSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsGGSkillsSelected(false)
   }
+
   const toggleGGSkillsColor = () => {
     setIsGGSkillsSelected(!isGGSkillsSelected);
-    setIsHTMLSkillsSelected(false)
-    setIsCSSkillsSelected(false)
-    setIsJavascriptSkillsSelected(false)
-    setIsREACTSkillsSelected(false)
-    setIsJavaSkillsSelected(false)
-    setIsSpringSkillsSelected(false)
-    setIsSpringBootSkillsSelected(false)
-    setIsnoodjsSkillsSelected(false)
-    setIsKotlinSkillsSelected(false)
-    setIsSwiftSkillsSelected(false)
   }
 
 
