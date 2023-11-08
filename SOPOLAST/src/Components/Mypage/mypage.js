@@ -592,12 +592,12 @@ useEffect(() => {
                     type="text"
                     placeholder="당신의 수상기록을 입력해주세요."
                     ></input>
-                    {/* <span className="writing8"> 당신의 포트폴리오은 무엇인가요? </span> */}
-                    {/* <input 
+                    <span className="writing8"> 당신의 포트폴리오은 무엇인가요? </span>
+                    <input 
                     id="kk" 
                     type="text"
                     placeholder="당신의 포트폴리오URL를 입력해주세요."
-                    ></input>*/}
+                    ></input>
                     <div className="completebutton">
                     완료
                     </div> 
