@@ -4,10 +4,11 @@ import Post1 from "../../Assets/image/1.png";
 // import Post2 from "../../Assets/img/postimg.jpeg";
 // import Post3 from "../../Assets/img/newjeans.jpeg";
 
+import Java from "../../Assets/image/java.png"
 import SOPO from "../../Assets/img/mainicon.png";
 import bind from "../../Assets/image/b1nd.png";
 import Jagu from "../../Assets/img/MAC.JPG";
-
+import he from "../../Assets/image/1.png"
 import Head from "../../head/head";
 import axios from "axios";
 import "./main.css";
@@ -24,11 +25,12 @@ export default function Start() {
   const [cards, setCards] = useState([]);
 
   const handlePostClick = (postId) => {
+    console.log(postId);
     // 클라이언트에서 서버로 요청 보내기
     axios
       .post(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/list",
-        { postId }
+        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read",
+        { postId:postId, }
       )
       .then((response) => {
         // 서버에서 받은 응답을 기반으로 클라이언트에서 리디렉션 수행
@@ -93,39 +95,37 @@ export default function Start() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/list"
-      )
+      .get("https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/list")
       .then((response) => {
-        setPosts(response.data);
+        setPosts(response.data.data);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   }, []);
 
-  const fetchCardData = async () => {
-    try {
-      const response = await axios.get(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read"
-      );
-      return response.data;
-    } catch (error) {
-      console.error("데이터를 불러오는 중 에러 발생:", error);
-      return [];
-    }
-  };
+  // const fetchCardData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read"
+  //     );
+  //     return response.data;
+  //   } catch (error) {
+  //     console.error("데이터를 불러오는 중 에러 발생:", error);
+  //     return [];
+  //   }
+  // };
   // 페이지가 로드될 때 데이터 가져오는 코드
-  useEffect(() => {
-    fetchCardData().then((data) => {
-      setCards(data);
-    });
-    window.addEventListener("beforeunload", () => {
-      fetchCardData().then((data) => {
-        setCards(data);
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   fetchCardData().then((data) => {
+  //     setCards(data);
+  //   });
+  //   window.addEventListener("beforeunload", () => {
+  //     fetchCardData().then((data) => {
+  //       setCards(data);
+  //     });
+  //   });
+  // }, []);
 
   return (
     <div className="main">
@@ -167,7 +167,7 @@ export default function Start() {
               navigate("/card3");
             }}
           >
-            <p className="card_p">서샹렬</p>
+            <p className="card_p">서상렬</p>
             <p className="card_p">Back-end Dev</p>
             <p className="card_p">DGSW 8th</p>
             <p className="card_p">DLC</p>
@@ -198,8 +198,7 @@ export default function Start() {
             className="card6"
             onClick={() => {
               navigate("/card6");
-            }}
-          >
+            }}>
             <p className="card_p">이해준</p>
             <p className="card_p">Front-Stack Dev</p>
             <p className="card_p">DGSW 8th</p>
@@ -217,7 +216,7 @@ export default function Start() {
             <p
               className="link_side"
               onClick={() => {
-                navigate("/Mypage");
+                navigate("/Portfoliosub");
               }}
             >
               내 포트폴리오
@@ -250,16 +249,29 @@ export default function Start() {
               onClick={() => handlePostClick(post.id)}
             >
               <div className="Zonecontrol">
-                <span className="Name">{post.author}</span>
-                <span className="title">{post.title}</span>
-                <span className="detail">{post.content}</span>
-                <span className="date">{post.date}</span>
+                <span className="Name">{posts.name}</span>
+                <span className="title">{posts.title}</span>
+                <span className="detail">{posts.content}</span>
+                <span className="date">{posts.createDate}</span>
               </div>
               <span className="img">
-                <img className="real_img" src={post.image} alt="이미지" />
+                <img className="real_img" src={posts.image} alt="이미지" />
               </span>
             </div>
           ))}
+          <div className="post-write" onClick={()=>{navigate("/Updownsub")}}>
+            <div className="Zonecontrol">
+              <span className="Name"> 김가영 </span>
+              <span className="title"> 4개교 연합 해커톤 프론트엔드 </span>
+              <span className="detail">
+              2023년 08월 24일 4개교 연합 해커톤을 진행했다.고종현 님 @manudeli 경력 요기요에서 -Merchant trine : 사장님 관련 서비스 사장 사이트, 사장 관리자 서비스 공통 요기요 디자인, FE 나의 이야기 제대 전, 수포자 고등학생에서 미대생(디자인전공)으로서의 삶...
+              </span>
+              <span className="date">2023.11.02</span>
+            </div>
+            <span className="img">
+              <img className="real_img" src={he} alt="이미지"></img>
+            </span>
+          </div>
           <div className="post-write">
             <div className="Zonecontrol">
               <span className="Name"> 서상렬 </span>
@@ -287,7 +299,7 @@ export default function Start() {
               </span>
               <span className="date">2023.09.18</span>
             </div>
-            {/* <span className="img"><img className='real_img' src={Post3} alt="이미지"></img></span> */}
+            <span className="img"><img className='real_img' src={Java} alt="이미지"></img></span>
           </div>
           <div className="post-write">
             <div className="Zonecontrol">

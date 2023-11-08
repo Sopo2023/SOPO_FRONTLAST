@@ -38,7 +38,7 @@ function Competition() {
           
           
       </div>
-      <div className='mo'>
+      <div className='mo1'>
           <div className='gatherBox' onClick={()=>{navigate("/CompetitionSub")}}>
             <div className='gatherTitle'> 8기 프론트엔드 헬뉴월 해커톤 <br></br> 같이 나갈 분 구해용~~ </div>
             <div className='gatherGradeName'> DGSW 8th 배채희 </div>

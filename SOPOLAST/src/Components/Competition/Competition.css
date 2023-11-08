@@ -186,14 +186,14 @@
     margin-top: 17px;
     margin-left: 110px;
   }
-/* .mo{
+.mo1{
   position: absolute;
-  top: 150px;
-  left: 400px;
+  top: 200px;
+  left: 610px;
   width: 900px;
   height: 800px;
 
-} */
+}
   
   .majorSelect > .frontEnd{
     display: inline-block;

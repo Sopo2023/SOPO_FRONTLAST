@@ -51,7 +51,7 @@ export default function Side(){
 
                         <div className='oddBio'>
                           <img src={org} className='imgBio'></img>
-                          <span className='perBio'> B1ND</span>
+                          <span className='perBio'> CNS</span>
                         </div>
 
                         <div className='oddBio'>
@@ -66,7 +66,7 @@ export default function Side(){
 
                         <div className='oddBio'>
                           <img src={kakao} className='imgBio'></img>
-                          <span className='perBio'> 010-123-1234 </span>
+                          <span className='perBio'> 010-2612-2864 </span>
                         </div>
 
                       </div> 

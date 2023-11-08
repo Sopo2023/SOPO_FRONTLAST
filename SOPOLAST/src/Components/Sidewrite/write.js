@@ -37,6 +37,7 @@ export default function Sidewrite() {
       });
       return;
     }
+    
   
     const formData = new FormData();
     const data = {
@@ -86,7 +87,9 @@ export default function Sidewrite() {
         <Head />
         <Side />
         <form className='write_form' onSubmit={onSubmitHandler}>
+
           <div className='write_img1'>
+            
             {imageSrc && <img src={imageSrc} alt="Preview" />}
           </div>
           <div className='sc-cBornZ-gegSAw'>
@@ -98,6 +101,7 @@ export default function Sidewrite() {
               <option value="iOS">iOS</option>
               <option value="임베">임베디드</option>
               <option value="디자인">디자인</option>
+              <option value="기타">기타</option>
             </select>
           </div>
           <div className='sd-cBornZ-gegSAw'>

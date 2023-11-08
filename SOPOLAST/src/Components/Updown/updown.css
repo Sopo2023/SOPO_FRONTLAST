@@ -9,7 +9,7 @@
   .search1{
     position: absolute;
     top: 8%;
-    left: 500px;
+    left: 580px;
     width: 840px;
     height: 50px;
     flex-shrink: 0;
@@ -104,13 +104,13 @@
     }
     
     .post-container {
-      position: relative;
-      margin-top: 105px;
-      margin-left: 400px;
+      position: absolute;
+      left: 500px;
+      top: 170px;
       overflow-y: auto; 
       max-height: calc(100% - 190px); 
-      width: 1100px;
-      height: 640px;
+      width: 1200px;
+      height: 1040px;
     };
 
   .post_border{
