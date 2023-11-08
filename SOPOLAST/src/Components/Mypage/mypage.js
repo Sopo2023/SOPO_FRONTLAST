@@ -97,38 +97,110 @@ useEffect(() => {
 
   const togglefrontdreamColor = () => {           // dream색깔 바꾸기
     setIsfrontdreamSelected(!isfrontdreamSelected);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const togglebackenddreamColor = () => {
     setIsbackenddreamSelected(!isbackenddreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const toggleAndroiddreamColor = () => {
     setIsAndroiddreamSelected(!isAndroiddreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const toggleiOSdreamColor = () => {
     setIsiOSdreamSelected(!isiOSdreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const toggleEmbeddeddreamColor = () => {
     setIsEmbeddeddreamSelected(!isEmbeddeddreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const toggleAIdreamColor = () => {
     setIsAIdreamSelected(!isAIdreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const toggleInfoSecdreamColor = () => {
     setIsInfoSecdreamSelected(!isInfoSecdreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsdesigndreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const toggledesigndreamColor = () => {
     setIsdesigndreamSelected(!isdesigndreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsfullstackdreamSelected(false);
   }
 
   const togglefullstackdreamColor = () => {
     setIsfullstackdreamSelected(!isfullstackdreamSelected);
+    setIsfrontdreamSelected(false);
+    setIsbackenddreamSelected(false);
+    setIsAndroiddreamSelected(false);
+    setIsiOSdreamSelected(false);
+    setIsEmbeddeddreamSelected(false);
+    setIsAIdreamSelected(false);
+    setIsInfoSecdreamSelected(false);
+    setIsdesigndreamSelected(false);
   }
 
   const toggleB1NDclubColor = () => {         // 동아리색깔 바꾸기
