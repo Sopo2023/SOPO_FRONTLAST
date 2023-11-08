@@ -205,14 +205,41 @@ useEffect(() => {
 
   const toggleB1NDclubColor = () => {         // 동아리색깔 바꾸기
     setIsB1NDclubSelected(!isB1NDclubSelected);
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleCNSclubColor = () => {
     setIsCNSclubSelected(!isCNSclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleDoclubColor = () => {
     setIsDoclubSelected(!isDoclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleALTclubColor = () => {
@@ -221,26 +248,80 @@ useEffect(() => {
 
   const toggle3DclubColor = () => {
     setIs3DclubSelected(!is3DclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleSpaceclubColor = () => {
     setIsSpaceclubSelected(!isSpaceclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleModiclubColor = () => {
     setIsModiclubSelected(!isModiclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleDLCclubColor = () => {
     setIsDLCclubSelected(!isDLCclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsQIclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleQIclubColor = () => {
     setIsQIclubSelected(!isQIclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIselseeclubSelected(false)
   }
 
   const toggleelseeclubColor = () => {
     setIselseeclubSelected(!iselseeclubSelected);
+    setIsB1NDclubSelected(false)
+    setIsCNSclubSelected(false)
+    setIsALTclubSelected(false)
+    setIsDoclubSelected(false)
+    setIs3DclubSelected(false)
+    setIsSpaceclubSelected(false)
+    setIsModiclubSelected(false)
+    setIsDLCclubSelected(false)
+    setIsQIclubSelected(false)
   }
 
   return (
