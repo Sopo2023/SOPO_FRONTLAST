@@ -34,17 +34,20 @@ export default function Mypage() {
   const [iselseeclubSelected, setIselseeclubSelected] = useState(false);
   const [sideName, setSideName] = useState('');
   const [email, setEmail] = useState('');
+  const [instagram, setinstagram] =useState('');
   
 // const localStorageName = localStorage.getItem('sopo_nm'); 
 useEffect(() => {
     const localStorageName = localStorage.getItem('sopo_nm');
     const localStorageEmail = localStorage.getItem('sopo_id'); 
+    const localStorageinstagram = localStorage.getItem('sopo_instagram')
     if(localStorageEmail){
       setEmail(localStorageEmail);
     }
     if (localStorageName) {
       setSideName(localStorageName);
     }
+    setinstagram(localStorageinstagram)
   }, []);
 
   const handleEmailCertify = () => {
@@ -203,7 +206,7 @@ useEffect(() => {
               <Link to="https://www.instagram.com/hae_jun7388/" className="link1">
                 인스타:
               </Link>
-              <Link to="https://www.instagram.com/hae_jun7388/" className="link2">@hae_jun7388</Link>
+              <Link to="`https://www.instagram.com/${instagram}/`" className="link2">@{instagram}</Link>
             </p>
             <p>
               <Link to="/mypage/kako" className="link1">

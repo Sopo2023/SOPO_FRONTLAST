@@ -4,17 +4,26 @@ import hp from "../../Assets/image/hp.png"
 import org from "../../Assets/image/org.png"
 import mail from "../../Assets/image/mail.png"
 import github from "../../Assets/image/github.png"
-import insta from "../../Assets/image/insta.png"
+import instag from "../../Assets/image/insta.png"
 import kakao from "../../Assets/image/kakao.png"
 
 export default function Side(){
   const [sideName, setSideName] = useState('');
-  
+  const [email, setemail] = useState('')
+  const [insta, setinsta] = useState('')
   useEffect(() => {
     const localStorageName = localStorage.getItem('sopo_nm');
+    const localStorageEmail= localStorage.getItem('sopo_id')
     
+    const localStorageinstagram =  localStorage.getItem('sopo_instagram');
     if (localStorageName) {
       setSideName(localStorageName);
+    }
+    if (localStorageEmail) {
+      setemail(localStorageEmail);
+    }
+    if(localStorageinstagram){
+      setinsta(localStorageinstagram)
     }
   }, []);
     return(
@@ -49,7 +58,7 @@ export default function Side(){
 
                         <div className='oddBio'>
                           <img src={mail} className='imgBio'></img>
-                          <span className='perBio'> leehaejoon@dgsw.hs.kr</span>
+                          <span className='perBio'> {email}</span>
                         </div>
 
                         <div className='oddBio'>
@@ -58,8 +67,8 @@ export default function Side(){
                         </div>
 
                         <div className='oddBio'>
-                          <img src={insta} className='imgBio'></img>
-                          <span className='perBio'> @haeejoon1234</span>
+                          <img src={instag} className='imgBio'></img>
+                          <span className='perBio'> @{insta}</span>
                         </div>
 
                         <div className='oddBio'>

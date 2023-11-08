@@ -132,12 +132,12 @@ export default function Start() {
       <div className="content">
         <Head />
         <div className="mainCard" ref={scrollContainerRef}>
-          {/* <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
+          <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
                 <p className='card_p'>배채희</p>
                 <p className='card_p'>Front-end Dev</p>
                 <p className='card_p'>DGSW 8th</p>
                 <p className='card_p'>CNS</p>
-            </div> */}
+            </div>
           {cards.map((card) => (
             <div
               key={card.id} //서버로부터 받은 id
