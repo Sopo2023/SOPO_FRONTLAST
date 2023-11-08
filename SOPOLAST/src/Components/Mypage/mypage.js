@@ -1,6 +1,7 @@
 import { Link , useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import TEST from "../../Assets/img/postimg.jpeg"
+import TEST8 from "../../Assets/img/B1CODE.png"
 import Head from "../../head/head";
 import Last from "../../Assets/img/Polygon 4.png"
 import mail from "../../Assets/img/mail.png"
@@ -446,7 +447,7 @@ useEffect(() => {
           <span className="img">
             <img
               className="real_img"
-              src={TEST}
+              src={TEST8}
               alt="이미지"
             ></img>
           </span>
