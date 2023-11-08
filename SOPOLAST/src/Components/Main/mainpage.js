@@ -4,11 +4,11 @@ import Post1 from "../../Assets/image/1.png";
 // import Post2 from "../../Assets/img/postimg.jpeg";
 // import Post3 from "../../Assets/img/newjeans.jpeg";
 
-import Java from "../../Assets/image/java.png"
+import Java from "../../Assets/image/java.png";
 import SOPO from "../../Assets/img/mainicon.png";
 import bind from "../../Assets/image/b1nd.png";
 import Jagu from "../../Assets/img/MAC.JPG";
-import he from "../../Assets/image/1.png"
+import he from "../../Assets/image/1.png";
 import Head from "../../head/head";
 import axios from "axios";
 import "./main.css";
@@ -29,17 +29,37 @@ export default function Start() {
     // 클라이언트에서 서버로 요청 보내기
     axios
       .post(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read",
-        { postId:postId, }
+        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read", //선배가 후배에게 게시물 보내기
+        { postId: postId }
       )
+
       .then((response) => {
+        console.log("POST 요청이 성공했습니다. 서버 응답:", response.data);
         // 서버에서 받은 응답을 기반으로 클라이언트에서 리디렉션 수행
         window.location.href = response.data.redirectTo;
+      })
+
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    fetchPostContent(postId);
+  };
+
+  const fetchPostContent = (postId) => {
+    axios
+      .get(
+        `https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read/${postId}` //선배가 후배에게 게시물 가져오기
+      ) // 실제 게시물 내용을 가져오는 엔드포인트로 변경
+      .then((response) => {
+        const postContent = response.data; // 가져온 게시물 내용
+        console.log("게시물 내용을 가져옵니다:", postContent);
+        // 여기에서 postContent를 state나 모달 창 등에 표시하도록 설정
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   };
+
   //   const user = useRecoilValue(userState);
   const [sideName, setSideName] = useState("");
   const localStorageName = localStorage.getItem("sopo_nm");
@@ -94,15 +114,19 @@ export default function Start() {
   }, [scrollContainerRef, handleMouseDown, handleMouseUp, handleMouseMove]);
 
   useEffect(() => {
+    // 게시물 목록을 가져오는 GET 요청
     axios
-      .get("https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/list")
+      .get(
+        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/list" //선배가 후배에게 게시물 목록 가져오기
+      )
       .then((response) => {
-        setPosts(response.data.data);
+        console.log("게시물 목록을 가져옵니다:", response.data);
+        setPosts(response.data);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, []);
+  }, []); // 빈 배열을 두어 페이지가 로드될 때 한 번만 실행되도록 설정합니다.
 
   // const fetchCardData = async () => {
   //   try {
@@ -132,12 +156,17 @@ export default function Start() {
       <div className="content">
         <Head />
         <div className="mainCard" ref={scrollContainerRef}>
-          <div className="card1" onClick={()=>{navigate("/Portfoliosub")}}>
-                <p className='card_p'>배채희</p>
-                <p className='card_p'>Front-end Dev</p>
-                <p className='card_p'>DGSW 8th</p>
-                <p className='card_p'>CNS</p>
-            </div>
+          <div
+            className="card1"
+            onClick={() => {
+              navigate("/Portfoliosub");
+            }}
+          >
+            <p className="card_p">배채희</p>
+            <p className="card_p">Front-end Dev</p>
+            <p className="card_p">DGSW 8th</p>
+            <p className="card_p">CNS</p>
+          </div>
           {cards.map((card) => (
             <div
               key={card.id} //서버로부터 받은 id
@@ -198,7 +227,8 @@ export default function Start() {
             className="card6"
             onClick={() => {
               navigate("/card6");
-            }}>
+            }}
+          >
             <p className="card_p">이해준</p>
             <p className="card_p">Front-Stack Dev</p>
             <p className="card_p">DGSW 8th</p>
@@ -259,12 +289,21 @@ export default function Start() {
               </span>
             </div>
           ))}
-          <div className="post-write" onClick={()=>{navigate("/Updownsub")}}>
+          <div
+            className="post-write"
+            onClick={() => {
+              navigate("/Updownsub");
+            }}
+          >
             <div className="Zonecontrol">
               <span className="Name"> 김가영 </span>
               <span className="title"> 4개교 연합 해커톤 프론트엔드 </span>
               <span className="detail">
-              2023년 08월 24일 4개교 연합 해커톤을 진행했다.고종현 님 @manudeli 경력 요기요에서 -Merchant trine : 사장님 관련 서비스 사장 사이트, 사장 관리자 서비스 공통 요기요 디자인, FE 나의 이야기 제대 전, 수포자 고등학생에서 미대생(디자인전공)으로서의 삶...
+                2023년 08월 24일 4개교 연합 해커톤을 진행했다.고종현 님
+                @manudeli 경력 요기요에서 -Merchant trine : 사장님 관련 서비스
+                사장 사이트, 사장 관리자 서비스 공통 요기요 디자인, FE 나의
+                이야기 제대 전, 수포자 고등학생에서 미대생(디자인전공)으로서의
+                삶...
               </span>
               <span className="date">2023.11.02</span>
             </div>
@@ -299,7 +338,9 @@ export default function Start() {
               </span>
               <span className="date">2023.09.18</span>
             </div>
-            <span className="img"><img className='real_img' src={Java} alt="이미지"></img></span>
+            <span className="img">
+              <img className="real_img" src={Java} alt="이미지"></img>
+            </span>
           </div>
           <div className="post-write">
             <div className="Zonecontrol">
