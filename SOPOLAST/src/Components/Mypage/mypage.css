@@ -555,18 +555,17 @@ ul {
   margin-top: 570px;
 }
 
-#skill{
+.Skills{
   position: absolute;
   left: 100px;
   top: 310px;
   width: 840px;
   border: none;
-  border-bottom: 2px solid #1a9a18;
   outline: none;
   font-size: 20px;
   margin-top: 570px;
 }
-#skill::placeholder{
+.skills::placeholder{
   font-size: 18px;
 }
 
@@ -646,4 +645,50 @@ ul {
 
 .elsedream {
   color: #A7A7A7; 
+}
+
+.Skills.selected {
+  /* 선택된 경우의 색상전환 */
+  color: #1a9a18;
+}
+
+.elseSkills.selected {
+  color: #1a9a18; /* 선택된 경우의 텍스트 색상을 바꾸려면 원하는 색상으로 변경하세요 */
+  /* 다른 스타일 속성들 */
+}
+
+.elseSkills {
+  color: #A7A7A7;
+  font-size: 18px;
+}
+
+.SkillsSelect{
+  color: #A7A7A7;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 75px;
+  margin-top: 250px;
+}
+
+.SkillsSelect > .Skills{
+  display: inline-block;
+  margin-left: 150px;
+  margin-top: 27px;
+ 
+}
+.SkillsSelect > .Skills:hover{
+  cursor: pointer;
+  color: #178915;
+}
+.elseSkills{
+  display: inline-block;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.elseSkills:hover{
+  cursor: pointer;
+  color: #178915;
 }

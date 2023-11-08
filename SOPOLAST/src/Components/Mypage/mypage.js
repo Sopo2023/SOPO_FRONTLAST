@@ -35,6 +35,19 @@ export default function Mypage() {
   const [isDLCclubSelected, setIsDLCclubSelected] = useState(false);
   const [isQIclubSelected, setIsQIclubSelected] = useState(false);
   const [iselseeclubSelected, setIselseeclubSelected] = useState(false);
+
+  const [isHTMLSkillsSelected, setIsHTMLSkillsSelected] = useState(false); // 전공선택 버튼 상태를 저장할 변수
+  const [isCSSkillsSelected, setIsCSSkillsSelected] = useState(false);
+  const [isJavascriptSkillsSelected, setIsJavascriptSkillsSelected] = useState(false);
+  const [isREACTSkillsSelected, setIsREACTSkillsSelected] = useState(false);
+  const [isJavaSkillsSelected, setIsJavaSkillsSelected] = useState(false);
+  const [isSpringSkillsSelected, setIsSpringSkillsSelected] = useState(false);
+  const [isSpringBootSkillsSelected, setIsSpringBootSkillsSelected] = useState(false);
+  const [isnoodjsSkillsSelected, setIsnoodjsSkillsSelected] = useState(false);
+  const [isKotlinSkillsSelected, setIsKotlinSkillsSelected] = useState(false);
+  const [isSwiftSkillsSelected, setIsSwiftSkillsSelected] = useState(false);
+  const [isGGSkillsSelected, setIsGGSkillsSelected] = useState(false);
+
   const [sideName, setSideName] = useState('');
   const [email, setEmail] = useState('');
   const [instagram, setinstagram] =useState('');
@@ -324,6 +337,151 @@ useEffect(() => {
     setIsQIclubSelected(false)
   }
 
+  const toggleHTMLSkillsColor = () => {
+    setIsHTMLSkillsSelected(!isHTMLSkillsSelected);
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleCSSkillsColor = () => {
+    setIsCSSkillsSelected(!isCSSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleJavascriptSkillsColor = () => {
+    setIsJavascriptSkillsSelected(!isJavascriptSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleREACTSkillsColor = () => {
+    setIsREACTSkillsSelected(!isREACTSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleJavaSkillsColor = () => {
+    setIsJavaSkillsSelected(!isJavaSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleSpringSkillsColor = () => {
+    setIsSpringSkillsSelected(!isSpringSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleSpringBootSkillsColor = () => {
+    setIsSpringBootSkillsSelected(!isSpringBootSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const togglenoodjsSkillsColor = () => {
+    setIsnoodjsSkillsSelected(!isnoodjsSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleKotlinSkillsColor = () => {
+    setIsKotlinSkillsSelected(!isKotlinSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleSwiftSkillsColor = () => {
+    setIsSwiftSkillsSelected(!isSwiftSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsGGSkillsSelected(false)
+  }
+  const toggleGGSkillsColor = () => {
+    setIsGGSkillsSelected(!isGGSkillsSelected);
+    setIsHTMLSkillsSelected(false)
+    setIsCSSkillsSelected(false)
+    setIsJavascriptSkillsSelected(false)
+    setIsREACTSkillsSelected(false)
+    setIsJavaSkillsSelected(false)
+    setIsSpringSkillsSelected(false)
+    setIsSpringBootSkillsSelected(false)
+    setIsnoodjsSkillsSelected(false)
+    setIsKotlinSkillsSelected(false)
+    setIsSwiftSkillsSelected(false)
+  }
+
+
   return (
     <div className="main">
       <div className="content">
@@ -581,11 +739,74 @@ useEffect(() => {
                     ></input> */}
 
                     <span className="writing6"> 당신의 사용가능 스킬은 무엇인가요? </span>
-                    <input 
-                    id="skill" 
-                    type="text"
-                    placeholder="당신의 사용가능 스킬을 입력해주세요."
-                    ></input>
+                    <div className='SkillsSelect'>
+                      <div
+                        className={`elseSkills ${isHTMLSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleHTMLSkillsColor}
+                      >
+                        HTML
+                      </div>
+                      <div
+                        className={`elseSkills ${isCSSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleCSSkillsColor}
+                      >
+                        CSS
+                      </div>
+                      <div
+                        className={`elseSkills ${isJavascriptSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleJavascriptSkillsColor}
+                      >
+                        JavaScript
+                      </div>
+                      <div
+                        className={`elseSkills ${isREACTSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleREACTSkillsColor}
+                      >
+                        REACT
+                      </div>
+                      <div
+                        className={`elseSkills ${isnoodjsSkillsSelected ? 'selected' : ''}`}
+                        onClick={togglenoodjsSkillsColor}
+                      >
+                        Nood.js
+                      </div>
+                      <div
+                        className={`elseSkills ${isJavaSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleJavaSkillsColor}
+                      >
+                        JAVA
+                      </div>
+                      <div
+                        className={`elseSkills ${isSpringSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleSpringSkillsColor}
+                      >
+                        Spring
+                      </div>
+                      <div
+                        className={`elseSkills ${isSpringBootSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleSpringBootSkillsColor}
+                      >
+                        Spring Boot
+                      </div>
+                      <div
+                        className={`elseSkills ${isKotlinSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleKotlinSkillsColor}
+                      >
+                        Kotlin
+                      </div>
+                      <div
+                        className={`elseSkills ${isSwiftSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleSwiftSkillsColor}
+                      >
+                        Swift
+                      </div>
+                      <div
+                        className={`elseSkills ${isGGSkillsSelected ? 'selected' : ''}`}
+                        onClick={toggleGGSkillsColor}
+                      >
+                        기타
+                      </div>
+                      </div>
                     <span className="writing7"> 당신이 수상이력 어떻게 되나요?</span>
                     <input 
                     id="Award" 
