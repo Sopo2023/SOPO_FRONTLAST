@@ -360,24 +360,17 @@ useEffect(() => {
               </Link>
               <Link className="link2" href={`mailto:${email}`}> {sideName}의 이메일 </Link>
             </p>
-            {/* <p>
-              <Link to={`https://www.instagram.com/${instagram}/`} className="link1">
-                인스타:
-              </Link>
-              <Link to={`https://www.instagram.com/${instagram}/`} className="link2">@{instagram}</Link>
-            </p> */}
             <p>
               <Link to="/mypage/kako" className="link1">
                 <img src={nm}></img>
               </Link>
               <Link className="link2">
-              010-1234-1234
+              010-2612-2864
               </Link>
             </p>
           </div>
         </div>
       </div>
-      
       <div className="post_1">
         <p className="post1">{sideName}님이 쓴 글 보기</p>
         <div className="post-write" onClick={()=>{navigate("/Updownsub")}}>
