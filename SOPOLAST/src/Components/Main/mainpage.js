@@ -25,7 +25,6 @@ export default function Start() {
   const [cards, setCards] = useState([]);
 
   const handlePostClick = (postId) => {
-    console.log(postId);
     // 클라이언트에서 서버로 요청 보내기
     axios
       .post(
@@ -48,7 +47,7 @@ export default function Start() {
   const fetchPostContent = (postId) => {
     axios
       .get(
-        `https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read/${postId}` //선배가 후배에게 게시물 가져오기
+        `https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/read/${postId}` //선배가 후배에게 게시물 가져오기
       ) // 실제 게시물 내용을 가져오는 엔드포인트로 변경
       .then((response) => {
         const postContent = response.data; // 가져온 게시물 내용
@@ -117,7 +116,7 @@ export default function Start() {
     // 게시물 목록을 가져오는 GET 요청
     axios
       .get(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/list" //선배가 후배에게 게시물 목록 가져오기
+        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/list" //선배가 후배에게 게시물 목록 가져오기
       )
       .then((response) => {
         console.log("게시물 목록을 가져옵니다:", response.data);
