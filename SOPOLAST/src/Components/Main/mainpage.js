@@ -61,7 +61,6 @@ export default function Start() {
 
   //   const user = useRecoilValue(userState);
   const [sideName, setSideName] = useState("");
-  const localStorageName = localStorage.getItem("sopo_nm");
   useEffect(() => {
     const localStorageName = localStorage.getItem("sopo_nm");
     if (localStorageName) {
@@ -112,20 +111,21 @@ export default function Start() {
     };
   }, [scrollContainerRef, handleMouseDown, handleMouseUp, handleMouseMove]);
 
+
+
   useEffect(() => {
-    // 게시물 목록을 가져오는 GET 요청
-    axios
-      .get(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/list" //선배가 후배에게 게시물 목록 가져오기
-      )
-      .then((response) => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get("https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/list");
         console.log("게시물 목록을 가져옵니다:", response.data);
         setPosts(response.data);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error:", error);
-      });
-  }, []); // 빈 배열을 두어 페이지가 로드될 때 한 번만 실행되도록 설정합니다.
+      }
+    };
+    fetchPosts();
+  }, []);
+   // 빈 배열을 두어 페이지가 로드될 때 한 번만 실행되도록 설정합니다.
 
   // const fetchCardData = async () => {
   //   try {
@@ -185,7 +185,7 @@ export default function Start() {
             }}
           >
             <p className="card_p">박규민</p>
-            <p className="card_p">Full-Stack Dev</p>
+            <p className="card_p">Front-end Dev</p>
             <p className="card_p">DGSW 8th</p>
             <p className="card_p">ALT</p>
           </div>
@@ -197,8 +197,8 @@ export default function Start() {
           >
             <p className="card_p">서상렬</p>
             <p className="card_p">Back-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">DLC</p>
+            <p className="card_p">교사</p>
+            <p className="card_p">대구은행</p>
           </div>
           <div
             className="card4"
@@ -207,7 +207,7 @@ export default function Start() {
             }}
           >
             <p className="card_p">전우진</p>
-            <p className="card_p">Front-Stack Dev</p>
+            <p className="card_p">Front-end Dev</p>
             <p className="card_p">DGSW 8th</p>
             <p className="card_p">모디</p>
           </div>
@@ -229,7 +229,7 @@ export default function Start() {
             }}
           >
             <p className="card_p">이해준</p>
-            <p className="card_p">Front-Stack Dev</p>
+            <p className="card_p">Front-end Dev</p>
             <p className="card_p">DGSW 8th</p>
             <p className="card_p">QI</p>
           </div>
@@ -237,7 +237,7 @@ export default function Start() {
 
         <div className="sideName">
           <div className="CHname">
-            <p onClick={() => navigate("/mypage")} className="sidenameColor">
+            <p onClick={() => navigate("/Portfoliosub")} className="sidenameColor">
               {sideName}
             </p>
           </div>
@@ -274,8 +274,8 @@ export default function Start() {
           {posts.map((post) => (
             <div
               className="post-write"
-              key={post.id}
-              onClick={() => handlePostClick(post.id)}
+              key={posts.id}
+              onClick={() => handlePostClick(posts.id)}
             >
               <div className="Zonecontrol">
                 <span className="Name">{posts.name}</span>

@@ -95,7 +95,7 @@
   }
   
   .searchBox{
-    display: inline-block;
+    display: flex;
     position: absolute;
     left: 420px;
     top: 100px;
@@ -172,7 +172,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
     border: none;
     appearance: none;
     -webkit-appearance: none;
@@ -215,6 +214,7 @@
   
   .majorSelect > .frontEnd{
     display: inline-block;
+    color: #1A9A18;
     margin-left: 150px;
     margin-top: 27px;
    
@@ -234,11 +234,12 @@
   .mo{
     position: absolute;
     left: 580px;
-    top: 200px;
+    top: 300px;
     width: 900px;
     height: 1000px;
     
   }
+ 
   .mo>.namecardBox:hover{
     cursor: pointer;
   }

@@ -28,9 +28,20 @@ function LoginComponent() {
   const handleEmailCertify = async (e) => {
     e.preventDefault();
     setIsCertifying(true);
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
 
     if (!email) {
-      Swal.fire({
+      Toast.fire({
         icon: "error",
         title: "이메일을 입력해주세요.",
       });
@@ -51,22 +62,22 @@ function LoginComponent() {
         }
       );
 
-      if (response.data.success) {
-        Swal.fire({
+      if (response.data.status === 200) {
+        Toast.fire({
           icon: "success",
           title: "이메일이 성공적으로 보내졌습니다.",
         });
 
         setIsEmailVerified(true);
       } else {
-        Swal.fire({
+        Toast.fire({
           icon: "error",
           title: "이메일 보내기 실패",
         });
       }
     } catch (error) {
       console.error("서버 통신 오류:", error);
-      Swal.fire({
+      Toast.fire({
         icon: "error",
         title: "인증이 안보내졌습니다",
       });
@@ -79,8 +90,21 @@ function LoginComponent() {
     e.preventDefault();
     const authenticationCode = document.querySelector(".Authentication").value;
 
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
+
     if (authenticationCode.length !== 6) {
-      Swal.fire({
+      Toast.fire({
         icon: "error",
         title: "인증 코드는 여섯 자리여야 합니다.",
       });
@@ -100,21 +124,21 @@ function LoginComponent() {
       );
 
       if (response.data.status === 200) {
-        Swal.fire({
+        Toast.fire({
           icon: "success",
           title: "인증 코드가 올바릅니다.",
         });
         setIsCertifying(false);
         setMsg(""); // 이전 오류 메시지 제거
       } else {
-        Swal.fire({
+        Toast.fire({
           icon: "error",
           title: "인증 코드가 올바르지 않습니다.",
         });
       }
     } catch (error) {
       console.error("서버 통신 오류:", error);
-      Swal.fire({
+      Toast.fire({
         icon: "error",
         title: "서버 통신 실패.",
       });

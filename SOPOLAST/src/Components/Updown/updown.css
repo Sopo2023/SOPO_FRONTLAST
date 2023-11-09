@@ -18,6 +18,9 @@
     background: #FFF;
     z-index: 2;
   }
+  .post-container::-webkit-scrollbar {
+    display: none;
+  }
   .post-divider {
     border-top: 1px solid #ccc;
     margin: 10px 0; 
@@ -106,7 +109,7 @@
     .post-container {
       position: absolute;
       left: 500px;
-      top: 170px;
+      top: 200px;
       overflow-y: auto; 
       max-height: calc(100% - 190px); 
       width: 1200px;

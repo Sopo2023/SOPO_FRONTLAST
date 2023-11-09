@@ -6,11 +6,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  overflow-x: hidden;
 }
 .content{
   position: absolute;
   top: 0;
-  width: 1910px;
+  width: 1920px;
   height: 1400px;
 }
 .footer{
@@ -61,7 +62,7 @@
     /* position: sticky; */
     position: absolute; 
     top: 500px;
-    right: 170px;
+    right: 150px;
     width: 290px;
     height: 310px;
     border-radius: 10px;

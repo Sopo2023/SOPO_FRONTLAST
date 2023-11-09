@@ -59,6 +59,10 @@ const LoginComponent = () => {
       setLoading(false);
 
       if (response.data.status === 200) {
+        Toast.fire({
+          icon: "success",
+          title: "로그인 성공",
+        });
         // setUser({ name: response.data.name, email: response.data.email });
         localStorage.clear()
         localStorage.setItem('sopo_id', response.data.data.email);
@@ -69,6 +73,7 @@ const LoginComponent = () => {
         // console.log(response.data.data.name);
         // console.log(localStorage.getItem('sopo_id'));
         // console.log(localStorage.getItem('sopo_nm'));
+       
         navigate("/main");
       } else {
         Toast.fire({

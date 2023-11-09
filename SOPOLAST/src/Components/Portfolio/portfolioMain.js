@@ -5,9 +5,15 @@ import Sidename from "../Sidebar/side"
 import "./protfolio.css"
 import Head from '../../head/head';
 
+
+
 export default function Portfolio() {
   const navigate = useNavigate(); 
+  
+
+  
   return (
+      
     <div className='main'>
       <div className="content">
       <Head />
@@ -21,10 +27,11 @@ export default function Portfolio() {
         </div>
         
           <div className='stackLine'>
-            <select className='gradeSelet'>
-              <option>8기 </option>
-              <option>7기 </option>
-              <option>6기 </option>
+          
+            <select className='gradeSelet' >
+              <option value="8">8기 </option>
+              <option value="7">7기 </option>
+              <option value="6">6기 </option>
             </select>
             <div className='gradegreen'> | </div>
             <div className='majorSelect'>

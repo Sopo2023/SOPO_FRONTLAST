@@ -1,11 +1,6 @@
 import "./updown.css";
 import { Link , useNavigate } from "react-router-dom";
 import Sidename from "../Sidebar/side";
-import TEST0 from "../../Assets/img/postimg.jpeg";
-import TEST1 from "../../Assets/img/gayoe.jpeg";
-import TEST2 from "../../Assets/img/park.JPG";
-import TEST3 from "../../Assets/img/newjeans.jpeg";
-import TEST4 from "../../Assets/img/gayoe.jpeg";
 import TEST5 from "../../Assets/image/3.png";
 import TEST6 from "../../Assets/image/1.png";
 import TEST7 from "../../Assets/image/2.png";

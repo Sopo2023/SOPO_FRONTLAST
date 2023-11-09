@@ -128,7 +128,7 @@ export default function Sidewrite() {
             <div className="btn-upload">사진 설정</div>
           </label>
           <input type="file" name="file" id="file" onChange={handleImageChange} />
-          {fileName && <div>{fileName}</div>}
+          {/* {fileName && <div>{fileName}</div>} */}
           <button id='write_submit' type='submit'>Submit</button>
         </form>
       </div>

@@ -129,10 +129,10 @@
     position: absolute;
     top: 255px;
     left: 602px;
-    width: 753px;
-    height: 400px;
+    width: 100px;
+    height: 50px;
     background: #fff;
-    font-size: 50px;
+    font-size: 20px;
     color: lightgray;
     font-weight: 700;
     cursor: pointer;
