@@ -3,12 +3,10 @@
   }
 
   .post-written1 {
-    position: relative;
+    position: absolute;
     padding: 10px;
-    margin-bottom: 20px;
-    margin-left: 430px;
-    margin-top: 7%;
-    background-color: #fff;
+    top: 200px;
+    left: 30%;
     width: 1000px;
     z-index: 1;
   }
@@ -16,6 +14,19 @@
   .post-written1 .title1 {
     font-size: 40px;
     color: #000000;
+  }
+  .post_design{
+    position: absolute;
+    /* background-color: #f8f8f8; */
+    left: 25%;
+    display: flex;
+    position: absolute;
+    left: 150px;
+    /* flex-direction: column;
+     align-items: center;
+     justify-content: center; */
+    width: 70%;
+    height: 100%;
   }
 
   .name1 {
@@ -45,12 +56,13 @@
   }
 
   .post_border1{
-    width: 650px;
+    width: 40vw;
     height: 260px;
     margin-top: -80px;
   }
  
   .minit {
+
     font-size: 20px;
   }
 

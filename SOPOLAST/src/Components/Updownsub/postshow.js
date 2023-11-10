@@ -1,7 +1,7 @@
 import "./postshow.css";
 import Sidename from "../Sidebar/side";
 import TEST6 from "../../Assets/image/1.png";
-import Head from "../../head/head";
+import Head from "../../hooks/head/head";
 
 export default function Start() {
   return (
@@ -9,6 +9,7 @@ export default function Start() {
       <div className="content">
         <Head />
         <Sidename />
+        <div className="post_design">
           <div className="post-written1">
             <div className="post_border1">
               <span className="title1">4개교 연합 해커톤 프론트엔드</span>
@@ -47,6 +48,7 @@ export default function Start() {
               </span>
             </div>
           </div>
+        </div>
         </div>
       </div>
   );

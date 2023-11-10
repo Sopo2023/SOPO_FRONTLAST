@@ -3,13 +3,13 @@ import cnsLogo from "../../Assets/image/cnsLogo.png"
 import b1nd from "../../Assets/image/b1nd.png"
 import Sidename from "../Sidebar/side"
 import "./protfolio.css"
-import Head from '../../head/head';
+import Head from '../../hooks/head/head';
 
 
 
 export default function Portfolio() {
   const navigate = useNavigate(); 
-  
+
 
   
   return (
@@ -49,16 +49,17 @@ export default function Portfolio() {
         
         <Sidename/>
       <div className='mo'>
-        <div className='namecardBox' onClick={()=>{navigate("/Portfoliosub")}} >
+        <div className='namecardBox' onClick={()=>{navigate("/52562893")}} >
           <div className='nameName'>배채희</div>
           <div className='nameGrade'> DGSW 8th </div>
           <div className='nameMail'> Mail - chaeeehui@gmail.com </div>
         </div>
 
-        <div className='namecardBox2'>
-          <div className='nameName'> 이해준 </div>
+
+       <div className='namecardBox2' onClick={()=>{navigate("/12362153")}} >
+          <div className='nameName'>박규민</div>
           <div className='nameGrade'> DGSW 8th </div>
-          <div className='nameMail'> Mail - haejoon@gmail.com </div>
+          <div className='nameMail'> Mail - kyumin7487@gmail.com </div>
         </div>
 
         <div className='namecardBox3'>

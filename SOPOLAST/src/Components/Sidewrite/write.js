@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import Head from '../../head/head';
+import Head from '../../hooks/head/head';
 import Side from '../Sidebar/side';
 import "./write.css";
 import Swal from "sweetalert2";

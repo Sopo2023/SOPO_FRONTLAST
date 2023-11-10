@@ -234,7 +234,7 @@
   .mo{
     position: absolute;
     left: 580px;
-    top: 300px;
+    top: 250px;
     width: 900px;
     height: 1000px;
     
@@ -319,7 +319,7 @@
     position: absolute;
     margin-left: 22px;
     margin-top: 180px;
-  
+   cursor: pointer;
     display: inline-block;
   }
   

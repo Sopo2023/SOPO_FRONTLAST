@@ -1,26 +1,47 @@
 .allPort{
-  width: 700px;
- 
+  width: 80%;
+ height: 100%;
+  /* background-color: #f6f6f6; */
   position: absolute;
-  left: 420px;
-
-  margin-top: 100px;
+   display: flex; 
+  flex-direction: column; 
+   /* align-items: center;*/
+   justify-content: center; 
+   
 }
-
-
+.portfolio_proflie{
+  width: 57%;
+  height: 200px;
+  
+}
+.mo_portfolio{
+  position: absolute;
+  left: 20%;
+  width: 70%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
 .namePort{
 
   color: #000;
-
   font-family: Inter; 
   font-size: 40px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
 }
-
+.portfolio_skill{
+  width: 57%;
+  
+  height: 150px;
+  
+}
 .gradePort{
-  margin-top: 7px;
+  
 
   color: #000;
 
@@ -32,7 +53,7 @@
 }
 
 .bioPort{
-  margin-top: 23px;
+  
 
   color: #8C8C8C;
 
@@ -44,10 +65,9 @@
 }
 
 .setBio{
-  margin-top: 16px;
+  /* margin-top: 16px; */
 
   color: #000;
-
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -66,7 +86,11 @@
   font-weight: 900;
   line-height: normal;
 }
-
+.portfolio-Award{
+  width: 57%;
+  height: 100px;
+  
+}
 .aboutSikll{
   margin-top: 2px;
 
@@ -80,7 +104,7 @@
 }
 
 .awardBio{
-  margin-top: 21px;
+  /* margin-top: 21px; */
 
   color: #000;
 
@@ -92,7 +116,7 @@
 }
 
 .aboutAward{
-  margin-top: 2px;
+  
 
   color: #000;
 
@@ -101,6 +125,13 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+.portfolio_AboutMe{
+  width: 57%;
+  height: 100px;
+  
+  margin-top: 20px;
+  
 }
 
 .aboutMe{
@@ -147,7 +178,7 @@
 }
 
 .aboutText{
-  display: inline;
+  display: inline-block;
 
   color: #000;
 
@@ -165,10 +196,19 @@
 
 .portMore{
   margin-top: 2rem;
+  width: 57%;
+  height: 200px;
+  margin-top: 20px;
 }
-
+.moreContent{
+  width: 57%;
+  height: 200px;
+  
+}
 .moreText{
   margin-top: 3rem;
+  width: 57%;
+  height: 200px;
 }
 
 .myStory{
@@ -213,8 +253,7 @@
 }
 
 .hrGreen{
-  width: 700px;
+  width: 100%;
   border: #1A9A18 solid;
-  
   margin-top: 10px;
 }

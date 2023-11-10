@@ -9,7 +9,7 @@ import SOPO from "../../Assets/img/mainicon.png";
 import bind from "../../Assets/image/b1nd.png";
 import Jagu from "../../Assets/img/MAC.JPG";
 import he from "../../Assets/image/1.png";
-import Head from "../../head/head";
+import Head from "../../hooks/head/head";
 import axios from "axios";
 import "./main.css";
 // import { useRecoilValue } from 'recoil';
@@ -115,8 +115,9 @@ export default function Start() {
 
   useEffect(() => {
     const fetchPosts = async () => {
+      const localStorageEmail= localStorage.getItem("sopo_id")
       try {
-        const response = await axios.get("https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/list");
+        const response = await axios.get("https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/list",{userId:localStorageEmail});
         console.log("게시물 목록을 가져옵니다:", response.data);
         setPosts(response.data);
       } catch (error) {
@@ -158,7 +159,7 @@ export default function Start() {
           <div
             className="card1"
             onClick={() => {
-              navigate("/Portfoliosub");
+              navigate("/52562893");
             }}
           >
             <p className="card_p">배채희</p>
@@ -181,7 +182,7 @@ export default function Start() {
           <div
             className="card2"
             onClick={() => {
-              navigate("/card2");
+              navigate("/12362153");
             }}
           >
             <p className="card_p">박규민</p>
@@ -245,7 +246,7 @@ export default function Start() {
             <p
               className="link_side"
               onClick={() => {
-                navigate("/Portfoliosub");
+                navigate("/52562893");
               }}
             >
               내 포트폴리오

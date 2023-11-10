@@ -8,9 +8,9 @@ import Signup from "../src/Components/Signup/signup";
 import Mypage from "../src/Components/Mypage/mypage";
 import Competition from "../src/Components/Competition/Competition";
 import Portfoliosub from "../src/Components/Portfoliosub/portfolioSub";
-import Mypagesub from "../src/Components/Mypagesub/mypageadjustment";
 import Updownsub from "../src/Components/Updownsub/postshow";
 import CompetitionSub from "../src/Components/compsub/competitionsub";
+import Park from "../src/Components/park"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
@@ -28,10 +28,10 @@ function App() {
             <Route path="/Signuppage" element={<Signup />} />
             <Route path="/Mypage" element={<Mypage />} />
             <Route path="/Competition" element={<Competition />} />
-            <Route path="/Portfoliosub" element={<Portfoliosub />} />
-            <Route path="/Mypagesub" element={<Mypagesub />} />
+            <Route path="/52562893" element={<Portfoliosub />} />
             <Route path="/Updownsub" element={<Updownsub />} />
             <Route path="/CompetitionSub" element={<CompetitionSub />} />
+            <Route path="/12362153" element={<Park />} />
           </Routes>
         </div>
       </RecoilRoot> {/* RecoilRoot를 App 컴포넌트 내부에 두세요 */}

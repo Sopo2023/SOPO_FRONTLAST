@@ -6,7 +6,7 @@ import TEST6 from "../../Assets/image/1.png";
 import TEST7 from "../../Assets/image/2.png";
 import TEST8 from "../../Assets/img/B1CODE.png"
 import TEST9 from "../../Assets/img/MAC.JPG"
-import Head from "../../head/head";
+import Head from "../../hooks/head/head";
 
 export default function Start() {
   const navigate = useNavigate();
