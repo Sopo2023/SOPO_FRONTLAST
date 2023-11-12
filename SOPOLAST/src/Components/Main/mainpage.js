@@ -196,10 +196,10 @@ export default function Start() {
               navigate("/card3");
             }}
           >
-            <p className="card_p">서상렬</p>
+            <p className="card_p">김가영</p>
             <p className="card_p">Back-end Dev</p>
-            <p className="card_p">교사</p>
-            <p className="card_p">대구은행</p>
+            <p className="card_p">DGSW 8th</p>
+            <p className="card_p">B1ND 인턴</p>
           </div>
           <div
             className="card4"
