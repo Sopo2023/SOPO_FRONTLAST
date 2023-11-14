@@ -6,7 +6,7 @@ import "./signup.css";
 import Swal from "sweetalert2";
 
 function LoginComponent() {
-  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app";
+  const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -201,7 +201,7 @@ function LoginComponent() {
         password: password,
       };
 
-      const response = await axios.post(SERVERURL + "/createUser", userData, {
+      const response = await axios.post(`${SERVERURL}/createUser`, userData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

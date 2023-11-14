@@ -23,12 +23,12 @@ export default function Start() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [cards, setCards] = useState([]);
-
+  const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
   const handlePostClick = (postId) => {
     // 클라이언트에서 서버로 요청 보내기
     axios
       .post(
-        "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read", //선배가 후배에게 게시물 보내기
+        `${SERVERURL}/senior-to-junior/read `, //선배가 후배에게 게시물 보내기
         { postId: postId }
       )
 
@@ -47,7 +47,7 @@ export default function Start() {
   const fetchPostContent = (postId) => {
     axios
       .get(
-        `https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/read/${postId}` //선배가 후배에게 게시물 가져오기
+        `${SERVERURL}/read/${postId}` //선배가 후배에게 게시물 가져오기
       ) // 실제 게시물 내용을 가져오는 엔드포인트로 변경
       .then((response) => {
         const postContent = response.data; // 가져온 게시물 내용
@@ -117,7 +117,7 @@ export default function Start() {
     const fetchPosts = async () => {
       const localStorageEmail= localStorage.getItem("sopo_id")
       try {
-        const response = await axios.get("https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/list",{userId:localStorageEmail});
+        const response = await axios.get(`${SERVERURL}/list`,{userId:localStorageEmail});
         console.log("게시물 목록을 가져옵니다:", response.data);
         setPosts(response.data);
       } catch (error) {

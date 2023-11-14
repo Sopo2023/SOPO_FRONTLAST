@@ -47,9 +47,9 @@ const LoginComponent = () => {
         password: password,
       };
 
-      const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/login"; // Move the server URL here
+      const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
 
-      const response = await axios.post(SERVERURL, userData, {
+      const response = await axios.post(`${SERVERURL}/login`, userData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

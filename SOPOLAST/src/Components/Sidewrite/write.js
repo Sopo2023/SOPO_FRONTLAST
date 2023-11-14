@@ -12,7 +12,7 @@ export default function Sidewrite() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [fileName, setFileName] = useState(null); 
   const localStorageEmail = localStorage.getItem('sopo_id');
-  const SERVERURL = "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app";
+  const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -56,7 +56,7 @@ export default function Sidewrite() {
     try {
       let response;
       if (selectedPlace === "게시물") {
-        await axios.post(SERVERURL + "/senior-to-junior/create", formData, {
+        await axios.post(`${SERVERURL}/senior-to-junior/create`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
