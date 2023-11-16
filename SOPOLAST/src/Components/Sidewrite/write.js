@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import axios from 'axios';
-import Head from '../../hooks/head/head';
-import Side from '../Sidebar/side';
+import { useState } from "react";
+import axios from "axios";
+import Head from "../../hooks/head/head";
+import Side from "../Sidebar/side";
 import "./write.css";
 import Swal from "sweetalert2";
 
@@ -10,9 +10,9 @@ export default function Sidewrite() {
   const [content, setContent] = useState("");
   const [imageSrc, setImageSrc] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [fileName, setFileName] = useState(null); 
-  const localStorageEmail = localStorage.getItem('sopo_id');
-  const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
+  const [fileName, setFileName] = useState(null);
+  const localStorageEmail = localStorage.getItem("sopo_id");
+  const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -22,37 +22,38 @@ export default function Sidewrite() {
     didOpen: (toast) => {
       toast.addEventListener("mouseenter", Swal.stopTimer);
       toast.addEventListener("mouseleave", Swal.resumeTimer);
-    }
+    },
   });
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    const selectedCategory = document.querySelector('.sc-cBornz-gegs').value;
-    const selectedPlace = document.querySelector('.sd-cBornz-gegs').value;
-  
+    const selectedCategory = document.querySelector(".sc-cBornz-gegs").value;
+    const selectedPlace = document.querySelector(".sd-cBornz-gegs").value;
+
     if (!title || !content) {
       Toast.fire({
-        icon: 'error',
-        title: '제목, 내용을 모두 입력해주세요.',
+        icon: "error",
+        title: "제목, 내용을 모두 입력해주세요.",
       });
       return;
     }
-    
-  
+
     const formData = new FormData();
     const data = {
       title,
       content,
       email: localStorageEmail,
     };
-  
-    
-    formData.append("data", new Blob([JSON.stringify(data)], { type: "application/json" }));
-  
+
+    formData.append(
+      "data",
+      new Blob([JSON.stringify(data)], { type: "application/json" })
+    );
+
     if (selectedPlace === "게시물") {
       formData.append("image", selectedImage);
     }
-  
+
     try {
       let response;
       if (selectedPlace === "게시물") {
@@ -63,16 +64,13 @@ export default function Sidewrite() {
         });
       } else if (selectedPlace === "대회") {
         response = await axios.post(SERVERURL + "#", formData, {
-          headers: {
-            
-          },
+          headers: {},
         });
       }
     } catch (error) {
       console.error("Error:", error);
     }
   };
-  
 
   const handleImageChange = (e) => {
     const selectedImage = e.target.files[0];
@@ -82,19 +80,17 @@ export default function Sidewrite() {
   };
 
   return (
-    <div className='main'>
+    <div className="main">
       <div className="content">
         <Head />
         <Side />
-        <form className='write_form' onSubmit={onSubmitHandler}>
-
-          <div className='write_img1'>
-            
+        <form className="write_form" onSubmit={onSubmitHandler}>
+          <div className="write_img1">
             {imageSrc && <img src={imageSrc} alt="Preview" />}
           </div>
-          <div className='sc-cBornZ-gegSAw'>
+          <div className="sc-cBornZ-gegSAw">
             <span>카테고리</span>
-            <select className='sc-cBornz-gegs'>
+            <select className="sc-cBornz-gegs">
               <option value="웹">웹</option>
               <option value="서버">서버</option>
               <option value="안드">안드로이드</option>
@@ -104,32 +100,39 @@ export default function Sidewrite() {
               <option value="기타">기타</option>
             </select>
           </div>
-          <div className='sd-cBornZ-gegSAw'>
+          <div className="sd-cBornZ-gegSAw">
             <span>올릴곳</span>
-            <select className='sd-cBornz-gegs'>
+            <select className="sd-cBornz-gegs">
               <option value="게시물">게시물</option>
               <option value="대회">대회</option>
             </select>
           </div>
           <input
-            className='write_title'
-            type='text'
-            placeholder='제목'
+            className="write_title"
+            type="text"
+            placeholder="제목"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
           <textarea
-            className='write_screen'
-            placeholder='내용'
+            className="write_screen"
+            placeholder="내용"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           ></textarea>
           <label htmlFor="file">
             <div className="btn-upload">사진 설정</div>
           </label>
-          <input type="file" name="file" id="file" onChange={handleImageChange} />
+          <input
+            type="file"
+            name="file"
+            id="file"
+            onChange={handleImageChange}
+          />
           {/* {fileName && <div>{fileName}</div>} */}
-          <button id='write_submit' type='submit'>Submit</button>
+          <button id="write_submit" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>

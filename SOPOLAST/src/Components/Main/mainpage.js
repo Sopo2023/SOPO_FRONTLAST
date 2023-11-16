@@ -23,7 +23,7 @@ export default function Start() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [cards, setCards] = useState([]);
-  const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
+  const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
   const handlePostClick = (postId) => {
     // 클라이언트에서 서버로 요청 보내기
     axios
@@ -111,13 +111,13 @@ export default function Start() {
     };
   }, [scrollContainerRef, handleMouseDown, handleMouseUp, handleMouseMove]);
 
-
-
   useEffect(() => {
     const fetchPosts = async () => {
-      const localStorageEmail= localStorage.getItem("sopo_id")
+      const localStorageEmail = localStorage.getItem("sopo_id");
       try {
-        const response = await axios.get(`${SERVERURL}/list`,{userId:localStorageEmail});
+        const response = await axios.get(`${SERVERURL}/list`, {
+          userId: localStorageEmail,
+        });
         console.log("게시물 목록을 가져옵니다:", response.data);
         setPosts(response.data);
       } catch (error) {
@@ -126,7 +126,7 @@ export default function Start() {
     };
     fetchPosts();
   }, []);
-   // 빈 배열을 두어 페이지가 로드될 때 한 번만 실행되도록 설정합니다.
+  // 빈 배열을 두어 페이지가 로드될 때 한 번만 실행되도록 설정합니다.
 
   // const fetchCardData = async () => {
   //   try {
@@ -238,7 +238,10 @@ export default function Start() {
 
         <div className="sideName">
           <div className="CHname">
-            <p onClick={() => navigate("/Portfoliosub")} className="sidenameColor">
+            <p
+              onClick={() => navigate("/Portfoliosub")}
+              className="sidenameColor"
+            >
               {sideName}
             </p>
           </div>

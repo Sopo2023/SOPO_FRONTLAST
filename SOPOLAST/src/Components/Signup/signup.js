@@ -6,7 +6,7 @@ import "./signup.css";
 import Swal from "sweetalert2";
 
 function LoginComponent() {
-  const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
+  const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -101,7 +101,6 @@ function LoginComponent() {
         toast.addEventListener("mouseleave", Swal.resumeTimer);
       },
     });
-
 
     if (authenticationCode.length !== 6) {
       Toast.fire({

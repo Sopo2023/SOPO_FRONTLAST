@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import {  userState } from "../../recoil/auto"; 
+import { userState } from "../../recoil/auto";
 
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
@@ -47,7 +47,7 @@ const LoginComponent = () => {
         password: password,
       };
 
-      const SERVERURL =`${process.env.REACT_APP_SERVER_URL}`;
+      const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 
       const response = await axios.post(`${SERVERURL}/login`, userData, {
         withCredentials: true,
@@ -64,16 +64,16 @@ const LoginComponent = () => {
           title: "로그인 성공",
         });
         // setUser({ name: response.data.name, email: response.data.email });
-        localStorage.clear()
-        localStorage.setItem('sopo_id', response.data.data.email);
-        localStorage.setItem('sopo_nm',  response.data.data.name);
-        
-        localStorage.setItem('sopo_github',"je355");
+        localStorage.clear();
+        localStorage.setItem("sopo_id", response.data.data.email);
+        localStorage.setItem("sopo_nm", response.data.data.name);
+
+        localStorage.setItem("sopo_github", "je355");
         // console.log(response.data.data.email);
         // console.log(response.data.data.name);
         // console.log(localStorage.getItem('sopo_id'));
         // console.log(localStorage.getItem('sopo_nm'));
-       
+
         navigate("/main");
       } else {
         Toast.fire({
