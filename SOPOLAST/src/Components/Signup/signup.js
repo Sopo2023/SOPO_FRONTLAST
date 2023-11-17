@@ -245,7 +245,7 @@ function LoginComponent() {
         </div>
         <div className="box1">
           <p>Sign up</p>
-          <form method="POST" onSubmit={LOginFunc}>
+          <form method="POST" className="signform" onSubmit={LOginFunc}>
             <input
               className="Name"
               name="name"
@@ -305,7 +305,7 @@ function LoginComponent() {
               value={loading ? "Signing up..." : "Sign up"}
             />
             <p>{msg}</p>
-            <Link to="/">Log in</Link>
+            <Link to="/" className="LogLink">Log in</Link>
           </form>
         </div>
       </div>

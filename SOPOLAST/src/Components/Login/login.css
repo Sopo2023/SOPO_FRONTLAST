@@ -31,7 +31,7 @@
   font-weight: bold;
   position: absolute;
   left: 50px;
-  top: 35%;
+  top: 30%;
 }
 
 .box2 button {
@@ -71,6 +71,6 @@ form {
 }
 .LINK{
   position: absolute;
-  bottom: 35%;
+  bottom: 33%;
   left: 50px;
 }

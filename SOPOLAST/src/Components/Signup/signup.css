@@ -39,6 +39,9 @@
   position: absolute;
 }
 .box1 p {
+  position: absolute;
+  top: 20%;
+  left: 50px;
   font-size: 40px;
   margin-bottom: 10px;
   font-weight: bold;
@@ -61,6 +64,16 @@
   bottom: 60px;
   left: 150px;
 }
+.Certificationbox{
+  width: 400px;
+  height: 60px;
+  position: absolute;
+  top: 41%;
+}
+.Authentication{
+  position: absolute;
+  top:10px;
+}
 .box1 .Certificationbox .completed {
   display: inline;
   padding: 0;
@@ -76,8 +89,8 @@
   font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 140px;
-  right: 90px;
+  top: 0;
+  right: 0px;
 }
 .box1 button {
   padding: 10px 20px;
@@ -147,4 +160,9 @@
 }
 form {
   display: contents;
+}
+.LogLink{
+  position: absolute;
+  left: 50px;
+  bottom: 23%;
 }
