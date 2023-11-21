@@ -17,7 +17,7 @@ import { RecoilRoot } from "recoil";
 function App() {
   return (
     <BrowserRouter>
-      <RecoilRoot> {/* RecoilRoot를 App 컴포넌트 내부에 두세요 */}
+      <RecoilRoot> 
         <div className="App">
           <Routes>
             <Route path="/" element={<LoginComponent />} />

@@ -9,7 +9,7 @@ import SOPO from "../../Assets/img/mainicon.png";
 import bind from "../../Assets/image/b1nd.png";
 import Jagu from "../../Assets/img/MAC.JPG";
 import he from "../../Assets/image/1.png";
-import Head from "../../hooks/head/head";
+import Head from "../../constants/head/head";
 import axios from "axios";
 import "./main.css";
 // import { useRecoilValue } from 'recoil';

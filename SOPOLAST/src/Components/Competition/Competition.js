@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Sidname from "../Sidebar/side";
-import Head from "../../hooks/head/head";
+import Sidname from "../../constants/Sidebar/side";
+import Head from "../../constants/head/head";
 import "./Competition.css";
 import { useNavigate } from "react-router-dom";
 

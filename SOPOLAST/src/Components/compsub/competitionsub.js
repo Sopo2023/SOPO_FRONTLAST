@@ -1,7 +1,7 @@
 import './cometitionsub.css';
-import Side from '../Sidebar/side';
+import Side from '../../constants/Sidebar/side';
 import "./cometitionsub.css"
-import Head from '../../hooks/head/head';
+import Head from '../../constants/head/head';
 import { useNavigate } from 'react-router-dom';
 
 function App() {
