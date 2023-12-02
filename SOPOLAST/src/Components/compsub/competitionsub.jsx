@@ -13,7 +13,6 @@ let goBack = () => {
     <div className="main">
       <div className="content">
         <Head/>  
-       
         <Side />
         <div className='compBox1'>
           <div className='compBack1' onClick={goBack}> ◀ </div>

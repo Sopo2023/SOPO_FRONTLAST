@@ -126,48 +126,27 @@ export default function Start() {
     };
     fetchPosts();
   }, []);
-  // 빈 배열을 두어 페이지가 로드될 때 한 번만 실행되도록 설정합니다.
-
-  // const fetchCardData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://port-0-sopo-backend-5yc2g32mlomvxoqs.sel5.cloudtype.app/senior-to-junior/read"
-  //     );
-  //     return response.data;
-  //   } catch (error) {
-  //     console.error("데이터를 불러오는 중 에러 발생:", error);
-  //     return [];
-  //   }
-  // };
-  // 페이지가 로드될 때 데이터 가져오는 코드
-  // useEffect(() => {
-  //   fetchCardData().then((data) => {
-  //     setCards(data);
-  //   });
-  //   window.addEventListener("beforeunload", () => {
-  //     fetchCardData().then((data) => {
-  //       setCards(data);
-  //     });
-  //   });
-  // }, []);
 
   return (
     <div className="main">
       <div className="content">
         <Head />
         <div className="mainCard" ref={scrollContainerRef}>
-          <div
-            className="card1"
-            onClick={() => {
-              navigate("/52562893");
-            }}
-          >
-            <p className="card_p">배채희</p>
-            <p className="card_p">Front-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">CNS</p>
-          </div>
-          {cards.map((card) => (
+          <div className="card_container"ref={scrollContainerRef}>
+            <div
+              className="card1"
+              onClick={() => {
+                navigate("/52562893");
+              }}
+            >
+              <div className="cardP">
+                <p className="card_p">배채희</p>
+                <p className="card_p">Front-end Dev</p>
+                <p className="card_p">DGSW 8th</p>
+                <p className="card_p">CNS</p>
+              </div>
+            </div>
+            {/* {cards.map((card) => (
             <div
               key={card.id} //서버로부터 받은 id
               onClick={() => navigate(`/card${card.id + 1}`)}
@@ -178,68 +157,79 @@ export default function Start() {
               <p className="card_p">{card.batch}</p>
               <p className="card_p">{card.club}</p>
             </div>
-          ))}
-          <div
-            className="card2"
-            onClick={() => {
-              navigate("/12362153");
-            }}
-          >
-            <p className="card_p">박규민</p>
-            <p className="card_p">Front-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">ALT</p>
-          </div>
-          <div
-            className="card3"
-            onClick={() => {
-              navigate("/card3");
-            }}
-          >
-            <p className="card_p">김가영</p>
-            <p className="card_p">Back-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">B1ND 인턴</p>
-          </div>
-          <div
-            className="card4"
-            onClick={() => {
-              navigate("/card4");
-            }}
-          >
-            <p className="card_p">전우진</p>
-            <p className="card_p">Front-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">모디</p>
-          </div>
-          <div
-            className="card5"
-            onClick={() => {
-              navigate("/card5");
-            }}
-          >
-            <p className="card_p">김호준</p>
-            <p className="card_p">Back-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">모디</p>
-          </div>
-          <div
-            className="card6"
-            onClick={() => {
-              navigate("/card6");
-            }}
-          >
-            <p className="card_p">이해준</p>
-            <p className="card_p">Front-end Dev</p>
-            <p className="card_p">DGSW 8th</p>
-            <p className="card_p">QI</p>
+          ))} */}
+            <div
+              className="card1"
+              onClick={() => {
+                navigate("/12362153");
+              }}
+            >
+              <div className="cardP">
+                <p className="card_p">박규민</p>
+                <p className="card_p">Front-end Dev</p>
+                <p className="card_p">DGSW 8th</p>
+                <p className="card_p">ALT</p>
+              </div>
+            </div>
+            <div
+              className="card1"
+              onClick={() => {
+                navigate("/card3");
+              }}
+            >
+              <div className="cardP">
+                <p className="card_p">김가영</p>
+                <p className="card_p">Back-end Dev</p>
+                <p className="card_p">DGSW 8th</p>
+                <p className="card_p">B1ND 인턴</p>
+              </div>
+            </div>
+            <div
+              className="card1"
+              onClick={() => {
+                navigate("/card4");
+              }}
+            >
+              <div className="cardP">
+                <p className="card_p">전우진</p>
+                <p className="card_p">Front-end Dev</p>
+                <p className="card_p">DGSW 8th</p>
+                <p className="card_p">모디</p>
+              </div>
+            </div>
+            <div
+              className="card1"
+              onClick={() => {
+                navigate("/card5");
+              }}
+            >
+              <div className="cardP">
+                <p className="card_p">김호준</p>
+                <p className="card_p">Back-end Dev</p>
+                <p className="card_p">DGSW 8th</p>
+                <p className="card_p">모디</p>
+              </div>
+            </div>
+            <div
+              className="card1"
+              onClick={() => {
+                navigate("/card6");
+              }}
+            >
+              <div className="cardP">
+                <p className="card_p">이해준</p>
+                <p className="card_p">Front-end Dev</p>
+                <p className="card_p">DGSW 8th</p>
+                <p className="card_p">QI</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="sideName">
           <div className="CHname">
             <p
-              onClick={() => navigate("/Portfoliosub")}
+              onClick={() => navigate("/mypage")}
               className="sidenameColor"
             >
               {sideName}

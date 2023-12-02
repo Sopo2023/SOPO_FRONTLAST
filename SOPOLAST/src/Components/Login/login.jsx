@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { userState } from "../../recoil/auto";
-
+// import { loginUser } from "../../hooks/Login/login";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
 import axios from "axios";
@@ -41,6 +41,8 @@ const LoginComponent = () => {
 
     // 서버에 로그인 정보를 확인하기 위한 요청을 보냅니다
     try {
+
+      // const success = await loginUser(email, password);
       setLoading(true);
       const userData = {
         email: email,
