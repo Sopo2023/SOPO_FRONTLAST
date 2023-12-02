@@ -4,9 +4,9 @@ import axios from "axios";
 import LOGO from "../../Assets/image/LOGO.png";
 import "./signup.css";
 import Swal from "sweetalert2";
+import { showToast } from "../../constants/Swal/Swal.js";
 
 function LoginComponent() {
-  
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 
   const [name, setName] = useState("");
@@ -42,10 +42,7 @@ function LoginComponent() {
     });
 
     if (!email) {
-      Toast.fire({
-        icon: "error",
-        title: "이메일을 입력해주세요.",
-      });
+      showToast("warning", "이메일을 입력해 주세요");
       return;
     }
 
@@ -64,24 +61,15 @@ function LoginComponent() {
       );
 
       if (response.data.status === 200) {
-        Toast.fire({
-          icon: "success",
-          title: "이메일이 성공적으로 보내졌습니다.",
-        });
+        showToast("success", "이메일이 성공적으로 보내졌습니다.");
 
         setIsEmailVerified(true);
       } else {
-        Toast.fire({
-          icon: "error",
-          title: "이메일 보내기 실패",
-        });
+        showToast("error", "이메일 보내기 실패");
       }
     } catch (error) {
       console.error("서버 통신 오류:", error);
-      Toast.fire({
-        icon: "error",
-        title: "인증이 안보내졌습니다",
-      });
+      showToast("error", "인증이 안보내졌습니다");
     } finally {
       setIsVerifying(false);
     }
@@ -104,10 +92,8 @@ function LoginComponent() {
     });
 
     if (authenticationCode.length !== 6) {
-      Toast.fire({
-        icon: "error",
-        title: "인증 코드는 여섯 자리여야 합니다.",
-      });
+      showToast("error", "인증 코드는 여섯 자리여야 합니다.");
+
       return;
     }
 
@@ -124,24 +110,16 @@ function LoginComponent() {
       );
 
       if (response.data.status === 200) {
-        Toast.fire({
-          icon: "success",
-          title: "인증 코드가 올바릅니다.",
-        });
+        showToast("success", "인증 코드가 올바릅니다.");
+
         setIsCertifying(false);
         setMsg(""); // 이전 오류 메시지 제거
       } else {
-        Toast.fire({
-          icon: "error",
-          title: "인증 코드가 올바르지 않습니다.",
-        });
+        showToast("error", "인증 코드가 올바르지 않습니다.");
       }
     } catch (error) {
       console.error("서버 통신 오류:", error);
-      Toast.fire({
-        icon: "error",
-        title: "서버 통신 실패.",
-      });
+      showToast("error", "서버 통신 실패.");
     }
   };
 
@@ -161,35 +139,27 @@ function LoginComponent() {
     });
 
     if (name === "") {
-      Toast.fire({
-        icon: "warning",
-        title: "이름을 써주세요",
-      });
+      showToast("warning", "이름을 써주세요");
+
       return;
     }
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailPattern.test(email)) {
-      Toast.fire({
-        icon: "warning",
-        title: "이메일 형식이 올바르지 않습니다.",
-      });
+      showToast("warning", "이메일 형식이 올바르지 않습니다.");
+
       return;
     }
 
     if (!email.endsWith("@dgsw.hs.kr")) {
-      Toast.fire({
-        icon: "warning",
-        title: "이 도메인은 회원가입이 허용되지 않습니다.",
-      });
+      showToast("warning", "이 도메인은 회원가입이 허용되지 않습니다.");
+
       return;
     }
 
     if (password !== repassword) {
-      Toast.fire({
-        icon: "question",
-        title: "비밀번호가 일치하지 않습니다.",
-      });
+      showToast("qusetion", "비밀번호가 일치하지 않습니다.");
+
       return;
     }
 
@@ -211,10 +181,8 @@ function LoginComponent() {
       setLoading(false);
 
       if (response.data.status === 200) {
-        Toast.fire({
-          icon: "success",
-          title: "회원 가입이 완료되었습니다.",
-        });
+        showToast("success", "회원 가입이 완료되었습니다.");
+
         // 회원가입 성공 후 초기화
         setName("");
         setEmail("");
@@ -224,17 +192,11 @@ function LoginComponent() {
         setIsCertifying(false);
         setIsEmailVerified(false);
       } else {
-        Toast.fire({
-          icon: "error",
-          title: "회원 가입에 실패하였습니다.",
-        });
+        showToast("error", "회원 가입에 실패하였습니다.");
       }
     } catch (error) {
       console.error("서버 통신 오류:", error);
-      Toast.fire({
-        icon: "error",
-        title: "서버 통신 실패.",
-      });
+      showToast("error", "서버 통신 실패.");
     }
   };
 
@@ -306,7 +268,9 @@ function LoginComponent() {
               value={loading ? "Signing up..." : "Sign up"}
             />
             <p>{msg}</p>
-            <Link to="/" className="LogLink">Log in</Link>
+            <Link to="/" className="LogLink">
+              Log in
+            </Link>
           </form>
         </div>
       </div>
