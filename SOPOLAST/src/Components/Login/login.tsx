@@ -5,28 +5,31 @@ import { useRecoilState } from "recoil";
 import { userState } from "../../recoil/auto";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
-import { loginUser } from "../../hooks/LoginCraft/LoginCraft.ts";
+import { loginUser } from "../../hooks/LoginCraft/LoginCraft";
 import { showToast } from "../../constants/Swal/Swal.js";
+import Cookies from "js-cookie";
 
-const LoginComponent = () => {
-  
+interface UserData {
+  email: string;
+  password: string;
+}
+
+const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
   const [user, setUser] = useRecoilState(userState);
 
   const handleLogin = async () => {
-
     if (email === "" || password === "") {
-      showToast("warning","이메일과 비밀번호를 모두 입력해주세요")
+      showToast("warning", "이메일과 비밀번호를 모두 입력해주세요");
       return;
     }
 
     try {
       setLoading(true);
-      const userData = {
+      const userData: UserData = {
         email: email,
         password: password,
       };
@@ -36,19 +39,18 @@ const LoginComponent = () => {
       setLoading(false);
 
       if (response.status === 200) {
-        showToast("success","로그인 성공")
-        localStorage.clear();
-        localStorage.setItem("sopo_id", response.data.data.email);
-        localStorage.setItem("sopo_nm", response.data.data.name);
-        localStorage.setItem("sopo_github", "je355");
+        showToast("success", "로그인 성공");
+        const { accessToken, refreshToken } = response.data.data;
+        localStorage.setItem("accessToken", accessToken);
+        Cookies.set("refreshToken", refreshToken);
 
         navigate("/main");
       } else {
-        showToast("error","로그인에 실패하였습니다")
+        showToast("error", "로그인에 실패하였습니다");
       }
     } catch (error) {
       console.log(error);
-      showToast("error","서버 통신 실패.")
+      showToast("error", "서버 통신 실패.");
     }
   };
 
@@ -79,9 +81,9 @@ const LoginComponent = () => {
             <button type="button" className="button" onClick={handleLogin}>
               Log in
             </button>
-            <Link to="/Signuppage" className="LINK">
+            <div onClick={()=>navigate("/Signuppage")} className="LINK">
               sign up
-            </Link>
+            </div>
           </form>
         </div>
       </div>
