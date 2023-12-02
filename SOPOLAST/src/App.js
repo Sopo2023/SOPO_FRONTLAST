@@ -1,6 +1,6 @@
 import "./App.css";
 import Updown from "./Components/Updown/updownmain";
-import LoginComponent from "./Components/Login/login";
+import Login from "./Components/Login/login";
 import Portfolio from "./Components/Portfolio/portfolioMain";
 import Main from "../src/Components/Main/mainpage";
 import Write from "../src/Components/Sidewrite/write";
@@ -20,7 +20,7 @@ function App() {
       <RecoilRoot> 
         <div className="App">
           <Routes>
-            <Route path="/" element={<LoginComponent />} />
+            <Route path="/" element={<Login />} />
             <Route path="/main" element={<Main />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/Mentor-Mentee" element={<Updown />} />
