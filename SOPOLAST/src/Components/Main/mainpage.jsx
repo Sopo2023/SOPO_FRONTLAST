@@ -132,7 +132,7 @@ export default function Start() {
       <div className="content">
         <Head />
         <div className="mainCard" ref={scrollContainerRef}>
-          <div className="card_container"ref={scrollContainerRef}>
+          <div className="card_container" ref={scrollContainerRef}>
             <div
               className="card1"
               onClick={() => {
@@ -225,153 +225,161 @@ export default function Start() {
             </div>
           </div>
         </div>
-
-        <div className="sideName">
-          <div className="CHname">
-            <p
-              onClick={() => navigate("/mypage")}
-              className="sidenameColor"
-            >
-              {sideName}
-            </p>
-          </div>
-          <div className="Write">
-            <p
-              className="link_side"
-              onClick={() => {
-                navigate("/52562893");
-              }}
-            >
-              내 포트폴리오
-            </p>
-            <p
-              className="link_side"
-              onClick={() => {
-                navigate("/sidewrite");
-              }}
-            >
-              글쓰기
-            </p>
-          </div>
-          <div className="News">
-            <p className="writ_name">내 소식</p>
-            <div className="write_detail">
-              <p className="writ">
-                <strong>서상렬</strong>님이 <strong>깃허브완전알려줌~ </strong>
-                글에 댓글을 남겼습니다.{" "}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="post">
-          {posts.map((post) => (
+        <div className="Bottom_Area">
+          <div className="post">
+            {posts.map((post) => (
+              <div
+                className="post-write"
+                key={posts.id}
+                onClick={() => handlePostClick(posts.id)}
+              >
+                <div className="Zonecontrol">
+                  <span className="Name">{posts.name}</span>
+                  <span className="title">{posts.title}</span>
+                  <span className="detail">{posts.content}</span>
+                  <span className="date">{posts.createDate}</span>
+                </div>
+                <span className="img">
+                  <img className="real_img" src={posts.image} alt="이미지" />
+                </span>
+              </div>
+            ))}
             <div
               className="post-write"
-              key={posts.id}
-              onClick={() => handlePostClick(posts.id)}
+              onClick={() => {
+                navigate("/Updownsub");
+              }}
             >
               <div className="Zonecontrol">
-                <span className="Name">{posts.name}</span>
-                <span className="title">{posts.title}</span>
-                <span className="detail">{posts.content}</span>
-                <span className="date">{posts.createDate}</span>
+                <span className="Name"> 김가영 </span>
+                <span className="title"> 4개교 연합 해커톤 프론트엔드 </span>
+                <span className="detail">
+                  2023년 08월 24일 4개교 연합 해커톤을 진행했다.고종현 님
+                  @manudeli 경력 요기요에서 -Merchant trine : 사장님 관련 서비스
+                  사장 사이트, 사장 관리자 서비스 공통 요기요 디자인, FE 나의
+                  이야기 제대 전, 수포자 고등학생에서 미대생(디자인전공)으로서의
+                  삶...
+                </span>
+                <span className="date">2023.11.02</span>
               </div>
               <span className="img">
-                <img className="real_img" src={posts.image} alt="이미지" />
+                <img className="real_img" src={he} alt="이미지"></img>
               </span>
             </div>
-          ))}
-          <div
-            className="post-write"
-            onClick={() => {
-              navigate("/Updownsub");
-            }}
-          >
-            <div className="Zonecontrol">
-              <span className="Name"> 김가영 </span>
-              <span className="title"> 4개교 연합 해커톤 프론트엔드 </span>
-              <span className="detail">
-                2023년 08월 24일 4개교 연합 해커톤을 진행했다.고종현 님
-                @manudeli 경력 요기요에서 -Merchant trine : 사장님 관련 서비스
-                사장 사이트, 사장 관리자 서비스 공통 요기요 디자인, FE 나의
-                이야기 제대 전, 수포자 고등학생에서 미대생(디자인전공)으로서의
-                삶...
+            <div className="post-write">
+              <div className="Zonecontrol">
+                <span className="Name"> 서상렬 </span>
+                <span className="title"> 나르샤 일지 </span>
+                <span className="detail">
+                  {" "}
+                  지난 8월부터 시작한 나르샤가 끝나간다. 나르샤가 끝나가며 ICT에
+                  나가게 되었는데 아직 그 순간을 기억하면 떨리고 있다. 힘들기도
+                  무척 힘들었지만 뿌듯함과{" "}
+                </span>
+                <span className="date">2023.09.22</span>
+              </div>
+              <span className="img">
+                <img className="real_img" src={SOPO} alt="이미지"></img>
               </span>
-              <span className="date">2023.11.02</span>
             </div>
-            <span className="img">
-              <img className="real_img" src={he} alt="이미지"></img>
-            </span>
+            <div className="post-write">
+              <div className="Zonecontrol">
+                <span className="Name"> 김창대 </span>
+                <span className="title"> JAVA 공부법 </span>
+                <span className="detail">
+                  {" "}
+                  JAVA 공부법.
+                  <br /> 안녕하세요. 오늘은 자바 공부법에 대해 이야기합니다.{" "}
+                </span>
+                <span className="date">2023.09.18</span>
+              </div>
+              <span className="img">
+                <img className="real_img" src={Java} alt="이미지"></img>
+              </span>
+            </div>
+            <div className="post-write">
+              <div className="Zonecontrol">
+                <span className="Name"> 김호준 </span>
+                <span className="title"> 바인드 컨퍼런스 듣기 </span>
+                <span className="detail">
+                  {" "}
+                  바인드 컨퍼런스 들은 날 <br /> 바인드 컨퍼런스를 시청각실에서
+                  들었는데 너무너무 좋은 이야기가 있었다.
+                </span>
+                <span className="date">2023.09.15</span>
+              </div>
+              <span className="img">
+                <img className="real_img" src={bind} alt="이미지"></img>
+              </span>
+            </div>
+            <div className="post-write">
+              <div className="Zonecontrol">
+                <span className="Name"> 조현아 </span>
+                <span className="title"> 자료구조 시험을 치고나서 </span>
+                <span className="detail">
+                  {" "}
+                  난 자료구조 시험을 중간고사에 치고서 배운점이 많이 생겨서 다른
+                  학생들도 알면 좋을것 같단 생각에 이 글을 쓰게 되었다!!{" "}
+                </span>
+                <span className="date">2023.09.12</span>
+              </div>
+              <span className="img">
+                <img className="real_img" src={Jagu} alt="이미지"></img>
+              </span>
+            </div>
           </div>
-          <div className="post-write">
-            <div className="Zonecontrol">
-              <span className="Name"> 서상렬 </span>
-              <span className="title"> 나르샤 일지 </span>
-              <span className="detail">
-                {" "}
-                지난 8월부터 시작한 나르샤가 끝나간다. 나르샤가 끝나가며 ICT에
-                나가게 되었는데 아직 그 순간을 기억하면 떨리고 있다. 힘들기도
-                무척 힘들었지만 뿌듯함과{" "}
-              </span>
-              <span className="date">2023.09.22</span>
-            </div>
-            <span className="img">
-              <img className="real_img" src={SOPO} alt="이미지"></img>
-            </span>
-          </div>
-          <div className="post-write">
-            <div className="Zonecontrol">
-              <span className="Name"> 김창대 </span>
-              <span className="title"> JAVA 공부법 </span>
-              <span className="detail">
-                {" "}
-                JAVA 공부법.
-                <br /> 안녕하세요. 오늘은 자바 공부법에 대해 이야기합니다.{" "}
-              </span>
-              <span className="date">2023.09.18</span>
-            </div>
-            <span className="img">
-              <img className="real_img" src={Java} alt="이미지"></img>
-            </span>
-          </div>
-          <div className="post-write">
-            <div className="Zonecontrol">
-              <span className="Name"> 김호준 </span>
-              <span className="title"> 바인드 컨퍼런스 듣기 </span>
-              <span className="detail">
-                {" "}
-                바인드 컨퍼런스 들은 날 <br /> 바인드 컨퍼런스를 시청각실에서
-                들었는데 너무너무 좋은 이야기가 있었다.
-              </span>
-              <span className="date">2023.09.15</span>
-            </div>
-            <span className="img">
-              <img className="real_img" src={bind} alt="이미지"></img>
-            </span>
-          </div>
-          <div className="post-write">
-            <div className="Zonecontrol">
-              <span className="Name"> 조현아 </span>
-              <span className="title"> 자료구조 시험을 치고나서 </span>
-              <span className="detail">
-                {" "}
-                난 자료구조 시험을 중간고사에 치고서 배운점이 많이 생겨서 다른
-                학생들도 알면 좋을것 같단 생각에 이 글을 쓰게 되었다!!{" "}
-              </span>
-              <span className="date">2023.09.12</span>
-            </div>
-            <span className="img">
-              <img className="real_img" src={Jagu} alt="이미지"></img>
-            </span>
-          </div>
-        </div>
 
-        {/* <form className='chang_button'>
+          {/* <form className='chang_button'>
             <input id='leftbutton' type='button' value="1"></input>
             <input type='button' value="2"></input>
         </form> */}
-      </div>
+          <div className="SideNameArea">
+            <div className="SideNameArea_flex">
+              <div className="sideName">
+                <div className="CHname">
+                  <p
+                    onClick={() => navigate("/mypage")}
+                    className="sidenameColor"
+                  >
+                    {sideName}
+                  </p>
+                </div>
+                <div className="Write">
+                  <p
+                    className="link_side"
+                    onClick={() => {
+                      navigate("/52562893");
+                    }}
+                  >
+                    내 포트폴리오
+                  </p>
+                  <p
+                    className="link_side"
+                    onClick={() => {
+                      navigate("/sidewrite");
+                    }}
+                  >
+                    글쓰기
+                  </p>
+                </div>
+              </div>
+              <div className="News">
+                <p className="writ_name">내 소식</p>
+                <div className="write_detail">
+                  <p className="writ">
+                    <strong>서상렬</strong>님이{" "}
+                    <strong>깃허브완전알려줌~ </strong>
+                    글에 댓글을 남겼습니다.{" "}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div> 
+      <footer className="Footer"></footer> 
     </div>
+    
   );
 }

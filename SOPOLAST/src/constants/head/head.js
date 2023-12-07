@@ -10,7 +10,7 @@ export default function Head() {
     const isPortfolio = location.pathname === "/portfolio";
     const isCompetition = location.pathname === "/Competition";
     const isMyPage = location.pathname === "/mypage";
-
+    
     return (
         <header className="header">
             <h1 className='SOPO' onClick={() => { navigate("/main") }}>SOPO</h1>

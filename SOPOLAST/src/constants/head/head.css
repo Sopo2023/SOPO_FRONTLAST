@@ -7,7 +7,7 @@
 
   .header {
     background-color: red;
-    position: sticky !important;
+    position: fixed !important;
     position: absolute;
     top: 0;
     z-index: 3;
