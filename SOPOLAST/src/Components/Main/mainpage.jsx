@@ -15,6 +15,7 @@ import "./main.css";
 // import { useRecoilValue } from 'recoil';
 // import { userState } from '../../recoil/auto';
 
+
 export default function Start() {
   const navigate = useNavigate();
   const scrollContainerRef = useRef(null);
