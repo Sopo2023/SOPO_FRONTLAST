@@ -14,6 +14,7 @@ interface UserData {
   password: string;
 }
 
+
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
