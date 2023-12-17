@@ -73,4 +73,9 @@ form {
   position: absolute;
   bottom: 33%;
   left: 50px;
+  color: #47a1f3;
+}
+.LINK:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
