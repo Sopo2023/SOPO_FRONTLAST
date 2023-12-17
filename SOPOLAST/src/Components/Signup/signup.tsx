@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import LOGO from "../../Assets/image/LOGO.png";
 import "./signup.css";
-import Swal from "sweetalert2";
 import { showToast } from "../../constants/Swal/Swal.js";
 
-function LoginComponent() {
+function LoginComponent(): JSX.Element {
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
+  const navigate = useNavigate();
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [repassword, setRepassword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [msg, setMsg] = useState<string>("");
+  const [isEmailEntered, setIsEmailEntered] = useState<boolean>(false);
+  const [isCertifying, setIsCertifying] = useState<boolean>(false);
+  const [isEmailVerified, setIsEmailVerified] = useState<boolean>(false);
+  const [isVerifying, setIsVerifying] = useState<boolean>(false);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [repassword, setRepassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [msg, setMsg] = useState("");
-  const [isEmailEntered, setIsEmailEntered] = useState(false);
-  const [isCertifying, setIsCertifying] = useState(false);
-  const [isEmailVerified, setIsEmailVerified] = useState(false);
-  const [isVerifying, setIsVerifying] = useState(false);
-
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const emailValue = e.target.value;
     setEmail(emailValue);
     setIsEmailEntered(!!emailValue);
   };
 
-  const handleEmailCertify = async (e) => {
+  const handleEmailCertify = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
     setIsCertifying(true);
+
     if (!email) {
       showToast("warning", "이메일을 입력해 주세요");
       return;
@@ -36,7 +36,7 @@ function LoginComponent() {
 
     try {
       const response = await axios.post(
-        SERVERURL + "/sendEmailVerifyNumber",
+        `${SERVERURL}/sendEmailVerifyNumber`,
         {
           email: email,
         },
@@ -50,7 +50,6 @@ function LoginComponent() {
 
       if (response.data.status === 200) {
         showToast("success", "이메일이 성공적으로 보내졌습니다.");
-
         setIsEmailVerified(true);
       } else {
         showToast("error", "이메일 보내기 실패");
@@ -63,31 +62,20 @@ function LoginComponent() {
     }
   };
 
-  const Authenticationverification = async (e) => {
+  const Authenticationverification = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
-    const authenticationCode = document.querySelector(".Authentication").value;
-
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener("mouseenter", Swal.stopTimer);
-        toast.addEventListener("mouseleave", Swal.resumeTimer);
-      },
-    });
+    const authenticationCode = (
+      document.querySelector(".Authentication") as HTMLInputElement
+    ).value;
 
     if (authenticationCode.length !== 6) {
       showToast("error", "인증 코드는 여섯 자리여야 합니다.");
-
       return;
     }
 
     try {
       const response = await axios.post(
-        SERVERURL + "/verifyCheckEmail",
+        `${SERVERURL}/verifyCheckEmail`,
         {
           email: email,
           verifyNm: authenticationCode,
@@ -99,7 +87,6 @@ function LoginComponent() {
 
       if (response.data.status === 200) {
         showToast("success", "인증 코드가 올바릅니다.");
-
         setIsCertifying(false);
         setMsg(""); // 이전 오류 메시지 제거
       } else {
@@ -111,43 +98,27 @@ function LoginComponent() {
     }
   };
 
-  const LOginFunc = async (e) => {
+  const LOginFunc = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
-    console.log("hihi");
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener("mouseenter", Swal.stopTimer);
-        toast.addEventListener("mouseleave", Swal.resumeTimer);
-      },
-    });
 
     if (name === "") {
       showToast("warning", "이름을 써주세요");
-
       return;
     }
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailPattern.test(email)) {
       showToast("warning", "이메일 형식이 올바르지 않습니다.");
-
       return;
     }
 
     if (!email.endsWith("@dgsw.hs.kr")) {
       showToast("warning", "이 도메인은 회원가입이 허용되지 않습니다.");
-
       return;
     }
 
     if (password !== repassword) {
-      showToast("qusetion", "비밀번호가 일치하지 않습니다.");
-
+      showToast("question", "비밀번호가 일치하지 않습니다.");
       return;
     }
 
@@ -195,8 +166,8 @@ function LoginComponent() {
           <img src={LOGO} alt="Logo" />
         </div>
         <div className="box1">
-          <p>Sign up</p>
           <form method="POST" className="signform" onSubmit={LOginFunc}>
+            <p>Sign up</p>
             <input
               className="Name"
               name="name"
@@ -256,9 +227,9 @@ function LoginComponent() {
               value={loading ? "Signing up..." : "Sign up"}
             />
             <p>{msg}</p>
-            <Link to="/" className="LogLink">
+            <div onClick={()=>navigate("/")} className="LogLink">
               Log in
-            </Link>
+            </div>
           </form>
         </div>
       </div>
