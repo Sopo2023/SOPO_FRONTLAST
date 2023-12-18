@@ -150,14 +150,6 @@
   font-size: 16px;
 }
 
-.box1 a {
-  text-decoration: none;
-  color: #47a1f3;
-}
-
-.box1 a:hover {
-  text-decoration: underline;
-}
 form {
   display: contents;
 }
@@ -165,4 +157,9 @@ form {
   position: absolute;
   left: 50px;
   bottom: 23%;
+  color: #47a1f3;
+}
+.LogLink:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
