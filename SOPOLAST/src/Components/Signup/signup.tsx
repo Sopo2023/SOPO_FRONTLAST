@@ -27,9 +27,11 @@ function LoginComponent(): JSX.Element {
 
   const handleEmailCertify = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
+    
     setIsCertifying(true);
 
     if (!email) {
+      setIsCertifying(false)
       showToast("warning", "이메일을 입력해 주세요");
       return;
     }
@@ -166,71 +168,78 @@ function LoginComponent(): JSX.Element {
           <img src={LOGO} alt="Logo" />
         </div>
         <div className="box1">
-          <form method="POST" className="signform" onSubmit={LOginFunc}>
-            <p>Sign up</p>
-            <input
-              className="Name"
-              name="name"
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            ></input>
-            <input
-              className="id-Email"
-              name="E-mail"
-              type="text"
-              placeholder="E-Mail"
-              value={email}
-              onChange={handleEmailChange}
-            ></input>
-            <button
-              onClick={handleEmailCertify}
-              className={`Certified ${isEmailEntered ? "entered" : ""}`}
-            >
-              {isVerifying ? "Verifying..." : "인증하기"}
-            </button>
-            {isCertifying && (
-              <div className="Certificationbox">
+          <div className="Box_Group">
+            <form method="POST" className="form" onSubmit={LOginFunc}>
+              <h1>Sign up</h1>
+              <div className="Name">
                 <input
-                  maxLength={10}
-                  className="Authentication"
-                  placeholder="인증코드 여섯자리를 입력해주세요."
+                  className="Name"
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+              </div>
+              <div className="Email_certification">
+                <input
+                  className="id-Email"
+                  name="E-mail"
+                  type="text"
+                  placeholder="E-Mail"
+                  value={email}
+                  onChange={handleEmailChange}
                 ></input>
                 <button
-                  onClick={Authenticationverification}
-                  className="completed"
+                  onClick={handleEmailCertify}
+                  className={`Certified ${isEmailEntered ? "entered" : ""}`}
                 >
-                  확인
+                  {isVerifying ? "Verifying..." : "인증하기"}
                 </button>
+              
               </div>
-            )}
-            <input
-              className="password"
-              name="password"
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-            <input
-              className="re-enter password"
-              type="password"
-              placeholder="Re-enter Password"
-              value={repassword}
-              onChange={(e) => setRepassword(e.target.value)}
-            ></input>
-            <input
-              type="submit"
-              className="button"
-              // disabled={loading || !isEmailVerified}
-              value={loading ? "Signing up..." : "Sign up"}
-            />
-            <p>{msg}</p>
-            <div onClick={()=>navigate("/")} className="LogLink">
-              Log in
-            </div>
-          </form>
+              {isCertifying && (
+                  <div className="Certificationbox" >
+                    <input
+                      maxLength={10}
+                      className="Authentication"
+                      placeholder="인증코드 여섯자리를 입력해주세요."
+                    ></input>
+                    <button
+                      onClick={Authenticationverification}
+                      className="completed"
+                    >
+                      확인
+                    </button>
+                  </div>
+                )}
+              <input
+                className="password"
+                name="password"
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+              <input
+                className="re-enter password"
+                type="password"
+                placeholder="Re-enter Password"
+                value={repassword}
+                onChange={(e) => setRepassword(e.target.value)}
+              ></input>
+              <input
+                type="submit"
+                className="button"
+                // disabled={loading || !isEmailVerified}
+                value={loading ? "Signing up..." : "Sign up"}
+              />
+              <p>{msg}</p>
+              <div onClick={() => navigate("/")} className="LogLink">
+                Log in
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

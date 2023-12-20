@@ -14,13 +14,11 @@ interface UserData {
   password: string;
 }
 
-
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const [user, setUser] = useRecoilState(userState);
 
   const handleLogin = async () => {
     if (email === "" || password === "") {
@@ -57,35 +55,38 @@ const LoginComponent: React.FC = () => {
 
   return (
     <div className="App1">
-      <div className="signup_main">
+      <div className="login_main">
         <div className="greenbox">
           <img src={LOGO} alt="로고"></img>
         </div>
-        <div className="box2">
-          <p>Log in</p>
-          <form>
-            <input
-              className="Email"
-              type="text"
-              placeholder="E-Mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-            <input
-              className="password"
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
+        <div className="box1">
+          <div className="Box_Group">
+            
+            <form className="form">
+            <h1>Log in</h1>
+              <input
+                className="Email"
+                type="text"
+                placeholder="E-Mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              ></input>
+              <input
+                className="password"
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
 
-            <button type="button" className="button" onClick={handleLogin}>
-              Log in
-            </button>
-            <div onClick={()=>navigate("/Signuppage")} className="LINK">
-              sign up
-            </div>
-          </form>
+              <button type="button" className="button" onClick={handleLogin}>
+                Log in
+              </button>
+              <div onClick={() => navigate("/Signuppage")} className="signLink">
+                sign up
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
