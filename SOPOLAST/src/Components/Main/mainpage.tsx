@@ -15,17 +15,25 @@ import "./main.css";
 // import { useRecoilValue } from 'recoil';
 // import { userState } from '../../recoil/auto';
 
+interface Post {
+  id: number;
+  name: string;
+  title: string;
+  content: string;
+  createDate: string;
+  image: string;
+}
 
 export default function Start() {
   const navigate = useNavigate();
-  const scrollContainerRef = useRef(null);
-  const [posts, setPosts] = useState([]);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [dragging, setDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState<any[]>([]);
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
-  const handlePostClick = (postId) => {
+  const handlePostClick = (postId: string) => {
     // 클라이언트에서 서버로 요청 보내기
     axios
       .post(
@@ -45,7 +53,7 @@ export default function Start() {
     fetchPostContent(postId);
   };
 
-  const fetchPostContent = (postId) => {
+  const fetchPostContent = (postId: string) => {
     axios
       .get(
         `${SERVERURL}/read/${postId}` //선배가 후배에게 게시물 가져오기
@@ -116,8 +124,10 @@ export default function Start() {
     const fetchPosts = async () => {
       const localStorageEmail = localStorage.getItem("sopo_id");
       try {
-        const response = await axios.get(`${SERVERURL}/list`, {
-          userId: localStorageEmail,
+        const response = await axios.get<Post[]>(`${SERVERURL}/list`, {
+          params: {
+            userId: localStorageEmail,
+          },
         });
         console.log("게시물 목록을 가져옵니다:", response.data);
         setPosts(response.data);
@@ -228,7 +238,7 @@ export default function Start() {
         </div>
         <div className="Bottom_Area">
           <div className="post">
-            {posts.map((post) => (
+            {/* {posts.map((post) => (
               <div
                 className="post-write"
                 key={posts.id}
@@ -244,7 +254,7 @@ export default function Start() {
                   <img className="real_img" src={posts.image} alt="이미지" />
                 </span>
               </div>
-            ))}
+            ))} */}
             <div
               className="post-write"
               onClick={() => {
@@ -376,11 +386,9 @@ export default function Start() {
               </div>
             </div>
           </div>
-          
         </div>
-      </div> 
-      <footer className="Footer"></footer> 
+      </div>
+      <footer className="Footer"></footer>
     </div>
-    
   );
 }

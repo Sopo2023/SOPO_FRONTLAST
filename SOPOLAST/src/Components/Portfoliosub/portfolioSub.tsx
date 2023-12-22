@@ -1,3 +1,4 @@
+import React from "react";
 import yogiyo from "../../Assets/image/1.png";
 import comment from "../../Assets/image/comment.png";
 import Head from "../../constants/head/head";

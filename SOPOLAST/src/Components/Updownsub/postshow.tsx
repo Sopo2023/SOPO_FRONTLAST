@@ -1,3 +1,4 @@
+import React from "react";
 import "./postshow.css";
 import Sidename from "../../constants/Sidebar/side";
 import TEST6 from "../../Assets/image/1.png";
