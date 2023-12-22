@@ -1,3 +1,4 @@
+import React from 'react';
 import './cometitionsub.css';
 import Side from '../../constants/Sidebar/side';
 import "./cometitionsub.css"

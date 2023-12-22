@@ -24,7 +24,6 @@ interface Post {
   image: string;
 }
 
-
 export default function Start() {
   const navigate = useNavigate();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -32,9 +31,9 @@ export default function Start() {
   const [dragging, setDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [cards, setCards] = useState<any[]>([]); 
+  const [cards, setCards] = useState<any[]>([]);
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
-  const handlePostClick = (postId:string) => {
+  const handlePostClick = (postId: string) => {
     // 클라이언트에서 서버로 요청 보내기
     axios
       .post(
@@ -54,7 +53,7 @@ export default function Start() {
     fetchPostContent(postId);
   };
 
-  const fetchPostContent = (postId:string) => {
+  const fetchPostContent = (postId: string) => {
     axios
       .get(
         `${SERVERURL}/read/${postId}` //선배가 후배에게 게시물 가져오기
@@ -387,11 +386,9 @@ export default function Start() {
               </div>
             </div>
           </div>
-          
         </div>
-      </div> 
-      <footer className="Footer"></footer> 
+      </div>
+      <footer className="Footer"></footer>
     </div>
-    
   );
 }

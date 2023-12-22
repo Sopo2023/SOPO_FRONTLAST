@@ -1,16 +1,19 @@
-import { useState } from "react";
+import React from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import Head from "../../constants/head/head";
 import Side from "../../constants/Sidebar/side";
 import "./write.css";
 import Swal from "sweetalert2";
 
-export default function Sidewrite() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [imageSrc, setImageSrc] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [fileName, setFileName] = useState(null);
+interface SidewriteProps {}
+
+const Sidewrite: React.FC<SidewriteProps> = () => {
+  const [title, setTitle] = useState<string>("");
+  const [content, setContent] = useState<string>("");
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
   const localStorageEmail = localStorage.getItem("sopo_id");
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
   const Toast = Swal.mixin({
@@ -25,10 +28,14 @@ export default function Sidewrite() {
     },
   });
 
-  const onSubmitHandler = async (e) => {
+  const onSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
-    const selectedCategory = document.querySelector(".sc-cBornz-gegs").value;
-    const selectedPlace = document.querySelector(".sd-cBornz-gegs").value;
+    const selectedCategory = (document.querySelector(
+      ".sc-cBornz-gegs"
+    ) as HTMLSelectElement).value;
+    const selectedPlace = (document.querySelector(
+      ".sd-cBornz-gegs"
+    ) as HTMLSelectElement).value;
 
     if (!title || !content) {
       Toast.fire({
@@ -50,7 +57,7 @@ export default function Sidewrite() {
       new Blob([JSON.stringify(data)], { type: "application/json" })
     );
 
-    if (selectedPlace === "게시물") {
+    if (selectedPlace === "게시물" && selectedImage) {
       formData.append("image", selectedImage);
     }
 
@@ -72,11 +79,11 @@ export default function Sidewrite() {
     }
   };
 
-  const handleImageChange = (e) => {
-    const selectedImage = e.target.files[0];
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const selectedImage = e.target.files?.[0];
     setSelectedImage(selectedImage);
     setFileName(selectedImage ? selectedImage.name : null);
-    setImageSrc(URL.createObjectURL(selectedImage));
+    setImageSrc(selectedImage ? URL.createObjectURL(selectedImage) : null);
   };
 
   return (
@@ -129,7 +136,7 @@ export default function Sidewrite() {
             id="file"
             onChange={handleImageChange}
           />
-          {/* {fileName && <div>{fileName}</div>} */}
+          {fileName && <div>{fileName}</div>}
           <button id="write_submit" type="submit">
             Submit
           </button>
@@ -137,4 +144,6 @@ export default function Sidewrite() {
       </div>
     </div>
   );
-}
+};
+
+export default Sidewrite;
