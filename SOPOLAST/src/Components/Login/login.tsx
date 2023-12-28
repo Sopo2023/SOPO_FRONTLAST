@@ -6,14 +6,13 @@ import { userState } from "../../recoil/auto";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
 import { loginUser } from "../../hooks/LoginCraft/LoginCraft";
-import { showToast } from "../../constants/Swal/Swal.js";
+import { showToast } from "../../constants/Swal/Swal";
 import Cookies from "js-cookie";
 
 interface UserData {
   email: string;
   password: string;
 }
-
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");

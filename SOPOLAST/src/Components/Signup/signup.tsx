@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import LOGO from "../../Assets/image/LOGO.png";
 import "./signup.css";
-import { showToast } from "../../constants/Swal/Swal.js";
+import { showToast } from "../../constants/Swal/Swal";
 
 function LoginComponent(): JSX.Element {
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
