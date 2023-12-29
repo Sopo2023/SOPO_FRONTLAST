@@ -1,5 +1,5 @@
 import axios from "axios";
-import Token from "@src/lib/Token/token";
+import Token from "../../lib/Token/token";
 interface LoginData {
   email: string;
   password: string;
@@ -19,9 +19,11 @@ export const loginUser = async (userData: LoginData): Promise<any> => {
       const { accessToken, refreshToken } = response.data.data;
       Token.setToken("accessToken", accessToken);
       Token.setToken("refreshToken", refreshToken);
+      return true;
+    }else{
+      return false;
     }
-
-    return response;
+    
   } catch (error) {
     throw error;
   }
