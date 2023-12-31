@@ -3,7 +3,7 @@ import "./App.css";
 import Updown from "./Components/Updown/updownmain";
 import Login from "./Components/Login/login";
 import Portfolio from "./Components/Portfolio/portfolioMain";
-import Main from "./Components/Main/mainpage";
+import Main from "./Components/Main/MainPage/mainpage";
 import Write from "./Components/Sidewrite/write";
 import Signup from "./Components/Signup/signup";
 import Mypage from "./Components/Mypage/mypage";
