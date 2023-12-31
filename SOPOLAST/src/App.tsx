@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";
+import GlobalStyles from "src/Style/global";
 import Updown from "./Components/Updown/updownmain";
 import Login from "./Components/Login/login";
 import Portfolio from "./Components/Portfolio/portfolioMain";
-import Main from "./Components/Main/MainPage/mainpage";
+import Main from "./Components/Home/MainPage/mainpage";
 import Write from "./Components/Sidewrite/write";
 import Signup from "./Components/Signup/signup";
 import Mypage from "./Components/Mypage/mypage";
@@ -19,6 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <RecoilRoot>
+      <GlobalStyles />
         <div className="App">
           <Routes>
             <Route path="/" element={<Login />} />
