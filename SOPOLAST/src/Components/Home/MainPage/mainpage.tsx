@@ -25,40 +25,7 @@ export default function Start() {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [cards, setCards] = useState<any[]>([]);
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
-  const handlePostClick = (postId: string) => {
-    // 클라이언트에서 서버로 요청 보내기
-    axios
-      .post(
-        `${SERVERURL}/senior-to-junior/read `, //선배가 후배에게 게시물 보내기
-        { postId: postId }
-      )
 
-      .then((response) => {
-        console.log("POST 요청이 성공했습니다. 서버 응답:", response.data);
-        // 서버에서 받은 응답을 기반으로 클라이언트에서 리디렉션 수행
-        window.location.href = response.data.redirectTo;
-      })
-
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-    fetchPostContent(postId);
-  };
-
-  const fetchPostContent = (postId: string) => {
-    axios
-      .get(
-        `${SERVERURL}/read/${postId}` //선배가 후배에게 게시물 가져오기
-      ) // 실제 게시물 내용을 가져오는 엔드포인트로 변경
-      .then((response) => {
-        const postContent = response.data; // 가져온 게시물 내용
-        console.log("게시물 내용을 가져옵니다:", postContent);
-        // 여기에서 postContent를 state나 모달 창 등에 표시하도록 설정
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
 
   //   const user = useRecoilValue(userState);
   const [sideName, setSideName] = useState("");
