@@ -3,6 +3,8 @@
       color: #1A9A18; 
       margin: 0 40px 0 30px;
       cursor: pointer;
+      font-size: 25px;
+      font-weight: 600;
   }
 
   .header {

@@ -1,27 +1,3 @@
-.main {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  overflow-x: hidden;
-}
-.content {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.Footer {
-  position: absolute;
-  background-color: #8c8c8c;
-  width: 100%;
-  height: 300px;
-  bottom: 0;
-}
-
 .start {
   width: 100%;
   height: 100%;
@@ -34,26 +10,9 @@
   text-decoration: none;
   color: #000;
 }
-.mainCard::-webkit-scrollbar {
-  display: none;
-}
-.mainCard {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 100vw;
-  height: 291px;
-  background-color: #f5f5f6;
-  position: absolute;
-  top: 80px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  -ms-user-select: none;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
+
 .Bottom_Area {
+  
   position: absolute;
   top: 370px;
   width: 100%;
@@ -62,6 +21,7 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
 .card_img {
   position: absolute;
   bottom: 150px;
@@ -90,11 +50,6 @@
   width: 350px;
   height: 400px;
 }
-
-/* .sideNameFlex{
-    margin-top: 40px;
-    margin-left: 10px;
-  } */
 
 .sideName > .CHname {
   background-color: #1a9a18;
@@ -169,82 +124,7 @@
 .Write p:hover {
   cursor: pointer;
 }
-.Zonecontrol {
-  width: 55%;
-  height: 100px;
-}
-.post::-webkit-scrollbar {
-  display: none;
-}
-.post {
-  overflow-x: hidden;
-  position: relative;
-  width: 60%;
-  height: 750px;
-}
 
-.post > .post-write {
-  position: relative;
-  border-bottom: 2px solid #d9d9d9;
-  left: 60px;
-  width: 100%;
-  height: 200px;
-  cursor: pointer;
-  /* background-color: #8C8C8C; */
-}
-.post > .post-write > .Zonecontrol > .Name {
-  position: relative;
-  top: 5px;
-  color: #000;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-}
-.post > .post-write > .Zonecontrol > .title {
-  display: block;
-  position: relative;
-  top: 7px;
-  color: #8c8c8c;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.post > .post-write > .Zonecontrol > .detail {
-  position: relative;
-  top: 10px;
-  color: #8c8c8c;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.post > .post-write > .Zonecontrol > .date {
-  position: absolute;
-  display: block;
-  bottom: 20px;
-  color: #8c8c8c;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.post > .post-write > .img {
-  position: relative;
-  width: 100px;
-  left: 60%;
-  bottom: 70px;
-}
-.real_img {
-  width: 250px;
-  height: 150px;
-  object-fit: contain;
-}
 /* .mainCard {
     overflow-x: auto; 
     overflow-y: hidden;
@@ -255,7 +135,7 @@
     position: absolute;
     top: 80px;
   } */
-.card1 {
+/* .card1 {
   display: flex;
   cursor: pointer;
   margin-left: 60px;
@@ -265,7 +145,7 @@
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+} */
 
 /* 
   .mainCard > .card2 {
@@ -325,7 +205,6 @@
   } */
 .cardP {
   position: relative;
-
   width: 200px;
   height: 50px;
 }
@@ -353,13 +232,4 @@
 
 .mainCard:active {
   cursor: grabbing;
-}
-.card_container {
-  width: 200vw;
-  height: 291px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }

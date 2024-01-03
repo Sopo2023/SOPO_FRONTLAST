@@ -6,14 +6,13 @@ import { userState } from "../../recoil/auto";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
 import { loginUser } from "../../hooks/LoginCraft/LoginCraft";
-import { showToast } from "../../constants/Swal/Swal.js";
-import Cookies from "js-cookie";
+import { showToast } from "../../constants/Swal/Swal";
+
 
 interface UserData {
   email: string;
   password: string;
 }
-
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
@@ -32,17 +31,10 @@ const LoginComponent: React.FC = () => {
         email: email,
         password: password,
       };
-
       const response = await loginUser(userData);
-
       setLoading(false);
-
-      if (response.status === 200) {
+      if (response) {
         showToast("success", "로그인 성공");
-        const { accessToken, refreshToken } = response.data.data;
-        localStorage.setItem("accessToken", accessToken);
-        Cookies.set("refreshToken", refreshToken);
-
         navigate("/main");
       } else {
         showToast("error", "로그인에 실패하였습니다");
