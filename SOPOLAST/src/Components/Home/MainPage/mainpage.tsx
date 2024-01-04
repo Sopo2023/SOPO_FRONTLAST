@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as s from "../Style/Main.style";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Post from "../Post/post";
 import Head from "src/constants/head/head";
-import axios from "axios";
-import "./main.css";
+import SideName from "../SideName/sidename";
 import Footer from "../Footer/Fotter";
+import axios from "axios";
+
 
 interface Post {
   id: number;
@@ -28,13 +29,7 @@ export default function Start() {
 
 
   //   const user = useRecoilValue(userState);
-  const [sideName, setSideName] = useState("");
-  useEffect(() => {
-    const localStorageName = localStorage.getItem("sopo_nm");
-    if (localStorageName) {
-      setSideName(localStorageName);
-    }
-  }, []);
+ 
 
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // 왼쪽 마우스 버튼만
@@ -196,48 +191,7 @@ export default function Start() {
             <input id='leftbutton' type='button' value="1"></input>
             <input type='button' value="2"></input>
         </form> */}
-            <div className="SideNameArea">
-              <div className="SideNameArea_flex">
-                <div className="sideName">
-                  <div className="CHname">
-                    <p
-                      onClick={() => navigate("/mypage")}
-                      className="sidenameColor"
-                    >
-                      {sideName}
-                    </p>
-                  </div>
-                  <div className="Write">
-                    <p
-                      className="link_side"
-                      onClick={() => {
-                        navigate("/52562893");
-                      }}
-                    >
-                      내 포트폴리오
-                    </p>
-                    <p
-                      className="link_side"
-                      onClick={() => {
-                        navigate("/sidewrite");
-                      }}
-                    >
-                      글쓰기
-                    </p>
-                  </div>
-                </div>
-                <div className="News">
-                  <p className="writ_name">내 소식</p>
-                  <div className="write_detail">
-                    <p className="writ">
-                      <strong>서상렬</strong>님이{" "}
-                      <strong>깃허브완전알려줌~ </strong>
-                      글에 댓글을 남겼습니다.{" "}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <SideName/>
           </s.BottomArea>
         </s.MainHome>
         <Footer />
