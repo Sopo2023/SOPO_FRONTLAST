@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { userState } from "../../recoil/auto";
+import { userState } from "../../../recoil/auto";
 import "./login.css";
 import LOGO from "../../Assets/image/LOGO.png";
-import { loginUser } from "../../hooks/LoginCraft/LoginCraft";
-import { showToast } from "../../constants/Swal/Swal";
-
+import { loginUser } from "../../../hooks/LoginCraft/LoginCraft";
+import { showToast } from "../../../constants/Swal/Swal";
 
 interface UserData {
   email: string;
@@ -53,9 +52,8 @@ const LoginComponent: React.FC = () => {
         </div>
         <div className="box1">
           <div className="Box_Group">
-            
             <form className="form">
-            <h1>Log in</h1>
+              <h1>Log in</h1>
               <input
                 className="Email"
                 type="text"
