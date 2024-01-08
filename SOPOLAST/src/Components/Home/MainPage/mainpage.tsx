@@ -2,11 +2,10 @@ import React, { useEffect, useState, useRef } from "react";
 import * as s from "../Style/Main.style";
 import { useNavigate } from "react-router-dom";
 import Post from "../Post/post";
-import Head from "src/constants/head/head";
+import Head from "../../../constants/head/Head/head";
 import SideName from "../SideName/sidename";
 import Footer from "../Footer/Fotter";
 import axios from "axios";
-
 
 interface Post {
   id: number;
@@ -27,9 +26,7 @@ export default function Start() {
   const [cards, setCards] = useState<any[]>([]);
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 
-
   //   const user = useRecoilValue(userState);
- 
 
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // 왼쪽 마우스 버튼만
@@ -191,7 +188,7 @@ export default function Start() {
             <input id='leftbutton' type='button' value="1"></input>
             <input type='button' value="2"></input>
         </form> */}
-            <SideName/>
+            <SideName />
           </s.BottomArea>
         </s.MainHome>
         <Footer />
