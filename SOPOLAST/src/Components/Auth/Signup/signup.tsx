@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import LOGO from "../../Assets/image/LOGO.png";
 import "./signup.css";
-import { showToast } from "../../constants/Swal/Swal";
+import { showToast } from "../../../constants/Swal/Swal";
 
 function LoginComponent(): JSX.Element {
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
@@ -27,11 +27,11 @@ function LoginComponent(): JSX.Element {
 
   const handleEmailCertify = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
-    
+
     setIsCertifying(true);
 
     if (!email) {
-      setIsCertifying(false)
+      setIsCertifying(false);
       showToast("warning", "이메일을 입력해 주세요");
       return;
     }
@@ -196,23 +196,22 @@ function LoginComponent(): JSX.Element {
                 >
                   {isVerifying ? "Verifying..." : "인증하기"}
                 </button>
-              
               </div>
               {isCertifying && (
-                  <div className="Certificationbox" >
-                    <input
-                      maxLength={10}
-                      className="Authentication"
-                      placeholder="인증코드 여섯자리를 입력해주세요."
-                    ></input>
-                    <button
-                      onClick={Authenticationverification}
-                      className="completed"
-                    >
-                      확인
-                    </button>
-                  </div>
-                )}
+                <div className="Certificationbox">
+                  <input
+                    maxLength={10}
+                    className="Authentication"
+                    placeholder="인증코드 여섯자리를 입력해주세요."
+                  ></input>
+                  <button
+                    onClick={Authenticationverification}
+                    className="completed"
+                  >
+                    확인
+                  </button>
+                </div>
+              )}
               <input
                 className="password"
                 name="password"

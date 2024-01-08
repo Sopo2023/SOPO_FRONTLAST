@@ -38,22 +38,25 @@ export const FooterLogoWrap = styled.div`
   cursor: pointer;
 `;
 export const FooterLogo = styled.img`
-  width: 28px;
+  width: 24px;
   height: 28px;
+  margin-left: 40px;
+  margin-top: 30px;
 `;
 export const FooterLogoTitle = styled.h1`
   font-size: 20px;
   font-weight: 600;
   color: white;
-  margin-top: 8px;
-  margin-left: 2px;
+  margin-top: 38px;
+  margin-left: 15px;
 `;
 export const FooterLogoText = styled.div`
 font-size: 20px;
   font-weight: 600;
   color: white;
-  margin-top: 8px;
-  margin-left: 10px;
+  margin-top: 38px;
+  margin-left: 17px;
+  color: #C9C9C9;
 `
 export const FooterListWrap = styled.div`
   width: 100%;
@@ -66,22 +69,37 @@ export const FooterListWrap = styled.div`
 `;
 export const FooterTeamName = styled.div`
   display: flex;
-  margin-left: 10px;
+  margin-left: 50px;
+  margin-top: 40px;
   color: white;
   width: 100%;
   height: 25px;
+  font-weight: 800;
 `;
 export const Footerdeveloper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
   flex-direction: column;
+  margin-left: 20px;
+  margin-top: 11px;
 `;
 export const FooterWebTeam = styled.div`
   display: flex;
   width: 100%;
   height: 40px;
 `;
+
+export const FooterdeveloperTextTitle = styled.div`
+  display: flex;
+  width: 70px;
+  height: 20px;
+  color: white;
+  font-weight: 650;
+  justify-content: space-around;
+  margin: 10px;
+`;
+
 export const FooterdeveloperText = styled.div`
   display: flex;
   width: 70px;
@@ -101,4 +119,5 @@ export const FooterVersion = styled.div`
   align-items: center;
   color: white;
   margin-left: 10px;
+
 `;
