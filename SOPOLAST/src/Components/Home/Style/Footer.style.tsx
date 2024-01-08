@@ -119,4 +119,5 @@ export const FooterVersion = styled.div`
   align-items: center;
   color: white;
   margin-left: 10px;
+
 `;

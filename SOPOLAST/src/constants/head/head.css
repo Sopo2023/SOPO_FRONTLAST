@@ -4,7 +4,7 @@
       margin: 0 40px 0 30px;
       cursor: pointer;
       font-size: 25px;
-      font-weight: 600;
+      font-weight: 900;
   }
 
   .header {
@@ -30,7 +30,7 @@
   .content .nav ul li {
     text-decoration-line: none;
     font-size: 23px;
-    font-weight: 800;
+    font-weight: 700;
     color: #8C8C8C;
     text-decoration: none;
     display: inline-block;
