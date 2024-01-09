@@ -160,7 +160,7 @@
     margin-top: 11.5px;
   }
   
-  .gradeSelet{
+  .gradeSelect{
     position: absolute;
     display: inline-block;
     width: 80px;
@@ -234,7 +234,7 @@
   .mo{
     position: absolute;
     left: 460px;
-    top: 250px;
+    top: 200px;
     width: 900px;
     height: 1000px;
     
