@@ -13,21 +13,7 @@ export default function Mypage() {
   const [isCertifying, setIsCertifying] = useState(false);
   const [dreamSelections, setdreamSelections] = useState([false, false, false, false, false, false, false, false]); // dream 버튼 상태를 저장할 변수
   const [clubSelections, setclubSelections] = useState([false, false, false, false, false, false, false, false, false, false]) // 동아리 버튼 상태를 저장할 변수
-
-  const [isHTMLSkillsSelected, setIsHTMLSkillsSelected] = useState(false); // 전공선택 버튼 상태를 저장할 변수
-  const [isCSSkillsSelected, setIsCSSkillsSelected] = useState(false);
-  const [isJavascriptSkillsSelected, setIsJavascriptSkillsSelected] =
-    useState(false);
-  const [isREACTSkillsSelected, setIsREACTSkillsSelected] = useState(false);
-  const [isJavaSkillsSelected, setIsJavaSkillsSelected] = useState(false);
-  const [isSpringSkillsSelected, setIsSpringSkillsSelected] = useState(false);
-  const [isSpringBootSkillsSelected, setIsSpringBootSkillsSelected] =
-    useState(false);
-  const [isnoodjsSkillsSelected, setIsnoodjsSkillsSelected] = useState(false);
-  const [isKotlinSkillsSelected, setIsKotlinSkillsSelected] = useState(false);
-  const [isSwiftSkillsSelected, setIsSwiftSkillsSelected] = useState(false);
-  const [isGGSkillsSelected, setIsGGSkillsSelected] = useState(false);
-
+  const [selectedSkills, setSelectedSkills] = useState([]); // 중복 선택을 저장할 변수
   const [sideName, setSideName] = useState("");
   const [email, setEmail] = useState("");
   const [github, setgithub] = useState("");
@@ -71,48 +57,18 @@ export default function Mypage() {
     setclubSelections(updatedSelections);
   };
   
-  const toggleHTMLSkillsColor = () => {
-    setIsHTMLSkillsSelected(!isHTMLSkillsSelected);
-  };
+  const toggleSkill = (skill) => {
+    const updatedSkills = [...selectedSkills];
 
-  const toggleCSSkillsColor = () => {
-    setIsCSSkillsSelected(!isCSSkillsSelected);
-  };
+    // 이미 선택된 스킬이면 제거, 아니면 추가
+    const index = updatedSkills.indexOf(skill);
+    if (index !== -1) {
+      updatedSkills.splice(index, 1);
+    } else {
+      updatedSkills.push(skill);
+    }
 
-  const toggleJavascriptSkillsColor = () => {
-    setIsJavascriptSkillsSelected(!isJavascriptSkillsSelected);
-  };
-
-  const toggleREACTSkillsColor = () => {
-    setIsREACTSkillsSelected(!isREACTSkillsSelected);
-  };
-
-  const toggleJavaSkillsColor = () => {
-    setIsJavaSkillsSelected(!isJavaSkillsSelected);
-  };
-
-  const toggleSpringSkillsColor = () => {
-    setIsSpringSkillsSelected(!isSpringSkillsSelected);
-  };
-
-  const toggleSpringBootSkillsColor = () => {
-    setIsSpringBootSkillsSelected(!isSpringBootSkillsSelected);
-  };
-
-  const togglenoodjsSkillsColor = () => {
-    setIsnoodjsSkillsSelected(!isnoodjsSkillsSelected);
-  };
-
-  const toggleKotlinSkillsColor = () => {
-    setIsKotlinSkillsSelected(!isKotlinSkillsSelected);
-  };
-
-  const toggleSwiftSkillsColor = () => {
-    setIsSwiftSkillsSelected(!isSwiftSkillsSelected);
-  };
-
-  const toggleGGSkillsColor = () => {
-    setIsGGSkillsSelected(!isGGSkillsSelected);
+    setSelectedSkills(updatedSkills);
   };
 
   return (
@@ -379,92 +335,70 @@ export default function Mypage() {
                 </span>
                 <div className="SkillsSelect">
                   <div
-                    className={`elseSkills ${
-                      isHTMLSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleHTMLSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("HTML") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("HTML")}
                   >
                     HTML
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isCSSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleCSSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("CSS") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("CSS")}
                   >
                     CSS
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isJavascriptSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleJavascriptSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("JavaScript") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("JavaScript")}
                   >
                     JavaScript
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isREACTSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleREACTSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("REACT") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("REACT")}
                   >
                     REACT
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isnoodjsSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={togglenoodjsSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Nood.js") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Nood.js")}
                   >
                     Nood.js
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isJavaSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleJavaSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("JAVA") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("JAVA")}
                   >
                     JAVA
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isSpringSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleSpringSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Spring") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Spring")}
                   >
                     Spring
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isSpringBootSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleSpringBootSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Spring Boot") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Spring Boot")}
                   >
                     Spring Boot
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isKotlinSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleKotlinSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Kotlin") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Kotlin")}
                   >
                     Kotlin
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isSwiftSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleSwiftSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Swift") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Swift")}
                   >
-                    Swift
+                    Kotlin
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isGGSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleGGSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("GG") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("GG")}
                   >
-                    기타
+                    GG
                   </div>
                 </div>
                 <span className="writing7">
