@@ -227,7 +227,9 @@ function LoginComponent(): JSX.Element {
                 type="submit"
                 // disabled={loading || !isEmailVerified}
                 value={loading ? "Signing up..." : "Sign up"}
-              />
+              >
+                Sign Up
+              </s.Button>
               <p>{msg}</p>
               <div onClick={() => navigate("/")} className="LogLink">
                 Log in
