@@ -97,7 +97,7 @@
   .searchBox{
     display: flex;
     position: absolute;
-    left: 420px;
+    left: 300px;
     top: 100px;
     width: 840px;
     height: 150px;
@@ -233,7 +233,7 @@
   }
   .mo{
     position: absolute;
-    left: 580px;
+    left: 460px;
     top: 250px;
     width: 900px;
     height: 1000px;
