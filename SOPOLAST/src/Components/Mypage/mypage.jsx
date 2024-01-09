@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import TEST8 from "../../Assets/img/B1CODE.png";
-import Head from "../../constants/head/head";
+import Head from "../../constants/head/Head/head";
 import Last from "../../Assets/img/Polygon 4.png";
 import mail from "../../Assets/img/mail.png";
 import github1 from "../../Assets/img/github.png";
 import nm from "../../Assets/img/hp.png";
-import "./mypage.css"
+import "./mypage.css";
 
 export default function Mypage() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import LOGO from "../../Assets/image/LOGO.png";
+import LOGO from "../../../Assets/image/LOGO.png";
 import "./signup.css";
 import { showToast } from "../../../constants/Swal/Swal";
 

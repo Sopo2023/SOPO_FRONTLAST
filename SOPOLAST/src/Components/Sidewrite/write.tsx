@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
-import Head from "../../constants/head/head";
+import Head from "../../constants/head/Head/head";
 import Side from "../../constants/Sidebar/side";
 import "./write.css";
 import Swal from "sweetalert2";
@@ -30,12 +30,12 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
 
   const onSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
-    const selectedCategory = (document.querySelector(
-      ".sc-cBornz-gegs"
-    ) as HTMLSelectElement).value;
-    const selectedPlace = (document.querySelector(
-      ".sd-cBornz-gegs"
-    ) as HTMLSelectElement).value;
+    const selectedCategory = (
+      document.querySelector(".sc-cBornz-gegs") as HTMLSelectElement
+    ).value;
+    const selectedPlace = (
+      document.querySelector(".sd-cBornz-gegs") as HTMLSelectElement
+    ).value;
 
     if (!title || !content) {
       Toast.fire({

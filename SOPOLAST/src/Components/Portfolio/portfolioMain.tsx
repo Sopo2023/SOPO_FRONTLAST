@@ -4,7 +4,7 @@ import cnsLogo from "../../Assets/image/cnsLogo.png";
 import b1nd from "../../Assets/image/b1nd.png";
 import Sidename from "../../constants/Sidebar/side";
 import "./protfolio.css";
-import Head from "../../constants/head/head";
+import Head from "../../constants/head/Head/head";
 
 export default function Portfolio() {
   const navigate = useNavigate();
