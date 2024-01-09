@@ -9,19 +9,9 @@ import nm from "../../Assets/img/hp.png";
 
 export default function Mypage() {
   const navigate = useNavigate();
-  const [yearSelections, setYearSelections] = useState([false, false, false, false]);
+  const [yearSelections, setYearSelections] = useState([false, false, false, false]); // Year 버튼 상태를 저장할 변수
   const [isCertifying, setIsCertifying] = useState(false);
-  
-  const [isfrontdreamSelected, setIsfrontdreamSelected] = useState(false); // dream 버튼 상태를 저장할 변수
-  const [isbackenddreamSelected, setIsbackenddreamSelected] = useState(false);
-  const [isAndroiddreamSelected, setIsAndroiddreamSelected] = useState(false);
-  const [isiOSdreamSelected, setIsiOSdreamSelected] = useState(false);
-  const [isEmbeddeddreamSelected, setIsEmbeddeddreamSelected] = useState(false);
-  const [isAIdreamSelected, setIsAIdreamSelected] = useState(false);
-  const [isInfoSecdreamSelected, setIsInfoSecdreamSelected] = useState(false);
-  const [isdesigndreamSelected, setIsdesigndreamSelected] = useState(false);
-  const [isfullstackdreamSelected, setIsfullstackdreamSelected] =
-    useState(false);
+  const [dreamSelections, setdreamSelections] = useState([false, false, false, false, false, false, false, false, false]); // dream 버튼 상태를 저장할 변수
 
   const [isB1NDclubSelected, setIsB1NDclubSelected] = useState(false); // 동아리 버튼 상태를 저장할 변수
   const [isCNSclubSelected, setIsCNSclubSelected] = useState(false);
@@ -52,8 +42,6 @@ export default function Mypage() {
   const [email, setEmail] = useState("");
   const [instagram, setinstagram] = useState("");
   const [github, setgithub] = useState("");
-
-  // const localStorageName = localStorage.getItem('sopo_nm');
   useEffect(() => {
     const localStorageName = localStorage.getItem("sopo_nm");
     const localStorageEmail = localStorage.getItem("sopo_id");
@@ -81,114 +69,11 @@ export default function Mypage() {
     updatedSelections[index] = true;
     setYearSelections(updatedSelections);
   };
-
-  const togglefrontdreamColor = () => {
-    // dream색깔 바꾸기
-    setIsfrontdreamSelected(!isfrontdreamSelected);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const togglebackenddreamColor = () => {
-    setIsbackenddreamSelected(!isbackenddreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const toggleAndroiddreamColor = () => {
-    setIsAndroiddreamSelected(!isAndroiddreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const toggleiOSdreamColor = () => {
-    setIsiOSdreamSelected(!isiOSdreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const toggleEmbeddeddreamColor = () => {
-    setIsEmbeddeddreamSelected(!isEmbeddeddreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const toggleAIdreamColor = () => {
-    setIsAIdreamSelected(!isAIdreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const toggleInfoSecdreamColor = () => {
-    setIsInfoSecdreamSelected(!isInfoSecdreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsdesigndreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const toggledesigndreamColor = () => {
-    setIsdesigndreamSelected(!isdesigndreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsfullstackdreamSelected(false);
-  };
-
-  const togglefullstackdreamColor = () => {
-    setIsfullstackdreamSelected(!isfullstackdreamSelected);
-    setIsfrontdreamSelected(false);
-    setIsbackenddreamSelected(false);
-    setIsAndroiddreamSelected(false);
-    setIsiOSdreamSelected(false);
-    setIsEmbeddeddreamSelected(false);
-    setIsAIdreamSelected(false);
-    setIsInfoSecdreamSelected(false);
-    setIsdesigndreamSelected(false);
+  
+  const toggledreamColor = (index) => {
+    const updatedSelections = Array(8).fill(false);
+    updatedSelections[index] = true;
+    setdreamSelections(updatedSelections);
   };
 
   const toggleB1NDclubColor = () => {
@@ -204,7 +89,6 @@ export default function Mypage() {
     setIsQIclubSelected(false);
     setIselseeclubSelected(false);
   };
-
   const toggleCNSclubColor = () => {
     setIsCNSclubSelected(!isCNSclubSelected);
     setIsB1NDclubSelected(false);
@@ -217,7 +101,6 @@ export default function Mypage() {
     setIsQIclubSelected(false);
     setIselseeclubSelected(false);
   };
-
   const toggleDoclubColor = () => {
     setIsDoclubSelected(!isDoclubSelected);
     setIsB1NDclubSelected(false);
@@ -473,73 +356,73 @@ export default function Mypage() {
                   <div className="dreamSelect">
                     <div
                       className={`elsedream ${
-                        isfrontdreamSelected ? "selected" : ""
+                        dreamSelections[0] ? "selected" : ""
                       }`}
-                      onClick={togglefrontdreamColor}
+                      onClick={() => toggledreamColor(0)}
                     >
                       프론트엔드
                     </div>
                     <div
                       className={`elsedream ${
-                        isbackenddreamSelected ? "selected" : ""
+                        dreamSelections[1] ? "selected" : ""
                       }`}
-                      onClick={togglebackenddreamColor}
+                      onClick={() => toggledreamColor(1)}
                     >
                       백엔드
                     </div>
                     <div
                       className={`elsedream ${
-                        isAndroiddreamSelected ? "selected" : ""
+                        dreamSelections[2] ? "selected" : ""
                       }`}
-                      onClick={toggleAndroiddreamColor}
+                      onClick={() => toggledreamColor(2)}
                     >
                       Android
                     </div>
                     <div
                       className={`elsedream ${
-                        isiOSdreamSelected ? "selected" : ""
+                        dreamSelections[3] ? "selected" : ""
                       }`}
-                      onClick={toggleiOSdreamColor}
+                      onClick={() => toggledreamColor(3)}
                     >
                       iOS
                     </div>
                     <div
                       className={`elsedream ${
-                        isEmbeddeddreamSelected ? "selected" : ""
+                        dreamSelections[4] ? "selected" : ""
                       }`}
-                      onClick={toggleEmbeddeddreamColor}
+                      onClick={() => toggledreamColor(4)}
                     >
                       임베디드
                     </div>
                     <div
                       className={`elsedream ${
-                        isAIdreamSelected ? "selected" : ""
+                        dreamSelections[5] ? "selected" : ""
                       }`}
-                      onClick={toggleAIdreamColor}
+                      onClick={() => toggledreamColor(5)}
                     >
                       AI
                     </div>
                     <div
                       className={`elsedream ${
-                        isInfoSecdreamSelected ? "selected" : ""
+                        dreamSelections[6] ? "selected" : ""
                       }`}
-                      onClick={toggleInfoSecdreamColor}
+                      onClick={() => toggledreamColor(6)}
                     >
                       정보보안
                     </div>
                     <div
                       className={`elsedream ${
-                        isdesigndreamSelected ? "selected" : ""
+                        dreamSelections[7] ? "selected" : ""
                       }`}
-                      onClick={toggledesigndreamColor}
+                      onClick={() => toggledreamColor(7)}
                     >
                       디자인
                     </div>
                     <div
                       className={`elsedream ${
-                        isfullstackdreamSelected ? "selected" : ""
+                        dreamSelections[8] ? "selected" : ""
                       }`}
-                      onClick={togglefullstackdreamColor}
+                      onClick={() => toggledreamColor(8)}
                     >
                       풀스택
                     </div>
@@ -641,14 +524,6 @@ export default function Mypage() {
                   type="text"
                   placeholder="당신의 깃허브 URL를 입력해주세요."
                 ></input>
-
-                {/* <span className="writing5"> 당신의 인스타는 무엇인가요? </span>
-                    <input 
-                    id="inst" 
-                    type="text"
-                    placeholder="당신의 인스타 URL을 입력해주세요."
-                    ></input> */}
-
                 <span className="writing6">
                   {" "}
                   당신의 사용가능 스킬은 무엇인가요?{" "}
