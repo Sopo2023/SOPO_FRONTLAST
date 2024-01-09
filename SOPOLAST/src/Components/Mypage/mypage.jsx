@@ -9,12 +9,9 @@ import nm from "../../Assets/img/hp.png";
 
 export default function Mypage() {
   const navigate = useNavigate();
+  const [yearSelections, setYearSelections] = useState([false, false, false, false]);
   const [isCertifying, setIsCertifying] = useState(false);
-  const [isYearSelected, setIsYearSelected] = useState(false); // Year 버튼 상태를 저장할 변수
-  const [is7thYearSelected, setIs7thYearSelected] = useState(false);
-  const [is8thYearSelected, setIs8thYearSelected] = useState(false);
-  const [is9thYearSelected, setIs9thYearSelected] = useState(false);
-
+  
   const [isfrontdreamSelected, setIsfrontdreamSelected] = useState(false); // dream 버튼 상태를 저장할 변수
   const [isbackenddreamSelected, setIsbackenddreamSelected] = useState(false);
   const [isAndroiddreamSelected, setIsAndroiddreamSelected] = useState(false);
@@ -79,36 +76,10 @@ export default function Mypage() {
     setIsCertifying(false);
   };
 
-  const toggleYearColor = () => {
-    // Year 버튼을 클릭할 때 색상을 변경
-    setIsYearSelected(true); // 현재 클릭된 버튼만 선택
-    setIs7thYearSelected(false); // 다른 버튼들의 상태 초기화
-    setIs8thYearSelected(false);
-    setIs9thYearSelected(false);
-  };
-
-  const toggle7thYearColor = () => {
-    // 7기 버튼을 클릭할 때 색상을 변경
-    setIs7thYearSelected(true); // 현재 클릭된 버튼만 선택
-    setIsYearSelected(false); // 다른 버튼들의 상태 초기화
-    setIs8thYearSelected(false);
-    setIs9thYearSelected(false);
-  };
-
-  const toggle8thYearColor = () => {
-    // 8기 버튼을 클릭할 때 색상을 변경
-    setIs8thYearSelected(true); // 현재 클릭된 버튼만 선택
-    setIsYearSelected(false); // 다른 버튼들의 상태 초기화
-    setIs7thYearSelected(false);
-    setIs9thYearSelected(false);
-  };
-
-  const toggle9thYearColor = () => {
-    // 9기 버튼을 클릭할 때 색상을 변경
-    setIs9thYearSelected(true); // 현재 클릭된 버튼만 선택
-    setIsYearSelected(false); // 다른 버튼들의 상태 초기화
-    setIs7thYearSelected(false);
-    setIs8thYearSelected(false);
+  const toggleYearColor = (index) => {
+    const updatedSelections = Array(4).fill(false); //콜백 함수 사용해서 코드 리팩토링
+    updatedSelections[index] = true;
+    setYearSelections(updatedSelections);
   };
 
   const togglefrontdreamColor = () => {
@@ -470,39 +441,30 @@ export default function Mypage() {
               <form className="horseman">
                 <span className="writing">
                   당신의 기수를 알려주세요
-                  <div className="YearSelect">
-                    {/* Year 버튼을 클릭할 때 색상을 변경 */}
-                    <div className="YearSelect">
-                      <div
-                        className={`Year ${isYearSelected ? "selected" : ""}`}
-                        onClick={toggleYearColor}
-                      >
-                        6기(2021)
-                      </div>
-                      <div
-                        className={`elseYear ${
-                          is7thYearSelected ? "selected" : ""
-                        }`}
-                        onClick={toggle7thYearColor}
-                      >
-                        7기(2022)
-                      </div>
-                      <div
-                        className={`elseYear ${
-                          is8thYearSelected ? "selected" : ""
-                        }`}
-                        onClick={toggle8thYearColor}
-                      >
-                        8기(2023)
-                      </div>
-                      <div
-                        className={`elseYear ${
-                          is9thYearSelected ? "selected" : ""
-                        }`}
-                        onClick={toggle9thYearColor}
-                      >
-                        9기(2024)
-                      </div>
+                  <div className="YearSelect"> {/* 콜백 함수를 사용해서 작성하였습니다 */}
+                    <div
+                      className={`Year ${yearSelections[0] ? "selected" : ""}`}
+                      onClick={() => toggleYearColor(0)}
+                    >
+                      6기(2021)
+                    </div>
+                    <div
+                      className={`elseYear ${yearSelections[1] ? "selected" : ""}`}
+                      onClick={() => toggleYearColor(1)}
+                    >
+                      7기(2022)
+                    </div>
+                    <div
+                      className={`elseYear ${yearSelections[2] ? "selected" : ""}`}
+                      onClick={() => toggleYearColor(2)}
+                    >
+                      8기(2023)
+                    </div>
+                    <div
+                      className={`elseYear ${yearSelections[3] ? "selected" : ""}`}
+                      onClick={() => toggleYearColor(3)}
+                    >
+                      9기(2024)
                     </div>
                   </div>
                 </span>
