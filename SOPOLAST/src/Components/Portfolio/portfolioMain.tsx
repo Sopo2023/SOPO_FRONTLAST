@@ -23,11 +23,14 @@ export default function Portfolio() {
           </div>
 
           <div className="stackLine">
-            <select className="gradeSelet">
+          <div className="gradeSelect">
+          <select className="gradeSelect">
               <option value="8">8기 </option>
               <option value="7">7기 </option>
               <option value="6">6기 </option>
             </select>
+          </div>
+
             <div className="gradegreen"> | </div>
             <div className="majorSelect">
               <div className="frontEnd"> 프론트엔드 </div>
