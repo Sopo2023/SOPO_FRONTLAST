@@ -11,36 +11,11 @@ export default function Mypage() {
   const navigate = useNavigate();
   const [yearSelections, setYearSelections] = useState([false, false, false, false]); // Year 버튼 상태를 저장할 변수
   const [isCertifying, setIsCertifying] = useState(false);
-  const [dreamSelections, setdreamSelections] = useState([false, false, false, false, false, false, false, false, false]); // dream 버튼 상태를 저장할 변수
-
-  const [isB1NDclubSelected, setIsB1NDclubSelected] = useState(false); // 동아리 버튼 상태를 저장할 변수
-  const [isCNSclubSelected, setIsCNSclubSelected] = useState(false);
-  const [isDoclubSelected, setIsDoclubSelected] = useState(false);
-  const [isALTclubSelected, setIsALTclubSelected] = useState(false);
-  const [is3DclubSelected, setIs3DclubSelected] = useState(false);
-  const [isSpaceclubSelected, setIsSpaceclubSelected] = useState(false);
-  const [isModiclubSelected, setIsModiclubSelected] = useState(false);
-  const [isDLCclubSelected, setIsDLCclubSelected] = useState(false);
-  const [isQIclubSelected, setIsQIclubSelected] = useState(false);
-  const [iselseeclubSelected, setIselseeclubSelected] = useState(false);
-
-  const [isHTMLSkillsSelected, setIsHTMLSkillsSelected] = useState(false); // 전공선택 버튼 상태를 저장할 변수
-  const [isCSSkillsSelected, setIsCSSkillsSelected] = useState(false);
-  const [isJavascriptSkillsSelected, setIsJavascriptSkillsSelected] =
-    useState(false);
-  const [isREACTSkillsSelected, setIsREACTSkillsSelected] = useState(false);
-  const [isJavaSkillsSelected, setIsJavaSkillsSelected] = useState(false);
-  const [isSpringSkillsSelected, setIsSpringSkillsSelected] = useState(false);
-  const [isSpringBootSkillsSelected, setIsSpringBootSkillsSelected] =
-    useState(false);
-  const [isnoodjsSkillsSelected, setIsnoodjsSkillsSelected] = useState(false);
-  const [isKotlinSkillsSelected, setIsKotlinSkillsSelected] = useState(false);
-  const [isSwiftSkillsSelected, setIsSwiftSkillsSelected] = useState(false);
-  const [isGGSkillsSelected, setIsGGSkillsSelected] = useState(false);
-
+  const [dreamSelections, setdreamSelections] = useState([false, false, false, false, false, false, false, false]); // dream 버튼 상태를 저장할 변수
+  const [clubSelections, setclubSelections] = useState([false, false, false, false, false, false, false, false, false, false]) // 동아리 버튼 상태를 저장할 변수
+  const [selectedSkills, setSelectedSkills] = useState([]); // 중복 선택을 저장할 변수
   const [sideName, setSideName] = useState("");
   const [email, setEmail] = useState("");
-  const [instagram, setinstagram] = useState("");
   const [github, setgithub] = useState("");
   useEffect(() => {
     const localStorageName = localStorage.getItem("sopo_nm");
@@ -76,168 +51,24 @@ export default function Mypage() {
     setdreamSelections(updatedSelections);
   };
 
-  const toggleB1NDclubColor = () => {
-    // 동아리색깔 바꾸기
-    setIsB1NDclubSelected(!isB1NDclubSelected);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
+  const toggleclubColor = (index) => {    
+    const updatedSelections = Array(10).fill(false);
+    updatedSelections[index] = true;
+    setclubSelections(updatedSelections);
   };
-  const toggleCNSclubColor = () => {
-    setIsCNSclubSelected(!isCNSclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
-  };
-  const toggleDoclubColor = () => {
-    setIsDoclubSelected(!isDoclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
-  };
+  
+  const toggleSkill = (skill) => {
+    const updatedSkills = [...selectedSkills];
 
-  const toggleALTclubColor = () => {
-    setIsALTclubSelected(!isALTclubSelected);
-  };
+    // 이미 선택된 스킬이면 제거, 아니면 추가
+    const index = updatedSkills.indexOf(skill);
+    if (index !== -1) {
+      updatedSkills.splice(index, 1);
+    } else {
+      updatedSkills.push(skill);
+    }
 
-  const toggle3DclubColor = () => {
-    setIs3DclubSelected(!is3DclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
-  };
-
-  const toggleSpaceclubColor = () => {
-    setIsSpaceclubSelected(!isSpaceclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
-  };
-
-  const toggleModiclubColor = () => {
-    setIsModiclubSelected(!isModiclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
-  };
-
-  const toggleDLCclubColor = () => {
-    setIsDLCclubSelected(!isDLCclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsQIclubSelected(false);
-    setIselseeclubSelected(false);
-  };
-
-  const toggleQIclubColor = () => {
-    setIsQIclubSelected(!isQIclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIselseeclubSelected(false);
-  };
-
-  const toggleelseeclubColor = () => {
-    setIselseeclubSelected(!iselseeclubSelected);
-    setIsB1NDclubSelected(false);
-    setIsCNSclubSelected(false);
-    setIsALTclubSelected(false);
-    setIsDoclubSelected(false);
-    setIs3DclubSelected(false);
-    setIsSpaceclubSelected(false);
-    setIsModiclubSelected(false);
-    setIsDLCclubSelected(false);
-    setIsQIclubSelected(false);
-  };
-
-  const toggleHTMLSkillsColor = () => {
-    setIsHTMLSkillsSelected(!isHTMLSkillsSelected);
-  };
-
-  const toggleCSSkillsColor = () => {
-    setIsCSSkillsSelected(!isCSSkillsSelected);
-  };
-
-  const toggleJavascriptSkillsColor = () => {
-    setIsJavascriptSkillsSelected(!isJavascriptSkillsSelected);
-  };
-
-  const toggleREACTSkillsColor = () => {
-    setIsREACTSkillsSelected(!isREACTSkillsSelected);
-  };
-
-  const toggleJavaSkillsColor = () => {
-    setIsJavaSkillsSelected(!isJavaSkillsSelected);
-  };
-
-  const toggleSpringSkillsColor = () => {
-    setIsSpringSkillsSelected(!isSpringSkillsSelected);
-  };
-
-  const toggleSpringBootSkillsColor = () => {
-    setIsSpringBootSkillsSelected(!isSpringBootSkillsSelected);
-  };
-
-  const togglenoodjsSkillsColor = () => {
-    setIsnoodjsSkillsSelected(!isnoodjsSkillsSelected);
-  };
-
-  const toggleKotlinSkillsColor = () => {
-    setIsKotlinSkillsSelected(!isKotlinSkillsSelected);
-  };
-
-  const toggleSwiftSkillsColor = () => {
-    setIsSwiftSkillsSelected(!isSwiftSkillsSelected);
-  };
-
-  const toggleGGSkillsColor = () => {
-    setIsGGSkillsSelected(!isGGSkillsSelected);
+    setSelectedSkills(updatedSkills);
   };
 
   return (
@@ -355,73 +186,55 @@ export default function Mypage() {
                   당신의 전공은 무엇인가요?
                   <div className="dreamSelect">
                     <div
-                      className={`elsedream ${
-                        dreamSelections[0] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[0] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(0)}
                     >
                       프론트엔드
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[1] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[1] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(1)}
                     >
                       백엔드
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[2] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[2] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(2)}
                     >
                       Android
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[3] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[3] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(3)}
                     >
                       iOS
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[4] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[4] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(4)}
                     >
                       임베디드
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[5] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[5] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(5)}
                     >
                       AI
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[6] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[6] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(6)}
                     >
                       정보보안
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[7] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[7] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(7)}
                     >
-                      디자인
+                      UI/UX 디자인
                     </div>
                     <div
-                      className={`elsedream ${
-                        dreamSelections[8] ? "selected" : ""
-                      }`}
+                      className={`elsedream ${dreamSelections[8] ? "selected" : ""}`}
                       onClick={() => toggledreamColor(8)}
                     >
                       풀스택
@@ -440,76 +253,68 @@ export default function Mypage() {
                 <span className="writing3">당신의 동아리는 무엇인가요?</span>
                 <div className="clubSelect">
                   <div
-                    className={`elseclub ${
-                      isB1NDclubSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleB1NDclubColor}
+                    className={`elseclub ${clubSelections[0] ? "selected" : ""}`}
+                    onClick={() => toggleclubColor(0)}
                   >
                     B1ND
                   </div>
                   <div
                     className={`elseclub ${
-                      isCNSclubSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleCNSclubColor}
+                      clubSelections[1] ? "selected" : ""}`}
+                    onClick={() => toggleclubColor(1)}
                   >
                     CNS
                   </div>
                   <div
-                    className={`elseclub ${
-                      isALTclubSelected ? "selected" : ""
+                    className={`elseclub ${clubSelections[2] ? "selected" : ""
                     }`}
-                    onClick={toggleALTclubColor}
+                    onClick={() => toggleclubColor(2)}
                   >
                     ALT
                   </div>
                   <div
-                    className={`elseclub ${isDoclubSelected ? "selected" : ""}`}
-                    onClick={toggleDoclubColor}
+                    className={`elseclub ${clubSelections[3] ? "selected" : ""}`}
+                    onClick={() => toggleclubColor(3)}
                   >
                     두카미
                   </div>
                   <div
-                    className={`elseclub ${is3DclubSelected ? "selected" : ""}`}
-                    onClick={toggle3DclubColor}
+                    className={`elseclub ${clubSelections[4] ? "selected" : ""}`}
+                    onClick={() => toggleclubColor(4)}
                   >
                     삼디
                   </div>
                   <div
-                    className={`elseclub ${
-                      isSpaceclubSelected ? "selected" : ""
+                    className={`elseclub ${clubSelections[5] ? "selected" : ""
                     }`}
-                    onClick={toggleSpaceclubColor}
+                    onClick={() => toggleclubColor(5)}
                   >
                     스페이스
                   </div>
                   <div
-                    className={`elseclub ${
-                      isModiclubSelected ? "selected" : ""
+                    className={`elseclub ${clubSelections[6] ? "selected" : ""
                     }`}
-                    onClick={toggleModiclubColor}
+                    onClick={() => toggleclubColor(6)}
                   >
                     모디
                   </div>
                   <div
-                    className={`elseclub ${isQIclubSelected ? "selected" : ""}`}
-                    onClick={toggleQIclubColor}
+                    className={`elseclub ${clubSelections[7] ? "selected" : ""}`}
+                    onClick={() => toggleclubColor(7)}
                   >
                     QI
                   </div>
                   <div
-                    className={`elseclub ${
-                      isDLCclubSelected ? "selected" : ""
+                    className={`elseclub ${clubSelections[8] ? "selected" : ""
                     }`}
-                    onClick={toggleDLCclubColor}
+                    onClick={() => toggleclubColor(8)}
                   >
                     DLC
                   </div>
                   <div
-                    className={`elseclub ${
-                      iselseeclubSelected ? "selected" : ""
+                    className={`elseclub ${clubSelections[9] ? "selected" : ""
                     }`}
-                    onClick={toggleelseeclubColor}
+                    onClick={() => toggleclubColor(9)}
                   >
                     기타
                   </div>
@@ -530,92 +335,70 @@ export default function Mypage() {
                 </span>
                 <div className="SkillsSelect">
                   <div
-                    className={`elseSkills ${
-                      isHTMLSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleHTMLSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("HTML") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("HTML")}
                   >
                     HTML
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isCSSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleCSSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("CSS") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("CSS")}
                   >
                     CSS
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isJavascriptSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleJavascriptSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("JavaScript") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("JavaScript")}
                   >
                     JavaScript
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isREACTSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleREACTSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("REACT") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("REACT")}
                   >
                     REACT
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isnoodjsSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={togglenoodjsSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Nood.js") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Nood.js")}
                   >
                     Nood.js
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isJavaSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleJavaSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("JAVA") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("JAVA")}
                   >
                     JAVA
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isSpringSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleSpringSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Spring") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Spring")}
                   >
                     Spring
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isSpringBootSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleSpringBootSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Spring Boot") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Spring Boot")}
                   >
                     Spring Boot
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isKotlinSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleKotlinSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Kotlin") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Kotlin")}
                   >
                     Kotlin
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isSwiftSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleSwiftSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("Swift") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("Swift")}
                   >
-                    Swift
+                    Kotlin
                   </div>
                   <div
-                    className={`elseSkills ${
-                      isGGSkillsSelected ? "selected" : ""
-                    }`}
-                    onClick={toggleGGSkillsColor}
+                    className={`elseSkills ${selectedSkills.includes("GG") ? "selected" : ""}`}
+                    onClick={() => toggleSkill("GG")}
                   >
-                    기타
+                    GG
                   </div>
                 </div>
                 <span className="writing7">
