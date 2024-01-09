@@ -1,4 +1,14 @@
-
+/* .content{
+  overflow-x: hidden;
+} */
+.SOPO {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #1a9a18;
+  margin: 0 40px 0 20px;
+}
+.content {
+  margin-top: 100px;
+}
 .start {
   width: 100%;
   height: 100%;
@@ -410,7 +420,7 @@ ul {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-left: -75px;
+  margin-left: -150px;
 }
 
 .YearSelect > .Year{
