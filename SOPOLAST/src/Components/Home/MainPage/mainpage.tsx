@@ -150,10 +150,10 @@ export default function Start() {
                 }}
               >
                 <s.CardP>
-                  <p className="card_p">전우진</p>
-                  <p className="card_p">Front-end Dev</p>
-                  <p className="card_p">DGSW 8th</p>
-                  <p className="card_p">모디</p>
+                  <s.p className="card_p">전우진</s.p>
+                  <s.p className="card_p">Front-end Dev</s.p>
+                  <s.p className="card_p">DGSW 8th</s.p>
+                  <s.p className="card_p">모디</s.p>
                 </s.CardP>
               </s.Card>
               <s.Card
