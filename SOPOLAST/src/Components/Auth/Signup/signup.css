@@ -1,43 +1,3 @@
-.App1 {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-.login_main {
-  width: 1470px;
-  height: 956px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.greenbox {
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  min-width: 700px;
-  max-width: 700px;
-  height: 100%;
-  position: relative;
-}
-.box1 {
-  width: 100%;
-  height: 100%;
-}
-.Name{
-  height: 56px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-}
-
 .box1 button.Certified {
   display: inline-block;
   padding: 0;
@@ -55,20 +15,17 @@
   top: 150px;
   right: 20px;
 }
-.Certificationbox{
+.Certificationbox {
   display: flex;
   width: 400px;
   height: 60px;
   position: relative;
 }
-.Authentication{
+.Authentication {
   position: absolute;
-  top:10px;
+  top: 10px;
 }
-.Email_certification{
-  width: 90%;
-  height: 50px;
-}
+
 .box1 .Certificationbox .completed {
   display: inline;
   padding: 0;
@@ -87,19 +44,7 @@
   top: 0;
   right: 0px;
 }
-.box1 button {
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  background-color: #1a9a18;
-  color: #fff;
-  margin: 10px;
-  height: 50px;
-  width: 400px;
-  font-size: 20px;
-  border-radius: 5px;
-  font-weight: bold;
-}
+
 .box1 input.button {
   padding: 10px 20px;
   border: none;
@@ -113,17 +58,7 @@
   border-radius: 5px;
   font-weight: bold;
 }
-.box1 input.id-Email {
-  border: none;
-  border-bottom: 2px solid #898989;
-  padding: 10px;
-  font-weight: bold;
-  height: 34px;
-  width: 260px;
-  font-size: 16px;
- 
-  
-}
+
 .box1 .Certificationbox input.Certificationbox {
   border: none;
   border-bottom: 2px solid #898989;
@@ -134,40 +69,14 @@
   width: 260px;
   font-size: 16px;
 }
-.box1 input {
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #898989;
-  padding: 10px;
-  font-weight: bold;
-  height: 34px;
-  width: 380px;
-  font-size: 16px;
-}
-.Box_Group{
-  width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.form{
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 28px;
-  justify-content: space-between;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
-.LogLink{
+
+.LogLink {
   position: absolute;
   left: 50px;
   bottom: 0;
   color: #47a1f3;
 }
-.LogLink:hover{
+.LogLink:hover {
   text-decoration: underline;
   cursor: pointer;
 }
