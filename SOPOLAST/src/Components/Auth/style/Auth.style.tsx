@@ -113,14 +113,30 @@ export const Button = styled.button`
   border-radius: 5px;
   font-weight: bold;
 `;
+export const Checkbox = styled.input`
+  margin-right: 10px;
+`;
+export const CheckboxWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+export const CheckboxLabel = styled.p`
+  font-size: 16px;
+`;
 
 export const SignLink = styled.div`
-  position: absolute;
-  left: 5%;
-  bottom: -30px;
+  position: relative;
+  display: block;
+
+  margin-right: 11%;
   color: #47a1f3;
 `;
 export const Email_certification = styled.div`
   width: 90%;
   height: 50px;
+`;
+export const CheckboxBundle = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

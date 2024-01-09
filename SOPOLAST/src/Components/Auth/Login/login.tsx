@@ -12,11 +12,13 @@ interface UserData {
   email: string;
   password: string;
 }
+
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const [keepLoggedIn, setKeepLoggedIn] = useState<boolean>(false); // 로그인 유지하기 상태
 
   const handleLogin = async () => {
     if (email === "" || password === "") {
@@ -42,6 +44,10 @@ const LoginComponent: React.FC = () => {
       console.log(error);
       showToast("error", "서버 통신 실패.");
     }
+  };
+
+  const handleKeepLoggedIn = () => {
+    setKeepLoggedIn(!keepLoggedIn);
   };
 
   return (
@@ -70,9 +76,20 @@ const LoginComponent: React.FC = () => {
               <s.Button type="button" onClick={handleLogin}>
                 Log in
               </s.Button>
-              <s.SignLink onClick={() => navigate("/Signuppage")}>
-                sign up
-              </s.SignLink>
+              <s.CheckboxWrapper>
+                <s.CheckboxBundle>
+                  <s.Checkbox
+                    type="checkbox"
+                    checked={keepLoggedIn}
+                    onChange={handleKeepLoggedIn}
+                  />
+                  <s.CheckboxLabel>로그인 유지하기</s.CheckboxLabel>
+                </s.CheckboxBundle>
+
+                <s.SignLink onClick={() => navigate("/Signuppage")}>
+                  sign up
+                </s.SignLink>
+              </s.CheckboxWrapper>
             </s.Form>
           </s.Box_Group>
         </s.Box1>
