@@ -162,19 +162,20 @@
     margin-top: 11.5px;
   }
   
-  /* .gradeSelet{
-    position: absolute;
-    display: inline-block;
-  
-    margin-top: 20px;
-    
+  .gradeSelet{
+    width: 80px;
+    height: 40px;
     color: #000;
-    font-family: Inter;
+    border: none; 
+
     font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  } */
+    font-weight: 600;
+    font-family: Inter;
+
+    margin-top: 20px;
+
+    display: inline;
+  }
   
 
   .gradegreen{

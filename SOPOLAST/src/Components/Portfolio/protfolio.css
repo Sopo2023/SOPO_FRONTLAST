@@ -161,24 +161,6 @@
   }
   
   .gradeSelect{
-    /* position: absolute; */
-    /* display: inline-block;
-    width: 80px;
-    margin-top: 20px;
-    outline: none;
-    color: #000;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    border: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-position: calc(100% - 5px) center;
-    background: url("../../Assets/img/arrow.png") no-repeat right center;
-    background-size: 20px 20px;  */
     width: 80px;
     height: 40px;
     color: #000;
@@ -228,7 +210,6 @@
     display: inline-block;
     color: #1A9A18;
     margin-top: 27px;
-    /* margin-left: 150px; */
    
   }
   .majorSelect > .frontEnd:hover{
