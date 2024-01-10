@@ -15,16 +15,6 @@
   top: 150px;
   right: 20px;
 }
-.Certificationbox {
-  display: flex;
-  width: 400px;
-  height: 60px;
-  position: relative;
-}
-.Authentication {
-  position: absolute;
-  top: 10px;
-}
 
 .box1 .Certificationbox .completed {
   display: inline;

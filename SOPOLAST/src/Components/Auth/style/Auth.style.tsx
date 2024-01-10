@@ -131,6 +131,11 @@ export const SignLink = styled.div`
 
   margin-right: 11%;
   color: #47a1f3;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 export const Email_certification = styled.div`
   width: 90%;
@@ -139,4 +144,68 @@ export const Email_certification = styled.div`
 export const CheckboxBundle = styled.div`
   display: flex;
   flex-direction: row;
+`;
+export const Certification = styled.div`
+  display: flex;
+  width: 400px;
+  height: 60px;
+  position: relative;
+`;
+export const Authentication = styled.input`
+  border: none;
+  border-bottom: 2px solid #898989;
+  padding: 10px;
+  font-weight: bold;
+  height: 34px;
+  width: 260px;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+`;
+export const Completed = styled.button`
+  display: inline;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #1a9a18;
+  color: #fff;
+  margin: 10px;
+  height: 50px;
+  width: 80px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0px;
+`;
+export const CertifiedButton = styled.button`
+  padding: 0;
+  cursor: pointer;
+  background-color: #d7d7d7;
+  border: none;
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  margin-left: 30px;
+
+  &.entered {
+    background-color: #1a9a18;
+    color: #fff;
+  }
+`;
+export const LogLink = styled.div`
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  color: #47a1f3;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;

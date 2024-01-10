@@ -188,27 +188,23 @@ function LoginComponent(): JSX.Element {
                   value={email}
                   onChange={handleEmailChange}
                 ></s.Email>
-                <button
+                <s.CertifiedButton
                   onClick={handleEmailCertify}
                   className={`Certified ${isEmailEntered ? "entered" : ""}`}
                 >
                   {isVerifying ? "Verifying..." : "인증하기"}
-                </button>
+                </s.CertifiedButton>
               </s.Email_certification>
               {isCertifying && (
-                <div className="Certificationbox">
-                  <input
+                <s.Certification>
+                  <s.Authentication
                     maxLength={10}
-                    className="Authentication"
                     placeholder="인증코드 여섯자리를 입력해주세요."
-                  ></input>
-                  <button
-                    onClick={Authenticationverification}
-                    className="completed"
-                  >
+                  ></s.Authentication>
+                  <s.Completed onClick={Authenticationverification}>
                     확인
-                  </button>
-                </div>
+                  </s.Completed>
+                </s.Certification>
               )}
               <s.Input
                 name="password"
@@ -231,9 +227,7 @@ function LoginComponent(): JSX.Element {
                 Sign Up
               </s.Button>
               <p>{msg}</p>
-              <div onClick={() => navigate("/")} className="LogLink">
-                Log in
-              </div>
+              <s.LogLink onClick={() => navigate("/")}>Log in</s.LogLink>
             </s.Form>
           </s.Box_Group>
         </s.Box1>
