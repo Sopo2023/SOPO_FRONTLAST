@@ -6,6 +6,7 @@ import Last from "../../Assets/img/Polygon 4.png";
 import mail from "../../Assets/img/mail.png";
 import github1 from "../../Assets/img/github.png";
 import nm from "../../Assets/img/hp.png";
+import "./mypage.css"
 
 export default function Mypage() {
   const navigate = useNavigate();
@@ -84,8 +85,7 @@ export default function Mypage() {
           </div>
         </div>
         <div className="Readme">
-          <p className="head">프론트엔드 개발자</p>
-          <div className="body">
+          <div className="body2">
             안녕하세요! 프론트엔드 개발자라는 꿈을 향해 달리는 {sideName}입니다.
           </div>
         </div>

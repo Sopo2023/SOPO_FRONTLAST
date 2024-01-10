@@ -1,13 +1,14 @@
 /* .content{
   overflow-x: hidden;
 } */
+.real_img {
+  width: 250px;
+  height: 170px;
+}
 .SOPO {
   text-decoration: none; /* 밑줄 제거 */
   color: #1a9a18;
   margin: 0 40px 0 20px;
-}
-.content {
-  margin-top: 100px;
 }
 .start {
   width: 100%;
@@ -55,9 +56,9 @@ ul {
   color: #1a9a18;
 }
 .top {
-  position: absolute;
+  position: relative;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 120px;
 }
 .top1 {
   font-size: 30px;
@@ -97,10 +98,8 @@ ul {
   font-size: 20px;
   font-weight: 600;
   margin: 0 0 0 60px;
-
   margin-bottom: 10px;
 }
-
 .head2 {
   font-size: 27px;
 
@@ -111,7 +110,7 @@ ul {
   margin-top: 150px;
 }
 
-.body {
+.body2 {
   display: flex;
   width: 1570px;
   height: 100px;
@@ -194,7 +193,7 @@ ul {
   width: 1430px;
   height: 400px;
   margin-left: -40px;
-  margin-top: 120px;
+  margin-top: 180px;
   /* background-color: #dddddd; */
 }
 
@@ -255,7 +254,7 @@ ul {
 .post_1 > .post-write > .img {
   position: relative;
   width: 100px;
-  left: 60%;
+  left: 75%;
   bottom: 9.5vh;
 }
 /* .post_mainnn{
