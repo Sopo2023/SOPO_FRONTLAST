@@ -113,16 +113,42 @@ export const Button = styled.button`
   border-radius: 5px;
   font-weight: bold;
 `;
-export const Checkbox = styled.input`
+export const Checkbox = styled.input.attrs({ type: "checkbox" })`
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
   margin-right: 10px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  &:checked {
+    background-color: #82c173;
+    border-color: #d7d7d7;
+    &:checked::after {
+      content: "✓";
+      position: absolute;
+      color: #ffffff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-18%, -38%);
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;
 export const CheckboxWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
-export const CheckboxLabel = styled.p`
-  font-size: 16px;
+export const CheckboxLabel = styled.label`
+  font-size: 20px;
+  color: #333333;
 `;
 
 export const SignLink = styled.div`

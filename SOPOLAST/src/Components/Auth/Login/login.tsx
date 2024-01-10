@@ -80,10 +80,14 @@ const LoginComponent: React.FC = () => {
                 <s.CheckboxBundle>
                   <s.Checkbox
                     type="checkbox"
+                    id="keepLoggedInCheckbox" // 체크박스에 id 추가
                     checked={keepLoggedIn}
                     onChange={handleKeepLoggedIn}
                   />
-                  <s.CheckboxLabel>로그인 유지하기</s.CheckboxLabel>
+
+                  <s.CheckboxLabel htmlFor="keepLoggedInCheckbox">
+                    로그인 유지하기
+                  </s.CheckboxLabel>
                 </s.CheckboxBundle>
 
                 <s.SignLink onClick={() => navigate("/Signuppage")}>
