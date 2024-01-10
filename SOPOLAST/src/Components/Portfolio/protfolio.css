@@ -162,7 +162,7 @@
   
   .gradeSelect{
     /* position: absolute; */
-    display: inline-block;
+    /* display: inline-block;
     width: 80px;
     margin-top: 20px;
     outline: none;
@@ -176,9 +176,22 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url("../../Assets/img/arrow.png") no-repeat right center;
     background-position: calc(100% - 5px) center;
-    background-size: 20px 20px; 
+    background: url("../../Assets/img/arrow.png") no-repeat right center;
+    background-size: 20px 20px;  */
+    width: 80px;
+    height: 40px;
+    color: #000;
+    border: none; 
+
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Inter;
+
+    margin-top: 20px;
+
+    display: inline;
+    
   }
   .gradeSelet::-ms-expand {
     display: none;
@@ -188,10 +201,8 @@
     color: green;
     font-size: 30px;
   
-    position: absolute;
-  
-    margin-top: 17px;
-    margin-left: 110px;
+    position: relative;
+    display: inline;
   }
   .stackLine{
     position: absolute;
@@ -202,21 +213,22 @@
     display: inline-block;
   }
   .majorSelect{
+    display: inline;
     color: #A7A7A7;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    position: absolute;
+    position: relative;
     
   }
   
   .majorSelect > .frontEnd{
     display: inline-block;
     color: #1A9A18;
-    margin-left: 150px;
     margin-top: 27px;
+    /* margin-left: 150px; */
    
   }
   .majorSelect > .frontEnd:hover{
