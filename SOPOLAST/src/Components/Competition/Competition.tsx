@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidname from "../../constants/Sidebar/side";
-import Head from "../../constants/head/head";
+import Head from "../../constants/head/Head/head";
 import "./Competition.css";
 import { useNavigate } from "react-router-dom";
 
 function Competition() {
   const navigate = useNavigate();
+
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={true}/>
         <Sidname />
         <div className="searchBox">
           <div className="search">

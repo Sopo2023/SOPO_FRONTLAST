@@ -91,7 +91,7 @@ export default function Start() {
 
   return (
     <>
-      <Head />
+      <Head active={true}/>
       <s.MainContainer>
         <s.MainHome>
           <s.MainCard ref={scrollContainerRef}>

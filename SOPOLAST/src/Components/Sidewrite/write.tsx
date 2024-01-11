@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
-import Head from "../../constants/head/head";
+import Head from "../../constants/head/Head/head";
 import Side from "../../constants/Sidebar/side";
 import "./write.css";
 import Swal from "sweetalert2";
@@ -89,7 +89,7 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={false}/>
         <Side />
         <form className="write_form" onSubmit={onSubmitHandler}>
           <div className="write_img1">
