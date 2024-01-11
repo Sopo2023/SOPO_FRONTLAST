@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TEST8 from "../../Assets/img/B1CODE.png";
 import Head from "../../constants/head/Head/head";
 import Last from "../../Assets/img/Polygon 4.png";
@@ -148,7 +148,7 @@ export default function Mypage() {
             <div className="pagination-writing">
               <div id="leave" onClick={LeavehandleEmailCertify}>
                 <div className="last-pagination">
-                  <img src={Last} />
+                  <img className="BackButton" src={Last} onClick={<Mypage />}/>
                 </div>
               </div>
               <div id="last-pagination">내 정보 입력하기</div>
