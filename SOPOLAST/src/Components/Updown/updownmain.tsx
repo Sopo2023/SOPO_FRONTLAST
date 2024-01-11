@@ -22,9 +22,9 @@ export default function Start() {
           <input type="button" className="Search_icon"></input>
           <div className="Searcg_icon_line"></div>
         </div>
-        <div className="Post-container">
+        <div className="Post_container">
           <div
-            className="Post-written"
+            className="Post_written"
             onClick={() => {
               navigate("/Updownsub");
             }}
@@ -51,7 +51,7 @@ export default function Start() {
               </div>
             </div>
           </div>
-          <div className="Post-written">
+          <div className="Post_written">
             <div className="Postshow1">
               <div className="Post_border">
                 <span className="Name">배채희</span>
@@ -75,7 +75,7 @@ export default function Start() {
               </div>
             </div>
           </div>
-          <div className="Post-written">
+          <div className="Post_written">
             <div className="Postshow1">
               <div className="Post_border">
                 <span className="Name">이해준</span>
@@ -97,7 +97,7 @@ export default function Start() {
               </div>
             </div>
           </div>
-          <div className="Post-written">
+          <div className="Post_written">
             <div className="Postshow1">
               <div className="Post_border">
                 <span className="Name">박규민</span>
@@ -122,7 +122,7 @@ export default function Start() {
               </span>
             </div>
           </div>
-          <div className="Post-written">
+          <div className="Post_written">
             <div className="Post_border">
               <div className="Postshow1">
                 <span className="Name">전우진</span>
@@ -148,7 +148,7 @@ export default function Start() {
               </div>
             </div>
           </div>
-          <div className="Post-written">
+          <div className="Post_written">
             <div className="Post_border">
               <div className="Postshow1">
                 <span className="Name">김호준</span>
