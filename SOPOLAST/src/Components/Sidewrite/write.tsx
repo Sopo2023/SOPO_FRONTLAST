@@ -30,12 +30,12 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
 
   const onSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
-    const selectedCategory = (document.querySelector(
-      ".sc-cBornz-gegs"
-    ) as HTMLSelectElement).value;
-    const selectedPlace = (document.querySelector(
-      ".sd-cBornz-gegs"
-    ) as HTMLSelectElement).value;
+    const selectedCategory = (
+      document.querySelector(".sc-cBornz-gegs") as HTMLSelectElement
+    ).value;
+    const selectedPlace = (
+      document.querySelector(".sd-cBornz-gegs") as HTMLSelectElement
+    ).value;
 
     if (!title || !content) {
       Toast.fire({

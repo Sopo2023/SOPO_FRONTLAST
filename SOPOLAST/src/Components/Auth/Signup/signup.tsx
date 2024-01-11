@@ -1,10 +1,10 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import LOGO from "../../Assets/image/LOGO.png";
-import "./signup.css";
+import LOGO from "../../../Assets/image/LOGO.png";
 import { showToast } from "../../../constants/Swal/Swal";
-
+import * as s from "../style/Auth.style";
+import "../Signup/signup.css";
 function LoginComponent(): JSX.Element {
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
   const navigate = useNavigate();
@@ -162,86 +162,77 @@ function LoginComponent(): JSX.Element {
   };
 
   return (
-    <div className="App1">
-      <div className="login_main">
-        <div className="greenbox">
-          <img src={LOGO} alt="Logo" />
-        </div>
-        <div className="box1">
-          <div className="Box_Group">
-            <form method="POST" className="form" onSubmit={LOginFunc}>
-              <h1>Sign up</h1>
-              <div className="Name">
-                <input
-                  className="Name"
+    <s.App1>
+      <s.Login_Main>
+        <s.GreenBox>
+          <s.Img src={LOGO} alt="Logo" />
+        </s.GreenBox>
+        <s.Box1>
+          <s.Box_Group>
+            <s.Form method="POST" onSubmit={LOginFunc}>
+              <s.Title>Sign up</s.Title>
+              <s.Name>
+                <s.Input
                   name="name"
                   type="text"
                   placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                ></input>
-              </div>
-              <div className="Email_certification">
-                <input
-                  className="id-Email"
+                ></s.Input>
+              </s.Name>
+              <s.Email_certification>
+                <s.Email
                   name="E-mail"
                   type="text"
                   placeholder="E-Mail"
                   value={email}
                   onChange={handleEmailChange}
-                ></input>
-                <button
+                ></s.Email>
+                <s.CertifiedButton
                   onClick={handleEmailCertify}
                   className={`Certified ${isEmailEntered ? "entered" : ""}`}
                 >
                   {isVerifying ? "Verifying..." : "인증하기"}
-                </button>
-              </div>
+                </s.CertifiedButton>
+              </s.Email_certification>
               {isCertifying && (
-                <div className="Certificationbox">
-                  <input
+                <s.Certification>
+                  <s.Authentication
                     maxLength={10}
-                    className="Authentication"
                     placeholder="인증코드 여섯자리를 입력해주세요."
-                  ></input>
-                  <button
-                    onClick={Authenticationverification}
-                    className="completed"
-                  >
+                  ></s.Authentication>
+                  <s.Completed onClick={Authenticationverification}>
                     확인
-                  </button>
-                </div>
+                  </s.Completed>
+                </s.Certification>
               )}
-              <input
-                className="password"
+              <s.Input
                 name="password"
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-              ></input>
-              <input
-                className="re-enter password"
+              ></s.Input>
+              <s.Input
                 type="password"
                 placeholder="Re-enter Password"
                 value={repassword}
                 onChange={(e) => setRepassword(e.target.value)}
-              ></input>
-              <input
+              ></s.Input>
+              <s.Button
                 type="submit"
-                className="button"
                 // disabled={loading || !isEmailVerified}
                 value={loading ? "Signing up..." : "Sign up"}
-              />
+              >
+                Sign Up
+              </s.Button>
               <p>{msg}</p>
-              <div onClick={() => navigate("/")} className="LogLink">
-                Log in
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+              <s.LogLink onClick={() => navigate("/")}>Log in</s.LogLink>
+            </s.Form>
+          </s.Box_Group>
+        </s.Box1>
+      </s.Login_Main>
+    </s.App1>
   );
 }
 

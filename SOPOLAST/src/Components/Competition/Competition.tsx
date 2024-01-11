@@ -6,6 +6,22 @@ import "./Competition.css";
 import { useNavigate } from "react-router-dom";
 
 function Competition() {
+  const majorClick = (major) => {
+    console.log(`Clicked on ${major}`);
+  };
+
+  const majorbutton: HTMLElement | null = document.getElementById('majorbutton');
+
+  if (majorbutton) {
+    majorbutton.addEventListener('click', function() {
+      if (majorbutton.classList.contains('clicked')) {
+        majorbutton.classList.remove('clicked');
+      } else {
+        majorbutton.classList.add('clicked');
+      }
+    });
+  }
+
   const navigate = useNavigate();
 
   return (
@@ -27,14 +43,61 @@ function Competition() {
             </select>
             <div className="gradegreen"> | </div>
             <div className="majorSelect">
-              <div className="frontEnd"> 프론트엔드 </div>
-              <div className="elseMajor"> 백엔드 </div>
-              <div className="elseMajor"> 안드로이드 </div>
-              <div className="elseMajor"> iOS </div>
-              <div className="elseMajor"> 임베디드 </div>
-              <div className="elseMajor"> AI </div>
-              <div className="elseMajor"> 정보보안 </div>
-              <div className="elseMajor"> 디자인 </div>
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('프론트엔드')}
+              >
+              프론트엔드
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('백엔드')}
+              >
+              백엔드
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('안드로이드')}
+              >
+              안드로이드
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('iOS')}
+              >
+              iOS
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('임베디드')}
+              >
+              임베디드
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('AI')}
+              >
+              AI
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('정보보안')}
+              >
+              정보보안
+              </button>
+
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('디자인')}
+              >
+              디자인
+              </button>
             </div>
           </div>
         </div>

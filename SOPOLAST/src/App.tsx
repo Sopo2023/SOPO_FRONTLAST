@@ -1,11 +1,11 @@
 import React from "react";
 import GlobalStyles from "src/Style/global";
 import Updown from "./Components/Updown/updownmain";
-import Login from "./Components/Login/login";
+import Login from "./Components/Auth/Login/login";
 import Portfolio from "./Components/Portfolio/portfolioMain";
 import Main from "./Components/Home/MainPage/mainpage";
 import Write from "./Components/Sidewrite/write";
-import Signup from "./Components/Signup/signup";
+import Signup from "./Components/Auth/Signup/signup";
 import Mypage from "./Components/Mypage/mypage";
 import Competition from "./Components/Competition/Competition";
 import Portfoliosub from "./Components/Portfoliosub/portfolioSub";
@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <RecoilRoot>
-      <GlobalStyles />
+        <GlobalStyles />
         <div className="App">
           <Routes>
             <Route path="/" element={<Login />} />

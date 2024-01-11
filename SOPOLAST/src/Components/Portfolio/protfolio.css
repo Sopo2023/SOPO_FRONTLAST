@@ -97,7 +97,7 @@
   .searchBox{
     display: flex;
     position: absolute;
-    left: 420px;
+    left: 300px;
     top: 100px;
     width: 840px;
     height: 150px;
@@ -160,25 +160,20 @@
     margin-top: 11.5px;
   }
   
-  .gradeSelet{
-    position: absolute;
-    display: inline-block;
+  .gradeSelect{
     width: 80px;
-    margin-top: 20px;
-    outline: none;
+    height: 40px;
     color: #000;
-    font-family: Inter;
+    border: none; 
+
     font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    border: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: url("../../Assets/img/arrow.png") no-repeat right center;
-    background-position: calc(100% - 5px) center;
-    background-size: 20px 20px; 
+    font-weight: 600;
+    font-family: Inter;
+
+    margin-top: 20px;
+
+    display: inline;
+    
   }
   .gradeSelet::-ms-expand {
     display: none;
@@ -188,10 +183,8 @@
     color: green;
     font-size: 30px;
   
-    position: absolute;
-  
-    margin-top: 17px;
-    margin-left: 110px;
+    position: relative;
+    display: inline;
   }
   .stackLine{
     position: absolute;
@@ -202,24 +195,50 @@
     display: inline-block;
   }
   .majorSelect{
+    display: inline;
     color: #A7A7A7;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    position: absolute;
+    position: relative;
     
   }
+
+  .majorbutton{
+    border: none;
+    background-color: none;
+    
+    padding: 13px;
+
+    display: inline;
+    color: #A7A7A7;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    
+    background: none;
+  }
+
+  .majorbutton:hover,
+  .majorbutton.clicked {
+    color: #1A9A18 !important;
+    cursor: pointer;
+
+    background-color: none;
+  }
   
-  .majorSelect > .frontEnd{
+  /* .majorSelect > .frontEnd{
     display: inline-block;
     color: #1A9A18;
-    margin-left: 150px;
     margin-top: 27px;
    
   }
-  .majorSelect > .frontEnd:hover{
+  .majorSelect > .frontEnd:active{
     cursor: pointer;
     color: #178915;
   }
@@ -227,14 +246,16 @@
     display: inline-block;
     margin-left: 25px;
   }
-  .elseMajor:hover{
+  .elseMajor:active{
     cursor: pointer;
     color: #178915;
-  }
+  } */
+
+
   .mo{
     position: absolute;
-    left: 580px;
-    top: 250px;
+    left: 460px;
+    top: 200px;
     width: 900px;
     height: 1000px;
     

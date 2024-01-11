@@ -1,12 +1,14 @@
-  .Main {
+import styled from "styled-components";
+
+export const Main = styled.div`
     width: 1500px;
     height: 1500px;
-  }
-  .Content {
+`;
+export const Content = styled.div`
     width: 1500px;
     height: 1500px;
-  }
-  .Search1{
+`;
+export const Search1 = styled.div`
     position: absolute;
     top: 8%;
     left: 580px;
@@ -17,8 +19,8 @@
     border: 1px solid #1A9A18;
     background: #FFF;
     z-index: 2;
-  }
-  .Search_box{
+`;
+export const Search_box = styled.div`
     position: absolute;
     outline: none;
     font-size: 20px;
@@ -28,8 +30,8 @@
     width: 750px;
     height: 40px;
     display: flex;
-  }
-  .Search_icon{
+`;
+export const Search_icon = styled.div`
     position: absolute;
     cursor: pointer;
     background-color: #FFF;
@@ -40,8 +42,8 @@
     flex-shrink: 0;
     border: 1px solid #1A9A18;
     border-radius: 50%;
-  }
-  .Searcg_icon_line{
+`;
+export const Searcg_icon_line = styled.div`
     position: absolute;
     cursor: pointer;
     top: 35px;
@@ -53,8 +55,8 @@
     flex-shrink: 0;
     stroke-width: 1px;
     stroke: #1A9A18;
-  }
-  .Post_container {
+`;
+export const Post_container = styled.div`
     position: absolute;
     left: 500px;
     top: 200px;
@@ -62,11 +64,11 @@
     max-height: calc(100% - 190px); 
     width: 1200px;
     height: 1040px;
-  };
-  .Post-container::-webkit-scrollbar {
-    display: none;
-  }
-  .Post_written {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`;
+export const Post_written = styled.div`
     position: relative;
     border-bottom: 1px solid #888;
     padding: 10px;
@@ -77,24 +79,42 @@
     height: 180px;
     cursor: pointer;
     z-index: 1;
-  }
-  .Post_border{
+    &.Name {
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    &.Title {
+        font-size: 22px;
+        color: #777;
+    }
+    &.Detail {
+        color: #777;
+    }
+    &.Date {
+        color: #888;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+`;
+export const Post_border = styled.div`
     width: 650px;
     height: 260px;
-  }
-  .Postshow1 {
+`;
+export const Postshow1 = styled.div`
     width: 650px;
     margin-left: -10px;
-  }
-  .Name{
+`;
+export const Name = styled.div`
     color: #000;
     font-family: Inter;
     font-size: 20px;  
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-  }
-  .Title{
+`;
+export const Title = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 20px;
@@ -102,45 +122,20 @@
     font-weight: 700;
     line-height: normal;
     margin-top: 6px;
-  }
-  .Detail{
+`;
+export const Detail = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-  }
-  .Post_Img{
+`;
+export const Post_Img = styled.div`
     width: 240px;
     height: 200px;
     position: absolute;
     top: 50%; 
     right: 50px; 
     transform: translate(0, -55%); 
-    }
-  /* .post-divider {
-    border-top: 1px solid #ccc;
-    margin: 10px 0; 
-  } */
-  .Post-written .Name {
-    font-weight: bold;
-    font-size: 20px;
-    color: #333;
-  }
-  
-  .Post-written .Title {
-    font-size: 22px;
-    color: #777;
-  }
-  
-  .Post-written .Detail {
-    color: #777;
-  }
-  
-  .Post-written .Date {
-    color: #888;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
+`;
