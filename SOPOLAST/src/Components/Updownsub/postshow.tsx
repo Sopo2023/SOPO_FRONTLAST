@@ -5,10 +5,11 @@ import TEST6 from "../../Assets/image/1.png";
 import Head from "../../constants/head/Head/head";
 
 export default function Start() {
+
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={false}/>
         <Sidename />
         <div className="post_design">
           <div className="post-written1">

@@ -89,7 +89,7 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={false}/>
         <Side />
         <form className="write_form" onSubmit={onSubmitHandler}>
           <div className="write_img1">

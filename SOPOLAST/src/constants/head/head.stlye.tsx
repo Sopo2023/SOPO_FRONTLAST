@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled,{css} from "styled-components";
+
+interface HeaderLiProps {
+    active: boolean;
+  }
 
 export const Header = styled.div`
 position: fixed !important;
@@ -26,20 +30,28 @@ padding: 0;
 display: flex;
 justify-content: space-between;
 `
-export const HeaderLi = styled.nav`
-cursor: pointer; 
-text-decoration-line: none;
-font-size: 23px;
-font-weight: 800;
-color: #8C8C8C;
-text-decoration: none;
-display: inline-block;
-margin-right: 50px;
-list-style-type: none;
-justify-content: space-between;
-display: flex; 
-& :hover{
-    color: #1A9A18 !important;
-}
+export const HeaderLi = styled.nav<HeaderLiProps>`
+  cursor: pointer;
+  text-decoration-line: none;
+  font-size: 23px;
+  font-weight: 800;
+  color: #8C8C8C;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 50px;
+  list-style-type: none;
+  justify-content: space-between;
+  display: flex;
 
-`
+  ${({ active }) =>
+    active &&
+    css`
+      color: #1A9A18 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 32px !important;
+    `}
+
+  &:hover {
+    color: #1A9A18 !important;
+  }
+`;

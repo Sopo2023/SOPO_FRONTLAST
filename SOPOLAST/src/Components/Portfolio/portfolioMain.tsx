@@ -25,11 +25,10 @@ export default function Portfolio() {
   }
 
   const navigate = useNavigate();
-
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={true}/>
 
         <div className="searchBox">
           <div className="search">

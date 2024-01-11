@@ -10,11 +10,12 @@ import TEST9 from "../../Assets/img/MAC.JPG";
 import Head from "../../constants/head/Head/head";
 
 export default function Start() {
+  
   const navigate = useNavigate();
   return (
-    <div className="Main">
-      <div className="Content">
-        <Head />
+    <div className="main">
+      <div className="content">
+        <Head active={true}/>
         <Sidename />
 
         <div className="Search1">
