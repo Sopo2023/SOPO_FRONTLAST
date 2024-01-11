@@ -1,12 +1,12 @@
-  #MainTitle {
-    color: #1A9A18;
-  }
-
-  .main {
+  .Main {
     width: 1500px;
     height: 1500px;
   }
-  .search1{
+  .Content {
+    width: 1500px;
+    height: 1500px;
+  }
+  .Search1{
     position: absolute;
     top: 8%;
     left: 580px;
@@ -18,14 +18,18 @@
     background: #FFF;
     z-index: 2;
   }
-  .post-container::-webkit-scrollbar {
-    display: none;
+  .Search_box{
+    position: absolute;
+    outline: none;
+    font-size: 20px;
+    left: 20px;
+    top: 5px;
+    border: none;
+    width: 750px;
+    height: 40px;
+    display: flex;
   }
-  .post-divider {
-    border-top: 1px solid #ccc;
-    margin: 10px 0; 
-  }
-  .search_icon{
+  .Search_icon{
     position: absolute;
     cursor: pointer;
     background-color: #FFF;
@@ -37,7 +41,7 @@
     border: 1px solid #1A9A18;
     border-radius: 50%;
   }
-  .searcg_icon_line{
+  .Searcg_icon_line{
     position: absolute;
     cursor: pointer;
     top: 35px;
@@ -50,19 +54,19 @@
     stroke-width: 1px;
     stroke: #1A9A18;
   }
-  .search_box{
+  .Post-container {
     position: absolute;
-    outline: none;
-    font-size: 20px;
-    left: 20px;
-    top: 40px;
-    border: none;
-    width: 750px;
-    height: 40px;
-    display: flex;
+    left: 500px;
+    top: 200px;
+    overflow-y: auto; 
+    max-height: calc(100% - 190px); 
+    width: 1200px;
+    height: 1040px;
+  };
+  .Post-container::-webkit-scrollbar {
+    display: none;
   }
-
-  .post-written {
+  .Post-written {
     position: relative;
     border-bottom: 1px solid #888;
     padding: 10px;
@@ -74,30 +78,40 @@
     cursor: pointer;
     z-index: 1;
   }
-  
-  .post-written .name {
-    font-weight: bold;
+  .Post_border{
+    width: 650px;
+    height: 260px;
+  }
+  .Postshow1 {
+    width: 650px;
+    margin-left: -10px;
+  }
+  .Name{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;  
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .Title{
+    color: #8C8C8C;
+    font-family: Inter;
     font-size: 20px;
-    color: #333;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 6px;
   }
-  
-  .post-written .title {
-    font-size: 22px;
-    color: #777;
+  .Detail{
+    color: #8C8C8C;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
-  
-  .post-written .detail {
-    color: #777;
-  }
-  
-  .post-written .date {
-    color: #888;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .post_img{
+  .Post_Img{
     width: 240px;
     height: 200px;
     position: absolute;
@@ -105,60 +119,28 @@
     right: 50px; 
     transform: translate(0, -55%); 
     }
-    
-    .post-container {
-      position: absolute;
-      left: 500px;
-      top: 200px;
-      overflow-y: auto; 
-      max-height: calc(100% - 190px); 
-      width: 1200px;
-      height: 1040px;
-    };
-
-  .post_border{
-    width: 650px;
-    height: 260px;
+  /* .post-divider {
+    border-top: 1px solid #ccc;
+    margin: 10px 0; 
+  } */
+  .Post-written .Name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
   }
-
-  .content {
-    width: 1500px;
-    height: 1500px;
+  
+  .Post-written .Title {
+    font-size: 22px;
+    color: #777;
   }
- 
-  .postshow1 {
-    width: 650px;
-    margin-left: -10px;
+  
+  .Post-written .Detail {
+    color: #777;
   }
-
-  .name{
-    color: #000;
-
-  font-family: Inter;
-  font-size: 20px;  
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  }
-
-  .title{
-    color: #8C8C8C;
-
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-
-  margin-top: 6px;
-  }
-
-  .detail{
-    color: #8C8C8C;
-
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  
+  .Post-written .Date {
+    color: #888;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
