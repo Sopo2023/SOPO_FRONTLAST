@@ -8,6 +8,10 @@ import Head from "../../constants/head/Head/head"
 
 
 export default function Portfolio() {
+  const majorClick = (major) => {
+    console.log(`Clicked on ${major}`);
+  };
+
   const navigate = useNavigate();
 
   return (
@@ -33,14 +37,62 @@ export default function Portfolio() {
 
             <div className="gradegreen"> | </div>
             <div className="majorSelect">
-              <div className="frontEnd"> 프론트엔드 </div>
-              <div className="elseMajor"> 백엔드 </div>
-              <div className="elseMajor"> 안드로이드 </div>
-              <div className="elseMajor"> iOS </div>
-              <div className="elseMajor"> 임베디드 </div>
-              <div className="elseMajor"> AI </div>
-              <div className="elseMajor"> 정보보안 </div>
-              <div className="elseMajor"> 디자인 </div>
+            <button
+            className="frontEnd"
+            onClick={() => majorClick('프론트엔드')}
+            >
+            프론트엔드
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('백엔드')}
+            >
+            백엔드
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('안드로이드')}
+            >
+            안드로이드
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('iOS')}
+            >
+            iOS
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('임베디드')}
+            >
+            임베디드
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('AI')}
+            >
+            AI
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('정보보안')}
+            >
+            정보보안
+            </button>
+
+            <button
+            className="elseMajor"
+            onClick={() => majorClick('디자인')}
+            >
+            디자인
+            </button>
+            
             </div>
           </div>
         </div>
