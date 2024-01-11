@@ -205,14 +205,40 @@
     position: relative;
     
   }
+
+  .majorbutton{
+    border: none;
+    background-color: none;
+    
+    padding: 13px;
+
+    display: inline;
+    color: #A7A7A7;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    
+    background: none;
+  }
+
+  .majorbutton:hover,
+  .majorbutton.clicked {
+    color: #1A9A18 !important;
+    cursor: pointer;
+
+    background-color: none;
+  }
   
-  .majorSelect > .frontEnd{
+  /* .majorSelect > .frontEnd{
     display: inline-block;
     color: #1A9A18;
     margin-top: 27px;
    
   }
-  .majorSelect > .frontEnd:hover{
+  .majorSelect > .frontEnd:active{
     cursor: pointer;
     color: #178915;
   }
@@ -220,10 +246,12 @@
     display: inline-block;
     margin-left: 25px;
   }
-  .elseMajor:hover{
+  .elseMajor:active{
     cursor: pointer;
     color: #178915;
-  }
+  } */
+
+
   .mo{
     position: absolute;
     left: 460px;
