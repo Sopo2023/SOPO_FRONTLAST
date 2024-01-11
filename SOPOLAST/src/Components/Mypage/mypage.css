@@ -1,6 +1,3 @@
-/* .content{
-  overflow-x: hidden;
-} */
 .real_img {
   width: 250px;
   height: 170px;
@@ -137,7 +134,6 @@ ul {
 }
 
 .socialp {
-  /* background-color: #F5F5F6; */
   width: 1570px;
   height: 120px;
   border-radius: 10px;
@@ -257,12 +253,6 @@ ul {
   left: 75%;
   bottom: 9.5vh;
 }
-/* .post_mainnn{
-  position: absolute;
-  left: 300px;
-} */
-
-
 .pagination {
   position: absolute;
   width: 100%;
@@ -367,10 +357,9 @@ ul {
 }
 .horseman{
   position: absolute;
-  top: 100px;
+  top: 20px;
   width: 100%;
-  height: 500px;
-  background-color: #1a9a18;
+  height: 1500px;
 }
 @keyframes pagination {
   0% {top: 700px;}
@@ -691,4 +680,7 @@ ul {
 .elseSkills:hover{
   cursor: pointer;
   color: #178915;
+}
+.BackButton {
+  cursor: pointer;
 }
