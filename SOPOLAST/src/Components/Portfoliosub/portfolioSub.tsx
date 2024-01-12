@@ -16,7 +16,7 @@ function Portfoliosubon() {
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={false}/>
         <Sidebar />
         <div className="mo_portfolio">
           <div className="allPort">
