@@ -4,7 +4,7 @@
     "resolveJsonModule": true,
     "jsx": "react",
     "paths": {
-      "@src/*": ["*"]
+      "@src/*": ["src/*"]
     },
     "baseUrl": ".",
   },
