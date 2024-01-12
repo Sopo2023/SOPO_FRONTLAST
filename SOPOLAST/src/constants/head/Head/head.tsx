@@ -6,7 +6,7 @@ interface HeadProps {
   active: boolean;
 }
 
-const Head: React.FC<HeadProps> = ({ active }) => {
+const Head: React.FC<HeadProps> = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
