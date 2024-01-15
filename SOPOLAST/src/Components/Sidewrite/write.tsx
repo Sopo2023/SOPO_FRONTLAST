@@ -4,11 +4,9 @@ import axios from "axios";
 import Head from "../../constants/head/Head/head";
 import Side from "../../constants/Sidebar/side";
 import "./write.css";
-import Swal from "sweetalert2";
+import { showToast } from "src/constants/Swal/Swal";
 
-interface SidewriteProps {}
-
-const Sidewrite: React.FC<SidewriteProps> = () => {
+const Sidewrite= () => {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [imageSrc, setImageSrc] = useState<string | null>(null);
@@ -16,17 +14,6 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
   const [fileName, setFileName] = useState<string | null>(null);
   const localStorageEmail = localStorage.getItem("sopo_id");
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 2000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
 
   const onSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
@@ -38,10 +25,7 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
     ).value;
 
     if (!title || !content) {
-      Toast.fire({
-        icon: "error",
-        title: "제목, 내용을 모두 입력해주세요.",
-      });
+      showToast("error", "제목, 내용을 모두 입력해주세요.");
       return;
     }
 
