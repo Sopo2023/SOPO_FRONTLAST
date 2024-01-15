@@ -4,7 +4,7 @@ import Updown from "src/Components/Updown/updownmain";
 import Login from "src/Components/Auth/Login/login";
 import Portfolio from "src/Components/Portfolio/portfolioMain";
 import Main from "src/Components/Home/MainPage/mainpage";
-import Write from "src/Components/Sidewrite/write";
+import Write from "src/Components/Sidewrite/Write/write";
 import Signup from "src/Components/Auth/Signup/signup";
 import Mypage from "src/Components/Mypage/mypage";
 import Competition from "src/Components/Competition/Competition";

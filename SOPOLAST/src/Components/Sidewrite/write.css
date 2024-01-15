@@ -16,6 +16,10 @@
     font-weight: 800;
     line-height: normal;
 }
+.write_form{
+    width: 500px;
+    height: 1200px;
+}
 .write_screen::placeholder{
     font-size: 30px;
     font-weight: 800;

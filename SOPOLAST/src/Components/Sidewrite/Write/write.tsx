@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
-import Head from "../../constants/head/Head/head";
-import Side from "../../constants/Sidebar/side";
-import "./write.css";
+import Head from "../../../constants/head/Head/head";
+import Side from "../../../constants/Sidebar/side";
+import "../write.css";
+import * as s from "../Sidewrite.style"
 import { showToast } from "src/constants/Swal/Swal";
 
-const Sidewrite= () => {
+const Sidewrite = () => {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [imageSrc, setImageSrc] = useState<string | null>(null);
@@ -71,11 +72,11 @@ const Sidewrite= () => {
   };
 
   return (
-    <div className="main">
-      <div className="content">
-        <Head active={false}/>
+   <>
+        <Head active={false} />
         <Side />
-        <form className="write_form" onSubmit={onSubmitHandler}>
+        {/* <s.WritePlace></s.WritePlace> */}
+        {/* <form className="write_form" onSubmit={onSubmitHandler}>
           <div className="write_img1">
             {imageSrc && <img src={imageSrc} alt="Preview" />}
           </div>
@@ -124,9 +125,9 @@ const Sidewrite= () => {
           <button id="write_submit" type="submit">
             Submit
           </button>
-        </form>
-      </div>
-    </div>
+        </form> */}
+    
+    </>
   );
 };
 
