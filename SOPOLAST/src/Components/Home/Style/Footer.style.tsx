@@ -5,7 +5,7 @@ export const FooterContainer = styled.div`
   position: relative;
   background-color: rgb(41, 44, 51);
   width: 100%;
-  height: 100%;
+  height: 320px;
 `;
 export const FooterWrap = styled.div`
   width: 1200px;

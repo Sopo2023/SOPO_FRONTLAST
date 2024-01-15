@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={false}/>
         <Side />
         <div className="compBox1">
           <div className="compBack1" onClick={goBack}>

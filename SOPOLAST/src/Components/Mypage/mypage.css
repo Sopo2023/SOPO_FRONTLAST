@@ -272,14 +272,15 @@ ul {
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
-#leave{
+.leave{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 40px;
+  top: 30px;
   cursor: pointer;
 }
-.last-pagination{
-  position: absolute;
-  left: 40px;
-  top: 10px;
-}
+
 #last-pagination{
   position: absolute;
   top: 40px;
@@ -357,7 +358,7 @@ ul {
 }
 .horseman{
   position: absolute;
-  top: 20px;
+  top: 65px;
   width: 100%;
   height: 1500px;
 }

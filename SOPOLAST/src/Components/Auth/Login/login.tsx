@@ -72,10 +72,6 @@ const LoginComponent: React.FC = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               ></s.Input>
-
-              <s.Button type="button" onClick={handleLogin}>
-                Log in
-              </s.Button>
               <s.CheckboxWrapper>
                 <s.CheckboxBundle>
                   <s.Checkbox
@@ -86,14 +82,17 @@ const LoginComponent: React.FC = () => {
                   />
 
                   <s.CheckboxLabel htmlFor="keepLoggedInCheckbox">
-                    로그인 유지하기
+                    로그인 유지
                   </s.CheckboxLabel>
                 </s.CheckboxBundle>
-
-                <s.SignLink onClick={() => navigate("/Signuppage")}>
-                  sign up
-                </s.SignLink>
               </s.CheckboxWrapper>
+              <s.Button type="button" onClick={handleLogin}>
+                Log in
+              </s.Button>
+
+              <s.SignLink onClick={() => navigate("/Signuppage")}>
+                sign up
+              </s.SignLink>
             </s.Form>
           </s.Box_Group>
         </s.Box1>

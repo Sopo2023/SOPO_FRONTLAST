@@ -6,7 +6,7 @@ interface HeadProps {
   active: boolean;
 }
 
-const Head: React.FC <HeadProps> = ({ active }) => {
+const Head: React.FC<HeadProps> = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -23,19 +23,19 @@ const Head: React.FC <HeadProps> = ({ active }) => {
       </s.SopoLogo>
       <nav>
         <s.HeaderUl>
-          <s.HeaderLi active={active} onClick={() => navigate("/Mentor-Mentee")}>
+          <s.HeaderLi active={isMain} onClick={() => navigate("/main")}>
             홈
           </s.HeaderLi>
-          <s.HeaderLi active={active} onClick={() => navigate("/Mentor-Mentee")}>
+          <s.HeaderLi active={isMentorMentee} onClick={() => navigate("/Mentor-Mentee")}>
             선배가 후배에게
           </s.HeaderLi>
-          <s.HeaderLi active={active} onClick={() => navigate("/portfolio")}>
+          <s.HeaderLi active={isPortfolio} onClick={() => navigate("/portfolio")}>
             포트폴리오
           </s.HeaderLi>
-          <s.HeaderLi active={active} onClick={() => navigate("/Competition")}>
+          <s.HeaderLi active={isCompetition} onClick={() => navigate("/Competition")}>
             대회
           </s.HeaderLi>
-          <s.HeaderLi active={active} onClick={() => navigate("/mypage")}>
+          <s.HeaderLi active={isMyPage} onClick={() => navigate("/mypage")}>
             내정보
           </s.HeaderLi>
         </s.HeaderUl>
