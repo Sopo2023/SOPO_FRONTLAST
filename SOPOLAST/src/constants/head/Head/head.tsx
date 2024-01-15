@@ -15,6 +15,7 @@ const Head: React.FC<HeadProps> = () => {
   const isPortfolio = location.pathname === "/portfolio";
   const isCompetition = location.pathname === "/Competition";
   const isMyPage = location.pathname === "/mypage";
+  const isWrite = location.pathname === "/sidewrite"
 
   return (
     <s.Header>
@@ -34,6 +35,9 @@ const Head: React.FC<HeadProps> = () => {
           </s.HeaderLi>
           <s.HeaderLi active={isCompetition} onClick={() => navigate("/Competition")}>
             대회
+          </s.HeaderLi>
+          <s.HeaderLi active={isWrite} onClick={() => navigate("/sidewrite")}>
+            글쓰기
           </s.HeaderLi>
           <s.HeaderLi active={isMyPage} onClick={() => navigate("/mypage")}>
             내정보
