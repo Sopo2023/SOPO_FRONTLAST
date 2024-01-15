@@ -6,14 +6,39 @@ import Last from "../../Assets/img/Polygon 4.png";
 import mail from "../../Assets/img/mail.png";
 import github1 from "../../Assets/img/github.png";
 import nm from "../../Assets/img/hp.png";
-import "./mypage.css"
+import "./mypage.css";
 
 export default function Mypage() {
   const navigate = useNavigate();
-  const [yearSelections, setYearSelections] = useState([false, false, false, false]); // Year 버튼 상태를 저장할 변수
+  const [yearSelections, setYearSelections] = useState([
+    false,
+    false,
+    false,
+    false,
+  ]); // Year 버튼 상태를 저장할 변수
   const [isCertifying, setIsCertifying] = useState(false);
-  const [dreamSelections, setdreamSelections] = useState([false, false, false, false, false, false, false, false]); // dream 버튼 상태를 저장할 변수
-  const [clubSelections, setclubSelections] = useState([false, false, false, false, false, false, false, false, false, false]) // 동아리 버튼 상태를 저장할 변수
+  const [dreamSelections, setdreamSelections] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]); // dream 버튼 상태를 저장할 변수
+  const [clubSelections, setclubSelections] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]); // 동아리 버튼 상태를 저장할 변수
   const [selectedSkills, setSelectedSkills] = useState([]); // 중복 선택을 저장할 변수
   const [sideName, setSideName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,6 +62,7 @@ export default function Mypage() {
   };
 
   const LeavehandleEmailCertify = () => {
+ 
     setIsCertifying(false);
   };
 
@@ -45,19 +71,19 @@ export default function Mypage() {
     updatedSelections[index] = true;
     setYearSelections(updatedSelections);
   };
-  
+
   const toggledreamColor = (index) => {
     const updatedSelections = Array(8).fill(false);
     updatedSelections[index] = true;
     setdreamSelections(updatedSelections);
   };
 
-  const toggleclubColor = (index) => {    
+  const toggleclubColor = (index) => {
     const updatedSelections = Array(10).fill(false);
     updatedSelections[index] = true;
     setclubSelections(updatedSelections);
   };
-  
+
   const toggleSkill = (skill) => {
     const updatedSkills = [...selectedSkills];
 
@@ -75,7 +101,7 @@ export default function Mypage() {
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={true} />
         <div className="top">
           <p className="top1">{sideName}</p>
           <p className="top2">DGSW 8th</p>
@@ -94,27 +120,32 @@ export default function Mypage() {
           <div className="socialp">
             <div className="pT">
               <p>
-                <Link to={`https://github.com/${github}`} className="link1">
-                  <img src={github1}></img>
-                </Link>
-                <Link to={`https://github.com/${github}`} className="link2">
+                <a
+                  className="link1"
+                  href={`https://github.com/${github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={github1} alt="GitHub" />
+                </a>
+                <a className="link2" href={`mailto:${email}`}>
                   @{github}
-                </Link>
+                </a>
               </p>
               <p>
-                <Link className="link1">
+                <a className="link1">
                   <img src={mail}></img>
-                </Link>
-                <Link className="link2" href={`mailto:${email}`}>
+                </a>
+                <a className="link2" href={`mailto:${email}`}>
                   {" "}
                   {sideName}의 이메일{" "}
-                </Link>
+                </a>
               </p>
               <p>
                 <Link to="/mypage/kako" className="link1">
                   <img src={nm}></img>
                 </Link>
-                <Link className="link2">010-2612-2864</Link>
+                <a className="link2">010-2612-2864</a>
               </p>
             </div>
           </div>
@@ -146,16 +177,16 @@ export default function Mypage() {
         {isCertifying && (
           <div className="pagination">
             <div className="pagination-writing">
-              <div id="leave" onClick={LeavehandleEmailCertify}>
-                <div className="last-pagination">
-                  <img className="BackButton" src={Last} onClick={<Mypage />}/>
-                </div>
+            <div className="leave" onClick={LeavehandleEmailCertify}>
+                <img className="BackButton" src={Last} />
               </div>
               <div id="last-pagination">내 정보 입력하기</div>
               <form className="horseman">
                 <span className="writing">
                   당신의 기수를 알려주세요
-                  <div className="YearSelect"> {/* 콜백 함수를 사용해서 작성하였습니다 */}
+                  <div className="YearSelect">
+                    {" "}
+                    {/* 콜백 함수를 사용해서 작성하였습니다 */}
                     <div
                       className={`Year ${yearSelections[0] ? "selected" : ""}`}
                       onClick={() => toggleYearColor(0)}
@@ -163,19 +194,25 @@ export default function Mypage() {
                       6기(2021)
                     </div>
                     <div
-                      className={`elseYear ${yearSelections[1] ? "selected" : ""}`}
+                      className={`elseYear ${
+                        yearSelections[1] ? "selected" : ""
+                      }`}
                       onClick={() => toggleYearColor(1)}
                     >
                       7기(2022)
                     </div>
                     <div
-                      className={`elseYear ${yearSelections[2] ? "selected" : ""}`}
+                      className={`elseYear ${
+                        yearSelections[2] ? "selected" : ""
+                      }`}
                       onClick={() => toggleYearColor(2)}
                     >
                       8기(2023)
                     </div>
                     <div
-                      className={`elseYear ${yearSelections[3] ? "selected" : ""}`}
+                      className={`elseYear ${
+                        yearSelections[3] ? "selected" : ""
+                      }`}
                       onClick={() => toggleYearColor(3)}
                     >
                       9기(2024)
@@ -186,55 +223,73 @@ export default function Mypage() {
                   당신의 전공은 무엇인가요?
                   <div className="dreamSelect">
                     <div
-                      className={`elsedream ${dreamSelections[0] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[0] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(0)}
                     >
                       프론트엔드
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[1] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[1] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(1)}
                     >
                       백엔드
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[2] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[2] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(2)}
                     >
                       Android
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[3] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[3] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(3)}
                     >
                       iOS
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[4] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[4] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(4)}
                     >
                       임베디드
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[5] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[5] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(5)}
                     >
                       AI
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[6] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[6] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(6)}
                     >
                       정보보안
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[7] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[7] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(7)}
                     >
                       UI/UX 디자인
                     </div>
                     <div
-                      className={`elsedream ${dreamSelections[8] ? "selected" : ""}`}
+                      className={`elsedream ${
+                        dreamSelections[8] ? "selected" : ""
+                      }`}
                       onClick={() => toggledreamColor(8)}
                     >
                       풀스택
@@ -253,66 +308,80 @@ export default function Mypage() {
                 <span className="writing3">당신의 동아리는 무엇인가요?</span>
                 <div className="clubSelect">
                   <div
-                    className={`elseclub ${clubSelections[0] ? "selected" : ""}`}
+                    className={`elseclub ${
+                      clubSelections[0] ? "selected" : ""
+                    }`}
                     onClick={() => toggleclubColor(0)}
                   >
                     B1ND
                   </div>
                   <div
                     className={`elseclub ${
-                      clubSelections[1] ? "selected" : ""}`}
+                      clubSelections[1] ? "selected" : ""
+                    }`}
                     onClick={() => toggleclubColor(1)}
                   >
                     CNS
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[2] ? "selected" : ""
+                    className={`elseclub ${
+                      clubSelections[2] ? "selected" : ""
                     }`}
                     onClick={() => toggleclubColor(2)}
                   >
                     ALT
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[3] ? "selected" : ""}`}
+                    className={`elseclub ${
+                      clubSelections[3] ? "selected" : ""
+                    }`}
                     onClick={() => toggleclubColor(3)}
                   >
                     두카미
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[4] ? "selected" : ""}`}
+                    className={`elseclub ${
+                      clubSelections[4] ? "selected" : ""
+                    }`}
                     onClick={() => toggleclubColor(4)}
                   >
                     삼디
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[5] ? "selected" : ""
+                    className={`elseclub ${
+                      clubSelections[5] ? "selected" : ""
                     }`}
                     onClick={() => toggleclubColor(5)}
                   >
                     스페이스
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[6] ? "selected" : ""
+                    className={`elseclub ${
+                      clubSelections[6] ? "selected" : ""
                     }`}
                     onClick={() => toggleclubColor(6)}
                   >
                     모디
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[7] ? "selected" : ""}`}
+                    className={`elseclub ${
+                      clubSelections[7] ? "selected" : ""
+                    }`}
                     onClick={() => toggleclubColor(7)}
                   >
                     QI
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[8] ? "selected" : ""
+                    className={`elseclub ${
+                      clubSelections[8] ? "selected" : ""
                     }`}
                     onClick={() => toggleclubColor(8)}
                   >
                     DLC
                   </div>
                   <div
-                    className={`elseclub ${clubSelections[9] ? "selected" : ""
+                    className={`elseclub ${
+                      clubSelections[9] ? "selected" : ""
                     }`}
                     onClick={() => toggleclubColor(9)}
                   >
@@ -335,67 +404,89 @@ export default function Mypage() {
                 </span>
                 <div className="SkillsSelect">
                   <div
-                    className={`elseSkills ${selectedSkills.includes("HTML") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("HTML") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("HTML")}
                   >
                     HTML
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("CSS") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("CSS") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("CSS")}
                   >
                     CSS
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("JavaScript") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("JavaScript") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("JavaScript")}
                   >
                     JavaScript
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("REACT") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("REACT") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("REACT")}
                   >
                     REACT
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("Nood.js") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("Nood.js") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("Nood.js")}
                   >
                     Nood.js
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("JAVA") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("JAVA") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("JAVA")}
                   >
                     JAVA
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("Spring") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("Spring") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("Spring")}
                   >
                     Spring
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("Spring Boot") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("Spring Boot") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("Spring Boot")}
                   >
                     Spring Boot
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("Kotlin") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("Kotlin") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("Kotlin")}
                   >
                     Kotlin
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("Swift") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("Swift") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("Swift")}
                   >
                     Kotlin
                   </div>
                   <div
-                    className={`elseSkills ${selectedSkills.includes("GG") ? "selected" : ""}`}
+                    className={`elseSkills ${
+                      selectedSkills.includes("GG") ? "selected" : ""
+                    }`}
                     onClick={() => toggleSkill("GG")}
                   >
                     GG

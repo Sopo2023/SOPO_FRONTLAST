@@ -11,7 +11,6 @@
   "include": [
     "src",
     "@types/images.d.ts",
-    "src/Components/Mypage/mypage.jsx",
     "src/index.tsx"
   ]
 }
