@@ -1,5 +1,4 @@
 import React from "react";
-import "../side.css";
 import * as s from "../side.style";
 import { useState, useEffect } from "react";
 import hp from "src/Assets/image/hp.png";
