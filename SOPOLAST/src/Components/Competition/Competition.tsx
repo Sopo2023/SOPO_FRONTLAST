@@ -5,6 +5,8 @@ import Head from "../../constants/head/Head/head";
 import "./Competition.css";
 import { useNavigate } from "react-router-dom";
 
+import * as S from "../Competition/competiton.sytle"
+
 function Competition() {
   const majorClick = (major) => {
     console.log(`Clicked on ${major}`);
@@ -30,127 +32,137 @@ function Competition() {
       <div className="content">
         <Head active={true} />
         <Sidname />
-        <div className="searchBox">
-          <div className="search">
-            <input className="search_box"></input>
-            <input type="button" className="search_icon"></input>
-            <div className="searcg_icon_line"></div>
-          </div>
-          <div className="stackLine">
-            <select className="gradeSelet">
-              <option>8기 </option>
-              <option>7기 </option>
-              <option>6기 </option>
-            </select>
-            <div className="gradegreen"> | </div>
-            <div className="majorSelect">
+        <S.SearchBox>
+          <S.Search>
+            <S.Searchbox/>
+            <S.SearchIcon type="button"/>
+            <S.serchIconLine/>
+          </S.Search>
+
+          <S.StackLine>
+            <>
+              <S.GradeSelect className="gradeSelect">
+                <option value="8">8기 </option>
+                <option value="7">7기 </option>
+                <option value="6">6기 </option>
+              </S.GradeSelect>
+            </>
+
+            <S.GradeGreen> | </S.GradeGreen>
+            <S.MajorSelect>
               <button
                 className="majorbutton"
-                onClick={() => majorClick("프론트엔드")}
+                onClick={() => majorClick('프론트엔드')}
               >
                 프론트엔드
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick("백엔드")}
+                onClick={() => majorClick('백엔드')}
               >
                 백엔드
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick("안드로이드")}
+                onClick={() => majorClick('안드로이드')}
               >
                 안드로이드
               </button>
 
-              <button className="majorbutton" onClick={() => majorClick("iOS")}>
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('iOS')}
+              >
                 iOS
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick("임베디드")}
+                onClick={() => majorClick('임베디드')}
               >
                 임베디드
               </button>
 
-              <button className="majorbutton" onClick={() => majorClick("AI")}>
+              <button
+              className="majorbutton"
+              onClick={() => majorClick('AI')}
+              >
                 AI
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick("정보보안")}
+                onClick={() => majorClick('정보보안')}
               >
                 정보보안
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick("디자인")}
+                onClick={() => majorClick('디자인')}
               >
                 디자인
               </button>
-            </div>
-          </div>
-        </div>
-        <div className="mo1">
-          <div
-            className="gatherBox"
+            </S.MajorSelect>
+          </S.StackLine>
+        </S.SearchBox>
+
+        <S.Mo1>
+          <S.GatherBox
             onClick={() => {
               navigate("/CompetitionSub");
             }}
           >
-            <div className="gatherTitle">
+            <S.GatherTitle>
               {" "}
               8기 프론트엔드 헬뉴월 해커톤 <br></br> 같이 나갈 분 구해용~~{" "}
-            </div>
-            <div className="gatherGradeName"> DGSW 8th 배채희 </div>
-            <div className="gatherMail"> Mail - chaeeehui@gmail.com </div>
-          </div>
-          <div className="gatherBox2">
-            <div className="gatherTitle">
+            </S.GatherTitle>
+            <S.GatherGradeName> DGSW 8th 배채희 </S.GatherGradeName>
+            <S.GatherMail> Mail - chaeeehui@gmail.com </S.GatherMail>
+          </S.GatherBox>
+          <S.GatherBox2>
+            <S.GatherTitle>
               {" "}
               ICT 창업경진대회 <br></br> 같이 나갈 프론트 있나요??
-            </div>
-            <div className="gatherGradeName"> DGSW 8th 박규민 </div>
-            <div className="gatherMail"> Mail - kyumin@gmail.com </div>
-          </div>
-          <div className="gatherBox3">
-            <div className="gatherTitle">
+            </S.GatherTitle>
+            <S.GatherGradeName> DGSW 8th 박규민 </S.GatherGradeName>
+            <S.GatherMail> Mail - kyumin@gmail.com </S.GatherMail>
+          </S.GatherBox2>
+          <S.GatherBox3>
+            <S.GatherTitle>
               {" "}
               저 대회나가려고 하는데 8기 <br></br>프론트 아무나 구해요.
-            </div>
-            <div className="gatherGradeName"> DGSW 7th 이해준 </div>
-            <div className="gatherMail"> Mail - haejoon@gmail.com </div>
-          </div>
-          <div className="gatherBox4">
-            <div className="gatherTitle">
+            </S.GatherTitle>
+            <S.GatherGradeName> DGSW 7th 이해준 </S.GatherGradeName>
+            <S.GatherMail> Mail - haejoon@gmail.com </S.GatherMail>
+          </S.GatherBox3>
+          <S.GatherBox4>
+            <S.GatherTitle>
               {" "}
               하이톤 나갈 8기 <br></br>프론트 연락주세요{" "}
-            </div>
-            <div className="gatherGradeName"> DGSW 7th 김가영 </div>
-            <div className="gatherMail"> Mail - kiku@gmail.com </div>
-          </div>
-          <div className="gatherBox5">
-            <div className="gatherTitle">
+            </S.GatherTitle>
+            <S.GatherGradeName> DGSW 7th 김가영 </S.GatherGradeName>
+            <S.GatherMail> Mail - kiku@gmail.com </S.GatherMail>
+          </S.GatherBox4>
+          <S.GatherBox5>
+            <S.GatherTitle>
               {" "}
               저랑 스택 나갈 프론트... <br></br> 혹시 있나요??
-            </div>
-            <div className="gatherGradeName"> DGSW 8th 제민국 </div>
-            <div className="gatherMail"> Mail - jegal@gmail.com </div>
-          </div>
-          <div className="gatherBox6">
-            <div className="gatherTitle">
+            </S.GatherTitle>
+            <S.GatherGradeName> DGSW 8th 제민국 </S.GatherGradeName>
+            <S.GatherMail> Mail - jegal@gmail.com </S.GatherMail>
+          </S.GatherBox5>
+          <S.GatherBox6>
+            <S.GatherTitle>
               {" "}
               헬로뉴월드 같이 나갈 <br></br> 프론트엔드 개발자 구합니다.
-            </div>
-            <div className="gatherGradeName"> DGSW 8th 김호준 </div>
-            <div className="gatherMail"> Mail - gaemi@gmail.com </div>
-          </div>
-        </div>
+            </S.GatherTitle>
+            <S.GatherGradeName> DGSW 8th 김호준 </S.GatherGradeName>
+            <S.GatherMail> Mail - gaemi@gmail.com </S.GatherMail>
+          </S.GatherBox6>
+        </S.Mo1>
       </div>
     </div>
   );

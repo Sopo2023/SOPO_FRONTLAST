@@ -99,3 +99,4 @@ export const MajorSelect = styled.div`
     position: relative;
     
 `
+
