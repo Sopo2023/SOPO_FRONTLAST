@@ -49,107 +49,98 @@ export default function Portfolio() {
 
             <S.GradeGreen> | </S.GradeGreen>
             <S.MajorSelect>
-              <button
-                className="majorbutton"
+              <S.MajorButton
                 onClick={() => majorClick('프론트엔드')}
               >
                 프론트엔드
-              </button>
+              </S.MajorButton>
 
-              <button
-                className="majorbutton"
+              <S.MajorButton
                 onClick={() => majorClick('백엔드')}
               >
                 백엔드
-              </button>
+              </S.MajorButton>
 
-              <button
-                className="majorbutton"
+              <S.MajorButton
                 onClick={() => majorClick('안드로이드')}
               >
                 안드로이드
-              </button>
+              </S.MajorButton>
 
-              <button
-              className="majorbutton"
+              <S.MajorButton
               onClick={() => majorClick('iOS')}
               >
                 iOS
-              </button>
+              </S.MajorButton>
 
-              <button
-                className="majorbutton"
+              <S.MajorButton
                 onClick={() => majorClick('임베디드')}
               >
                 임베디드
-              </button>
+              </S.MajorButton>
 
-              <button
-              className="majorbutton"
+              <S.MajorButton
               onClick={() => majorClick('AI')}
               >
                 AI
-              </button>
+              </S.MajorButton>
 
-              <button
-                className="majorbutton"
+              <S.MajorButton
                 onClick={() => majorClick('정보보안')}
               >
                 정보보안
-              </button>
+              </S.MajorButton>
 
-              <button
-                className="majorbutton"
+              <S.MajorButton
                 onClick={() => majorClick('디자인')}
               >
                 디자인
-              </button>
+              </S.MajorButton>
             </S.MajorSelect>
           </S.StackLine>
         </S.SearchBox>
 
         <Sidename />
-        <div className="mo">
-          <div
+        <S.Mo>
+          <S.NameCardBox
             className="namecardBox"
             onClick={() => {
               navigate("/52562893");
             }}
           >
-            <div className="nameName">배채희</div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - chaeeehui@gmail.com </div>
-          </div>
+            <S.CardName>배채희</S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - chaeeehui@gmail.com </S.CardMail>
+          </S.NameCardBox>
 
-          <div
-            className="namecardBox2"
+          <S.NameCardBox2
             onClick={() => {
               navigate("/12362153");
             }}
           >
-            <div className="nameName">박규민</div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - kyumin7487@gmail.com </div>
-          </div>
+            <S.CardName>박규민</S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - kyumin7487@gmail.com </S.CardMail>
+          </S.NameCardBox2>
 
-          <div className="namecardBox3">
-            <div className="nameName"> 전우진 </div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - woojin@gmail.com </div>
-          </div>
+          <S.NameCardBox3>
+            <S.CardName> 전우진 </S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - woojin@gmail.com </S.CardMail>
+          </S.NameCardBox3>
 
-          <div className="namecardBox5">
-            <div className="nameName"> 이윤선 </div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - younssun@gmail.com </div>
-          </div>
+          <S.NameCardBox5>
+            <S.CardName> 이윤선 </S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - younssun@gmail.com </S.CardMail>
+          </S.NameCardBox5>
 
-          <div className="namecardBox4">
-            <div className="nameName"> 이예진 </div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - yejin@gmail.com </div>
-          </div>
-        </div>
+          <S.NameCardBox4>
+            <S.CardName> 이예진 </S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - yejin@gmail.com </S.CardMail>
+          </S.NameCardBox4>
+        </S.Mo>
       </div>
     </div>
   );
