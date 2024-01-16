@@ -69,7 +69,7 @@ export const StackLine = styled.div`
     display: inline-block;
 `
 
-export const GradeSelect = styled.div`
+export const GradeSelect = styled.select`
     width: 80px;
     height: 40px;
     color: #000;
@@ -77,9 +77,25 @@ export const GradeSelect = styled.div`
     font-size: 30px;
     font-weight: 600;
     font-family: Inter;
-
     margin-top: 20px;
-
     display: inline;
+`
 
+export const GradeGreen = styled.div`
+    color: green;
+    font-size: 30px;
+    position: relative;
+    display: inline;
+`
+
+export const MajorSelect = styled.div`
+    display: inline;
+    color: #A7A7A7;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    
 `

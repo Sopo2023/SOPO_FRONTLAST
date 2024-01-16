@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import cnsLogo from "../../Assets/image/cnsLogo.png";
 import b1nd from "../../Assets/image/b1nd.png";
-import Sidename from "../../constants/Sidebar/side";
+import Sidename from "src/constants/Sidebar/Side/side";
 import "./protfolio.css";
 import Head from "../../constants/head/Head/head"
 
@@ -39,16 +39,16 @@ export default function Portfolio() {
           </S.Search>
 
           <S.StackLine>
-            <S.GradeSelect>
-              <select className="gradeSelect">
+            <>
+              <S.GradeSelect className="gradeSelect">
                 <option value="8">8기 </option>
                 <option value="7">7기 </option>
                 <option value="6">6기 </option>
-              </select>
-            </S.GradeSelect>
+              </S.GradeSelect>
+            </>
 
-            <div className="gradegreen"> | </div>
-            <div className="majorSelect">
+            <S.GradeGreen> | </S.GradeGreen>
+            <S.MajorSelect>
               <button
                 className="majorbutton"
                 onClick={() => majorClick('프론트엔드')}
@@ -104,7 +104,7 @@ export default function Portfolio() {
               >
                 디자인
               </button>
-            </div>
+            </S.MajorSelect>
           </S.StackLine>
         </S.SearchBox>
 
