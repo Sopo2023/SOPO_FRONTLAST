@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const SearchBox = styled.div`
     display: flex;
@@ -100,146 +100,121 @@ export const MajorSelect = styled.div`
     
 `
 
-
-export const MajorButton = styled.button`
-    border: none;
-    background-color: none;
-    padding: 13px;
-    display: inline;
-    color: #A7A7A7;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    position: relative;
-    background: none;
-    cursor: pointer;
-`
-
-export const MajorButtonHover = styled(MajorButton)`
-    &:hover {
-        color: #1A9A18 !important;
-    }
-`
-
-export const MajorButtonClicked = styled(MajorButton)`
-    &:active {
-        color: #1A9A18 !important;
-    }
-`
-
-export const Mo = styled.div`
+export const Mo1 = styled.div`
     position: absolute;
-    left: 460px;
     top: 200px;
+    left: 490px;
     width: 900px;
-    height: 1000px;
-`;
-export const NameCardBox = styled.div`
-    width: 840px;
-    height: 130px;
+    height: 800px;
+`
+
+export const GatherBox = styled.div`
+    width: 398px;
+    height: 210px;
     flex-shrink: 0;
+    cursor: pointer;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: absolute;
-    margin-left: 22px;
-    margin-top: 30px;
-    display: inline-block;
-`;
+    margin-top: 39px;
+`
 
-export const HoveredNameCardBox = styled(NameCardBox)`
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-export const CardName = styled.div`
+export const GatherTitle = styled.div`
     color: #000;
     font-family: Inter;
     font-size: 25px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    position: absolute;
     margin-top: 22px;
     margin-left: 33px;
 `
 
-export const CardGrade = styled.div`
+
+
+export const GatherGradeName = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    margin-top: 55px;
+    margin-top: 53px;
     margin-left: 33px;
 `
 
-export const CardMail = styled.div`
+export const GatherMail = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    position: absolute;
-    margin-top: 99px;
+    margin-top: 7px;
     margin-left: 33px;
 `
 
-export const NameCardBox2 = styled.div`
-    width: 840px;
-    height: 130px;
+export const GatherBox2 = styled.div`
+    width: 398px;
+    height: 210px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: absolute;
-    margin-left: 22px;
-    margin-top: 180px;
-    cursor: pointer;
-    display: inline-block;
-`;
+    margin-top: 39px;
+    margin-left: 430px;
+`
 
-export const NameCardBox3 = styled.div`
-    width: 840px;
-    height: 130px;
+export const GatherBox3 = styled.div`
+    width: 398px;
+    height: 210px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: absolute;
-    margin-left: 22px;
-    margin-top: 330px;
-    display: inline-block;
-`;
+    margin-top: 280px;
+`
 
-export const NameCardBox4 = styled.div`
-    width: 840px;
-    height: 130px;
+export const GatherBox4 = styled.div`
+    width: 398px;
+    height: 210px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: absolute;
-    margin-left: 22px;
-    margin-top: 480px;
-    display: inline-block;
-`;
+    margin-top: 280px;
+    margin-left: 430px;
+`
 
-export const NameCardBox5 = styled.div`
-    width: 840px;
-    height: 130px;
+export const GatherBox5 = styled.div`
+    width: 398px;
+    height: 210px;
     flex-shrink: 0;
+  
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
     position: absolute;
-    margin-left: 22px;
-    margin-top: 640px;
-    display: inline-block;
-`;
+  
+    margin-top: 521px;
+`
+
+export const GatherBox6 = styled.div`
+    width: 398px;
+    height: 210px;
+    flex-shrink: 0;
+  
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    position: absolute;
+  
+    margin-top: 521px;
+    margin-left: 430px;
+`
