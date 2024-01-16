@@ -1,6 +1,7 @@
-/* .content{
-  overflow-x: hidden;
-} */
+.real_img {
+  width: 250px;
+  height: 170px;
+}
 .SOPO {
   text-decoration: none; /* 밑줄 제거 */
   color: #1a9a18;
@@ -52,9 +53,9 @@ ul {
   color: #1a9a18;
 }
 .top {
-  position: absolute;
+  position: relative;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 120px;
 }
 .top1 {
   font-size: 30px;
@@ -94,10 +95,8 @@ ul {
   font-size: 20px;
   font-weight: 600;
   margin: 0 0 0 60px;
-
   margin-bottom: 10px;
 }
-
 .head2 {
   font-size: 27px;
 
@@ -108,7 +107,7 @@ ul {
   margin-top: 150px;
 }
 
-.body {
+.body2 {
   display: flex;
   width: 1570px;
   height: 100px;
@@ -135,7 +134,6 @@ ul {
 }
 
 .socialp {
-  /* background-color: #F5F5F6; */
   width: 1570px;
   height: 120px;
   border-radius: 10px;
@@ -191,7 +189,7 @@ ul {
   width: 1430px;
   height: 400px;
   margin-left: -40px;
-  margin-top: 120px;
+  margin-top: 180px;
   /* background-color: #dddddd; */
 }
 
@@ -252,15 +250,9 @@ ul {
 .post_1 > .post-write > .img {
   position: relative;
   width: 100px;
-  left: 60%;
+  left: 75%;
   bottom: 9.5vh;
 }
-/* .post_mainnn{
-  position: absolute;
-  left: 300px;
-} */
-
-
 .pagination {
   position: absolute;
   width: 100%;
@@ -280,14 +272,15 @@ ul {
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
-#leave{
+.leave{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 40px;
+  top: 30px;
   cursor: pointer;
 }
-.last-pagination{
-  position: absolute;
-  left: 40px;
-  top: 10px;
-}
+
 #last-pagination{
   position: absolute;
   top: 40px;
@@ -365,10 +358,9 @@ ul {
 }
 .horseman{
   position: absolute;
-  top: 100px;
+  top: 65px;
   width: 100%;
-  height: 500px;
-  background-color: #1a9a18;
+  height: 1500px;
 }
 @keyframes pagination {
   0% {top: 700px;}
@@ -417,7 +409,7 @@ ul {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-left: -75px;
+  margin-left: -150px;
 }
 
 .YearSelect > .Year{
@@ -689,4 +681,7 @@ ul {
 .elseSkills:hover{
   cursor: pointer;
   color: #178915;
+}
+.BackButton {
+  cursor: pointer;
 }

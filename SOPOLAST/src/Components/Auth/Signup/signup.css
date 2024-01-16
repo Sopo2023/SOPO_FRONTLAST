@@ -1,0 +1,72 @@
+.box1 button.Certified {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #1a9a18;
+  color: #fff;
+  height: 50px;
+  width: 80px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  right: 20px;
+}
+
+.box1 .Certificationbox .completed {
+  display: inline;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #1a9a18;
+  color: #fff;
+  margin: 10px;
+  height: 50px;
+  width: 80px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.box1 input.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #1a9a18;
+  color: #fff;
+  margin: 10px;
+  height: 50px;
+  width: 400px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.box1 .Certificationbox input.Certificationbox {
+  border: none;
+  border-bottom: 2px solid #898989;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  height: 34px;
+  width: 260px;
+  font-size: 16px;
+}
+
+.LogLink {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  color: #47a1f3;
+}
+.LogLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

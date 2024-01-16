@@ -1,10 +1,16 @@
 {
-    "compilerOptions": {
-      "esModuleInterop": true,
-      "resolveJsonModule": true,
-      "jsx": "react"
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "paths": {
+      "@src/*": ["src/*"]
     },
-    
-    
-  }
-  
+    "baseUrl": ".",
+  },
+  "include": [
+    "src",
+    "@types/images.d.ts",
+    "src/index.tsx"
+  ]
+}
