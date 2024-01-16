@@ -1,7 +1,7 @@
 // import yogiyo from "../../Assets/image/1.png"
 // import comment from "../../Assets/image/comment.png"
-import Head from "../constants/head/head";
-import Sidebar from "../constants/Sidebar/side";
+import Head from "../constants/head/Head/head";
+import Sidebar from "../constants/Sidebar/Side/side";
 import "../Components/Portfoliosub/portfolioSub.css";
 
 import org from "../Assets/image/org.png";
