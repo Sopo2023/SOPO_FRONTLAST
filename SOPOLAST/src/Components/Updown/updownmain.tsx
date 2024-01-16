@@ -1,7 +1,7 @@
 import React from "react";
 import "./updown.css";
 import { Link, useNavigate } from "react-router-dom";
-import Sidename from "../../constants/Sidebar/Side/side";
+import Sidename from "src/constants/Sidebar/Side/side";
 import TEST5 from "../../Assets/image/3.png";
 import TEST6 from "../../Assets/image/1.png";
 import TEST7 from "../../Assets/image/2.png";

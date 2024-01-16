@@ -1,6 +1,6 @@
 import React from "react";
 import "./cometitionsub.css";
-import Side from "../../constants/Sidebar/Side/side";
+import Side from "src/constants/Sidebar/Side/side";
 import "./cometitionsub.css";
 import Head from "../../constants/head/Head/head";
 import { useNavigate } from "react-router-dom";
