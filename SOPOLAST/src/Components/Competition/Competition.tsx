@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Sidname from "../../constants/Sidebar/side";
+import Sidname from "../../constants/Sidebar/Side/side";
 import Head from "../../constants/head/Head/head";
 import "./Competition.css";
 import { useNavigate } from "react-router-dom";
@@ -10,14 +10,15 @@ function Competition() {
     console.log(`Clicked on ${major}`);
   };
 
-  const majorbutton: HTMLElement | null = document.getElementById('majorbutton');
+  const majorbutton: HTMLElement | null =
+    document.getElementById("majorbutton");
 
   if (majorbutton) {
-    majorbutton.addEventListener('click', function() {
-      if (majorbutton.classList.contains('clicked')) {
-        majorbutton.classList.remove('clicked');
+    majorbutton.addEventListener("click", function () {
+      if (majorbutton.classList.contains("clicked")) {
+        majorbutton.classList.remove("clicked");
       } else {
-        majorbutton.classList.add('clicked');
+        majorbutton.classList.add("clicked");
       }
     });
   }
@@ -27,7 +28,7 @@ function Competition() {
   return (
     <div className="main">
       <div className="content">
-        <Head active={true}/>
+        <Head active={true} />
         <Sidname />
         <div className="searchBox">
           <div className="search">
@@ -44,59 +45,53 @@ function Competition() {
             <div className="gradegreen"> | </div>
             <div className="majorSelect">
               <button
-              className="majorbutton"
-              onClick={() => majorClick('프론트엔드')}
+                className="majorbutton"
+                onClick={() => majorClick("프론트엔드")}
               >
-              프론트엔드
+                프론트엔드
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('백엔드')}
+                className="majorbutton"
+                onClick={() => majorClick("백엔드")}
               >
-              백엔드
+                백엔드
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('안드로이드')}
+                className="majorbutton"
+                onClick={() => majorClick("안드로이드")}
               >
-              안드로이드
+                안드로이드
+              </button>
+
+              <button className="majorbutton" onClick={() => majorClick("iOS")}>
+                iOS
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('iOS')}
+                className="majorbutton"
+                onClick={() => majorClick("임베디드")}
               >
-              iOS
+                임베디드
+              </button>
+
+              <button className="majorbutton" onClick={() => majorClick("AI")}>
+                AI
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('임베디드')}
+                className="majorbutton"
+                onClick={() => majorClick("정보보안")}
               >
-              임베디드
+                정보보안
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('AI')}
+                className="majorbutton"
+                onClick={() => majorClick("디자인")}
               >
-              AI
-              </button>
-
-              <button
-              className="majorbutton"
-              onClick={() => majorClick('정보보안')}
-              >
-              정보보안
-              </button>
-
-              <button
-              className="majorbutton"
-              onClick={() => majorClick('디자인')}
-              >
-              디자인
+                디자인
               </button>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import yogiyo from "../../Assets/image/1.png";
 import comment from "../../Assets/image/comment.png";
 import Head from "../../constants/head/Head/head";
-import Sidebar from "../../constants/Sidebar/side";
+import Sidebar from "../../constants/Sidebar/Side/side";
 import "./portfolioSub.css";
 
 import org from "../../Assets/image/org.png";
@@ -16,7 +16,7 @@ function Portfoliosubon() {
   return (
     <div className="main">
       <div className="content">
-        <Head active={false}/>
+        <Head active={false} />
         <Sidebar />
         <div className="mo_portfolio">
           <div className="allPort">
