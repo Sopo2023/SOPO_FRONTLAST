@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Sidename from "src/constants/Sidebar/Side/side";
 import Head from "../../constants/head/Head/head";
+import UpdownPost from "../../Components/Updown/Post/Post";
 import * as s from "../Updown/Updown.style";
 
 export default function Updown() {
@@ -15,6 +16,7 @@ export default function Updown() {
           <s.Search_icon></s.Search_icon>
           <s.Searcg_icon_line></s.Searcg_icon_line>
         </s.Search1>
+        <UpdownPost/>
     </s.Main>
   );
 }
