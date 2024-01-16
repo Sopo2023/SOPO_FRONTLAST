@@ -3,7 +3,6 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import Head from "../../constants/head/Head/head";
 import Side from "../../constants/Sidebar/Side/side";
-import "./write.css";
 import ImgPlus from "src/Assets/image/imgplus.png";
 import SubmitImg from "src/Assets/image/submitimg.png";
 import * as s from "./Write.style";
