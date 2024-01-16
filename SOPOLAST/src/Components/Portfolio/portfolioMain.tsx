@@ -2,24 +2,24 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import cnsLogo from "../../Assets/image/cnsLogo.png";
 import b1nd from "../../Assets/image/b1nd.png";
-import Sidename from "../../constants/Sidebar/side";
+import Sidename from "../../constants/Sidebar/Side/side";
 import "./protfolio.css";
-import Head from "../../constants/head/Head/head"
-
+import Head from "../../constants/head/Head/head";
 
 export default function Portfolio() {
   const majorClick = (major) => {
     console.log(`Clicked on ${major}`);
   };
 
-  const majorbutton: HTMLElement | null = document.getElementById('majorbutton');
+  const majorbutton: HTMLElement | null =
+    document.getElementById("majorbutton");
 
   if (majorbutton) {
-    majorbutton.addEventListener('click', function() {
-      if (majorbutton.classList.contains('clicked')) {
-        majorbutton.classList.remove('clicked');
+    majorbutton.addEventListener("click", function () {
+      if (majorbutton.classList.contains("clicked")) {
+        majorbutton.classList.remove("clicked");
       } else {
-        majorbutton.classList.add('clicked');
+        majorbutton.classList.add("clicked");
       }
     });
   }
@@ -28,7 +28,7 @@ export default function Portfolio() {
   return (
     <div className="main">
       <div className="content">
-        <Head active={true}/>
+        <Head active={true} />
 
         <div className="searchBox">
           <div className="search">
@@ -38,70 +38,64 @@ export default function Portfolio() {
           </div>
 
           <div className="stackLine">
-          <div className="gradeSelect">
-          <select className="gradeSelect">
-              <option value="8">8기 </option>
-              <option value="7">7기 </option>
-              <option value="6">6기 </option>
-            </select>
-          </div>
+            <div className="gradeSelect">
+              <select className="gradeSelect">
+                <option value="8">8기 </option>
+                <option value="7">7기 </option>
+                <option value="6">6기 </option>
+              </select>
+            </div>
 
             <div className="gradegreen"> | </div>
             <div className="majorSelect">
               <button
-              className="majorbutton"
-              onClick={() => majorClick('프론트엔드')}
+                className="majorbutton"
+                onClick={() => majorClick("프론트엔드")}
               >
-              프론트엔드
+                프론트엔드
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('백엔드')}
+                className="majorbutton"
+                onClick={() => majorClick("백엔드")}
               >
-              백엔드
+                백엔드
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('안드로이드')}
+                className="majorbutton"
+                onClick={() => majorClick("안드로이드")}
               >
-              안드로이드
+                안드로이드
+              </button>
+
+              <button className="majorbutton" onClick={() => majorClick("iOS")}>
+                iOS
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('iOS')}
+                className="majorbutton"
+                onClick={() => majorClick("임베디드")}
               >
-              iOS
+                임베디드
+              </button>
+
+              <button className="majorbutton" onClick={() => majorClick("AI")}>
+                AI
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('임베디드')}
+                className="majorbutton"
+                onClick={() => majorClick("정보보안")}
               >
-              임베디드
+                정보보안
               </button>
 
               <button
-              className="majorbutton"
-              onClick={() => majorClick('AI')}
+                className="majorbutton"
+                onClick={() => majorClick("디자인")}
               >
-              AI
-              </button>
-
-              <button
-              className="majorbutton"
-              onClick={() => majorClick('정보보안')}
-              >
-              정보보안
-              </button>
-
-              <button
-              className="majorbutton"
-              onClick={() => majorClick('디자인')}
-              >
-              디자인
+                디자인
               </button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./cometitionsub.css";
-import Side from "../../constants/Sidebar/side";
+import Side from "../../constants/Sidebar/Side/side";
 import "./cometitionsub.css";
 import Head from "../../constants/head/Head/head";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="main">
       <div className="content">
-        <Head active={false}/>
+        <Head active={false} />
         <Side />
         <div className="compBox1">
           <div className="compBack1" onClick={goBack}>
