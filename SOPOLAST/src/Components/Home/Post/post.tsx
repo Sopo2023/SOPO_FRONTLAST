@@ -137,22 +137,7 @@ const Post = () => {
           <s.Postimg>
             <img src={bind} alt="이미지"></img>
           </s.Postimg>
-        </s.PostWrite>
-        <s.PostWrite>
-          <s.PostZonecontrol>
-            <span> 조현아 </span>
-            <span> 자료구조 시험을 치고나서 </span>
-            <span>
-              {" "}
-              난 자료구조 시험을 중간고사에 치고서 배운점이 많이 생겨서 다른
-              학생들도 알면 좋을것 같단 생각에 이 글을 쓰게 되었다!!{" "}
-            </span>
-            <span>2023.09.12</span>
-          </s.PostZonecontrol>
-          <s.Postimg>
-            <img className="real_img" src={Jagu} alt="이미지"></img>
-          </s.Postimg>
-        </s.PostWrite>
+        </s.PostWrite>      
       </s.PostVeiw>
     </>
   );

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const PostVeiw = styled.div`
-  overflow-x: hidden;
   position: relative;
   width: 60%;
   height: 750px;
