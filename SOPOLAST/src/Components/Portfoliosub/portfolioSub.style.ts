@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
+export const AllContainer = styled.div`
+    position: relative;
+`
+
 export const MoPortfolio = styled.div`
-    position: absolute;
+    position: relative;
     left: 20%;
-    width: 70%;
+    width: 100%;
     height: 100%;
     
     display: flex;
@@ -230,7 +234,7 @@ export const MyStroy = styled.div`
 
 export const PlusButton = styled.div`
     display: inline;
-    position: absolute;
+    position: relative;
 `
 
 export const HrGreen = styled.div`
