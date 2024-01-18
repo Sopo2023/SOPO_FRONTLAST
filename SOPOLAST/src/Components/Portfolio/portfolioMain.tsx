@@ -2,87 +2,145 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import cnsLogo from "../../Assets/image/cnsLogo.png";
 import b1nd from "../../Assets/image/b1nd.png";
-import Sidename from "../../constants/Sidebar/side";
+import Sidename from "src/constants/Sidebar/Side/side";
 import "./protfolio.css";
-import Head from "../../constants/head/head";
+import Head from "../../constants/head/Head/head"
+
+import * as S from "../Portfolio/portfolioMain.style"
 
 export default function Portfolio() {
-  const navigate = useNavigate();
+  const majorClick = (major) => {
+    console.log(`Clicked on ${major}`);
+  };
 
+  const majorbutton: HTMLElement | null = document.getElementById('majorbutton');
+
+  if (majorbutton) {
+    majorbutton.addEventListener('click', function() {
+      if (majorbutton.classList.contains('clicked')) {
+        majorbutton.classList.remove('clicked');
+      } else {
+        majorbutton.classList.add('clicked');
+      }
+    });
+  }
+
+  const navigate = useNavigate();
   return (
     <div className="main">
       <div className="content">
-        <Head />
+        <Head active={true}/>
 
-        <div className="searchBox">
-          <div className="search">
-            <input className="search_box"></input>
-            <input type="button" className="search_icon"></input>
-            <div className="searcg_icon_line"></div>
-          </div>
+        <S.SearchBox>
+          <S.Search>
+            <S.Searchbox/>
+            <S.SearchIcon type="button"/>
+            <S.serchIconLine/>
+          </S.Search>
 
-          <div className="stackLine">
-            <select className="gradeSelet">
-              <option value="8">8기 </option>
-              <option value="7">7기 </option>
-              <option value="6">6기 </option>
-            </select>
-            <div className="gradegreen"> | </div>
-            <div className="majorSelect">
-              <div className="frontEnd"> 프론트엔드 </div>
-              <div className="elseMajor"> 백엔드 </div>
-              <div className="elseMajor"> 안드로이드 </div>
-              <div className="elseMajor"> iOS </div>
-              <div className="elseMajor"> 임베디드 </div>
-              <div className="elseMajor"> AI </div>
-              <div className="elseMajor"> 정보보안 </div>
-              <div className="elseMajor"> 디자인 </div>
-            </div>
-          </div>
-        </div>
+          <S.StackLine>
+            <>
+              <S.GradeSelect className="gradeSelect">
+                <option value="8">8기 </option>
+                <option value="7">7기 </option>
+                <option value="6">6기 </option>
+              </S.GradeSelect>
+            </>
+
+            <S.GradeGreen> | </S.GradeGreen>
+            <S.MajorSelect>
+              <S.MajorButton
+                onClick={() => majorClick('프론트엔드')}
+              >
+                프론트엔드
+              </S.MajorButton>
+
+              <S.MajorButton
+                onClick={() => majorClick('백엔드')}
+              >
+                백엔드
+              </S.MajorButton>
+
+              <S.MajorButton
+                onClick={() => majorClick('안드로이드')}
+              >
+                안드로이드
+              </S.MajorButton>
+
+              <S.MajorButton
+              onClick={() => majorClick('iOS')}
+              >
+                iOS
+              </S.MajorButton>
+
+              <S.MajorButton
+                onClick={() => majorClick('임베디드')}
+              >
+                임베디드
+              </S.MajorButton>
+
+              <S.MajorButton
+              onClick={() => majorClick('AI')}
+              >
+                AI
+              </S.MajorButton>
+
+              <S.MajorButton
+                onClick={() => majorClick('정보보안')}
+              >
+                정보보안
+              </S.MajorButton>
+
+              <S.MajorButton
+                onClick={() => majorClick('디자인')}
+              >
+                디자인
+              </S.MajorButton>
+            </S.MajorSelect>
+          </S.StackLine>
+        </S.SearchBox>
 
         <Sidename />
-        <div className="mo">
-          <div
+        <S.Mo>
+          <S.NameCardBox
             className="namecardBox"
             onClick={() => {
               navigate("/52562893");
             }}
           >
-            <div className="nameName">배채희</div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - chaeeehui@gmail.com </div>
-          </div>
+            <S.CardName>배채희</S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - chaeeehui@gmail.com </S.CardMail>
+          </S.NameCardBox>
 
-          <div
-            className="namecardBox2"
+          <S.NameCardBox2
             onClick={() => {
               navigate("/12362153");
             }}
           >
-            <div className="nameName">박규민</div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - kyumin7487@gmail.com </div>
-          </div>
+            <S.CardName>박규민</S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - kyumin7487@gmail.com </S.CardMail>
+          </S.NameCardBox2>
 
-          <div className="namecardBox3">
-            <div className="nameName"> 전우진 </div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - woojin@gmail.com </div>
-          </div>
+          <S.NameCardBox3>
+            <S.CardName> 전우진 </S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - woojin@gmail.com </S.CardMail>
+          </S.NameCardBox3>
 
-          <div className="namecardBox5">
-            <div className="nameName"> 이윤선 </div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - younssun@gmail.com </div>
-          </div>
+          <S.NameCardBox5>
+            <S.CardName> 이윤선 </S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - younssun@gmail.com </S.CardMail>
+          </S.NameCardBox5>
 
-          <div className="namecardBox4">
-            <div className="nameName"> 이예진 </div>
-            <div className="nameGrade"> DGSW 8th </div>
-            <div className="nameMail"> Mail - yejin@gmail.com </div>
-          </div>
-        </div>
+          <S.NameCardBox4>
+            <S.CardName> 이예진 </S.CardName>
+            <S.CardGrade> DGSW 8th </S.CardGrade>
+            <S.CardMail> Mail - yejin@gmail.com </S.CardMail>
+          </S.NameCardBox4>
+        </S.Mo>
       </div>
     </div>
   );

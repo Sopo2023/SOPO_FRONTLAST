@@ -25,20 +25,20 @@ const Fotter = () => {
             <s.FooterTeamName>낮은기대치</s.FooterTeamName>
             <s.Footerdeveloper>
               <s.FooterWebTeam>
-                <s.FooterdeveloperText>웹</s.FooterdeveloperText>
+                <s.FooterdeveloperTextTitle>웹</s.FooterdeveloperTextTitle>
                 <s.FooterdeveloperText>이해준</s.FooterdeveloperText>
                 <s.FooterdeveloperText>박규민</s.FooterdeveloperText>
                 <s.FooterdeveloperText>배채희</s.FooterdeveloperText>
                 <s.FooterdeveloperText>전우진</s.FooterdeveloperText>
               </s.FooterWebTeam>
               <s.FooterServerTeam>
-                <s.FooterdeveloperText>서버</s.FooterdeveloperText>
+                <s.FooterdeveloperTextTitle>서버</s.FooterdeveloperTextTitle>
                 <s.FooterdeveloperText>김가영</s.FooterdeveloperText>
                 <s.FooterdeveloperText>김호준</s.FooterdeveloperText>
               </s.FooterServerTeam>
             </s.Footerdeveloper>
           </s.FooterListWrap>
-          <s.FooterVersion>v1</s.FooterVersion>
+          <s.FooterVersion>v1.0.0</s.FooterVersion>
         </s.FootersidetWrap>
       </s.FooterWrap>
     </s.FooterContainer>

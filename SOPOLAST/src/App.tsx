@@ -1,17 +1,17 @@
 import React from "react";
 import GlobalStyles from "src/Style/global";
-import Updown from "./Components/Updown/updownmain";
-import Login from "./Components/Login/login";
-import Portfolio from "./Components/Portfolio/portfolioMain";
-import Main from "./Components/Home/MainPage/mainpage";
-import Write from "./Components/Sidewrite/write";
-import Signup from "./Components/Signup/signup";
-import Mypage from "./Components/Mypage/mypage";
-import Competition from "./Components/Competition/Competition";
-import Portfoliosub from "./Components/Portfoliosub/portfolioSub";
-import Updownsub from "./Components/Updownsub/postshow";
-import CompetitionSub from "./Components/compsub/competitionsub";
-import Park from "./Components/park";
+import Updown from "src/Components/Updown/updownmain";
+import Login from "src/Components/Auth/Login/login";
+import Portfolio from "src/Components/Portfolio/portfolioMain";
+import Main from "src/Components/Home/MainPage/mainpage";
+import Write from "src/Components/Sidewrite/write";
+import Signup from "src/Components/Auth/Signup/signup";
+import Mypage from "src/Components/Mypage/mypage";
+import Competition from "src/Components/Competition/Competition";
+import Portfoliosub from "src/Components/Portfoliosub/portfolioSub";
+import Updownsub from "src/Components/Updownsub/postshow";
+import CompetitionSub from "src/Components/compsub/competitionsub";
+import Park from "src/Components/park";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <RecoilRoot>
-      <GlobalStyles />
+        <GlobalStyles />
         <div className="App">
           <Routes>
             <Route path="/" element={<Login />} />

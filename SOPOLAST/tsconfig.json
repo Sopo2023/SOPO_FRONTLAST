@@ -4,14 +4,13 @@
     "resolveJsonModule": true,
     "jsx": "react",
     "paths": {
-      "@src/*": ["*"]
+      "@src/*": ["src/*"]
     },
     "baseUrl": ".",
   },
   "include": [
     "src",
     "@types/images.d.ts",
-    "src/Components/Mypage/mypage.jsx",
     "src/index.tsx"
   ]
 }

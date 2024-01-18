@@ -1,47 +1,36 @@
 import React from "react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
-import Head from "../../constants/head/head";
-import Side from "../../constants/Sidebar/side";
-import "./write.css";
-import Swal from "sweetalert2";
+import Head from "../../constants/head/Head/head";
+import Side from "../../constants/Sidebar/Side/side";
+import ImgPlus from "src/Assets/image/imgplus.png";
+import SubmitImg from "src/Assets/image/submitimg.png";
+import * as s from "./Write.style";
+import { showToast } from "src/constants/Swal/Swal";
+import { ConfirmToast } from "src/constants/Swal/confirm";
 
-interface SidewriteProps {}
-
-const Sidewrite: React.FC<SidewriteProps> = () => {
+const Sidewrite = () => {
   const [title, setTitle] = useState<string>("");
+  const [selectPlace, setselectPlace] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [fileName, setFileName] = useState<string | null>(null);
   const localStorageEmail = localStorage.getItem("sopo_id");
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 2000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
 
   const onSubmitHandler = async (e: FormEvent) => {
+    console.log("hello");
+
     e.preventDefault();
-    const selectedCategory = (document.querySelector(
-      ".sc-cBornz-gegs"
-    ) as HTMLSelectElement).value;
-    const selectedPlace = (document.querySelector(
-      ".sd-cBornz-gegs"
-    ) as HTMLSelectElement).value;
+    ConfirmToast("warning", "글을 올리겠습니까?", "", "success", "완료", "");
+    if (ConfirmToast){
+      console.log("hello");
+      
+    }
 
     if (!title || !content) {
-      Toast.fire({
-        icon: "error",
-        title: "제목, 내용을 모두 입력해주세요.",
-      });
+      showToast("error", "제목, 내용을 모두 입력해주세요.");
       return;
     }
 
@@ -57,19 +46,19 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
       new Blob([JSON.stringify(data)], { type: "application/json" })
     );
 
-    if (selectedPlace === "게시물" && selectedImage) {
+    if (selectPlace === "게시물" && selectedImage) {
       formData.append("image", selectedImage);
     }
 
     try {
       let response;
-      if (selectedPlace === "게시물") {
+      if (selectPlace === "게시물") {
         await axios.post(`${SERVERURL}/senior-to-junior/create`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
         });
-      } else if (selectedPlace === "대회") {
+      } else if (selectPlace === "대회") {
         response = await axios.post(SERVERURL + "#", formData, {
           headers: {},
         });
@@ -87,62 +76,82 @@ const Sidewrite: React.FC<SidewriteProps> = () => {
   };
 
   return (
-    <div className="main">
-      <div className="content">
-        <Head />
+    <>
+      <s.Main>
+        <Head active={false} />
         <Side />
-        <form className="write_form" onSubmit={onSubmitHandler}>
-          <div className="write_img1">
-            {imageSrc && <img src={imageSrc} alt="Preview" />}
-          </div>
-          <div className="sc-cBornZ-gegSAw">
-            <span>카테고리</span>
-            <select className="sc-cBornz-gegs">
-              <option value="웹">웹</option>
-              <option value="서버">서버</option>
-              <option value="안드">안드로이드</option>
-              <option value="iOS">iOS</option>
-              <option value="임베">임베디드</option>
-              <option value="디자인">디자인</option>
-              <option value="기타">기타</option>
-            </select>
-          </div>
-          <div className="sd-cBornZ-gegSAw">
-            <span>올릴곳</span>
-            <select className="sd-cBornz-gegs">
-              <option value="게시물">게시물</option>
-              <option value="대회">대회</option>
-            </select>
-          </div>
-          <input
-            className="write_title"
-            type="text"
-            placeholder="제목"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <textarea
-            className="write_screen"
-            placeholder="내용"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          ></textarea>
-          <label htmlFor="file">
-            <div className="btn-upload">사진 설정</div>
-          </label>
-          <input
-            type="file"
-            name="file"
-            id="file"
-            onChange={handleImageChange}
-          />
-          {fileName && <div>{fileName}</div>}
-          <button id="write_submit" type="submit">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+        <s.Write_Main>
+          <s.Writing>
+            <s.From onSubmit={onSubmitHandler}>
+              <s.WriteTool>
+                <s.Tool>
+                  <span>올릴곳</span>
+                  <s.CategorySelect onChange={(e) => setselectPlace(e.target.value)}>
+                    <option value="게시물">게시물</option>
+                    <option value="대회">대회</option>
+                  </s.CategorySelect>
+                </s.Tool>
+                <s.Tool>
+                  <span>카테고리</span>
+                  <s.CategorySelect>
+                    <option value="web">웹</option>
+                    <option value="server">서버</option>
+                    <option value="Android">안드로이드</option>
+                    <option value="iOS">iOS</option>
+                    <option value="Embedded">임베디드</option>
+                    <option value="design">디자인</option>
+                    <option value="etc">기타</option>
+                  </s.CategorySelect>
+                </s.Tool>
+                <s.Tool>
+               
+                  <span>이미지추가</span>
+                  <s.plustimg>
+                    <label htmlFor="file">
+                      <img src={ImgPlus} />
+                    </label>
+                    <s.btnupload type="hidden" onChange={handleImageChange} ></s.btnupload>
+                   
+                  </s.plustimg>
+                  
+                </s.Tool>
+
+                <s.SubmitButtonMain>
+                  <s.SubmitButton>Submit</s.SubmitButton>
+                  <s.plustimg>
+                    <img src={SubmitImg} />
+                  </s.plustimg>
+                </s.SubmitButtonMain>
+              </s.WriteTool>
+              <s.WriteUnder>
+                <s.WriteForm>
+                  {/* <div className="write_img1">
+              {imageSrc && <img src={imageSrc} alt="Preview" />}
+            </div> */}
+                  <s.WriteTitlelMain>
+                    <s.WriteTitle
+                      type="text"
+                      placeholder="제목"
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                  </s.WriteTitlelMain>
+                  <s.WriteDetailMain>
+                    <s.WriteDetail
+                      placeholder="내용"
+                      value={content}
+                      onChange={(e) => setContent(e.target.value)}
+                    ></s.WriteDetail>
+                  </s.WriteDetailMain>
+
+                  {/* {fileName && <div>{fileName}</div>} */}
+                </s.WriteForm>
+              </s.WriteUnder>
+            </s.From>
+          </s.Writing>
+        </s.Write_Main>
+      </s.Main>
+    </>
   );
 };
 

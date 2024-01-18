@@ -1,128 +1,40 @@
-  /* .App{
-    overflow: hidden;
-  } */
-  .proBox{
-    position: relative;
-    margin-left: 450px;
-    margin-top: 150px;
-    display: inline-block;
-  
-    width: 320px;
-    height: 640px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #F5F5F6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal; 
-  
-    overflow: hidden;
-  }
-  
-  .proBox > .proName{
+import styled from "styled-components";
+
+export const SearchBox = styled.div`
+    display: flex;
     position: absolute;
-  
-    width: 70.318px;
-    height: 28.444px;
-    flex-shrink: 0; 
-    margin: 46.46px 0 0 28.54px;
-  }
-  
-  .proHr{
-    
-    border: #A7A7A7 solid 0.9px;
-    width: 320px;;
-  
-    margin-top: 30.34px;
-    margin-left: -28.4px;
-  }
-  
-  .proBio{
-    margin-top: 30px;
-  
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  
-  .proBio > .firstBio{
-    font-size: 18px;
-    font-weight: 800;
-  }
-  
-  .secondBio{
-    margin-top: 10px;
-  }
-  
-  .skillTitle{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  
-  .awardTitle{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  
-  .bioInfo{
-    margin-top: 20px;
-  }
-  
-  .bioInfo > .oddBio{
-    margin-top: 10px;
-  }
-  
-  .imgBio{
-    width: 20px;
-    height: 20px; 
-  
-    vertical-align: middle;
-  }
-  
-  .perBio{
-    font-weight: 600;
-    font-size: 15px;
-  
-    vertical-align: middle;
-  
-    margin-left: 10px;
-  }
-  
-  .searchBox1{
-    display: inline-block;
-  
-    position: absolute;
-    top: 150px;
-    left: 600px;
+    left: 300px;
+    top: 100px;
     width: 840px;
-    height: 50px;
+    height: 150px;
     flex-shrink: 0; 
-  
-    /* border-radius: 50px;
-    border: 1px solid #178915;
-    background: #FFF; */
-  }
-  
-  .search_1{
+`
+
+export const Search = styled.div`
     position: absolute;
-    bottom: 60px;
-    left: 5px;
+    display: inline-block;
+    top: 10px;
+    left: 180px;
     width: 840px;
     height: 50px;
     flex-shrink: 0;
     border-radius: 50px;
     border: 1px solid #1A9A18;
     background: #FFF;
-  }
-  .search_icon{
+`
+
+export const Searchbox = styled.input`
+    position: relative;
+    outline: none;
+    font-size: 20px;
+    left: 20px;
+    top: 4px;
+    border: none;
+    width: 750px;
+    height: 40px;
+`
+
+export const SearchIcon = styled.input`
     position: absolute;
     cursor: pointer;
     background-color: #FFF;
@@ -133,8 +45,9 @@
     flex-shrink: 0;
     border: 1px solid #1A9A18;
     border-radius: 50%;
-  }
-  .searcg_icon_line{
+`
+
+export const serchIconLine = styled.div`
     position: absolute;
     cursor: pointer;
     top: 35px;
@@ -146,70 +59,56 @@
     flex-shrink: 0;
     stroke-width: 1px;
     stroke: #1A9A18;
-  }
-  .search_box{
-    position: relative;
-    outline: none;
-    font-size: 20px;
-    left: 20px;
-    top: 4px;
-    border: none;
-    width: 750px;
-    height: 40px;
-  }
-  .searchBox1 > .searchFito{
-    margin-left: 797px;
-    margin-top: 11.5px;
-  }
-  
-  .gradeSelet{
+`
+export const StackLine = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    left: 200px;
+    display: inline-block;
+`
+
+export const GradeSelect = styled.select`
     width: 80px;
     height: 40px;
     color: #000;
     border: none; 
-
     font-size: 30px;
     font-weight: 600;
     font-family: Inter;
-
     margin-top: 20px;
-
     display: inline;
-  }
-  
+`
 
-  .gradegreen{
+export const GradeGreen = styled.div`
     color: green;
     font-size: 30px;
-  
     position: relative;
-  
-    /* margin-top: 17px; */
-    margin-left: 20px;
-  }
+    display: inline;
+`
 
-.mo1{
-  position: absolute;
-  top: 200px;
-  left: 490px;
-  width: 900px;
-  height: 800px;
+export const MajorSelect = styled.div`
+    display: inline;
+    color: #A7A7A7;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    
+`
 
-}
-  
-  .majorSelect > .frontEnd{
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 27px;
-  
-  }
-  
-  .elseMajor{
-    display: inline-block;
-    margin-left: 25px;
-  }
-  
-  .gatherBox{
+export const Mo1 = styled.div`
+    position: absolute;
+    top: 200px;
+    left: 490px;
+    width: 900px;
+    height: 800px;
+`
+
+export const GatherBox = styled.div`
     width: 398px;
     height: 210px;
     flex-shrink: 0;
@@ -217,93 +116,81 @@
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
-  
     margin-top: 39px;
-  }
-  
-  .gatherTitle{
+`
+
+export const GatherTitle = styled.div`
     color: #000;
     font-family: Inter;
     font-size: 25px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-  
     margin-top: 22px;
     margin-left: 33px;
-  }
-  
-  .gatherGradeName{
+`
+
+
+
+export const GatherGradeName = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    
     margin-top: 53px;
     margin-left: 33px;
-  }
-  
-  .gatherMail{
+`
+
+export const GatherMail = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-  
     margin-top: 7px;
     margin-left: 33px;
-  }
-  
-  .gatherBox2{
+`
+
+export const GatherBox2 = styled.div`
     width: 398px;
     height: 210px;
     flex-shrink: 0;
-  
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
-  
     margin-top: 39px;
     margin-left: 430px;
-  }
-  
-  .gatherBox3{
+`
+
+export const GatherBox3 = styled.div`
     width: 398px;
     height: 210px;
     flex-shrink: 0;
-  
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
-  
     margin-top: 280px;
-  }
-  
-  .gatherBox4{
+`
+
+export const GatherBox4 = styled.div`
     width: 398px;
     height: 210px;
     flex-shrink: 0;
-  
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
-  
     margin-top: 280px;
     margin-left: 430px;
-  }
-  
-  .gatherBox5{
+`
+
+export const GatherBox5 = styled.div`
     width: 398px;
     height: 210px;
     flex-shrink: 0;
@@ -315,9 +202,9 @@
     position: absolute;
   
     margin-top: 521px;
-  }
-  
-  .gatherBox6{
+`
+
+export const GatherBox6 = styled.div`
     width: 398px;
     height: 210px;
     flex-shrink: 0;
@@ -330,4 +217,4 @@
   
     margin-top: 521px;
     margin-left: 430px;
-  }
+`
