@@ -3,7 +3,6 @@ import yogiyo from "../../Assets/image/1.png";
 import comment from "../../Assets/image/comment.png";
 import Head from "../../constants/head/Head/head";
 import Sidebar from "../../constants/Sidebar/Side/side";
-import "./portfolioSub.css";
 
 import * as S from "../../Components/Portfoliosub/portfolioSub.style";
 
@@ -17,8 +16,6 @@ import plus from "../../Assets/image/plusButton.svg";
 function Portfoliosubon() {
   return (
     <S.AllContainer>
-      <div className="main">
-        <div className="content">
           <Head active={false} />
           <Sidebar />
           <S.MoPortfolio>
@@ -113,8 +110,6 @@ function Portfoliosubon() {
               </S.MoreContent>
             </S.AllPort>
           </S.MoPortfolio>
-        </div>
-      </div>
     </S.AllContainer>
   );
 }
