@@ -13,11 +13,12 @@ interface Select {
   active: boolean;
 }
 
-const YearSelect: React.FC<YearSelect & { index: number }> = ({ active, onClick, children, index }) => (
-  <s.Year className={active ? "selected" : ""} onClick={() => onClick(index)}>
-    {children}
-  </s.Year>
-);
+// const YearSelect: React.FC<YearSelect & { index: number }> = ({ active, onClick, children, index }) => (
+//   <s.Year className={active ? "selected" : ""} onClick={() => onClick(index)}>
+//     {children}
+//   </s.Year>
+// );
+
 
 const Mypage:React.FC<Select>=()=> {
   const navigate = useNavigate();
@@ -115,13 +116,13 @@ const Mypage:React.FC<Select>=()=> {
   return (
     <s.Main>
         <Head active={true} />
-        <s.Top>
+        <s.TopProfile>
           <s.Top1>{sideName}</s.Top1> 
           <s.Top2>DGSW 8th</s.Top2>
           <s.Fixbutton onClick={() => handleEmailCertify()}>
             <s.FixbuttonT>프로필 수정하기</s.FixbuttonT>
           </s.Fixbutton>
-        </s.Top>
+        </s.TopProfile>
         <s.Readme>
           <s.Body1>프론트엔드 개발자</s.Body1>
           <s.Body2>
