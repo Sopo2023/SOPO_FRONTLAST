@@ -1,21 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 import * as s from "../Pagination/Pagination.style";
 
 interface PaginationProps {
-  total: number; // 전체 아이템 수
-  limit: number; // 한 페이지에 보여질 아이템 수
-  page: number; // 현재 페이지
-  setPage: (page: number) => void; // 페이지 변경 함수
+  postsPerPage: number;
+  totalPosts: number;
+  paginate: (pageNumber: number) => void;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
-  total,
-  limit,
-  page,
-  setPage,
+  postsPerPage,
+  totalPosts,
+  paginate,
 }) => {
-  const numPages = Math.ceil(total / limit);
+  const [page, setPage] = useState(1); // 페이지 상태 추가
+
+  const numPages = Math.ceil(totalPosts / postsPerPage);
   const maxDisplayedPages = 5; // 최대로 보여질 페이지 수
   const halfDisplayedPages = Math.floor(maxDisplayedPages / 2); // 최대 페이지 수의 절반
 
@@ -60,13 +59,6 @@ const Pagination: React.FC<PaginationProps> = ({
       </s.Button>
     </s.Nav>
   );
-};
-
-Pagination.propTypes = {
-  total: PropTypes.number.isRequired, // 전체 아이템 수
-  limit: PropTypes.number.isRequired, // 한 페이지에 보여질 아이템 수
-  page: PropTypes.number.isRequired, // 현재 페이지
-  setPage: PropTypes.func.isRequired, // 페이지 변경 함수
 };
 
 export default Pagination;
