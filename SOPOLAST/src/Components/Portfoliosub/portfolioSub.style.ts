@@ -7,6 +7,10 @@ export const AllContainer = styled.div`
     height: 100vh;
 `
 
+export const SidebarWrap = styled.div`
+  width: 320px;
+`
+
 export const PortfolioMain = styled.div`
     width: 100%;
     height: calc(170%);

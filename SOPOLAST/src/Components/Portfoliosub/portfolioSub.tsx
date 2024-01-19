@@ -17,7 +17,9 @@ function Portfoliosubon() {
   return (
     <S.AllContainer>
           <Head active={false} />
-          <Sidebar />
+          <S.SidebarWrap>
+            <Sidebar/>
+          </S.SidebarWrap>
           <S.PortfolioMain>
             <S.MoPortfolio>
               <S.AllPort>
