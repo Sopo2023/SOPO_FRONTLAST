@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
 export const AllContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+`
+
+export const PortfolioMain = styled.div`
+    width: 100%;
+    height: calc(170%);
+    display: flex;
     position: relative;
 `
 
 export const MoPortfolio = styled.div`
     position: relative;
-    left: 20%;
     width: 100%;
     height: 100%;
     
@@ -73,7 +82,7 @@ export const SetBio = styled.p`
 
 export const PortfolioSkill = styled.div`
     width: 57%;
-    height: 200px;
+    height: 100px;
 `
 
 export const SkillsBio = styled.p`
@@ -217,7 +226,7 @@ export const Abouttext = styled.a`
 `
 
 export const MoreText = styled.div`
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   width: 57%;
   height: 200px;
 `
