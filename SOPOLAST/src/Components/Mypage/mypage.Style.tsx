@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-interface Year {
-  active: boolean;
-}
 
 export const Main = styled.div`
   display: flex;

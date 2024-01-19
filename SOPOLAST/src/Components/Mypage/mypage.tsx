@@ -9,10 +9,6 @@ import nm from "../../Assets/img/hp.png";
 import * as s from "src/Components/Mypage/mypage.Style";
 import "./mypage.css";
 
-interface Select {
-  active: boolean;
-}
-
 // const YearSelect: React.FC<YearSelect & { index: number }> = ({ active, onClick, children, index }) => (
 //   <s.Year className={active ? "selected" : ""} onClick={() => onClick(index)}>
 //     {children}
@@ -20,7 +16,7 @@ interface Select {
 // );
 
 
-const Mypage:React.FC<Select>=()=> {
+const Mypage:React.FC=()=> {
   const navigate = useNavigate();
   const [yearSelections, setYearSelections] = useState([
     false,
