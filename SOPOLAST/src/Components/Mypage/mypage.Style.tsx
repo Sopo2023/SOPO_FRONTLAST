@@ -1,22 +1,35 @@
 import styled from "styled-components";
 
-
 export const Main = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
+`;
+export const Bottom = styled.div`
+  margin-top: 80px;
+  display: flex;
   flex-direction: column;
-  overflow: hidden;
+  gap: 50px;
+  width: 100vw;
+  height: 1200px;
 `;
 export const TopProfile = styled.div`
-  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  margin-top: 120px;
 `;
+export const profilename = styled.div`
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+`
 export const Top1 = styled.p`
+margin-left: 50px;
   font-size: 30px;
   font-weight: 900;
-  margin: 0 19px 0 60px;
   display: inline-block;
 `;
 export const Top2 = styled.p`
@@ -26,15 +39,13 @@ export const Top2 = styled.p`
   display: inline-block;
 `;
 export const Fixbutton = styled.div`
-  position: relative;
+margin-left: 50px;
   width: 200px;
-  height: 40px;
+  height: 70px;
   border-radius: 10px;
   color: #868686;
   background-color: #f5f5f6;
   border: none;
-  margin: 30px 19px 50px 60px;
-  margin-top: 67px;
   cursor: pointer;
 `;
 export const FixbuttonT = styled.div`
@@ -43,171 +54,152 @@ export const FixbuttonT = styled.div`
   position: absolute;
 `;
 export const Readme = styled.div`
-  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 400px;
 `;
 export const Body1 = styled.span`
-  position: absolute;
+  display: flex;
   font-weight: 700;
   font-size: 25px;
   margin-left: 70px;
-  margin-top: -30px;
 `;
 export const Body2 = styled.div`
   display: flex;
-  width: 1570px;
+  width: 90%;
   height: 120px;
   background-color: #f5f5f6;
   border-radius: 10px;
-  margin: 0 60px 0 60px;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   font-size: 25px;
   font-weight: 800;
 `;
 export const Social = styled.div`
-  margin: 52px 0 0 60px;
+  display: flex;
+  width: 100%;
+  height: 300px;
   font-size: 20px;
   font-weight: 800;
-  position: absolute;
 `;
 export const Socialp = styled.div`
-  width: 1570px;
-  height: 200px;
+  display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
-  position: relative;
 `;
 export const Pt = styled.div`
-  position: absolute;
-  margin-left: 10px;
-  margin-top: 10px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+margin-left: 30px;
+width: 100%;
+height: 100%;
 `;
 export const link1 = styled.a`
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #8c8c8c;
+  color: black;
   width: 250px;
-  height: 200px;
-  position: absolute;
+  height: 50px;
   img {
     width: 50px;
-    height: 30px;
-    object-fit: contain;
-    margin-left: 0px;
-    margin-top: -10px;
-    position: absolute;
+    height: 50px;
   }
 `;
-export const link2 = styled.a`
-  text-decoration: none;
-  bottom: 7px;
-  margin-left: 52px;
-  color: #000;
+export const imgButton = styled.p`
+display: flex;
+flex-direction: row;
+  width: 200px;
+  height: 50px;
 `;
-export const Git = styled.p`
-  margin-top: 10px;
-`;
-export const Email = styled.p`
-  margin-top: 20px;
-`;
-export const Number = styled.p`
-  margin-top: 20px;
-`;
-export const SocialM = styled.p`
-  position: absolute;
+export const SocialNam = styled.p`
+  display: flex;
   font-size: 25px;
-  margin-left: 60px;
-  margin-top: -5px;
+  margin-top: 5px;
+  margin-left: 10px;
 `;
 export const SocialG = styled.p`
-  position: absolute;
-  font-size: 18px;
-  margin-left: 168px;
-  margin-top: -3px;
+display: flex;
+margin-top: 5px;
 `;
 export const post_1 = styled.div`
-  margin: 60px 0 0 10px;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
-  position: relative;
-  left: 50px;
-  top: 440px;
-  width: 1430px;
+  width: 100%;
   height: 700px;
-  margin-left: -40px;
-  margin-top: -220px;
 `;
-export const post1 = styled.p`
-  top: 30px;
-  left: 50px;
+export const postrecord = styled.p`
+  margin-left: 15%;
   color: #1a9a18;
   font-size: 25px;
   font-weight: 800;
-  position: absolute;
-  margin-top: 25px;
 `;
+export const PostVeiw = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+`
 export const post_write = styled.div`
-  margin: 0;
-  position: relative;
-  top: 70px;
-  margin-top: 25px;
-  height: 190px;
-  margin-left: 51px;
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+  width: 70%;
+  height: 200px;
   border-bottom: 2px solid #888;
-  width: 1470px;
+  cursor: pointer;
 `;
 export const Zonecontrol = styled.div`
-  width: 55%;
-  height: 100px;
-  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+  height: 100%;
+
 `;
 export const Name = styled.span`
-  position: absolute;
-  top: 5px;
+  display: flex;
   color: #000;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: -7px;
 `;
 export const Title = styled.span`
-  display: block;
-  position: absolute;
-  top: 7px;
+  display: flex;
   color: #8c8c8c;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 25px;
 `;
 export const Detail = styled.span`
-  position: absolute;
-  top: 10px;
   color: #8c8c8c;
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: 60px;
 `;
 export const Date = styled.span`
-  position: absolute;
-  display: block;
-  top: 80px;
   color: #8c8c8c;
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  margin-top: 80px;
 `;
-export const Img = styled.img`
-  position: absolute;
+export const Img = styled.img` 
   width: 250px;
-  left: 75%;
-  bottom: 2.8vh;
+ height: 80%;
 `;
 export const SocialC = styled.img``;
 export const Pagination = styled.div`
