@@ -8,7 +8,8 @@ import SEOUL from "src/Assets/image/3.png";
 import Yogiyo from "src/Assets/image/1.png";
 import KOREA from "src/Assets/image/2.png";
 import MAC from "src/Assets/img/MAC.JPG";
-
+import { link } from "fs";
+import Pagination from "src/constants/Pagination/Pagination";
 // const UpdownPost = () => {
 //     const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 //     const navigate = useNavigate();
@@ -52,8 +53,32 @@ import MAC from "src/Assets/img/MAC.JPG";
 //         console.error("Error:", error);
 //       });
 //   };
+interface Post {
+  id: number;
+  author: string;
+  title: string;
+  content: string;
+  date: string;
+  image: string;
+}
+
 export default function UpdownPost() {
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postsPerPage] = useState<number>(10);
+  const [posts, setPosts] = useState<Post[]>([]);
+  //게시물 가져오기
+  useEffect(() => {
+    axios.get<Post[]>("/api/posts").then((response) => {
+      setPosts(response.data);
+    });
+  }, []);
+  //현재 페이지의 게시물 가져오기
+  const indexOfLastPost: number = currentPage * postsPerPage;
+  const indexOfFirstPost: number = indexOfLastPost - postsPerPage;
+  const currentPosts: Post[] = posts.slice(indexOfFirstPost, indexOfLastPost);
+  //페이지네이션 변경 시 이벤트 처리
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   return (
     <s.PostMain>
       <s.PostMainView>
@@ -176,6 +201,11 @@ export default function UpdownPost() {
             </s.Postimg>
           </s.PostWrite>
         </s.Post_border>
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={posts.length}
+          paginate={paginate}
+        />
       </s.PostMainView>
     </s.PostMain>
   );
