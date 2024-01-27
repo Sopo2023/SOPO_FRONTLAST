@@ -86,26 +86,24 @@ const Profile = ({ onClose }) => {
                 <s.Writing>
                   <s.WritingM>당신의 기수를 알려주세요</s.WritingM>
                   <s.YearChoice>
-                    {" "}
-                    {/* 콜백 함수를 사용해서 작성하였습니다 */}
-                    {/* <s.Year
+                    <s.Year
                       className={yearSelections[0] ? "selected" : ""}
                       onClick={() => toggleYearColor(0)}
                     >
                       6기(2021)
-                    </s.Year> */}
-                    <YearSelect index={0} active={yearSelections[0]} onClick={() => toggleYearColor(0)}>
+                    </s.Year> 
+                    <s.YearSelect index={0} onClick={() => toggleYearColor(0)}>
                       6기(2021)
-                    </YearSelect>
-                    <YearSelect index={1} active={yearSelections[1]} onClick={() => toggleYearColor(1)}>
+                    </s.YearSelect>
+                    <s.YearSelect index={1} onClick={() => toggleYearColor(1)}>
                       7기(2022)
-                    </YearSelect>
-                    <YearSelect index={2} active={yearSelections[2]} onClick={() => toggleYearColor(2)}>
+                    </s.YearSelect>
+                    <s.YearSelect index={2} onClick={() => toggleYearColor(2)}>
                       8기(2023)
-                    </YearSelect>
-                    <YearSelect index={3} active={yearSelections[3]} onClick={() => toggleYearColor(3)}>
+                    </s.YearSelect>
+                    <s.YearSelect index={3} onClick={() => toggleYearColor(3)}>
                       9기(2024)
-                    </YearSelect>
+                    </s.YearSelect>
                   </s.YearChoice>
                 </s.Writing>
                 <s.Writing>

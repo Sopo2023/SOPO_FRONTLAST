@@ -326,7 +326,10 @@ export const Completebutton = styled.div`
   cursor: pointer;
   transition: color 0.3s;
 `;
-export const YearSelect = styled.div`
+export const YearChoice = styled.div`
+  
+`
+export const YearSelect = styled.div<{index: number}>`
   color: #a7a7a7;
   font-family: Inter;
   font-size: 20px;
