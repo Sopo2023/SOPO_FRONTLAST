@@ -28,7 +28,7 @@ export default function Start() {
 
   //   const user = useRecoilValue(userState);
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e:MouseEvent) => {
     if (e.button !== 0) return; // 왼쪽 마우스 버튼만
     setDragging(true);
     setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
@@ -39,7 +39,7 @@ export default function Start() {
     setDragging(false);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:MouseEvent) => {
     if (!dragging) return;
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
     const walk = (x - startX) * 2;
