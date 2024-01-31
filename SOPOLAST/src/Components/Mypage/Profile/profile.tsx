@@ -1,6 +1,6 @@
 import React,{useState}  from "react";
 import { useNavigate } from "react-router-dom";
-import * as s from "src/Components/Mypage/mypage.Style"
+import * as s from "src/Components/Mypage/Profile/profile.Style"
 import Last from "src/Assets/img/Polygon 4.png";
 
 const Profile = ({ onClose }) => {
@@ -92,18 +92,24 @@ const Profile = ({ onClose }) => {
                     >
                       6기(2021)
                     </s.Year> 
-                    <s.YearSelect index={0} onClick={() => toggleYearColor(0)}>
-                      6기(2021)
-                    </s.YearSelect>
-                    <s.YearSelect index={1} onClick={() => toggleYearColor(1)}>
+                    <s.Year
+                      className={yearSelections[1] ? "selected" : ""}
+                      onClick={() => toggleYearColor(1)}
+                    >
                       7기(2022)
-                    </s.YearSelect>
-                    <s.YearSelect index={2} onClick={() => toggleYearColor(2)}>
+                    </s.Year> 
+                    <s.Year
+                      className={yearSelections[2] ? "selected" : ""}
+                      onClick={() => toggleYearColor(2)}
+                    >
                       8기(2023)
-                    </s.YearSelect>
-                    <s.YearSelect index={3} onClick={() => toggleYearColor(3)}>
+                    </s.Year> 
+                    <s.Year
+                      className={yearSelections[3] ? "selected" : ""}
+                      onClick={() => toggleYearColor(3)}
+                    >
                       9기(2024)
-                    </s.YearSelect>
+                    </s.Year> 
                   </s.YearChoice>
                 </s.Writing>
                 <s.Writing>
@@ -273,102 +279,48 @@ const Profile = ({ onClose }) => {
                     >
                       REACT
                     </s.Skill>
+                    <s.Skill
+                      className={selectedSkills.includes("TypeScript") ? "selected" : ""}
+                      onClick={() => toggleSkill("TypeScript")}
+                    >
+                      TypeScript
+                    </s.Skill>
+                    <s.Skill
+                      className={selectedSkills.includes("JAVA") ? "selected" : ""}
+                      onClick={() => toggleSkill("JAVA")}
+                    >
+                      JAVA
+                    </s.Skill>
+                    <s.Skill
+                      className={selectedSkills.includes("Spring") ? "selected" : ""}
+                      onClick={() => toggleSkill("Spring")}
+                    >
+                      Spring
+                    </s.Skill>
+                    <s.Skill
+                      className={selectedSkills.includes("Kotlin") ? "selected" : ""}
+                      onClick={() => toggleSkill("Kotlin")}
+                    >
+                      Kotlin
+                    </s.Skill>
+                    <s.Skill
+                      className={selectedSkills.includes("Swift") ? "selected" : ""}
+                      onClick={() => toggleSkill("Swift")}
+                    >
+                      Swift
+                    </s.Skill>
+                    <s.Skill
+                      className={selectedSkills.includes("GG") ? "selected" : ""}
+                      onClick={() => toggleSkill("GG")}
+                    >
+                      기타
+                    </s.Skill>
                   </s.SkillsSelect>
-                  <div className="SkillsSelect">
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("HTML") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("HTML")}
-                  >
-                    HTML
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("CSS") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("CSS")}
-                  >
-                    CSS
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("JavaScript") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("JavaScript")}
-                  >
-                    JavaScript
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("REACT") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("REACT")}
-                  >
-                    REACT
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("Nood.js") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("Nood.js")}
-                  >
-                    Nood.js
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("JAVA") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("JAVA")}
-                  >
-                    JAVA
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("Spring") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("Spring")}
-                  >
-                    Spring
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("Spring Boot") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("Spring Boot")}
-                  >
-                    Spring Boot
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("Kotlin") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("Kotlin")}
-                  >
-                    Kotlin
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("Swift") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("Swift")}
-                  >
-                    Kotlin
-                  </div>
-                  <div
-                    className={`elseSkills ${
-                      selectedSkills.includes("GG") ? "selected" : ""
-                    }`}
-                    onClick={() => toggleSkill("GG")}
-                  >
-                    기타
-                  </div>
-                </div>
                 </s.Writing>
                 <s.Writing>
                   <s.WritingM>
                     {" "}
-                    당신이 수상이력 어떻게 되나요?
+                    당신의 수상이력을 입력해주세요.
                   </s.WritingM>
                   <s.Award
                     type="text"
@@ -379,11 +331,11 @@ const Profile = ({ onClose }) => {
                     {" "}
                     당신의 포트폴리오은 무엇인가요?{" "}
                   </s.WritingM>
-                </s.Writing>
-                <s.Pf
+                  <s.Pf
                   type="text"
                   placeholder="당신의 포트폴리오URL를 입력해주세요."
-                ></s.Pf>
+                  ></s.Pf>
+                </s.Writing>
                 <s.Completebutton>완료</s.Completebutton>
               </s.Horseman>
             </s.Pagination_Writing>
