@@ -50,8 +50,8 @@ const Mypage:React.FC=()=> {
         <s.Bottom>
         <s.TopProfile>
           <s.profilename>
-          <s.Top1>{sideName}</s.Top1> 
-          <s.Top2>DGSW 8th</s.Top2>
+            <s.Top1>{sideName}</s.Top1> 
+            <s.Top2>DGSW 8th</s.Top2>
           </s.profilename>
           <s.Fixbutton onClick={() => handleEmailCertify()}>
             <s.FixbuttonT>프로필 수정하기</s.FixbuttonT>

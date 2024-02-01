@@ -23,8 +23,9 @@ export const TopProfile = styled.div`
 export const profilename = styled.div`
   display: flex;
   align-items: center;
-  width: 200px;
+  width: 400px;
   height: 100%;
+  margin-bottom: 50px;
 `
 export const Top1 = styled.p`
 margin-left: 50px;
@@ -39,9 +40,9 @@ export const Top2 = styled.p`
   display: inline-block;
 `;
 export const Fixbutton = styled.div`
-margin-left: 50px;
-  width: 200px;
-  height: 70px;
+  margin-left: 50px;
+  width: 250px;
+  height: 100px;
   border-radius: 10px;
   color: #868686;
   background-color: #f5f5f6;
@@ -49,8 +50,8 @@ margin-left: 50px;
   cursor: pointer;
 `;
 export const FixbuttonT = styled.div`
-  margin-top: 13px;
-  margin-left: 45px;
+  margin-top: 15px;
+  margin-left: 70px;
   position: absolute;
 `;
 export const Readme = styled.div`
@@ -65,6 +66,7 @@ export const Body1 = styled.span`
   font-weight: 700;
   font-size: 25px;
   margin-left: 70px;
+  margin-top: 30px;
 `;
 export const Body2 = styled.div`
   display: flex;
@@ -77,6 +79,7 @@ export const Body2 = styled.div`
   margin: 0 auto;
   font-size: 25px;
   font-weight: 800;
+  margin-right: 120px;
 `;
 export const Social = styled.div`
   display: flex;
@@ -92,12 +95,13 @@ export const Socialp = styled.div`
   border-radius: 10px;
 `;
 export const Pt = styled.div`
-display: flex;
-flex-direction: column;
-gap: 5px;
-margin-left: 30px;
-width: 100%;
-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 75px;
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
 `;
 export const link1 = styled.a`
   display: flex;
@@ -107,15 +111,16 @@ export const link1 = styled.a`
   width: 250px;
   height: 50px;
   img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
   }
 `;
 export const imgButton = styled.p`
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
   width: 200px;
   height: 50px;
+  margin-bottom: 10px;
 `;
 export const SocialNam = styled.p`
   display: flex;
@@ -135,7 +140,7 @@ export const post_1 = styled.div`
   height: 700px;
 `;
 export const postrecord = styled.p`
-  margin-left: 15%;
+  margin-left: 90px;
   color: #1a9a18;
   font-size: 25px;
   font-weight: 800;
@@ -146,7 +151,7 @@ export const PostVeiw = styled.div`
   width: 100%;
   height: 100%;
   margin-top: 20px;
-`
+`;
 export const post_write = styled.div`
   display: flex;
   flex-direction: row;
@@ -155,6 +160,7 @@ export const post_write = styled.div`
   height: 200px;
   border-bottom: 2px solid #888;
   cursor: pointer;
+  margin-right: 350px;
 `;
 export const Zonecontrol = styled.div`
   display: flex;
@@ -201,4 +207,5 @@ export const Img = styled.img`
   width: 250px;
  height: 80%;
 `;
-export const SocialC = styled.img``;
+export const SocialC = styled.img`
+`;
