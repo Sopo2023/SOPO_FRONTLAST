@@ -1,100 +1,6 @@
-  .proBox_{
-    position: relative;
-  
-    display: inline-block;
-  
-    width: 320px;
-    height: 640px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #F5F5F6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-left: 40px;
-    margin-top: 200px;
-  
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal; 
-  
-    overflow: hidden;
-  }
-  
-  .proBox_ > .proName{
-    position: absolute;
-  
-    width: 70.318px;
-    height: 28.444px;
-    flex-shrink: 0; 
-    margin: 46.46px 0 0 28.54px;
-  }
-  
-  .proHr{
-    
-    border: #A7A7A7 solid 0.9px;
-    width: 320px;;
-  
-    margin-top: 30.34px;
-    margin-left: -28.4px;
-  }
-  
-  .proBio{
-    margin-top: 30px;
-  
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  
-  .proBio > .firstBio{
-    font-size: 18px;
-    font-weight: 800;
-  }
-  
-  .secondBio{
-    margin-top: 10px;
-  }
-  
-  .skillTitle{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  
-  .awardTitle{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  
-  .bioInfo{
-    margin-top: 20px;
-  }
-  
-  .bioInfo > .oddBio{
-    margin-top: 10px;
-  }
-  
-  .imgBio{
-    width: 20px;
-    height: 20px; 
-  
-    vertical-align: middle;
-  }
-  
-  .perBio{
-    font-weight: 600;
-    font-size: 15px;
-  
-    vertical-align: middle;
-  
-    margin-left: 10px;
-  }
-  
-  .searchBox{
+import styled from "styled-components"
+
+export const SearchBox = styled.div`
     display: flex;
     position: absolute;
     left: 300px;
@@ -102,12 +8,9 @@
     width: 840px;
     height: 150px;
     flex-shrink: 0; 
-  
-    /* border-radius: 50px;
-    border: 1px solid #178915;
-    background: #FFF; */
-  }
-  .search{
+`
+
+export const Search = styled.div`
     position: absolute;
     display: inline-block;
     top: 10px;
@@ -118,8 +21,20 @@
     border-radius: 50px;
     border: 1px solid #1A9A18;
     background: #FFF;
-  }
-  .search_icon{
+`
+
+export const Searchbox = styled.input`
+    position: relative;
+    outline: none;
+    font-size: 20px;
+    left: 20px;
+    top: 4px;
+    border: none;
+    width: 750px;
+    height: 40px;
+`
+
+export const SearchIcon = styled.input`
     position: absolute;
     cursor: pointer;
     background-color: #FFF;
@@ -130,8 +45,9 @@
     flex-shrink: 0;
     border: 1px solid #1A9A18;
     border-radius: 50%;
-  }
-  .searcg_icon_line{
+`
+
+export const serchIconLine = styled.div`
     position: absolute;
     cursor: pointer;
     top: 35px;
@@ -143,58 +59,36 @@
     flex-shrink: 0;
     stroke-width: 1px;
     stroke: #1A9A18;
-  }
-  .search_box{
-    position: relative;
-    outline: none;
-    font-size: 20px;
-    left: 20px;
-    top: 4px;
-    border: none;
-    width: 750px;
-    height: 40px;
-  }
-  
-  .searchBox > .searchFito{
-    margin-left: 797px;
-    margin-top: 11.5px;
-  }
-  
-  .gradeSelect{
-    width: 80px;
-    height: 40px;
-    color: #000;
-    border: none; 
-
-    font-size: 30px;
-    font-weight: 600;
-    font-family: Inter;
-
-    margin-top: 20px;
-
-    display: inline;
-    
-  }
-  .gradeSelet::-ms-expand {
-    display: none;
-}
-  
-  .gradegreen{
-    color: green;
-    font-size: 30px;
-  
-    position: relative;
-    display: inline;
-  }
-  .stackLine{
+`
+export const StackLine = styled.div`
     position: absolute;
     width: 100%;
     height: 100px;
     bottom: 0px;
     left: 200px;
     display: inline-block;
-  }
-  .majorSelect{
+`
+
+export const GradeSelect = styled.select`
+    width: 80px;
+    height: 40px;
+    color: #000;
+    border: none; 
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Inter;
+    margin-top: 20px;
+    display: inline;
+`
+
+export const GradeGreen = styled.div`
+    color: green;
+    font-size: 30px;
+    position: relative;
+    display: inline;
+`
+
+export const MajorSelect = styled.div`
     display: inline;
     color: #A7A7A7;
     font-family: Inter;
@@ -204,14 +98,13 @@
     line-height: normal;
     position: relative;
     
-  }
+`
 
-  .majorbutton{
+
+export const MajorButton = styled.button`
     border: none;
     background-color: none;
-    
     padding: 13px;
-
     display: inline;
     color: #A7A7A7;
     font-family: Inter;
@@ -220,179 +113,133 @@
     font-weight: 600;
     line-height: normal;
     position: relative;
-    
     background: none;
-  }
-
-  .majorbutton:hover,
-  .majorbutton.clicked {
-    color: #1A9A18 !important;
     cursor: pointer;
+`
 
-    background-color: none;
-  }
-  
-  /* .majorSelect > .frontEnd{
-    display: inline-block;
-    color: #1A9A18;
-    margin-top: 27px;
-   
-  }
-  .majorSelect > .frontEnd:active{
-    cursor: pointer;
-    color: #178915;
-  }
-  .elseMajor{
-    display: inline-block;
-    margin-left: 25px;
-  }
-  .elseMajor:active{
-    cursor: pointer;
-    color: #178915;
-  } */
+export const MajorButtonHover = styled(MajorButton)`
+    &:hover {
+        color: #1A9A18 !important;
+    }
+`
 
+export const MajorButtonClicked = styled(MajorButton)`
+    &:active {
+        color: #1A9A18 !important;
+    }
+`
 
-  .mo{
+export const Mo = styled.div`
     position: absolute;
     left: 460px;
     top: 200px;
     width: 900px;
     height: 1000px;
-    
-  }
- 
-  .mo>.namecardBox:hover{
-    cursor: pointer;
-  }
-   .mo>.namecardBox{
+`;
+export const NameCardBox = styled.div`
     width: 840px;
     height: 130px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
     margin-left: 22px;
     margin-top: 30px;
-  
     display: inline-block;
+`;
+
+export const HoveredNameCardBox = styled(NameCardBox)`
+  &:hover {
+    cursor: pointer;
   }
-  
-  .nameName{
+`;
+
+export const CardName = styled.div`
     color: #000;
     font-family: Inter;
     font-size: 25px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-  
     position: absolute;
-  
     margin-top: 22px;
     margin-left: 33px;
-  }
-  
-  .nameGrade{
+`
+
+export const CardGrade = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-  
     position: absolute;
-  
     margin-top: 55px;
     margin-left: 33px;
-  }
-  
-  .nameMail{
+`
+
+export const CardMail = styled.div`
     color: #8C8C8C;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-  
     position: absolute;
-  
     margin-top: 99px;
     margin-left: 33px;
-  }
-  
-  .cnsLogo{
-    width: 73px;
-    height: 40px;
-    flex-shrink: 0;
-    margin-top: 10px;
-    margin-left: 747px;
-  }
-  
-  .mo>.namecardBox2{
+`
+
+export const NameCardBox2 = styled.div`
     width: 840px;
     height: 130px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
     margin-left: 22px;
     margin-top: 180px;
-   cursor: pointer;
+    cursor: pointer;
     display: inline-block;
-  }
-  
-  
-  .b1ndLogo{
-    width: 70px;
-    height: 70px;
-    margin-top: 10px;
-    margin-left: 760px;
-  }
-  
-  .mo>.namecardBox3{
+`;
+
+export const NameCardBox3 = styled.div`
     width: 840px;
     height: 130px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
     margin-left: 22px;
     margin-top: 330px;
-  
     display: inline-block;
-  }
-  
-  .mo>.namecardBox4{
+`;
+
+export const NameCardBox4 = styled.div`
     width: 840px;
     height: 130px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
     margin-left: 22px;
     margin-top: 480px;
-  
     display: inline-block;
-  }
-  
-  .mo>.namecardBox5{
+`;
+
+export const NameCardBox5 = styled.div`
     width: 840px;
     height: 130px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
     position: absolute;
     margin-left: 22px;
     margin-top: 640px;
-  
     display: inline-block;
-  }
+`;
