@@ -1,54 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { userState } from "../../../recoil/auto";
+import { useLogin } from "src/hooks/auth/UseLogin";
 import * as s from "../style/Auth.style";
 import LOGO from "../../../Assets/image/LOGO.png";
-import { loginUser } from "../../../hooks/LoginCraft/LoginCraft";
-import { showToast } from "../../../constants/Swal/Swal";
-
-interface UserData {
-  email: string;
-  password: string;
-}
 
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-  const [keepLoggedIn, setKeepLoggedIn] = useState<boolean>(false); // 로그인 유지하기 상태
 
-  const handleLogin = async () => {
-    if (email === "" || password === "") {
-      showToast("warning", "이메일과 비밀번호를 모두 입력해주세요");
-      return;
-    }
-
-    try {
-      setLoading(true);
-      const userData: UserData = {
-        email: email,
-        password: password,
-      };
-      const response = await loginUser(userData);
-      setLoading(false);
-      if (response) {
-        showToast("success", "로그인 성공");
-        navigate("/main");
-      } else {
-        showToast("error", "로그인에 실패하였습니다");
-      }
-    } catch (error) {
-      console.log(error);
-      showToast("error", "서버 통신 실패.");
-    }
-  };
-
-  const handleKeepLoggedIn = () => {
-    setKeepLoggedIn(!keepLoggedIn);
-  };
+  const {
+    email,
+    password,
+    setPassword,
+    onChangeEmail,
+    keepLoggedIn,
+    handleKeepLoggedIn,
+    handleLogin,
+  } = useLogin();
 
   return (
     <s.App1>
@@ -64,7 +31,7 @@ const LoginComponent: React.FC = () => {
                 type="text"
                 placeholder="E-Mail"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={onChangeEmail}
               ></s.Input>
               <s.Input
                 type="password"
