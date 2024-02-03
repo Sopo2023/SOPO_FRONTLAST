@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { showToast } from "src/constants/Swal/Swal";
-import { loginUser } from "src/hooks/LoginCraft/LoginCraft";
+import axios from "axios";
+import Token from "src/lib/Token/token";
 
 interface UserData {
   email: string;
@@ -9,6 +10,7 @@ interface UserData {
 }
 
 export const useLogin = () => {
+  const SERVERURL = process.env.REACT_APP_SERVER_URL;
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -28,16 +30,23 @@ export const useLogin = () => {
         email: email,
         password: password,
       };
-      const response = await loginUser(userData);
+      const response = await axios.post(`${SERVERURL}/login`, userData, {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setLoading(false);
-      if (response) {
+      if (response.status === 200) {
+        const { accessToken, refreshToken } = response.data.data;
+        Token.setToken("accessToken", accessToken);
+        Token.setToken("refreshToken", refreshToken);
         showToast("success", "로그인 성공");
         navigate("/main");
       } else {
         showToast("error", "로그인에 실패하였습니다");
       }
     } catch (error) {
-      console.log(error);
       showToast("error", "서버 통신 실패.");
     }
   };
