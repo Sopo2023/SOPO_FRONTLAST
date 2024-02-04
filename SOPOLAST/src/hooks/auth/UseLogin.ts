@@ -16,7 +16,7 @@ export const useLogin = () => {
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [keepLoggedIn, setKeepLoggedIn] = useState<boolean>(false); // 로그인 유지하기 상태
-  const idRegex = /^[A-Za-z0-9]+$/;
+
   const passwordRegex = /^\s*[\w!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?]+$/;
   const handleLogin = async () => {
     if (email === "" || password === "") {
@@ -52,7 +52,11 @@ export const useLogin = () => {
   };
 
   const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+    const idRegex = /^[A-Za-z0-9]+$/;
+    const value = e.target.value;
+    if (idRegex.test(value) || value === "") {
+      setEmail(value);
+    }
   };
 
   const handleKeepLoggedIn = () => {

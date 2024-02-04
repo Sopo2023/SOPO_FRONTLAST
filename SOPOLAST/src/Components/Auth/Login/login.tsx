@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useLogin } from "src/hooks/auth/UseLogin";
 import * as s from "../style/Auth.style";
-import LOGO from "../../../Assets/image/LOGO.png";
+import LOGO from "src/Assets/image/LOGO.png";
 
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
