@@ -123,6 +123,7 @@ export const btnupload = styled.input`
   height: 100%;
   display: flex;
   border: none;
+  display: none;
 `;
 export const From = styled.form`
   width: 100%;
