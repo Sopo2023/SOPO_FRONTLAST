@@ -12,12 +12,25 @@ import { ConfirmToast } from "src/constants/Swal/confirm";
 const Sidewrite = () => {
   const [title, setTitle] = useState<string>("");
   const [selectPlace, setselectPlace] = useState<string>("");
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+
+  const handleChangeImg = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const file = e.target.files?.[0];
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      setSelectedImg(reader.result as string);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
   const [content, setContent] = useState<string>("");
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
-  const [selectedImage, setSelectedImage] = useState<File | null>(null);
-  const [fileName, setFileName] = useState<string | null>(null);
-  const localStorageEmail = localStorage.getItem("sopo_id");
-  const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
+  // const [imageSrc, setImageSrc] = useState<string | null>(null);
+  // const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  // const [fileName, setFileName] = useState<string | null>(null);
+  // const localStorageEmail = localStorage.getItem("sopo_id");
+  // const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 
   const onSubmitHandler = async (e: FormEvent) => {
     console.log("hello");
@@ -29,52 +42,52 @@ const Sidewrite = () => {
       
     }
 
-    if (!title || !content) {
-      showToast("error", "제목, 내용을 모두 입력해주세요.");
-      return;
-    }
+  //   if (!title || !content) {
+  //     showToast("error", "제목, 내용을 모두 입력해주세요.");
+  //     return;
+  //   }
 
-    const formData = new FormData();
-    const data = {
-      title,
-      content,
-      email: localStorageEmail,
-    };
+  //   const formData = new FormData();
+  //   const data = {
+  //     title,
+  //     content,
+  //     email: localStorageEmail,
+  //   };
 
-    formData.append(
-      "data",
-      new Blob([JSON.stringify(data)], { type: "application/json" })
-    );
+  //   formData.append(
+  //     "data",
+  //     new Blob([JSON.stringify(data)], { type: "application/json" })
+  //   );
 
-    if (selectPlace === "게시물" && selectedImage) {
-      formData.append("image", selectedImage);
-    }
+  //   if (selectPlace === "게시물" && selectedImage) {
+  //     formData.append("image", selectedImage);
+  //   }
 
-    try {
-      let response;
-      if (selectPlace === "게시물") {
-        await axios.post(`${SERVERURL}/senior-to-junior/create`, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
-      } else if (selectPlace === "대회") {
-        response = await axios.post(SERVERURL + "#", formData, {
-          headers: {},
-        });
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
+  //   try {
+  //     let response;
+  //     if (selectPlace === "게시물") {
+  //       await axios.post(`${SERVERURL}/senior-to-junior/create`, formData, {
+  //         headers: {
+  //           "Content-Type": "multipart/form-data",
+  //         },
+  //       });
+  //     } else if (selectPlace === "대회") {
+  //       response = await axios.post(SERVERURL + "#", formData, {
+  //         headers: {},
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // };
 
-  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const selectedImage = e.target.files?.[0];
-    setSelectedImage(selectedImage);
-    setFileName(selectedImage ? selectedImage.name : null);
-    setImageSrc(selectedImage ? URL.createObjectURL(selectedImage) : null);
-  };
-
+  // const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const selectedImage = e.target.files?.[0];
+  //   setSelectedImage(selectedImage);
+  //   setFileName(selectedImage ? selectedImage.name : null);
+  //   setImageSrc(selectedImage ? URL.createObjectURL(selectedImage) : null);
+  // };
+  }
   return (
     <>
       <s.Main>
@@ -107,10 +120,10 @@ const Sidewrite = () => {
                
                   <span>이미지추가</span>
                   <s.plustimg>
-                    <label htmlFor="file">
+                    <label htmlFor="change-img">
                       <img src={ImgPlus} />
                     </label>
-                    <s.btnupload type="hidden" onChange={handleImageChange} ></s.btnupload>
+                    <s.btnupload name="file" type="file" id="change-img"  onChange={handleChangeImg} ></s.btnupload>
                    
                   </s.plustimg>
                   
