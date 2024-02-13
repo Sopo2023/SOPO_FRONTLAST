@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const StackLine = styled.div`
     position: absolute;
@@ -7,7 +7,7 @@ export const StackLine = styled.div`
     bottom: 0px;
     left: 200px;
     display: inline-block;
-`
+`;
 
 export const GradeSelect = styled.select`
     width: 80px;
@@ -19,14 +19,14 @@ export const GradeSelect = styled.select`
     font-family: Inter;
     margin-top: 20px;
     display: inline;
-`
+`;
 
 export const GradeGreen = styled.div`
     color: green;
     font-size: 30px;
     position: relative;
     display: inline;
-`
+`;
 
 export const MajorSelect = styled.div`
     display: inline;
@@ -37,16 +37,14 @@ export const MajorSelect = styled.div`
     font-weight: 600;
     line-height: normal;
     position: relative;
-    
-`
+`;
 
-
-export const MajorButton = styled.button`
+export const MajorButton = styled.button<{clicked: boolean }>`
     border: none;
     background-color: none;
     padding: 13px;
-    display: inline;
-    color: #A7A7A7;
+    display: inline; 
+    color: ${({ clicked }) => (clicked ? '#1A9A18' : '#A7A7A7')};
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -55,16 +53,12 @@ export const MajorButton = styled.button`
     position: relative;
     background: none;
     cursor: pointer;
-`
 
-export const MajorButtonHover = styled(MajorButton)`
     &:hover {
-        color: #1A9A18 !important;
+        color: #1A9A18;
     }
-`
 
-export const MajorButtonClicked = styled(MajorButton)`
     &:active {
-        color: #1A9A18 !important;
+        color: ${({ clicked }) => (clicked ? '#1A9A18' : '#A7A7A7')};
     }
-`
+`;

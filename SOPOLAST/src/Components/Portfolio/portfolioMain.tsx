@@ -1,7 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import cnsLogo from "../../Assets/image/cnsLogo.png";
-import b1nd from "../../Assets/image/b1nd.png";
 import Sidename from "src/constants/Sidebar/Side/side";
 import "./protfolio.css";
 import Head from "../../constants/head/Head/head"
