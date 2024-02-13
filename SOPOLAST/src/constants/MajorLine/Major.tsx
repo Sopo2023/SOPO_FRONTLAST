@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import * as S from 'src/constants/MajorLine/Major.style';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import * as S from "src/constants/MajorLine/Major.style";
 
 export default function Major() {
-  const [isClicked, setIsClicked] = useState(false); // 버튼 클릭 상태를 관리합니다.
-  const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const majorClick = (major) => {
-    console.log(`Clicked on ${major}`);
-    setIsClicked(!isClicked); // 버튼 클릭 시 상태를 변경하여 클래스 추가/제거를 토글합니다.
+  const handleClick = (index:string) => {
+    setActiveIndex(index);
   };
 
   return (
@@ -26,57 +24,57 @@ export default function Major() {
 
           <S.MajorSelect>
             <S.MajorButton
-              onClick={() => majorClick('프론트엔드')}
-              clicked={isClicked}
+              active={activeIndex === "프론트엔드"}
+              onClick={() => handleClick("프론트엔드")}
             >
               프론트엔드
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('백엔드')}
-              clicked={isClicked}
+              active={activeIndex === "백엔드"}
+              onClick={() => handleClick("백엔드")}
             >
               백엔드
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('안드로이드')}
-              clicked={isClicked}
+              active={activeIndex === "안드로이드"}
+              onClick={() => handleClick("안드로이드")}
             >
               안드로이드
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('iOS')}
-              clicked={isClicked}
+              active={activeIndex === "Ios"}
+              onClick={() => handleClick("Ios")}
             >
               iOS
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('임베디드')}
-              clicked={isClicked}
+              active={activeIndex === "임베디드"}
+              onClick={() => handleClick("임베디드")}
             >
               임베디드
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('AI')}
-              clicked={isClicked}
+              active={activeIndex === "AI"}
+              onClick={() => handleClick("AI")}
             >
               AI
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('정보보안')}
-              clicked={isClicked}
+              active={activeIndex === "정보보안"}
+              onClick={() => handleClick("정보보안")}
             >
               정보보안
             </S.MajorButton>
 
             <S.MajorButton
-              onClick={() => majorClick('디자인')}
-              clicked={isClicked}
+              active={activeIndex === "디자인"}
+              onClick={() => handleClick("디자인")}
             >
               디자인
             </S.MajorButton>
