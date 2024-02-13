@@ -11,8 +11,9 @@ const LoginComponent: React.FC = () => {
     email,
     password,
     setPassword,
-    onChangeEmail,
     keepLoggedIn,
+    onChangeEmail,
+    onChangePassword,
     handleKeepLoggedIn,
     handleLogin,
   } = useLogin();
@@ -37,7 +38,7 @@ const LoginComponent: React.FC = () => {
                 type="password"
                 placeholder="Password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={onChangePassword}
               ></s.Input>
               <s.CheckboxWrapper>
                 <s.CheckboxBundle>
