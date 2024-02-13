@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import Head from "../../constants/head/Head/head";
 import Side from "../../constants/Sidebar/Side/side";
@@ -6,7 +7,7 @@ import ImgPlus from "src/Assets/image/imgplus.png";
 import SubmitImg from "src/Assets/image/submitimg.png";
 import * as s from "./Write.style";
 import { showToast } from "src/constants/Swal/Swal";
-import UseWrite from "src/hooks/Wirte/useWirte"
+import UseWrite from "src/hooks/Write/useWirte"
 
 const Sidewrite = () => {
   const {
@@ -65,7 +66,6 @@ const Sidewrite = () => {
                       onChange={handleChangeImg}
                     ></s.btnupload>
                   </s.plustimg>
-                  
                 </s.Tool>
 
                 <s.SubmitButtonMain>
@@ -96,7 +96,6 @@ const Sidewrite = () => {
                       onChange={(e) => setContent(e.target.value)}
                     ></s.WriteDetail>
                   </s.WriteDetailMain>
-
                   {/* {fileName && <div>{fileName}</div>} */}
                 </s.WriteForm>
               </s.WriteUnder>
