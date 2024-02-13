@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import Head from "../../constants/head/Head/head";
 import Side from "../../constants/Sidebar/Side/side";
@@ -7,74 +6,23 @@ import ImgPlus from "src/Assets/image/imgplus.png";
 import SubmitImg from "src/Assets/image/submitimg.png";
 import * as s from "./Write.style";
 import { showToast } from "src/constants/Swal/Swal";
+import UseWrite from "src/hooks/Wirte/useWirte"
 
 const Sidewrite = () => {
-  const [title, setTitle] = useState<string>("");
-  const [content, setContent] = useState<string>("");
-  const [selectPlace, setselectPlace] = useState<string>("");
-  const [selectedImg, setSelectedImg] = useState<string | null>(null);
-  const [Class, setSelectClass] = useState<string>("");
-  const handleChangeImg = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const file = e.target.files?.[0];
-    const reader = new FileReader();
+  const {
+    title,
+    setTitle,
+    content,
+    setContent,
+    selectPlace,
+    setselectPlace,
+    Class,
+    setSelectClass,
+    selectedImg,
+    handleChangeImg,
+    onSubmitHandler,
 
-    reader.onload = () => {
-      setSelectedImg(reader.result as string);
-    };
-    if (file) {
-      reader.readAsDataURL(file);
-    }
-  };
-  
-
-  const onSubmitHandler = async (e: FormEvent) => {
-    console.log("hello");
-    e.preventDefault();
-
-    if (!title || !content) {
-      showToast("error", "제목, 내용을 모두 입력해주세요.");
-      return;
-    }
-
-    const formData = new FormData();
-    const data = {
-      title,
-      content,
-      Class
-    };
-    formData.append(
-      "data",
-      new Blob([JSON.stringify(data)], { type: "application/json" })
-    );
-    
-    if (selectPlace === "게시물" && selectedImg) {
-      formData.append("image", selectedImg);
-    }
-
-    try {
-      let response;
-      if (selectPlace === "게시물") {
-        await axios.post(`#`, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
-      } else if (selectPlace === "대회") {
-        response = await axios.post("#", formData, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-
-    // const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-    //   const selectedImage = e.target.files?.[0];
-    //   setSelectedImage(selectedImage);
-    //   setFileName(selectedImage ? selectedImage.name : null);
-    //   setImageSrc(selectedImage ? URL.createObjectURL(selectedImage) : null);
-    // };
-  };
+  } = UseWrite();
   return (
     
       <s.Main>
@@ -117,6 +65,7 @@ const Sidewrite = () => {
                       onChange={handleChangeImg}
                     ></s.btnupload>
                   </s.plustimg>
+                  
                 </s.Tool>
 
                 <s.SubmitButtonMain>
@@ -147,6 +96,7 @@ const Sidewrite = () => {
                       onChange={(e) => setContent(e.target.value)}
                     ></s.WriteDetail>
                   </s.WriteDetailMain>
+
                   {/* {fileName && <div>{fileName}</div>} */}
                 </s.WriteForm>
               </s.WriteUnder>
