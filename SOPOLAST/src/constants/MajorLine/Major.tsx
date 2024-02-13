@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "src/constants/MajorLine/Major.style";
+import axios from "axios";
 
 export default function Major() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [grades, setGrades] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("히히api자리지롱");
+        setGrades(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleClick = (index:string) => {
     setActiveIndex(index);
@@ -12,12 +28,13 @@ export default function Major() {
   return (
     <div className="main">
       <div className="content">
-        {/* 스타일을 적용한 요소들을 렌더링합니다. */}
         <S.StackLine>
-          <S.GradeSelect className="gradeSelect">
-            <option value="8">8기</option>
-            <option value="7">7기</option>
-            <option value="6">6기</option>
+        <S.GradeSelect className="gradeSelect">
+            {grades.map((grade) => (
+              <option key={grade.id} value={grade.id}>
+                {grade.name}
+              </option>
+            ))}
           </S.GradeSelect>
 
           <S.GradeGreen> | </S.GradeGreen>
