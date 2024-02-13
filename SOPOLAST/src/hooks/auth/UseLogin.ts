@@ -68,6 +68,18 @@ export const useLogin = () => {
       console.log("유효하지 않은 이메일 형식입니다.");
       // 또는 setError("유효하지 않은 이메일 형식입니다.");와 같이 상태를 업데이트할 수 있습니다.
     }
+    const specialCharRegex = /[^a-zA-Z0-9@]/;
+    if (specialCharRegex.test(newEmail)) {
+      // 특수문자가 감지되면 해당 문자를 공백으로 치환
+      const filteredEmail = newEmail
+        .replace(specialCharRegex, " ")
+        .replace(/\s/g, "");
+      setEmail(filteredEmail);
+    } else if (!isValidEmail) {
+      // 유효하지 않은 이메일 형식이면 에러 처리
+      console.log("유효하지 않은 이메일 형식입니다.");
+      // 또는 setError("유효하지 않은 이메일 형식입니다.");와 같이 상태를 업데이트할 수 있습니다.
+    }
   };
 
   const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
