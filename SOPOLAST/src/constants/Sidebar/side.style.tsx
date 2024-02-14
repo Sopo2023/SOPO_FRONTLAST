@@ -43,71 +43,84 @@ export const ProName = styled.div`
   line-height: normal;
 `;
 export const profile = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-`
+  display: flex;
+  width: 100%;
+  height: 100%;
+`;
 export const proBorder = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-top: 2px solid gray;
-    width: 100%;
-    height: 100%;
-`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: 2px solid gray;
+  width: 100%;
+  height: 100%;
+`;
 export const proMain = styled.div`
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 80%;
-    height: 100%;
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal; 
-`
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 80%;
+  height: 100%;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+`;
 export const Span = styled.span`
-    display: flex;
-`
+  display: flex;
+  width: 100%;
+  height: 30px;
+  white-space: pre-line;
+`;
 export const award = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 50px;
+  height: 150px;
+`;
+export const SkilSapnDetail = styled.span`
 display: flex;
-flex-direction: column;
-width: 100%;
-min-width: 50px; 
-height: 150px;
-
-`
+flex-direction: row;
+  color: #000;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+`;
 export const SapnDetail = styled.span`
-    color: #000;
-    font-family: Inter;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal; 
-`
+display: flex;
+  color: #000;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+`;
 export const ProImage = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 20px;
-    width: 100%;
-    height: 100%;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+`;
 export const oodBio = styled.div`
-    width: 100%;
-    height: 10%;
-`
+  width: 100%;
+  height: 10%;
+`;
 export const imgBio = styled.img`
-        width: 20px;
-    height: 20px;
-    vertical-align: middle;
-`
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+`;
 export const perBio = styled.span`
-    font-weight: 600;
-    font-size: 15px;
-    vertical-align: middle;
-    margin-left: 10px;
-`
+  font-weight: 600;
+  font-size: 15px;
+  vertical-align: middle;
+  margin-left: 10px;
+`;
