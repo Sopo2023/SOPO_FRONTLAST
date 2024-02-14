@@ -93,6 +93,8 @@ const useSignup = () => {
     } catch (error) {
       console.error("서버 통신 오류:", error);
       showToast("error", "서버 통신 실패.");
+    } finally {
+      setIsVerifying(false); // 수정된 부분
     }
   };
 
@@ -104,7 +106,7 @@ const useSignup = () => {
       return;
     }
 
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // 수정된 부분
     if (!emailPattern.test(email)) {
       showToast("warning", "이메일 형식이 올바르지 않습니다.");
       return;
