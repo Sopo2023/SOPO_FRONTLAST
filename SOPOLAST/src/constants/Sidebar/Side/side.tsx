@@ -24,7 +24,7 @@ export default function Side() {
                 <S.Span>{introduction}</S.Span>
                 <S.Span> {Bio}</S.Span>
 
-                {skill.map((skill, index) => (
+                {skill.slice(0, 6).map((skill, index) => (
                   <>
                     <S.Span> Skill</S.Span>
                     <S.SkilSapnDetail key={index}>
