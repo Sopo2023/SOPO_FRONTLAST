@@ -72,6 +72,14 @@ export const proMain = styled.div`
 export const Span = styled.span`
     display: flex;
 `
+export const award = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+min-width: 50px; 
+height: 150px;
+
+`
 export const SapnDetail = styled.span`
     color: #000;
     font-family: Inter;
