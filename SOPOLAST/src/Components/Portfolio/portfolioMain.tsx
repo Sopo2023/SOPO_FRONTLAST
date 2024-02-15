@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidename from "src/constants/Sidebar/Side/side";
 import "./protfolio.css";
 import Head from "../../constants/head/Head/head"
 import MajorLine from "../../constants/MajorLine/Major"
+import axios from "axios";
 
 import * as S from "../Portfolio/portfolioMain.style"
 
 export default function Portfolio() {
-  const majorClick = (major) => {
-    console.log(`Clicked on ${major}`);
+  const [users, setUsers] = useState([]);
+  const [activeUser, setActiveUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get("히ㅣㅎ api");
+        setUsers(response.data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
+  const handleNameCardClick = (user) => {
+    setActiveUser(user);
   };
 
-  const majorbutton: HTMLElement | null = document.getElementById('majorbutton');
-
-  if (majorbutton) {
-    majorbutton.addEventListener('click', function() {
-      if (majorbutton.classList.contains('clicked')) {
-        majorbutton.classList.remove('clicked');
-      } else {
-        majorbutton.classList.add('clicked');
-      }
-    });
-  }
-
-  const navigate = useNavigate();
   return (
     <div className="main">
       <div className="content">
@@ -42,48 +47,19 @@ export default function Portfolio() {
 
         <Sidename />
         <S.Mo>
-          <S.NameCardBox
-            className="namecardBox"
-            onClick={() => {
-              navigate("/52562893");
-            }}
-          >
-            <S.CardName>배채희</S.CardName>
-            <S.CardGrade> DGSW 8th </S.CardGrade>
-            <S.CardMail> Mail - chaeeehui@gmail.com </S.CardMail>
-          </S.NameCardBox>
-
-          <S.NameCardBox2
-            onClick={() => {
-              navigate("/12362153");
-            }}
-          >
-            <S.CardName>박규민</S.CardName>
-            <S.CardGrade> DGSW 8th </S.CardGrade>
-            <S.CardMail> Mail - kyumin7487@gmail.com </S.CardMail>
-          </S.NameCardBox2>
-
-          <S.NameCardBox3>
-            <S.CardName> 전우진 </S.CardName>
-            <S.CardGrade> DGSW 8th </S.CardGrade>
-            <S.CardMail> Mail - woojin@gmail.com </S.CardMail>
-          </S.NameCardBox3>
-
-          <S.NameCardBox5>
-            <S.CardName> 이윤선 </S.CardName>
-            <S.CardGrade> DGSW 8th </S.CardGrade>
-            <S.CardMail> Mail - younssun@gmail.com </S.CardMail>
-          </S.NameCardBox5>
-
-          <S.NameCardBox4>
-            <S.CardName> 이예진 </S.CardName>
-            <S.CardGrade> DGSW 8th </S.CardGrade>
-            <S.CardMail> Mail - yejin@gmail.com </S.CardMail>
-          </S.NameCardBox4>
+          {users.map((user) => (
+            <S.NameCardBox
+              key={user.id}
+              className="namecardBox"
+              onClick={() => handleNameCardClick(user)}
+            >
+              <S.CardName>{user.name}</S.CardName>
+              <S.CardGrade>{user.grade}</S.CardGrade>
+              <S.CardMail>{user.mail}</S.CardMail>
+            </S.NameCardBox>
+          ))}
         </S.Mo>
       </div>
     </div>
   );
 }
-
-// export default portfolio();
