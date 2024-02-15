@@ -4,8 +4,7 @@ import axios from "axios";
 import LOGO from "../../../Assets/image/LOGO.png";
 import { showToast } from "../../../constants/Swal/Swal";
 import * as s from "../style/Auth.style";
-import "../Signup/signup.css";
-function LoginComponent(): JSX.Element {
+function LoginComponent() {
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
   const navigate = useNavigate();
   const [name, setName] = useState<string>("");
