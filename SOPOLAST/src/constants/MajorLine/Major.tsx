@@ -6,6 +6,7 @@ import axios from "axios";
 export default function Major() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [grades, setGrades] = useState([]);
+  const [selectedMajorInfo, setSelectedMajorInfo] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,24 +22,43 @@ export default function Major() {
     fetchData();
   }, []);
 
-  const handleClick = (index:string) => {
-    setActiveIndex(index);
+  const handleClick = async (grade: string) => {
+    setActiveIndex(grade);
+    try {
+      const response = await axios.get(`히히api자리/${grade}`);
+      setSelectedMajorInfo(response.data);
+    } catch (error) {
+      console.error("Error fetching major info:", error);
+    }
   };
-
-  return (
-    <div className="main">
-      <div className="content">
-        <S.StackLine>
-        <S.GradeSelect className="gradeSelect">
-            {grades.map((grade) => (
-              <option key={grade.id} value={grade.id}>
-                {grade.name}
-              </option>
-            ))}
-          </S.GradeSelect>
+  
+    return (
+      <div className="main">
+        <div className="content">
+          <S.StackLine>
+            <S.GradeSelect className="gradeSelect">
+              {grades.map((grade) => (
+                <option key={grade.id} value={grade.id}>
+                  {grade.name}
+                </option>
+              ))}
+            </S.GradeSelect>
+  
 
           <S.GradeGreen> | </S.GradeGreen>
-
+          
+          <S.MajorSelect>
+            {grades.map((grade) => (
+              <S.MajorButton
+                key={grade.id}
+                active={activeIndex === grade.id}
+                onClick={() => handleClick(grade.id)}
+              > 
+                {grade.name}
+              </S.MajorButton>
+            ))}
+          </S.MajorSelect> 
+          
           <S.MajorSelect>
             <S.MajorButton
               active={activeIndex === "프론트엔드"}
