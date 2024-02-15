@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 `;
 export const MainHome = styled.div`
   width: 100%;
-  min-height: 1200px;
+  min-height: 1300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,10 +38,11 @@ export const MainCard = styled.div`
   }
 `;
 export const CardContainer = styled.div`
-  width: 200vw;
+  min-width: 185vw;
+  
+  white-space: nowrap;
   height: 291px;
   flex-direction: row;
-  flex-wrap: nowrap;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
