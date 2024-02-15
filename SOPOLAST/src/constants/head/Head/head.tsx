@@ -19,32 +19,33 @@ const Head: React.FC<HeadProps> = () => {
 
   return (
     <S.Header>
+
       <S.Head>
       <S.SopoLogo onClick={() => navigate("/main")}>
         SOPO
       </S.SopoLogo>
-      <nav>
+      <S.Nav>
         <S.HeaderUl>
           <S.HeaderLi active={isMain} onClick={() => navigate("/main")}>
-            홈
+            <span> 홈</span>
           </S.HeaderLi>
           <S.HeaderLi active={isMentorMentee} onClick={() => navigate("/Mentor-Mentee")}>
-            선배가 후배에게
+            <span>선배가 후배에게</span>
           </S.HeaderLi>
           <S.HeaderLi active={isPortfolio} onClick={() => navigate("/portfolio")}>
-            포트폴리오
+          <span> 포트폴리오</span>
           </S.HeaderLi>
           <S.HeaderLi active={isCompetition} onClick={() => navigate("/Competition")}>
-            대회
+          <span>대회</span>
           </S.HeaderLi>
           <S.HeaderLi active={isWrite} onClick={() => navigate("/sidewrite")}>
-            글쓰기
+            <span>글쓰기</span>
           </S.HeaderLi>
           <S.HeaderLi active={isMyPage} onClick={() => navigate("/mypage")}>
-            내정보
+            <span>내정보</span>
           </S.HeaderLi>
         </S.HeaderUl>
-      </nav>
+      </S.Nav>
       </S.Head>
     </S.Header>
   );

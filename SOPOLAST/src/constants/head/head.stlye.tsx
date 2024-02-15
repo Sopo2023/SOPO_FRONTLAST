@@ -31,13 +31,22 @@ cursor: pointer;
 font-size: 25px;
 font-weight: 600;
 `
+export const Nav = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+`
 export const HeaderUl = styled.ul`
 padding: 0;
 display: flex;
 justify-content: space-between;
 `
-export const HeaderLi = styled.nav<HeaderLiProps>`
+export const HeaderLi = styled.div<HeaderLiProps>`
   cursor: pointer;
+  height: 100%;
   text-decoration-line: none;
   font-size: 23px;
   font-weight: 800;
@@ -56,7 +65,15 @@ export const HeaderLi = styled.nav<HeaderLiProps>`
       text-decoration: underline !important;
       text-underline-offset: 32px !important;
     `}
-
+span{
+  text-decoration: none;
+  font-size: 23px;
+    color: #8C8C8C;
+    padding: 0px 7px;
+    box-sizing: content-box;
+    white-space: nowrap;
+    cursor: pointer;
+}
   &:hover {
     color: #1A9A18 !important;
   }
