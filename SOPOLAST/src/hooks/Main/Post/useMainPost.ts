@@ -11,7 +11,6 @@ const UseMainPost = () =>{
     // 추가: 컴포넌트가 마운트되면 서버에서 포스트 목록을 가져옴
     fetchPosts();
   }, []);
-
   const fetchPosts = () => {
     axios
       .get(`${SERVERURL}/posts`) // 변경: 실제 포스트 목록을 가져오는 엔드포인트로 변경
