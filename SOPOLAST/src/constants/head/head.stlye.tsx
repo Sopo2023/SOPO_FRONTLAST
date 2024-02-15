@@ -3,7 +3,12 @@ import styled,{css} from "styled-components";
 interface HeaderLiProps {
     active: boolean;
   }
-
+export const Head = styled.div`
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+`
 export const Header = styled.div`
 position: fixed !important;
 position: absolute;
@@ -15,6 +20,7 @@ width: 100%;
 height: 80px;
 margin: 0;
 display: flex;
+justify-content: center;
 align-items: center;
 `
 export const SopoLogo= styled.h1`

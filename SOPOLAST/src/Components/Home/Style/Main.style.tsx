@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
+export const Main = styled.div`
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 80px;
+`
 export const MainContainer = styled.div`
-  width: 100vw;
-  min-height: 100vh;
+    width: 1400px;
+    height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,10 +21,11 @@ export const MainContainer = styled.div`
 export const MainHome = styled.div`
   width: 100%;
   min-height: 1300px;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
   position: relative;
 `;
 export const MainCard = styled.div`
@@ -24,8 +34,7 @@ export const MainCard = styled.div`
   width: 100vw;
   height: 291px;
   background-color: #f5f5f6;
-  position: absolute;
-  top: 80px;
+  display: flex;
   -ms-overflow-style: none;
   scrollbar-width: none;
   -ms-user-select: none;
@@ -39,7 +48,6 @@ export const MainCard = styled.div`
 `;
 export const CardContainer = styled.div`
   min-width: 185vw;
-  
   white-space: nowrap;
   height: 291px;
   flex-direction: row;
@@ -78,8 +86,6 @@ export const p = styled.p`
 `;
 
 export const BottomArea = styled.div`
-  position: absolute;
-  top: 400px;
   width: 100%;
   height: 800px;
   display: flex;

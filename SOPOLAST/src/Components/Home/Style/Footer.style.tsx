@@ -6,9 +6,11 @@ export const FooterContainer = styled.div`
   background-color: rgb(41, 44, 51);
   width: 100%;
   height: 320px;
+  display: flex;
+  justify-content: center;
 `;
 export const FooterWrap = styled.div`
-  width: 1200px;
+  width: 1400px;
   display: flex;
   -webkit-box-align: center;
   align-items: center;

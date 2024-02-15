@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import * as s from "../head.stlye";
+import * as S from "../head.stlye";
 
 interface HeadProps {
   active: boolean;
@@ -18,33 +18,35 @@ const Head: React.FC<HeadProps> = () => {
   const isWrite = location.pathname === "/sidewrite"
 
   return (
-    <s.Header>
-      <s.SopoLogo onClick={() => navigate("/main")}>
+    <S.Header>
+      <S.Head>
+      <S.SopoLogo onClick={() => navigate("/main")}>
         SOPO
-      </s.SopoLogo>
+      </S.SopoLogo>
       <nav>
-        <s.HeaderUl>
-          <s.HeaderLi active={isMain} onClick={() => navigate("/main")}>
+        <S.HeaderUl>
+          <S.HeaderLi active={isMain} onClick={() => navigate("/main")}>
             홈
-          </s.HeaderLi>
-          <s.HeaderLi active={isMentorMentee} onClick={() => navigate("/Mentor-Mentee")}>
+          </S.HeaderLi>
+          <S.HeaderLi active={isMentorMentee} onClick={() => navigate("/Mentor-Mentee")}>
             선배가 후배에게
-          </s.HeaderLi>
-          <s.HeaderLi active={isPortfolio} onClick={() => navigate("/portfolio")}>
+          </S.HeaderLi>
+          <S.HeaderLi active={isPortfolio} onClick={() => navigate("/portfolio")}>
             포트폴리오
-          </s.HeaderLi>
-          <s.HeaderLi active={isCompetition} onClick={() => navigate("/Competition")}>
+          </S.HeaderLi>
+          <S.HeaderLi active={isCompetition} onClick={() => navigate("/Competition")}>
             대회
-          </s.HeaderLi>
-          <s.HeaderLi active={isWrite} onClick={() => navigate("/sidewrite")}>
+          </S.HeaderLi>
+          <S.HeaderLi active={isWrite} onClick={() => navigate("/sidewrite")}>
             글쓰기
-          </s.HeaderLi>
-          <s.HeaderLi active={isMyPage} onClick={() => navigate("/mypage")}>
+          </S.HeaderLi>
+          <S.HeaderLi active={isMyPage} onClick={() => navigate("/mypage")}>
             내정보
-          </s.HeaderLi>
-        </s.HeaderUl>
+          </S.HeaderLi>
+        </S.HeaderUl>
       </nav>
-    </s.Header>
+      </S.Head>
+    </S.Header>
   );
 };
 
