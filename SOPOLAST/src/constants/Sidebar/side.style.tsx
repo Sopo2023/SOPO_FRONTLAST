@@ -83,8 +83,8 @@ export const award = styled.div`
   height: 150px;
 `;
 export const SkilSapnDetail = styled.span`
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
   color: #000;
   font-family: Inter;
   font-size: 17px;

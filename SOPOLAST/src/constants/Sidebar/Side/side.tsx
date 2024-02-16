@@ -1,7 +1,5 @@
 import React from "react";
 import * as S from "../side.style";
-import { useState, useEffect } from "react";
-import hp from "src/Assets/image/hp.png";
 import org from "src/Assets/image/org.png";
 import mail from "src/Assets/image/mail.png";
 import github1 from "src/Assets/image/github.png";
@@ -23,7 +21,6 @@ export default function Side() {
               <S.proMain>
                 <S.Span>{introduction}</S.Span>
                 <S.Span> {Bio}</S.Span>
-
                 {skill.slice(0, 6).map((skill, index) => (
                   <>
                     <S.Span> Skill</S.Span>
@@ -37,7 +34,7 @@ export default function Side() {
                     <>
                       <S.Span>Award</S.Span>
                       <S.SapnDetail key={index}>
-                        <span>🥇{award}</span>
+                        <span>🏆{award}</span>
                       </S.SapnDetail>
                     </>
                   ))}
