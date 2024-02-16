@@ -10,13 +10,48 @@ export const FooterContainer = styled.div`
   justify-content: center;
 `;
 export const FooterWrap = styled.div`
-  width: 1400px;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
   padding: 24px 0px;
+  @media only screen and (min-width: 320px) {
+    width: 320px;
+  }
+  @media only screen and (max-width: 540px) {
+    width: 540px;
+  }
+  @media only screen and (max-width: 1023px) {
+    width: 1023px;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 1024px;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 1300px;
+  }
+  @media only screen and (min-width: 1400px) {
+    width: 1500px;
+  }
+  @media only screen and (min-width: 1470px) {
+    width: 1470px;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 1700px;
+  }
+  @media only screen and (min-width: 1700px) {
+    width: 1800px;
+  }
+  @media only screen and (min-width: 1920px) {
+    width: 2000px;
+  }
+  @media only screen and (min-width: 2000px) {
+    width: 2100px;
+  }
+  @media only screen and (min-width: 2400px) {
+    width: 2600px;
+  }
 `;
 
 export const FootersidetWrap = styled.div`

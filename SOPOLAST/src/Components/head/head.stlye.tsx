@@ -4,7 +4,42 @@ interface HeaderLiProps {
     active: boolean;
   }
 export const Head = styled.div`
-    width: 1400px;
+    @media only screen and (min-width: 320px) {
+    width: 320px;
+  }
+  @media only screen and (max-width: 540px) {
+    width: 540px;
+  }
+  @media only screen and (max-width: 1023px) {
+    width: 1023px;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 1024px;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 1300px;
+  }
+  @media only screen and (min-width: 1400px) {
+    width: 1500px;
+  }
+  @media only screen and (min-width: 1470px) {
+    width: 1470px;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 1700px;
+  }
+  @media only screen and (min-width: 1700px) {
+    width: 1800px;
+  }
+  @media only screen and (min-width: 1920px) {
+    width: 2000px;
+  }
+  @media only screen and (min-width: 2000px) {
+    width: 2100px;
+  }
+  @media only screen and (min-width: 2400px) {
+    width: 2600px;
+  }
     height: 100%;
     display: flex;
     align-items: center;

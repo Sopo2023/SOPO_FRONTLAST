@@ -5,6 +5,7 @@ export const PostVeiw = styled.div`
   background-color: #a7a7a72c;
   width: 60%;
   height: 750px;
+  margin-left: 30px;
   &::-webkit-scrollbar {
     display: none;
   }
