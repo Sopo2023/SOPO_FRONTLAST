@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { showToast } from "src/constants/Swal/Swal";
 import axios from "axios";
 
-const useSignup = () => {
+export const useSignup = () => {
   const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ const useSignup = () => {
   const [isCertifying, setIsCertifying] = useState(false);
   const [isEmailVerified, setIsEmailVerified] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
-  const [authenticationCode, setAuthenticationCode] = useState(""); // 추가된 부분
+  const [authenticationCode, setAuthenticationCode] = useState("");
 
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
@@ -86,7 +86,7 @@ const useSignup = () => {
       if (response.data.status === 200) {
         showToast("success", "인증 코드가 올바릅니다.");
         setIsCertifying(false);
-        setMsg(""); // 이전 오류 메시지 제거
+        setMsg("");
       } else {
         showToast("error", "인증 코드가 올바르지 않습니다.");
       }
@@ -94,7 +94,7 @@ const useSignup = () => {
       console.error("서버 통신 오류:", error);
       showToast("error", "서버 통신 실패.");
     } finally {
-      setIsVerifying(false); // 수정된 부분
+      setIsVerifying(false);
     }
   };
 
@@ -106,7 +106,7 @@ const useSignup = () => {
       return;
     }
 
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // 수정된 부분
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailPattern.test(email)) {
       showToast("warning", "이메일 형식이 올바르지 않습니다.");
       return;
@@ -128,6 +128,7 @@ const useSignup = () => {
         email: email,
         name: name,
         password: password,
+        repassword: repassword,
       };
 
       const response = await axios.post(`${SERVERURL}/createUser`, userData, {
@@ -142,7 +143,6 @@ const useSignup = () => {
       if (response.data.status === 200) {
         showToast("success", "회원 가입이 완료되었습니다.");
 
-        // 회원가입 성공 후 초기화
         setName("");
         setEmail("");
         setPassword("");
