@@ -131,6 +131,8 @@ export const useSignup = () => {
         repassword: repassword,
       };
 
+      console.log("서버로 보내는 정보:", userData); // 콘솔에 서버로 보내는 정보 표시
+
       const response = await axios.post(`${SERVERURL}/createUser`, userData, {
         withCredentials: true,
         headers: {
