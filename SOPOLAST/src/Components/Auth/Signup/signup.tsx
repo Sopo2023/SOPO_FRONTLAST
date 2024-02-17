@@ -5,7 +5,6 @@ import axios from "axios";
 import LOGO from "../../../Assets/image/LOGO.png";
 import { showToast } from "../../../constants/Swal/Swal";
 import * as s from "../style/Auth.style";
-import "../Signup/signup.css";
 
 const LoginComponent: React.FC = () => {
   const navigate = useNavigate();
