@@ -34,9 +34,8 @@ const UseSidewrite = () => {
     const data = {
       title,
       content,
-      setselectPlace,
-      setSelectClass,
-      selectedImg,
+      selectPlace, // 추가: 선택한 카테고리 정보
+      isContest: selectPlace === "대회", // 추가: 대회인지 게시물인지 여부
     };
 
     formData.append(
@@ -56,6 +55,10 @@ const UseSidewrite = () => {
             "Content-Type": "multipart/form-data",
           },
         });
+      } else if (selectPlace === "대회") {
+        response = await axios.post("#", formData, {
+          headers: { "Content-Type": "multipart/form-data" },
+        });
       }
 
       // 서버 응답 처리
@@ -64,30 +67,7 @@ const UseSidewrite = () => {
       // 콘솔에 정보가 나오도록 추가
       console.log("서버로 정보를 보냈습니다.");
       console.log("보낸 데이터:", data);
-      console.log("선택한 카테고리:", setSelectClass); // 선택한 카테고리를 콘솔에 출력
-    } catch (error) {
-      console.error("Error:", error);
-    }
-
-    if (selectPlace === "게시물" && selectedImg) {
-      formData.append("image", selectedImg);
-    }
-
-    try {
-      let response;
-      if (selectPlace === "게시물") {
-        response = await axios.post("#", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
-      }
-      console.log(response);
-
-      // 콘솔에 정보가 나오도록 추가
-      console.log("서버로 정보를 보냈습니다.");
-      console.log("보낸 데이터:", data);
-      console.log("선택한 카테고리:", setSelectClass); // 선택한 카테고리를 콘솔에 출력
+      console.log("선택한 카테고리:", selectPlace); // 선택한 카테고리를 콘솔에 출력
     } catch (error) {
       console.error("Error:", error);
     }
