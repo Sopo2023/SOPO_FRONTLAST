@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidname from "../../constants/Sidebar/Side/side";
-import Head from "../../constants/head/Head/head";
+import Head from "src/Components/head/Head/head";
 import "./Competition.css";
 import { useNavigate } from "react-router-dom";
 

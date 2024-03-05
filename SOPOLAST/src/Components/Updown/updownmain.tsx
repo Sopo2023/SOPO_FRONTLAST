@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Sidename from "src/constants/Sidebar/Side/side";
-import Head from "src/constants/head/Head/head";
+import Head from "src/Components/head/Head/head";
 import UpdownPost from "src/Components/Updown/Post/Post";
 
 import * as s from "src/Components/Updown/Updown.style";

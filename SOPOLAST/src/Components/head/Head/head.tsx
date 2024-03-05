@@ -19,7 +19,6 @@ const Head: React.FC<HeadProps> = () => {
 
   return (
     <S.Header>
-
       <S.Head>
       <S.SopoLogo onClick={() => navigate("/main")}>
         SOPO

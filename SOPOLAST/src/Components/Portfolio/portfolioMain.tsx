@@ -4,7 +4,7 @@ import cnsLogo from "../../Assets/image/cnsLogo.png";
 import b1nd from "../../Assets/image/b1nd.png";
 import Sidename from "src/constants/Sidebar/Side/side";
 import "./protfolio.css";
-import Head from "../../constants/head/Head/head"
+import Head from "src/Components/head/Head/head"
 
 import * as S from "../Portfolio/portfolioMain.style"
 

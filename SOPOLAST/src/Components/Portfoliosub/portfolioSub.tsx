@@ -1,7 +1,7 @@
 import React from "react";
 import yogiyo from "../../Assets/image/1.png";
 import comment from "../../Assets/image/comment.png";
-import Head from "../../constants/head/Head/head";
+import Head from "src/Components/head/Head/head";
 import Sidebar from "../../constants/Sidebar/Side/side";
 
 import * as S from "../../Components/Portfoliosub/portfolioSub.style";
