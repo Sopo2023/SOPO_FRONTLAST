@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useLogin } from "src/hooks/auth/UseLogin";
-import * as s from "../style/Auth.style";
+import * as S from "../style/Auth.style";
 import LOGO from "src/Assets/image/LOGO.png";
 
 const LoginComponent: React.FC = () => {
@@ -19,53 +19,53 @@ const LoginComponent: React.FC = () => {
   } = useLogin();
 
   return (
-    <s.App1>
-      <s.Login_Main>
-        <s.GreenBox>
-          <s.Img src={LOGO} alt="로고"></s.Img>
-        </s.GreenBox>
-        <s.Box1>
-          <s.Box_Group>
-            <s.Form className="form">
-              <s.Title>Log in</s.Title>
-              <s.Input
+    <S.App1>
+      <S.Login_Main>
+        <S.GreenBox>
+          <S.Img src={LOGO} alt="로고"></S.Img>
+        </S.GreenBox>
+        <S.Box1>
+          <S.Box_Group>
+            <S.Form className="form">
+              <S.Title>Log in</S.Title>
+              <S.Input
                 type="text"
                 placeholder="E-Mail"
                 value={email}
                 onChange={onChangeEmail}
-              ></s.Input>
-              <s.Input
+              ></S.Input>
+              <S.Input
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={onChangePassword}
-              ></s.Input>
-              <s.CheckboxWrapper>
-                <s.CheckboxBundle>
-                  <s.Checkbox
+              ></S.Input>
+              <S.CheckboxWrapper>
+                <S.CheckboxBundle>
+                  <S.Checkbox
                     type="checkbox"
                     id="keepLoggedInCheckbox" // 체크박스에 id 추가
                     checked={keepLoggedIn}
                     onChange={handleKeepLoggedIn}
                   />
 
-                  <s.CheckboxLabel htmlFor="keepLoggedInCheckbox">
+                  <S.CheckboxLabel htmlFor="keepLoggedInCheckbox">
                     로그인 유지
-                  </s.CheckboxLabel>
-                </s.CheckboxBundle>
-              </s.CheckboxWrapper>
-              <s.Button type="button" onClick={handleLogin}>
+                  </S.CheckboxLabel>
+                </S.CheckboxBundle>
+              </S.CheckboxWrapper>
+              <S.Button type="button" onClick={handleLogin}>
                 Log in
-              </s.Button>
+              </S.Button>
 
-              <s.SignLink onClick={() => navigate("/Signuppage")}>
+              <S.SignLink onClick={() => navigate("/Signuppage")}>
                 sign up
-              </s.SignLink>
-            </s.Form>
-          </s.Box_Group>
-        </s.Box1>
-      </s.Login_Main>
-    </s.App1>
+              </S.SignLink>
+            </S.Form>
+          </S.Box_Group>
+        </S.Box1>
+      </S.Login_Main>
+    </S.App1>
   );
 };
 
