@@ -12,12 +12,6 @@ export const Main = styled.div`
 `;
 export const MainContainer = styled.div`
   max-width: 3000px; /* 최대 넓이 설정 */
-  @media only screen and (min-width: 320px) {
-    width: 320px;
-  }
-  @media only screen and (max-width: 540px) {
-    width: 540px;
-  }
   @media only screen and (max-width: 1023px) {
     width: 1023px;
   }
@@ -40,13 +34,16 @@ export const MainContainer = styled.div`
     width: 1800px;
   }
   @media only screen and (min-width: 1920px) {
-    width: 2000px;
+    width: 1920px;
+    height: 1200px;
   }
   @media only screen and (min-width: 2000px) {
     width: 2100px;
+    
   }
   @media only screen and (min-width: 2400px) {
     width: 2600px;
+    
   }
   height: 100%;
   display: flex;

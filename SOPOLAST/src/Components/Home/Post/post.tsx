@@ -7,7 +7,6 @@ import he from "src/Assets/image/1.png";
 import * as s from "../Style/Post.style";
 import useMainPost from "src/hooks/Main/Post/useMainPost"
 const Post = () => {
-  const navigate = useNavigate();
   const {
     handlePostClick,
     posts,
