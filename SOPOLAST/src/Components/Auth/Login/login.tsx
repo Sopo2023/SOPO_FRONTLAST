@@ -4,7 +4,7 @@ import { useLogin } from "src/hooks/auth/UseLogin";
 import * as S from "../style/Auth.style";
 import LOGO from "src/Assets/image/LOGO.png";
 
-const LoginComponent: React.FC = () => {
+const LoginComponent = () => {
   const navigate = useNavigate();
 
   const {
