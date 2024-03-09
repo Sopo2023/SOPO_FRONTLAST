@@ -1,15 +1,13 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as S from "../head.stlye";
+import {HeadProps} from "src/types/Head/Head.types"
 
-interface HeadProps {
-  active: boolean;
-}
+
 
 const Head: React.FC<HeadProps> = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
   const isMain = location.pathname === "/main";
   const isMentorMentee = location.pathname === "/Mentor-Mentee";
   const isPortfolio = location.pathname === "/portfolio";
