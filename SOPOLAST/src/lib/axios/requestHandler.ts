@@ -3,8 +3,8 @@ import {
   ACCESS_TOKEN_KEY,
   REFRESH_TOKEN_KEY,
   REQUEST_TOKEN_KEY,
-} from "../auth/constant";
-import Token from "../Token/token";
+} from "src/constants/token/token.constants";
+import Token from "../token/token";
 
 export const requestHandler = (config: AxiosRequestConfig) => {
   const access_token = Token.getToken(ACCESS_TOKEN_KEY);

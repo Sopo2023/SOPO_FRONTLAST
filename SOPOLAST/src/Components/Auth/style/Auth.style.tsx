@@ -14,8 +14,70 @@ export const App1 = styled.div`
 export const Login_Main = styled.div`
   width: 1470px;
   height: 956px;
+  max-width: 3000px;
+  height: 956px;
+  @media only screen and (min-width: 320px) {
+    width: 320px;
+    
+  }
+  @media only screen and (max-width: 540px) {
+    width: 540px;
+    height: 100%;
+  }
+  @media only screen and (max-width: 1023px) {
+    width: 1023px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 1024px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1100px) {
+    width: 1100px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 1300px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1400px) {
+    width: 1400px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1470px) {
+    width: 1470px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1500px) {
+    width: 1500px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 1600px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1700px) {
+    width: 1700px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1800px) {
+    width: 1800px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 1900px) {
+    width: 1900px;
+    height: 1200px;
+  }
+  @media only screen and (min-width: 2000px) {
+    width: 2100px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 2400px) {
+    width: 2600px;
+    height: 100%;
+  }
   display: flex;
-  justify-content: space-around;
+  align-items: center;
 `;
 export const GreenBox = styled.div`
   display: flex;
@@ -24,8 +86,9 @@ export const GreenBox = styled.div`
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  min-width: 700px;
-  max-width: 700px;
+  /* min-width: 700px;
+  max-width: 700px; */
+  width: 80%;
   height: 100%;
   position: relative;
 `;
@@ -38,8 +101,11 @@ export const Img = styled.img`
   margin: 0;
 `;
 export const Box1 = styled.div`
+  display: flex;
   width: 100%;
   height: 100%;
+  /* min-width: 700px;
+  max-width: 700px; */
 `;
 export const Box_Group = styled.div`
   width: 100%;

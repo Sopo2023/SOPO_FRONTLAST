@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
 `;
 export const Write_Main = styled.div`
   display: flex;
@@ -25,7 +25,6 @@ export const WriteTool = styled.div`
   gap: 10px;
   width: 100%;
   height: 100px;
-  z-index: 4;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: relative;
 `;
@@ -48,7 +47,9 @@ export const CategorySelect = styled.select`
   background-color: rgb(241, 241, 241);
   appearance: none;
 `;
-export const SubmitButton = styled.button`
+
+export const SubmitButton = styled.input.attrs({ type: 'submit', value: "Submit" })`
+  z-index: 5;
   cursor: pointer;
   border: none;
   width: 100%;
@@ -88,21 +89,24 @@ export const WriteTitlelMain = styled.div`
   justify-content: center;
   width: 100%;
   height: 100px;
+  
 `;
 export const WriteTitle = styled.input`
   display: flex;
   outline: none;
   border: none;
   width: 80%;
-  height: 100px;
+  height: 75%;
   flex-shrink: 0;
   font-size: 30px;
   padding-left: 10px;
   padding-top: 20px;
+  border-bottom: 1px solid #dbdbdb;
 `;
 export const WriteDetailMain = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
 `;
@@ -115,7 +119,6 @@ export const WriteDetail = styled.textarea`
   width: 80%;
   height: 100%;
   font-size: 30px;
-  border-top: 1px solid #dbdbdb;
   padding-top: 10px;
   padding-left: 10px;
 `;
@@ -124,6 +127,7 @@ export const btnupload = styled.input`
   height: 100%;
   display: flex;
   border: none;
+  display: none;
 `;
 export const From = styled.form`
   width: 100%;
@@ -141,3 +145,8 @@ export const SubmitButtonMain = styled.button`
   cursor: pointer;
   background-color: white;
 `;
+export const WriteImg = styled.img`
+  display: flex;
+  width: 70%;
+  height: 500px;
+`
