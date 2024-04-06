@@ -2,7 +2,7 @@ import React from "react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import Head from "src/Components/head/Head/head";
-import Side from "../../constants/Sidebar/Side/side";
+import Side from "../../Sidebar/Side/side";
 import ImgPlus from "src/Assets/image/imgplus.png";
 import SubmitImg from "src/Assets/image/submitimg.png";
 import * as s from "./Write.style";
@@ -37,57 +37,56 @@ const Sidewrite = () => {
 
     e.preventDefault();
     ConfirmToast("warning", "글을 올리겠습니까?", "", "success", "완료", "");
-    if (ConfirmToast){
+    if (ConfirmToast) {
       console.log("hello");
-      
     }
 
-  //   if (!title || !content) {
-  //     showToast("error", "제목, 내용을 모두 입력해주세요.");
-  //     return;
-  //   }
+    //   if (!title || !content) {
+    //     showToast("error", "제목, 내용을 모두 입력해주세요.");
+    //     return;
+    //   }
 
-  //   const formData = new FormData();
-  //   const data = {
-  //     title,
-  //     content,
-  //     email: localStorageEmail,
-  //   };
+    //   const formData = new FormData();
+    //   const data = {
+    //     title,
+    //     content,
+    //     email: localStorageEmail,
+    //   };
 
-  //   formData.append(
-  //     "data",
-  //     new Blob([JSON.stringify(data)], { type: "application/json" })
-  //   );
+    //   formData.append(
+    //     "data",
+    //     new Blob([JSON.stringify(data)], { type: "application/json" })
+    //   );
 
-  //   if (selectPlace === "게시물" && selectedImage) {
-  //     formData.append("image", selectedImage);
-  //   }
+    //   if (selectPlace === "게시물" && selectedImage) {
+    //     formData.append("image", selectedImage);
+    //   }
 
-  //   try {
-  //     let response;
-  //     if (selectPlace === "게시물") {
-  //       await axios.post(`${SERVERURL}/senior-to-junior/create`, formData, {
-  //         headers: {
-  //           "Content-Type": "multipart/form-data",
-  //         },
-  //       });
-  //     } else if (selectPlace === "대회") {
-  //       response = await axios.post(SERVERURL + "#", formData, {
-  //         headers: {},
-  //       });
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   }
-  // };
+    //   try {
+    //     let response;
+    //     if (selectPlace === "게시물") {
+    //       await axios.post(`${SERVERURL}/senior-to-junior/create`, formData, {
+    //         headers: {
+    //           "Content-Type": "multipart/form-data",
+    //         },
+    //       });
+    //     } else if (selectPlace === "대회") {
+    //       response = await axios.post(SERVERURL + "#", formData, {
+    //         headers: {},
+    //       });
+    //     }
+    //   } catch (error) {
+    //     console.error("Error:", error);
+    //   }
+    // };
 
-  // const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   const selectedImage = e.target.files?.[0];
-  //   setSelectedImage(selectedImage);
-  //   setFileName(selectedImage ? selectedImage.name : null);
-  //   setImageSrc(selectedImage ? URL.createObjectURL(selectedImage) : null);
-  // };
-  }
+    // const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    //   const selectedImage = e.target.files?.[0];
+    //   setSelectedImage(selectedImage);
+    //   setFileName(selectedImage ? selectedImage.name : null);
+    //   setImageSrc(selectedImage ? URL.createObjectURL(selectedImage) : null);
+    // };
+  };
   return (
     <>
       <s.Main>
@@ -99,7 +98,9 @@ const Sidewrite = () => {
               <s.WriteTool>
                 <s.Tool>
                   <span>올릴곳</span>
-                  <s.CategorySelect onChange={(e) => setselectPlace(e.target.value)}>
+                  <s.CategorySelect
+                    onChange={(e) => setselectPlace(e.target.value)}
+                  >
                     <option value="게시물">게시물</option>
                     <option value="대회">대회</option>
                   </s.CategorySelect>
@@ -117,16 +118,18 @@ const Sidewrite = () => {
                   </s.CategorySelect>
                 </s.Tool>
                 <s.Tool>
-               
                   <span>이미지추가</span>
                   <s.plustimg>
                     <label htmlFor="change-img">
                       <img src={ImgPlus} />
                     </label>
-                    <s.btnupload name="file" type="file" id="change-img"  onChange={handleChangeImg} ></s.btnupload>
-                   
+                    <s.btnupload
+                      name="file"
+                      type="file"
+                      id="change-img"
+                      onChange={handleChangeImg}
+                    ></s.btnupload>
                   </s.plustimg>
-                  
                 </s.Tool>
 
                 <s.SubmitButtonMain>

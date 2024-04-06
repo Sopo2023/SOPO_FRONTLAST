@@ -1,7 +1,7 @@
 import React, { useState}from "react";
 import { useNavigate } from "react-router-dom";
 import { useSignup } from "src/hooks/auth/UseSignup";
-import LOGO from "../../../Assets/image/LOGO.png";
+import LOGO from "src/Assets/image/LOGO.png";
 import * as S from "../style/Auth.style";
 
 const LoginComponent= () => {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { showToast } from "src/constants/Swal/Swal";
 import axios from "axios";
-import Token from "src/lib/Token/token";
+import Token from "src/lib/token/token";
 
 interface UserData {
   email: string;

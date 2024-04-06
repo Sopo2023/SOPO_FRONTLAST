@@ -1,7 +1,7 @@
 import React from "react";
 import "./postshow.css";
-import Sidename from "src/constants/Sidebar/Side/side";
-import TEST6 from "../../Assets/image/1.png";
+import Sidename from "src/Components/Sidebar/Side/side";
+import TEST6 from "src/Assets/image/1.png";
 import Head from "src/Components/head/Head/head";
 
 export default function Start() {

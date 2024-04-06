@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Sidname from "../../constants/Sidebar/Side/side";
+import Sidname from "../../Sidebar/Side/side";
 import Head from "src/Components/head/Head/head";
 import "./Competition.css";
 import { useNavigate } from "react-router-dom";
 
-import * as S from "../Competition/competiton.sytle"
+import * as S from "./competiton.sytle";
 
 function Competition() {
   const majorClick = (major) => {
@@ -34,9 +34,9 @@ function Competition() {
         <Sidname />
         <S.SearchBox>
           <S.Search>
-            <S.Searchbox/>
-            <S.SearchIcon type="button"/>
-            <S.serchIconLine/>
+            <S.Searchbox />
+            <S.SearchIcon type="button" />
+            <S.serchIconLine />
           </S.Search>
 
           <S.StackLine>
@@ -52,56 +52,50 @@ function Competition() {
             <S.MajorSelect>
               <button
                 className="majorbutton"
-                onClick={() => majorClick('프론트엔드')}
+                onClick={() => majorClick("프론트엔드")}
               >
                 프론트엔드
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick('백엔드')}
+                onClick={() => majorClick("백엔드")}
               >
                 백엔드
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick('안드로이드')}
+                onClick={() => majorClick("안드로이드")}
               >
                 안드로이드
               </button>
 
-              <button
-              className="majorbutton"
-              onClick={() => majorClick('iOS')}
-              >
+              <button className="majorbutton" onClick={() => majorClick("iOS")}>
                 iOS
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick('임베디드')}
+                onClick={() => majorClick("임베디드")}
               >
                 임베디드
               </button>
 
-              <button
-              className="majorbutton"
-              onClick={() => majorClick('AI')}
-              >
+              <button className="majorbutton" onClick={() => majorClick("AI")}>
                 AI
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick('정보보안')}
+                onClick={() => majorClick("정보보안")}
               >
                 정보보안
               </button>
 
               <button
                 className="majorbutton"
-                onClick={() => majorClick('디자인')}
+                onClick={() => majorClick("디자인")}
               >
                 디자인
               </button>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as s from "../Pagination/Pagination.style";
+import * as s from "./Pagination.style";
 
 interface PaginationProps {
   postsPerPage: number;
