@@ -2,7 +2,7 @@ import React from "react";
 import yogiyo from "src/Assets/image/1.png";
 import comment from "src/Assets/image/comment.png";
 import Head from "src/Components/head/Head/head";
-import Sidebar from "../../Sidebar/Side/side";
+import Sidebar from "../Sidebar/Side/side";
 
 import * as S from "./portfolioSub.style";
 

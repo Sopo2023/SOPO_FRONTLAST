@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Magnifying from "src/Components/magnifying/Magnifying/Magnifying";
-import * as s from "src/Components/common/Updown/Post/Post.Style";
+import * as s from "@src/Components/Updown/Post/Post.Style";
 import B1CODE from "src/Assets/img/B1CODE.png";
 import SEOUL from "src/Assets/image/3.png";
 import Yogiyo from "src/Assets/image/1.png";
