@@ -18,21 +18,19 @@ const Router = () => {
     <BrowserRouter>
       <RecoilRoot>
         <GlobalStyles />
-        <div className="App">
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Main />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/Mentor-Mentee" element={<Updown />} />
-            <Route path="/sidewrite" element={<Write />} />
-            <Route path="/Signuppage" element={<Signup />} />
-            <Route path="/Mypage" element={<Mypage />} />
-            <Route path="/Competition" element={<Competition />} />
-            <Route path="/52562893" element={<Portfoliosub />} />
-            <Route path="/Updownsub" element={<Updownsub />} />
-            <Route path="/CompetitionSub" element={<CompetitionSub />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/Mentor-Mentee" element={<Updown />} />
+          <Route path="/sidewrite" element={<Write />} />
+          <Route path="/Signuppage" element={<Signup />} />
+          <Route path="/Mypage" element={<Mypage />} />
+          <Route path="/Competition" element={<Competition />} />
+          <Route path="/52562893" element={<Portfoliosub />} />
+          <Route path="/Updownsub" element={<Updownsub />} />
+          <Route path="/CompetitionSub" element={<CompetitionSub />} />
+        </Routes>
       </RecoilRoot>
     </BrowserRouter>
   );

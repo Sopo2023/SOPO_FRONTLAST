@@ -1,10 +1,10 @@
-import React, { useState}from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSignup } from "src/hooks/auth/UseSignup";
 import LOGO from "src/Assets/image/LOGO.png";
 import * as S from "../style/Auth.style";
 
-const LoginComponent= () => {
+const LoginComponent = () => {
   const navigate = useNavigate();
   const [isEmailEntered, setIsEmailEntered] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
@@ -13,18 +13,7 @@ const LoginComponent= () => {
   const [loading, setLoading] = useState(false);
 
   const {
-    name,
-    setName,
-    email,
-    setEmail,
-    password,
-    setPassword,
-    repassword,
-    setRepassword,
-    handleEmailChange,
-    handleEmailCertify,
-    Authenticationverification,
-    LOginFunc,
+  ...signup
   } = useSignup();
 
   return (
@@ -35,15 +24,15 @@ const LoginComponent= () => {
         </S.GreenBox>
         <S.Box1>
           <S.Box_Group>
-            <S.Form method="POST" onSubmit={LOginFunc}>
+            <S.Form method="POST" onSubmit={signup.LOginFunc}>
               <S.Title>Sign up</S.Title>
               <S.Name>
                 <S.Input
                   name="name"
                   type="text"
                   placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={signup.name}
+                  onChange={(e) => signup.setName(e.target.value)}
                 ></S.Input>
               </S.Name>
               <S.Email_certification>
@@ -51,14 +40,14 @@ const LoginComponent= () => {
                   name="E-mail"
                   type="text"
                   placeholder="E-Mail"
-                  value={email}
+                  value={signup.email}
                   onChange={(e) => {
-                    setEmail(e.target.value);
+                    signup.setEmail(e.target.value);
                     setIsEmailEntered(true);
                   }}
                 ></S.Email>
                 <S.CertifiedButton
-                  onClick={handleEmailCertify}
+                  onClick={signup.handleEmailCertify}
                   className={`Certified ${isEmailEntered ? "entered" : ""}`}
                 >
                   {isVerifying ? "Verifying..." : "인증하기"}
@@ -70,7 +59,7 @@ const LoginComponent= () => {
                     maxLength={10}
                     placeholder="인증코드 여섯자리를 입력해주세요."
                   ></S.Authentication>
-                  <S.Completed onClick={Authenticationverification}>
+                  <S.Completed onClick={signup.Authenticationverification}>
                     확인
                   </S.Completed>
                 </S.Certification>
@@ -79,14 +68,14 @@ const LoginComponent= () => {
                 name="password"
                 type="password"
                 placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={signup.password}
+                onChange={(e) => signup.setPassword(e.target.value)}
               ></S.Input>
               <S.Input
                 type="password"
                 placeholder="Re-enter Password"
-                value={repassword}
-                onChange={(e) => setRepassword(e.target.value)}
+                value={signup.repassword}
+                onChange={(e) => signup.setRepassword(e.target.value)}
               ></S.Input>
               <S.Button
                 type="submit"
@@ -96,7 +85,7 @@ const LoginComponent= () => {
                 Sign Up
               </S.Button>
               <p>{msg}</p>
-              <S.LogLink onClick={() => navigate("/")}>Log in</S.LogLink>
+              <S.LogLink onClick={() => navigate("/signup")}>Log in</S.LogLink>
             </S.Form>
           </S.Box_Group>
         </S.Box1>

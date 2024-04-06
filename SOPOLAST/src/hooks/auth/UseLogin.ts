@@ -3,11 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { showToast } from "src/constants/Swal/Swal";
 import axios from "axios";
 import Token from "src/lib/token/token";
-
-interface UserData {
-  email: string;
-  password: string;
-}
+import {UserData} from "src/types/auth/login.type";
 
 export const useLogin = () => {
   const SERVERURL = process.env.REACT_APP_SERVER_URL;
@@ -99,6 +95,7 @@ export const useLogin = () => {
   };
 
   return {
+    loading,
     email,
     setEmail,
     password,

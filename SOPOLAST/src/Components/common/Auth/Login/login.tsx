@@ -8,14 +8,7 @@ const LoginComponent = () => {
   const navigate = useNavigate();
 
   const {
-    email,
-    password,
-    setPassword,
-    keepLoggedIn,
-    onChangeEmail,
-    onChangePassword,
-    handleKeepLoggedIn,
-    handleLogin,
+  ...login
   } = useLogin();
 
   return (
@@ -31,22 +24,22 @@ const LoginComponent = () => {
               <S.Input
                 type="text"
                 placeholder="E-Mail"
-                value={email}
-                onChange={onChangeEmail}
+                value={login.email}
+                onChange={login.onChangeEmail}
               ></S.Input>
               <S.Input
                 type="password"
                 placeholder="Password"
-                value={password}
-                onChange={onChangePassword}
+                value={login.password}
+                onChange={login.onChangePassword}
               ></S.Input>
               <S.CheckboxWrapper>
                 <S.CheckboxBundle>
                   <S.Checkbox
                     type="checkbox"
                     id="keepLoggedInCheckbox" // 체크박스에 id 추가
-                    checked={keepLoggedIn}
-                    onChange={handleKeepLoggedIn}
+                    checked={login.keepLoggedIn}
+                    onChange={login.handleKeepLoggedIn}
                   />
 
                   <S.CheckboxLabel htmlFor="keepLoggedInCheckbox">
@@ -54,7 +47,7 @@ const LoginComponent = () => {
                   </S.CheckboxLabel>
                 </S.CheckboxBundle>
               </S.CheckboxWrapper>
-              <S.Button type="button" onClick={handleLogin}>
+              <S.Button type="button" onClick={login.handleLogin}>
                 Log in
               </S.Button>
 
