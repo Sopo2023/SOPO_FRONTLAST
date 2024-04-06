@@ -1,4 +1,3 @@
-import React from "react";
 import GlobalStyles from "src/Style/global";
 import Updown from "src/Components/common/Updown/updownmain";
 import Login from "src/Components/common/Auth/Login/login";
@@ -21,8 +20,8 @@ const Router = () => {
         <GlobalStyles />
         <div className="App">
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/main" element={<Main />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Main />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/Mentor-Mentee" element={<Updown />} />
             <Route path="/sidewrite" element={<Write />} />
