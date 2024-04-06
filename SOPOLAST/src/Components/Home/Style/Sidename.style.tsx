@@ -4,7 +4,6 @@ export const SideNameArea = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  top: 15%;
   width: 480px;
   height: 100%;
 `;

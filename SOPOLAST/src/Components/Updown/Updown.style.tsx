@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-    width: 1500px;
-    height: 1500px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
 `;

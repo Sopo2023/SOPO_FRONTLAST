@@ -100,6 +100,7 @@ export const MajorSelect = styled.div`
     
 `
 
+
 export const MajorButton = styled.button`
     border: none;
     background-color: none;
@@ -134,8 +135,7 @@ export const Mo = styled.div`
     top: 200px;
     width: 900px;
     height: 1000px;
-`
-
+`;
 export const NameCardBox = styled.div`
     width: 840px;
     height: 130px;
@@ -242,5 +242,4 @@ export const NameCardBox5 = styled.div`
     margin-left: 22px;
     margin-top: 640px;
     display: inline-block;
-`
-
+`;
