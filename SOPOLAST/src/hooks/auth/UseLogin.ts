@@ -4,9 +4,10 @@ import { showToast } from "src/constants/Swal/Swal";
 import axios from "axios";
 import Token from "src/lib/token/token";
 import {UserData} from "src/types/auth/login.type";
+import CONFIG from "src/config/config.json";
 
 export const useLogin = () => {
-  const SERVERURL = process.env.REACT_APP_SERVER_URL;
+  
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -25,11 +26,7 @@ export const useLogin = () => {
         email: email,
         password: password,
       };
-      const response = await axios.post(`${SERVERURL}/login`, userData, {
-        withCredentials: true,
-        headers: {
-          "Content-Type": "application/json",
-        },
+      const response = await axios.post(`${CONFIG.server}/login`, userData, {
       });
       setLoading(false);
       if (response.status === 200) {

@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { SopoV1Axios } from "src/lib/auth/CustomAxios";
+import CONFIG from "src/config/config.json";
 
 const UseMainPost = () =>{
-    const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
+    
   
   const [posts, setPosts] = useState([]); // 추가: 포스트 목록 상태 추가
 
@@ -12,8 +14,7 @@ const UseMainPost = () =>{
     fetchPosts();
   }, []);
   const fetchPosts = () => {
-    axios
-      .get(`${SERVERURL}/posts`) // 변경: 실제 포스트 목록을 가져오는 엔드포인트로 변경
+    SopoV1Axios.get(`${CONFIG.server}/posts`) // 변경: 실제 포스트 목록을 가져오는 엔드포인트로 변경
       .then((response) => {
         const fetchedPosts = response.data;
         setPosts(fetchedPosts);
@@ -26,8 +27,8 @@ const UseMainPost = () =>{
 
   const handlePostClick = (postId) => {
     // 클라이언트에서 서버로 요청 보내기
-    axios
-      .post(`${SERVERURL}/senior-to-junior/read`, { postId: postId })
+    SopoV1Axios
+      .post(`${CONFIG.server}/senior-to-junior/read`, { postId: postId })
       .then((response) => {
         console.log("POST 요청이 성공했습니다. 서버 응답:", response.data);
         window.location.href = response.data.redirectTo;
@@ -39,8 +40,8 @@ const UseMainPost = () =>{
   };
 
   const fetchPostContent = (postId) => {
-    axios
-      .get(`${SERVERURL}/read/${postId}`)
+    SopoV1Axios
+      .get(`${CONFIG.server}/read/${postId}`)
       .then((response) => {
         const postContent = response.data;
         console.log("게시물 내용을 가져옵니다:", postContent);
