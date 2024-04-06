@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Magnifying from "src/constants/magnifying/Magnifying/Magnifying";
-import * as s from "src/Components/Updown/Post/Post.Style";
+import Magnifying from "src/Components/magnifying/Magnifying/Magnifying";
+import * as s from "@src/Components/Updown/Post/Post.Style";
 import B1CODE from "src/Assets/img/B1CODE.png";
 import SEOUL from "src/Assets/image/3.png";
 import Yogiyo from "src/Assets/image/1.png";
 import KOREA from "src/Assets/image/2.png";
 import MAC from "src/Assets/img/MAC.JPG";
 import { link } from "fs";
-import Pagination from "src/constants/Pagination/Pagination";
+import Pagination from "src/Components/Pagination/Pagination";
 // const UpdownPost = () => {
 //     const SERVERURL = `${process.env.REACT_APP_SERVER_URL}`;
 //     const navigate = useNavigate();

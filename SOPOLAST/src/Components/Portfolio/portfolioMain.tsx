@@ -2,25 +2,26 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import cnsLogo from "../../Assets/image/cnsLogo.png";
 import b1nd from "../../Assets/image/b1nd.png";
-import Sidename from "src/constants/Sidebar/Side/side";
+import Sidename from "src/Components/Sidebar/Side/side";
 import "./protfolio.css";
-import Head from "../../constants/head/Head/head"
+import Head from "src/Components/head/Head/head";
 
-import * as S from "../Portfolio/portfolioMain.style"
+import * as S from "./portfolioMain.style";
 
 export default function Portfolio() {
   const majorClick = (major) => {
     console.log(`Clicked on ${major}`);
   };
 
-  const majorbutton: HTMLElement | null = document.getElementById('majorbutton');
+  const majorbutton: HTMLElement | null =
+    document.getElementById("majorbutton");
 
   if (majorbutton) {
-    majorbutton.addEventListener('click', function() {
-      if (majorbutton.classList.contains('clicked')) {
-        majorbutton.classList.remove('clicked');
+    majorbutton.addEventListener("click", function () {
+      if (majorbutton.classList.contains("clicked")) {
+        majorbutton.classList.remove("clicked");
       } else {
-        majorbutton.classList.add('clicked');
+        majorbutton.classList.add("clicked");
       }
     });
   }
@@ -29,13 +30,13 @@ export default function Portfolio() {
   return (
     <div className="main">
       <div className="content">
-        <Head active={true}/>
+        <Head active={true} />
 
         <S.SearchBox>
           <S.Search>
-            <S.Searchbox/>
-            <S.SearchIcon type="button"/>
-            <S.serchIconLine/>
+            <S.Searchbox />
+            <S.SearchIcon type="button" />
+            <S.serchIconLine />
           </S.Search>
 
           <S.StackLine>
@@ -49,51 +50,33 @@ export default function Portfolio() {
 
             <S.GradeGreen> | </S.GradeGreen>
             <S.MajorSelect>
-              <S.MajorButton
-                onClick={() => majorClick('프론트엔드')}
-              >
+              <S.MajorButton onClick={() => majorClick("프론트엔드")}>
                 프론트엔드
               </S.MajorButton>
 
-              <S.MajorButton
-                onClick={() => majorClick('백엔드')}
-              >
+              <S.MajorButton onClick={() => majorClick("백엔드")}>
                 백엔드
               </S.MajorButton>
 
-              <S.MajorButton
-                onClick={() => majorClick('안드로이드')}
-              >
+              <S.MajorButton onClick={() => majorClick("안드로이드")}>
                 안드로이드
               </S.MajorButton>
 
-              <S.MajorButton
-              onClick={() => majorClick('iOS')}
-              >
+              <S.MajorButton onClick={() => majorClick("iOS")}>
                 iOS
               </S.MajorButton>
 
-              <S.MajorButton
-                onClick={() => majorClick('임베디드')}
-              >
+              <S.MajorButton onClick={() => majorClick("임베디드")}>
                 임베디드
               </S.MajorButton>
 
-              <S.MajorButton
-              onClick={() => majorClick('AI')}
-              >
-                AI
-              </S.MajorButton>
+              <S.MajorButton onClick={() => majorClick("AI")}>AI</S.MajorButton>
 
-              <S.MajorButton
-                onClick={() => majorClick('정보보안')}
-              >
+              <S.MajorButton onClick={() => majorClick("정보보안")}>
                 정보보안
               </S.MajorButton>
 
-              <S.MajorButton
-                onClick={() => majorClick('디자인')}
-              >
+              <S.MajorButton onClick={() => majorClick("디자인")}>
                 디자인
               </S.MajorButton>
             </S.MajorSelect>
