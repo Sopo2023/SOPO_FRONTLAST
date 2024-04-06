@@ -42,7 +42,7 @@ const SideName = () => {
               </s.WriteText>
             </s.Write>
             <s.News>
-              <s.WriteAlarm>내 소식</s.WriteAlarm>
+              <s.WriteAlarm>소포 소식</s.WriteAlarm>
               <s.WriteDetail>
                 <s.WriteMain>
                   <s.WritText>

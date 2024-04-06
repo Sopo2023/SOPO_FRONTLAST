@@ -6,7 +6,7 @@ import Head from "../../constants/head/Head/head"
 import MajorLine from "../../constants/MajorLine/Major"
 import axios from "axios";
 
-import * as S from "../Portfolio/portfolioMain.style"
+import * as S from "./portfolioMain.style";
 
 export default function Portfolio() {
   const [users, setUsers] = useState([]);
@@ -33,15 +33,14 @@ export default function Portfolio() {
   return (
     <div className="main">
       <div className="content">
-        <Head active={true}/>
+        <Head active={true} />
 
         <S.SearchBox>
           <S.Search>
-            <S.Searchbox/>
-            <S.SearchIcon type="button"/>
-            <S.serchIconLine/>
+            <S.Searchbox />
+            <S.SearchIcon type="button" />
+            <S.serchIconLine />
           </S.Search>
-
           <MajorLine/>
         </S.SearchBox>
 
