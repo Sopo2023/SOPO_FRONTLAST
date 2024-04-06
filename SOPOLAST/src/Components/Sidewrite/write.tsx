@@ -7,7 +7,7 @@ import ImgPlus from "src/Assets/image/imgplus.png";
 import SubmitImg from "src/Assets/image/submitimg.png";
 import * as s from "./Write.style";
 import { showToast } from "src/constants/Swal/Swal";
-import UseWrite from "src/hooks/Wirte/useWrite";
+import UseWrite from "src/hooks/Write/useWirte";
 
 const Sidewrite = () => {
   const {
