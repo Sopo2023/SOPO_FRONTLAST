@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidename from "src/constants/Sidebar/Side/side";
-import "./protfolio.css";
-import Head from "../../constants/head/Head/head"
+import Sidename from "src/Components/Sidebar/Side/side";
+import Head from "src/Components/head/Head/head"
 import MajorLine from "../../constants/MajorLine/Major"
 import axios from "axios";
 

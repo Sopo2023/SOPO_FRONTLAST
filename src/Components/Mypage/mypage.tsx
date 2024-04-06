@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import TEST8 from "src/Assets/img/B1CODE.png";
-import Head from "src/constants/head/Head/head";
+import Head from "src/Components/head/Head/head";
 import mail from "src/Assets/img/mail.png";
 import github1 from "src/Assets/img/github.png";
 import nm from "src/Assets/img/hp.png";

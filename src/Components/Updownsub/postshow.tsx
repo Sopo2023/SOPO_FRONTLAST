@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import * as s from "src/Components/Updownsub/postshow.Style";
-import Sidename from "src/constants/Sidebar/Side/side";
-import Head from "src/constants/head/Head/head";
+import Sidename from "src/Components/Sidebar/Side/side";
+import Head from "src/Components/head/Head/head";
 
 interface Post {
   id: number;
@@ -44,3 +44,4 @@ const BoardDetail = () => {
     </div>
   );
 };
+export default BoardDetail

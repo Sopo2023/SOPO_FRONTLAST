@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Magnifying from "src/constants/magnifying/Magnifying/Magnifying";
+import Magnifying from "src/Components/magnifying/Magnifying/Magnifying";
 import * as s from "src/Components/Updown/Post/Post.Style";
 import SEOUL from "src/Assets/image/3.png";
 import { link } from "fs";
-import Pagination from "src/constants/Pagination/Pagination";
+import Pagination from "src/Components/Pagination/Pagination";
 interface Post {
   id: number;
   author: string;
